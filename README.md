@@ -1,6 +1,6 @@
 # Inhaltsverzeichnis  
 ## Fiv_5AHME_Stefan_Ornik
-### Jahrganz_2017-2018
+### Jahrgang_2017-2018
 
 | Nr. | Datum |                  Inhalt                      |           md-Link            |
 |-----|-------|----------------------------------------------|------------------------------|
