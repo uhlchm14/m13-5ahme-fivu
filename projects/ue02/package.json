@@ -1,0 +1,13 @@
+{
+  "name": "ue02",
+  "version": "1.0.0",
+  "description": "Zweite Uebung",
+  "main": "main.js",
+  "repository": {},
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
