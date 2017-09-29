@@ -1,7 +1,7 @@
 {
-  "name": "typescript-template",
+  "name": "ue03",
   "version": "1.0.0",
-  "description": "Project Template for Node.js/Typescript FIVU 5AHME",
+  "description": "Dritte Übung",
   "main": "dist/main.js",
   "repository": {},
   "scripts": {
