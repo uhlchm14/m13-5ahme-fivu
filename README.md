@@ -6,7 +6,7 @@
 | Nr. | Datum |      docs and projects       |  short summary  |
 |-----|-------|------------------------------|-----------------|
 |  1  | 14.09 |![Einheit 1](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit1.md)| Einführung |                      
-|  2  | 21.09 |![Einheit 2](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit2.md)| Erstes einfaches Programm           |
+|  2  | 21.09 |![Einheit 2](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit2.md) ![Praxis 1](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue02)| Erstes einfaches Programm           |
 |  3  | 28.09 |![Einheit 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit3.md)| Typescript |
 |  4  | 05.10 |![Einheit 4]()|||
 
