@@ -13,7 +13,7 @@
 - Dominik Riegelnegg und Markus Mörth dürfen hierfür eine extra Ausarbeitung vornehmen
 
 ### 2. Erkunden von Typescript
-- Gestartet wurde mit der Installation eines Typescript Transpiler
+- Gestartet wurde mit der Installation eines Typescript Transpilers
 - Wir ließen einen Typescript Quellcode in einen Javascript Quellcode umwandeln
    - Somit wurde unsere .ts Datei zu einer .js Datei
 - Wir unterhielten uns über Javascript Target Versionen
