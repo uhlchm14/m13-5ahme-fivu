@@ -19,6 +19,16 @@
   UE02: [Übung 2]
 * Typescript Template von LMS geklont und als UE03 bei uns angelegt.  
   UE03: [Übung 3]
+  
+## Einheit 4: 4.10.17 (Supplierung)
+Anlegen mehrerer Files:
+* tslint.json für Syntaxüberprüfung in Typescript und tsconfig.json für die Transpilierung
+* .vscode Ordner: settings.json --> Einstellungen für das lokale Projekt
+* Tool Gulp: gulpfile.js und tasks.json (in .vscode) für die Übersetzung des Quellcodes
+* launch.json in .vscode für Debug Launcher Einstellungen
+* *.js.map Files: Verantwortlich für das Anzeigen von Fehlern und in welcher Zeile er im Typescriptcode aufgetreten ist - Fehlermapping
+* main.ts: Car Klasse erstellt.
+
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
