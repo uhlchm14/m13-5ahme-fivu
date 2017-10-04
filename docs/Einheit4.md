@@ -7,9 +7,24 @@
 1. gulpfile.js
 2. settings.json
 3. launch.json
-4. Allgemein
+4. main.js.map
+5. Klasse car erstellen
 
-### 1. Wiederholung
+5. Allgemein
 
+### 1. gulpfile.js
+Gulp generell kann:
+- HTML, Java Script und CSS verkleinern
+- SCSS in CSS umwandeln
+- Bilder optimieren und Dateien in einen dist-Ordner kopieren
+- Webbrowser automatisch aktualisieren oder Webserver automatisch starten
 
-### 2. Erkunden von Typescript
+![Quelle](https://de.wikipedia.org/wiki/Gulp.js)
+
+### 2. settings.json
+
+### 3. launch.json
+
+### 4. main.js.map
+
+### 5. Klasse car erstellen
