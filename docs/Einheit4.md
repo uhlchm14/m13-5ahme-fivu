@@ -10,8 +10,6 @@
 4. main.js.map
 5. Klasse car erstellen
 
-5. Allgemein
-
 ### 1. gulpfile.js
 Gulp generell kann:
 - HTML, Java Script und CSS verkleinern
