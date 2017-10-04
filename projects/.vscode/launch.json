@@ -4,6 +4,14 @@
         "type": "node",
         "request": "launch",
         "name": "Launch Program",
-        "program": "${workspaceRoot}\\main.js"
+        // "program": "${file}"
+        "program": "${workspaceRoot}/src/main.ts",
+        "cwd": "${workspaceRoot}",
+        "console": "integratedTerminal",
+        "outFiles": ["${workspaceRoot}/dist/*.js"],
+        "sourceMaps": true,
+        "preLaunchTask": "build",
+        //"trace": "all",
+        "smartStep": true
     }]
 }
