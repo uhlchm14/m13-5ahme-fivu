@@ -1,0 +1,21 @@
+{
+    "name": "ue_01",
+    "version": "1.0.0",
+    "description": "Uebung 1",
+    "main": "main.js",
+    "repositorys": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Javascript"
+    ],
+    "author": "Florian Greistorfer",
+    "license": "ISC",
+    "dependencies": {
+        "sprintf-js": "^1.1.1"
+    },
+    "devDependencies": {
+        "typescript": "^2.5.2"
+    }
+}
