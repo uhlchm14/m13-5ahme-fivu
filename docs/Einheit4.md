@@ -17,7 +17,7 @@ Gulp generell kann:
 - Bilder optimieren und Dateien in einen dist-Ordner kopieren
 - Webbrowser automatisch aktualisieren oder Webserver automatisch starten
 
-![Quelle - Wikipedia](https://de.wikipedia.org/wiki/Gulp.js)
+[Quelle - Wikipedia](https://de.wikipedia.org/wiki/Gulp.js)
 
 ### 2. settings.json
 
