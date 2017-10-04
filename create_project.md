@@ -11,6 +11,8 @@ cd uebung01
 
 ![npm init](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/moemam13/Fotos/npm_init.PNG)
 
-* Jetzt öffnet man das Programm *Visual Studio Code* und öffnet den Projektordner. Danach öffnet man die *package.json* Datei und fügt die im Bild markierte Zeile ein.
+* Jetzt öffnet man das Programm *Visual Studio Code* und öffnet den Projektordner. Danach öffnet man die Datei *package.json* und fügt die im Bild markierte Zeile ein.
 
 ![package.json](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/moemam13/Fotos/package_json.PNG)
+
+* Diese Zeile kann man aber auch im Terminal machen. Entweder mit *nano* oder man fügt die Zeile dort ein wo man zufor alles mit Enter bestätigt hat. Dort wird unten nämlich der Inhalt der Datei angezeigt und er kann dort bearbeitet werden.
