@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
   "files.exclude": {
-    ".vscode/": false,
+    ".vscode/": true,
     "**/node_modules/": true,
     "**/.gitkeep": true,
     "**/.gitignore": true,
