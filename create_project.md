@@ -16,3 +16,6 @@ cd uebung01
 ![package.json](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/moemam13/Fotos/package_json.PNG)
 
 * Diese Zeile kann man aber auch im Terminal machen. Entweder mit *nano* oder man fügt die Zeile dort ein wo man zufor alles mit Enter bestätigt hat. Dort wird unten nämlich der Inhalt der Datei angezeigt und er kann dort bearbeitet werden.
+
+
+* Und nun kann man ganz normale seine Dateien etc. machen. (z.B. main.ts)
