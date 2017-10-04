@@ -1,11 +1,11 @@
 // Place your settings in this file to overwrite default and user settings.
 {
   "files.exclude": {
-    ".vscode/": true,
+    ".vscode/": false,
     "**/node_modules/": true,
     "**/.gitkeep": true,
     "**/.gitignore": true,
-    "**/dist": true,
+    "**/dist": false,
     "**/package.json": true,
     "**/package-lock.json": true,
     "**/gulpfile.js": true,
