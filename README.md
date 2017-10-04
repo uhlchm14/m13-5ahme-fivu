@@ -5,22 +5,25 @@
 ## Verfasser: Fabio Pölzl
 
 
+
 ### Übersicht und Kurzbeschreibung der Lehreinheiten
 
 
-#### 1. Einheit
+
+### 1. Einheit
 **Datum:** 14.09.2017
 **Dazugehörige Übung(en):** -
-**Inhalt:** 
+**Inhalt:**
 1. Besprechung zum Ablauf des Unterrichtgegenstandes FIVU für dieses Schuljahr 2017/18
 2. Allgemeine Wiederholung über die Entwicklung der Programmiersprachen
   - Genauere Betrachtung der Programmiersprachen für die serverseitige Programmierung
 3. Installation von Node.js und Visual Studio Code
 
 
-#### 2. Einheit
+
+### 2. Einheit
 **Datum:** 21.09.2017
-**Dazugehörige Übung(en):** ![ue01]projects/ue01)
+**Dazugehörige Übung(en):** ![ue01](projects/ue01)
 **Inhalt:**
 1. JavaScript
   - Erarbeitung der Grundlagen, wie z.B. Datentypen (boolean, string, number, object, undefined, null) und Variablendeklarationen (var, const, let)
@@ -30,7 +33,8 @@
   - Umgang mit Node Package Manager
 
 
-#### 3. Einheit
+
+### 3. Einheit
 **Datum:** 28.09.2017
 **Dazugehörige Übung(en):** ![ue02](projects/ue02), ![ue03](projects/ue03)
 **Inhalt:**
@@ -40,10 +44,11 @@
   - Installation des TypeScript-Transpilers
   - Erstellung einer Klasse in TypeScript
   - Unterhaltung über die JavaScript Target Version
-  - Download und Besprechung der ersten Dateien des Templates f�r ue03
+  - Download und Besprechung der ersten Dateien des Templates für ue03
 
 
-#### 4. Einheit
+
+### 4. Einheit
 **Datum:** 04.10.2017
 **Dazugehörige Übung(en):** ![ue03](projects/ue03)
 **Inhalt:**
