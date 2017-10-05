@@ -4,7 +4,7 @@ var str;
 console.log(x);
 console.log(s);
 s = str;
-var Person = /** @class */ (function () {
+var Person = (function () {
     function Person(nachName, vorName) {
         this.nachName = nachName;
         this.vorName = vorName;
