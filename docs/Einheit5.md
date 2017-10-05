@@ -11,7 +11,8 @@
 ### 1. Allgemeines
 - Zuweisung erfolgt immer über **set-Funktion**
 - Abfrage erfolgt immer über **get-Funktion**
-- generell bei beiden Methoden (getter + setter) kollidieren die Namen, daher wird bei der Variablen-Deklaration ein "_" gesetzt.  
+- generell bei beiden Methoden (getter + setter) kollidieren die Namen,  
+  daher wird bei der Variablen-Deklaration ein "_" gesetzt.  
     - z.B  private _hersteller: string;
 - Gegenteil von stringify = parse
 - Buffer = Feld von Zeichen, hat eine Methode 
