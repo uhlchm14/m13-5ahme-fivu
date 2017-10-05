@@ -43,3 +43,25 @@
 * main.js.map wird verwendet, um aufgetretene Fehler auch in typescript anzuzeigen
 * Programmierung
   * Car classe erstellt
+  * Quellcode ue03: [typescript](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue03/src/main.ts)
+  
+### Einheit 5: 05.10.2017
+
+* Es gibt in Typescript eigene setter und getter Methoden
+  * Achtung! Es kann hierbei zu Namenskollosionen kommen, daher immer Variablennamen mit einem _ beginnen.
+  * zB: private _model: string;
+ 
+* Lesen und Schreiben von Dateien
+  * Dazu muss man import **as fs from 'fs';** importieren.
+  * In eine Datei schreiben: **fs.writeFileSync('C:\\Users\\User\\Documents\\Schule\\5AHME\\FIVU\\ue03\\autos.json', JSON.stringify(autos));**
+  * Aus eine Datei lesen: **const buffer = fs.readFileSync('C:\\Users\\User\\Documents\\Schule\\5AHME\\FIVU\\ue03\\autos.json');**
+  * Jedoch ist dies nicht die beste Art und Weise um Dateien zu lesen, denn es können Sachen in die Datei geschrieben werden, die nicht nicht hinein geschrieben werden dürfen. -> Dies geht, da dies kein Object Car ist!
+
+* Tastenkombination hinzufügen
+  * Datei -> Einstellungen -> Tastenkombinationen -> keybindings.json -> Quellcode von FIVU template kopieren und dort einfügen. 
+  * strg + alt + b = build
+
+* Neue Übung erstellen (ue04)
+  * alte Übung kopieren (ue03) und in ue04 einfügen
+  * main.ts löschen und dann eine neue Classe erstellen (Car.ts).
+  * Quellcode: [ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue04/src/car.ts)
