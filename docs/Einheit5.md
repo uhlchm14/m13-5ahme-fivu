@@ -25,6 +25,9 @@
     - const buffer = fs.readFileSync('C:\\Dateien_Windows\\Dateien\\Schule_HTL\\Fiv\\autos.json');
     - const str = buffer.toString();
     - const autos2 = JSON.parse(str);
+    - // Problem: die eingelesenen Objekte müssen nicht mit der Klassendeklaration übereinstimmen 
+    - // --> keine automatische Überprüfung
 
 ### 3. Tastenkombinationen einfügen
+
 
