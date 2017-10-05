@@ -38,9 +38,9 @@
 * Feld deklarieren und definieren.
   * deklaration: let autos: Car[] = [];
   * definition: autos.push(new Car('RA 1111'));  
-autos.push(new Car('RA 2222'));  
-autos.push(new Car('RA 3333'));  
-autos.push(new Car('RA 4444'));  
+                autos.push(new Car('RA 2222'));      
+                autos.push(new Car('RA 3333'));    
+                autos.push(new Car('RA 4444'));    
 * Ausgabe vom Feld mit 2 Arten:
   * for-Schleifen: for (const a of autos){
     console.log(a);
@@ -48,5 +48,7 @@ autos.push(new Car('RA 4444'));
   * Direkt über das Feld: console.log(autos);
 * In Json Datei abspeichern: 
   * fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
-* keybinding.json fpr die Tastenkürzel.
+* keybinding.json für die Tastenkürzel.
+  * Datei -> Einstellungen -> Tastenkompination -> keybinding.json -> Alles im .vscode unter settings ins andere Verzeichnis kopieren.
+  * Die Datei in .vscode -> keybinding.json löschen.
 
