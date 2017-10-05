@@ -43,7 +43,7 @@ for (const a of autos) {
 
 // console.log(autos);
 
-// fs.writeFileSync('./autos.json', JSON.stringify(autos));
+fs.writeFileSync('./autos.json', JSON.stringify(autos));
 
 try {
   const buffer = fs.readFileSync('./autos.json');
@@ -51,6 +51,7 @@ try {
   const autos2 = JSON.parse(str);
 
   console.log(autos2);
+  // Problem: die eingelesenen Objekte müssen nicht mit der Klassendeklaration übereinstimmen
 } catch (err) {
   console.log('Fehler aufgetreten!');
 }
