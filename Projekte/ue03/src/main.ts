@@ -2,40 +2,40 @@ import * as fs from 'fs';
 
 class Car {
     private kennzeichen: string;
-    private _hersteller: string;
+    private _hersteller: string;    // Für Namenskonflikte: private Datenelemente mit '_' kennzeichnen
     private modell: string;
     private baujahr: number;
     private einsatzbereit: boolean;
 
-    public constructor (kennzeichen: string) {
+    public constructor(kennzeichen: string) {
         this.kennzeichen = kennzeichen;
     }
-public getKennzeichen(): string {
-    return this.kennzeichen;
+
+    public getKennzeichen (): string {
+        return this.kennzeichen;
+    }
+
+    public set hersteller(value: string) {
+        this._hersteller = value;
+        if (value === 'Honda') {
+            throw new Error('Mag ich net!');
+        }
+    }
+
+    public get hersteller(): string {
+        return this._hersteller + ', der beste Hersteller';
+    }
 }
 
-public set hersteller (value: string)
-{
-   // if(value === 'Honda')
-    // {
-      //  throw new Error('Will ich nicht');
-    // }
-    this.hersteller = value;
-}
+const autos: Car[] = [];
 
-public get hersteller (): string {
-    return this._hersteller;
-}
-}
+autos.push(new Car('GU 754'));
+autos.push(new Car('GU 666'));
+autos.push(new Car('GU 88'));
+autos.push(new Car('GU 69'));
+autos.push(new Car('GU 1234'));
 
-const autos: Car[] = []; // new Array();
-
-autos.push(new Car('LB 214RD'));
-autos.push(new Car('LB 1303R'));
-autos.push(new Car('LB 214DR'));
-autos.push(new Car('LB DRR99'));
-
-// autos = [ new Car('LB DRR99'), new Car('LB 99 DRR') ] // andere Variante
+// autos = [ new Car('GU 1111'), new Car('GU 2222') ];
 
 for (const a of autos) {
     console.log(a);
@@ -43,10 +43,10 @@ for (const a of autos) {
 
 console.log(autos);
 
-// fs.writeFileSync('C:\\Users\\Dominik\\Documents\\FIV\\m13-5ahme-fivu\\Projekte\\ue03' , JSON.stringify(autos));
+fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
 
 try {
-    const buffer = fs.readFileSync('C:\\Users\\Dominik\\Documents\\FIV\\m13-5ahme-fivu\\Projekte\\ue03');
+    const buffer = fs.readFileSync('./autos.json');
     const str = buffer.toString();
     const autos2 = JSON.parse(str);
     console.log(autos2);
@@ -54,3 +54,4 @@ try {
     console.log('Fehler aufgetreten');
     console.log(err);
 }
+
