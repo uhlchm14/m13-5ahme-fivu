@@ -4,4 +4,5 @@
 |---------|-------|------|
 | 1 | 20.09.2017 | [ue01](projects/ue01/main.js) |
 | 2 | 27.09.2017 | [ue02](projects/ue02/main.js) & [ue03](projects/ue03/src/main.ts) |
-| 3 | 04.10.2017 | [ue03](projects/ue03/src/main.ts) |0
+| 3 | 04.10.2017 | [ue03](projects/ue03/main.ts) |
+| 4 | 05.11.2017 | [ue03](projects/ue03/main.ts) & [ue04](projects/ue04/main.ts) |
