@@ -50,5 +50,5 @@
   * fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
 * keybinding.json für die Tastenkürzel.
   * Datei -> Einstellungen -> Tastenkompination -> keybinding.json -> Alles im .vscode unter settings ins andere Verzeichnis kopieren.
-  * Die Datei in .vscode -> keybinding.json löschen.
+ 
 
