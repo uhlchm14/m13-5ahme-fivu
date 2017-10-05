@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 class Car {
     private kennzeichen: string;
     private _hersteller: string;    // Für Namenskonflikte: private Variable mit _ kennzeichnen
@@ -16,7 +18,7 @@ class Car {
     public set hersteller(value: string) {
         this._hersteller = value;
         if (value === 'VW') {
-            throw new Error('Mag ich net!');
+            throw new Error('Kein VW!');
         }
     }
 
@@ -33,7 +35,11 @@ autos.push(new Car('RA 3333'));
 autos.push(new Car('RA 4444'));
 
 
-
 for (const a of autos){
     console.log(a);
 }
+
+console.log(autos);
+
+fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
+

@@ -22,7 +22,7 @@
   
 ## 4.Einheit 04.10.2017 (Mittwoch)
 * Schritt für Schritt alles von Repository kopiert für die Einrichtung von Visual Studio Code 
-* tsconfig.json Für die Transpilierung von von .ts zu .js
+* tsconfig.json für die Transpilierung von von .ts zu .js
 * tslint.json für Syntaxüberprüfung(Überprüfung der Falscheingabe)
 * .vscode Ordner erstellen.
   * settings.json zum Sichtbarmachen von Deateinin der IDE. 
@@ -34,4 +34,19 @@
   * Für Namenskonflikte: private Variable mit _ kennzeichnen.
 * [Übung 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue03)
 	
+## 5.Einheit 05.10.2017 (Donnerstag)
+* Feld deklarieren und definieren.
+  * deklaration: let autos: Car[] = [];
+  * definition: autos.push(new Car('RA 1111'));  
+autos.push(new Car('RA 2222'));  
+autos.push(new Car('RA 3333'));  
+autos.push(new Car('RA 4444'));  
+* Ausgabe vom Feld mit 2 Arten:
+  * for-Schleifen: for (const a of autos){
+    console.log(a);
+}
+  * Direkt über das Feld: console.log(autos);
+* In Json Datei abspeichern: 
+  * fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
+* keybinding.json fpr die Tastenkürzel.
 
