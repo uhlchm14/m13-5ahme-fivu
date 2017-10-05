@@ -1,3 +1,5 @@
+import * as  fs from 'fs';
+
 class Car {
     private kennzeichen: string;
     private hersteller: string;
@@ -35,3 +37,7 @@ for (const a of autos)
 }
 
 console.log(autos);
+
+fs.writeFileSync('C://Users//User//Documents//Schule//Klassen//5.Jg//FIVU//m13-5ahme-fivu//files//autos.json', JSON.stringify(autos));
+
+const buffer = fs.readFileSync('C://Users//User//Documents//Schule//Klassen//5.Jg//FIVU//m13-5ahme-fivu//files//autos.json');
