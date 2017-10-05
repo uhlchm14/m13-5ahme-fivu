@@ -15,6 +15,10 @@ export class Car {
         }
         this._hersteller = data.hersteller;
 
+        if (typeof data.baujahr !== 'number') {
+            throw new Error('Falscher Datentyp');
+        }
+        this._baujahr = data.baujahr;
 
     }
     public get kennzeichen(): string {
