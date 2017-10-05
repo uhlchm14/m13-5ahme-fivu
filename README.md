@@ -57,3 +57,7 @@
   * Ausgabe -> console.log(autos2);
   * [Übung 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue03)
 
+* ue04 erstellt 
+  * alles kopiert mit rsynch -aP ue03/ ue04/
+
+
