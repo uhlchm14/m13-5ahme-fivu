@@ -13,6 +13,9 @@
 - Abfrage erfolgt immer über **get-Funktion**
 - generell bei beiden Methoden (getter + setter) kollidieren die Namen, daher wird bei der Variablen-Deklaration ein "_" gesetzt.  
     - z.B  private _hersteller: string;
+- Gegenteil von stringify = parse
+- Buffer = Feld von Zeichen, hat eine Methode 
+    - --> to String (kann damit Buffer in String umwandeln )
 
 - push hängt an einen Array etwas drann
 
