@@ -53,6 +53,19 @@
             "problemMatcher": [
                 "$tsc-watch"
             ]
+        },
+        {
+            "taskName": "start",
+            "command": "npm",
+            "isShellCommand": true,
+            "args": [
+                "start"
+            ],
+            "isBuildCommand": true,
+            "showOutput": "silent",
+            "problemMatcher": [
+                "$tsc-watch"
+            ]
         }
     ]
 }

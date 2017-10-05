@@ -4,7 +4,7 @@
         "**/node_modules/": true,
         "**/.gitkeep": true,
         "**/.gitignore": false,
-        "**/dist": true,
+        "**/dist": false,
         "**/package.json": false,
         "**/package-lock.json": true,
         "**/gulpfile.js": false,

@@ -11,5 +11,10 @@
         "key": "ctrl+alt+c",
         "command": "workbench.action.tasks.runTask",
         "args": "clean"
+    },
+    {
+        "key": "shift+f6",
+        "command": "workbench.action.tasks.runTask",
+        "args": "start"
     }
 ]
