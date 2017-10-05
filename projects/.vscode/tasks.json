@@ -4,19 +4,12 @@
             "taskName": "build",
             "command": "gulp",
             "isShellCommand": true,
-            "args": [
-                "--gulpfile",
-                "gulpfile.js",
-                "build"
-            ],
+            "args": ["--gulpfile", "gulpfile.js", "build"],
             "isBuildCommand": true,
             "showOutput": "silent",
             "problemMatcher": [{
                 "owner": "gulp-typescript",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceRoot}"
-                ],
+                "fileLocation": ["relative", "${workspaceRoot}"],
                 "pattern": {
                     "regexp": "(.*)\\((\\d*),(\\d*)\\): (error|warning) (.*)",
                     "file": 1,
@@ -31,11 +24,7 @@
             "taskName": "clean",
             "command": "gulp",
             "isShellCommand": true,
-            "args": [
-                "--gulpfile",
-                "gulpfile.js",
-                "clean"
-            ],
+            "args": ["--gulpfile", "gulpfile.js", "clean"],
             "isBuildCommand": true,
             "showOutput": "silent"
         },
@@ -43,29 +32,28 @@
             "taskName": "cleanAndBuild",
             "command": "gulp",
             "isShellCommand": true,
-            "args": [
-                "--gulpfile",
-                "gulpfile.js",
-                "cleanAndBuild"
-            ],
+            "args": ["--gulpfile", "gulpfile.js", "cleanAndBuild"],
             "isBuildCommand": true,
             "showOutput": "silent",
-            "problemMatcher": [
-                "$tsc-watch"
-            ]
+            "problemMatcher": ["$tsc-watch"]
         },
         {
             "taskName": "start",
             "command": "npm",
             "isShellCommand": true,
-            "args": [
-                "start"
-            ],
+            "args": ["start"],
             "isBuildCommand": true,
             "showOutput": "silent",
-            "problemMatcher": [
-                "$tsc-watch"
-            ]
+            "problemMatcher": ["$tsc-watch"]
+        },
+        {
+            "taskName": "cd",
+            "command": "cd",
+            "isShellCommand": true,
+            "args": ["Git/m13-5ahme-fivu/projects/ue03"],
+            "isBuildCommand": true,
+            "showOutput": "silent",
+            "problemMatcher": ["$tsc-watch"]
         }
     ]
 }

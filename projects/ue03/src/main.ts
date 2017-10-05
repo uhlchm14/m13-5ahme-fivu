@@ -1,33 +1,33 @@
+import * as fs from 'fs';
 
 class Car {
-    private _kennzeichen: string;
-    private _hersteller: string;
-    private _modell: string;
-    private _baujahr: number;
-    private _einsatzbereit: boolean;
+  private _kennzeichen: string;
+  private _hersteller: string;
+  private _modell: string;
+  private _baujahr: number;
+  private _einsatzbereit: boolean;
 
-    public constructor (kennzeichen: string) {
-        this._kennzeichen = kennzeichen;
-    }
+  public constructor(kennzeichen: string) {
+    this._kennzeichen = kennzeichen;
+  }
 
-    public getKennzeichen (): string {
-        return this._kennzeichen;
-    }
+  public getKennzeichen(): string {
+    return this._kennzeichen;
+  }
 
-    public set hersteller (value: string) {
-        // if (value === 'Honda') {
-        //     throw new Error('Will ich nicht');
-        // }
-        this._hersteller = value;
-    }
+  public set hersteller(value: string) {
+    // if (value === 'Honda') {
+    //     throw new Error('Will ich nicht');
+    // }
+    this._hersteller = value;
+  }
 
-    public get hersteller (): string {
-        return this._hersteller;
-    }
-
+  public get hersteller(): string {
+    return this._hersteller;
+  }
 }
 
-const autos: Car [] = []; // new Array
+const autos: Car[] = []; // new Array
 
 autos.push(new Car('DL 677AW'));
 autos.push(new Car('DL 732BB'));
@@ -38,11 +38,19 @@ autos.push(new Car('DL 88HH'));
 // autos = [ new Car('DL 11111'), new Car('DL 22222')];
 
 for (const a of autos) {
-    console.log(a);
+  console.log(a);
 }
 
+// console.log(autos);
 
+// fs.writeFileSync('./autos.json', JSON.stringify(autos));
 
+try {
+  const buffer = fs.readFileSync('./autos.json');
+  const str = buffer.toString();
+  const autos2 = JSON.parse(str);
 
-
-console.log(meinAuto.hersteller);
+  console.log(autos2);
+} catch (err) {
+  console.log('Fehler aufgetreten!');
+}
