@@ -29,6 +29,15 @@ Anlegen mehrerer Files:
 * \*.js.map Files: Verantwortlich für das Anzeigen von Fehlern und in welcher Zeile er im Typescriptcode aufgetreten ist - Fehlermapping
 * [main.ts]: Car Klasse erstellt.
 
+## Einheit 5: 5.10.17
+* Anlegen und ausgeben eines Arrays in der main.ts.
+* Array in eine *.json Datei schreiben.
+* Definieren eigener Tastenkürzel im globalen .vscode Verzeichnis in der keybindings.json.
+* Array aus einer *.json Datei einlesen.
+* Erstellen von ue04 mithilfe des 'rsync' Befehls.  
+  UE04: [Übung 4]
+* Anlegen der Klasse [car.ts] mit Interface zur Überprüfung der Datenattribute die in den Konstruktor übergeben werden
+
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
@@ -40,3 +49,5 @@ Anlegen mehrerer Files:
 [tasks.json]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/.vscode/tasks.json
 [launch.json]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/.vscode/launch.json
 [main.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/src/main.ts
+[Übung 4]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue04
+[car.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue04/src/car.ts

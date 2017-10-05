@@ -1,57 +1,43 @@
-import * as fs from 'fs';
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const fs = require("fs");
 class Car {
-    private kennzeichen: string;
-    private _hersteller: string;    // Für Namenskonflikte: private Datenelemente mit '_' kennzeichnen
-    private modell: string;
-    private baujahr: number;
-    private einsatzbereit: boolean;
-
-    public constructor(kennzeichen: string) {
+    constructor(kennzeichen) {
         this.kennzeichen = kennzeichen;
     }
-
-    public getKennzeichen (): string {
+    getKennzeichen() {
         return this.kennzeichen;
     }
-
-    public set hersteller(value: string) {
+    set hersteller(value) {
         this._hersteller = value;
         if (value === 'Honda') {
             throw new Error('Mag ich net!');
         }
     }
-
-    public get hersteller(): string {
+    get hersteller() {
         return this._hersteller + ', der beste Hersteller';
     }
 }
-
-const autos: Car[] = [];
-
+const autos = [];
 autos.push(new Car('GU 754'));
 autos.push(new Car('GU 666'));
 autos.push(new Car('GU 88'));
 autos.push(new Car('GU 69'));
 autos.push(new Car('GU 1234'));
-
-// autos = [ new Car('GU 1111'), new Car('GU 2222') ];
-
 for (const a of autos) {
     console.log(a);
 }
-
 console.log(autos);
-
 fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
-
 try {
     const buffer = fs.readFileSync('./autos.json');
     const str = buffer.toString();
     const autos2 = JSON.parse(str);
     console.log(autos2);
-} catch (err) {
+}
+catch (err) {
     console.log('Fehler aufgetreten');
     console.log(err);
 }
 
+//# sourceMappingURL=main.js.map
