@@ -1,29 +1,37 @@
-class car {
+class Car {
     private kennzeichen: string;
     private hersteller: string;
     private modell: string;
     private baujahr: number;
     private einsatzbereit: boolean;
 
-    public constructor (kennzeichen: string)
-    {
-        this.kennzeichen = kennzeichen; 
+    public constructor (kennzeichen: string) {
+        this.kennzeichen = kennzeichen;
     }
 
-    public getKennzeichen (): string{
+    public getKennzeichen (): string {
         return  this.kennzeichen;
     }
 
 
-	public set setKennzeichen(value: string) {
-		this.kennzeichen = value;
+    public setKennzeichen(value: string) {
+        return this.kennzeichen = value;
     }
 
-	public get getHersteller(): string {
-		return this.hersteller;
-	}
+    public get getHersteller(): string {
+        return this.hersteller;
+    }
 }
 
-const meinAuto = new car('GU 6666');
-meinAuto.hersteller = 'Seat';
-console.log(meinAuto.getHersteller);
+const autos: Car [] = [];
+autos.push(new Car('GU 12345'));
+autos.push(new Car('GU 66666'));
+autos.push(new Car('GU 11111'));
+autos.push(new Car('GU 22222'));
+
+for (const a of autos)
+{
+    console.log(a);
+}
+
+console.log(autos);
