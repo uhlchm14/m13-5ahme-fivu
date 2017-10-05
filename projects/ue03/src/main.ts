@@ -36,8 +36,20 @@ for (const a of autos)
     console.log(a);
 }
 
-console.log(autos);
+//console.log(autos);
 
-fs.writeFileSync('C://Users//User//Documents//Schule//Klassen//5.Jg//FIVU//m13-5ahme-fivu//files//autos.json', JSON.stringify(autos));
+//fs.writeFileSync('C://Users//User//Documents//Schule//Klassen//5.Jg//FIVU//m13-5ahme-fivu//files//autos.json', JSON.stringify(autos));
 
-const buffer = fs.readFileSync('C://Users//User//Documents//Schule//Klassen//5.Jg//FIVU//m13-5ahme-fivu//files//autos.json');
+try {
+    const buffer = fs.readFileSync('C://Users//User//Documents//Schule//Klassen//5.Jg//FIVU//m13-5ahme-fivu//files//autos.json');
+    const str = buffer.toString();
+    const autos2 = JSON.parse(str);
+
+    console.log(autos2);
+
+} catch (error) {
+    console.log('Fehler aufgetreten');
+    console.log(error);
+}
+
+
