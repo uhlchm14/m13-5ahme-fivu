@@ -7,6 +7,7 @@
 1. Allgemeines
 2. Lesen und Schreiben von Dateien
 3. Tastenkombinationen einfügen
+4. ue04 erstellen
 
 ### 1. Allgemeines
 - Zuweisung erfolgt immer über **set-Funktion**
@@ -36,3 +37,6 @@
 - Tastenkombination einbinden --> **strg + alt + b** = built (vom LMS-Server)
 - Tastenkombination **alt + shift** --> Mehrere Zeilen makieren untereinander
 
+### 4. ue04 erstellen
+- Altes Projekt kopieren und ue04 öffnen
+- main.ts löschen und eine klasse erstellen
