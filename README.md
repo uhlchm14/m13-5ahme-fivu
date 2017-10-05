@@ -26,3 +26,20 @@
 * Quellcode typescript: [typescript](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue02/main.ts)
 * Quellcode javascript: [javascript](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue02/main.js)
 * Template von LMS geklont und in ein neues Programm eingefügt
+
+### Einheit 4: 04.10.2017
+
+* template von LMS fertig in neues Programm eingefügt
+* .vscode Ordner erstellt
+  * setting.json einfügen (was wird sichtbar gemacht und was nicht)
+  * tasks.json einfügen ()
+  * launch.json einfügen (Debuggereinstellungen)
+ 
+* in ue03 Ordner eingefügt:
+  * tslint.json (für Syntax Überprüfung)
+  * tsconfig.json (Configurationseinstellungen: zb: target, include)
+  * gulpfile.js (für Übersetzung des Quellcodes)
+
+* main.js.map wird verwendet, um aufgetretene Fehler auch in typescript anzuzeigen
+* Programmierung
+  * Car classe erstellt
