@@ -1,4 +1,4 @@
-# FIVU
+﻿# FIVU
 ## Klasse: 5AHME
 ## Schuljahr: 2017/18
 ## Lehrer: Prof. Steiner
@@ -10,10 +10,10 @@
 
 
 
-### 1. Einheit
-**Datum:** 14.09.2017
-**Dazugehörige Übung(en):** -
-**Inhalt:**
+### 1. Einheit  
+**Datum:** 14.09.2017  
+**Dazugehörige Übung(en):** -  
+**Inhalt:**  
 1. Besprechung zum Ablauf des Unterrichtgegenstandes FIVU für dieses Schuljahr 2017/18
 2. Allgemeine Wiederholung über die Entwicklung der Programmiersprachen
   - Genauere Betrachtung der Programmiersprachen für die serverseitige Programmierung
@@ -21,10 +21,10 @@
 
 
 
-### 2. Einheit
-**Datum:** 21.09.2017
-**Dazugehörige Übung(en):** ![ue01](projects/ue01)
-**Inhalt:**
+### 2. Einheit  
+**Datum:** 21.09.2017  
+**Dazugehörige Übung(en):** ![ue01](projects/ue01)  
+**Inhalt:**  
 1. JavaScript
   - Erarbeitung der Grundlagen, wie z.B. Datentypen (boolean, string, number, object, undefined, null) und Variablendeklarationen (var, const, let)
 2. Node.js
@@ -35,9 +35,9 @@
 
 
 ### 3. Einheit
-**Datum:** 28.09.2017
-**Dazugehörige Übung(en):** ![ue02](projects/ue02), ![ue03](projects/ue03)
-**Inhalt:**
+**Datum:** 28.09.2017  
+**Dazugehörige Übung(en):** ![ue02](projects/ue02), ![ue03](projects/ue03)  
+**Inhalt:**  
 1. Wiederholung der letzten Einheit
   - Erstellung eines Projekts
 2. TypeScript
@@ -49,9 +49,9 @@
 
 
 ### 4. Einheit
-**Datum:** 04.10.2017
-**Dazugehörige Übung(en):** ![ue03](projects/ue03)
-**Inhalt:**
+**Datum:** 04.10.2017  
+**Dazugehörige Übung(en):** ![ue03](projects/ue03)  
+**Inhalt:**  
 Download und Besprechung der letzten Dateien des Templates für ue03
 1. tsconfig.json
   - Einstellungen für das Programm (z.B. JavaScript Target Version)
