@@ -43,7 +43,7 @@ for (const a of autos) {
 
 console.log(autos);
 
-fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
+fs.writeFileSync('./tmp/autos.json', JSON.stringify(autos));
 
 try {
     const buffer = fs.readFileSync('./autos.json');
