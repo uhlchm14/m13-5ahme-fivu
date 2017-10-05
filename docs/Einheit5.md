@@ -29,5 +29,6 @@
     - --> keine automatische Überprüfung
 
 ### 3. Tastenkombinationen einfügen
-
+- Tastenkombination einbinden --> **strg + alt + b** = built (vom LMS-Server)
+- Tastenkombination **alt + shift** --> Mehrere Zeilen makieren untereinander
 
