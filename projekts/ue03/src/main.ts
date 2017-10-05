@@ -15,7 +15,7 @@ class Car {
 
     public set hersteller(value: string) {
         this._hersteller = value;
-        if (value === 'Honda') {
+        if (value === 'VW') {
             throw new Error('Mag ich net!');
         }
     }
@@ -25,7 +25,15 @@ class Car {
     }
 }
 
-const meinAuto = new Car('GU 69');
-// (<any>meinAuto).hersteller = 'Honda'; --> nix gut (Typecast)
-meinAuto.hersteller = 'Honda';
-console.log(meinAuto.hersteller);
+let autos: Car[] = [];
+
+autos.push(new Car('RA 1111'));
+autos.push(new Car('RA 2222'));
+autos.push(new Car('RA 3333'));
+autos.push(new Car('RA 4444'));
+
+
+
+for (const a of autos){
+    console.log(a);
+}
