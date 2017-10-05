@@ -28,7 +28,7 @@
   * settings.json zum Sichtbarmachen von Deateinin der IDE. 
   * tasks.json welche Tasks es gib z.B clean and build.
   * launch.json für die Debugger-Einstellungen.
-* gulpfile.js definition was Tasks machen sollen.
+* gulpfile.js definition was die Tasks machen sollen.
 * *.js.map Files: Verantwortlich für das Anzeigen von Fehlern und in welcher Zeile er im Typescriptcode aufgetreten ist - " "Fehlermapping"
 * main.ts -> Erstellung der Klasse "class car".
   * Für Namenskonflikte: private Variable mit _ kennzeichnen.
@@ -41,14 +41,19 @@
                 autos.push(new Car('RA 2222'));      
                 autos.push(new Car('RA 3333'));    
                 autos.push(new Car('RA 4444'));    
-* Ausgabe vom Feld mit 2 Arten:
+* Ausgabe von einen Feld mit 2 Arten:
   * for-Schleifen: for (const a of autos){
     console.log(a);
 }
   * Direkt über das Feld: console.log(autos);
 * In Json Datei abspeichern: 
   * fs.writeFileSync('./dist/autos.json', JSON.stringify(autos));
-* keybinding.json für die Tastenkürzel.
-  * Datei -> Einstellungen -> Tastenkompination -> keybinding.json -> Alles im .vscode unter settings ins andere Verzeichnis kopieren.
- 
+* .vscode -> keybinding.json für die Tastenkürzel.
+  * Datei -> Einstellungen -> Tastenkompination -> keybinding.json -> Alles im .vscode unter settings in das andere Verzeichnis kopieren.
+* Weitere Art ein Feld auszugeben:
+  * Aus Json ins Programm einlesen -> const buffer = fs.readFileSync('./dist/autos.json');
+  * In einen String speicher -> const str = buffer.toString();
+  * Mithilfe von parse in ein Feld speichern -> const autos2 = JSON.parse(str);
+  * Ausgabe -> console.log(autos2);
+  * [Übung 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue03)
 
