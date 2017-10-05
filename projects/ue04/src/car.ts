@@ -19,7 +19,6 @@ export class Car {
             throw new Error('Falscher Datentyp');
         }
         this._baujahr = data.baujahr;
-
     }
     public get kennzeichen(): string {
         return this._kennzeichen;
