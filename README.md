@@ -39,4 +39,18 @@ Besprechen der letzten Dateien des Templates für ue03
 4. In der tasks.json können Tasks seblst definiert werden (celan, build, cleanAndBuild, ...) 
 5. In der launch.json können Konfigurationen für den Debugger gewählt/erstellt werden
 
-
+### 5. Einheit
+**Datum:** 05.10.2017  
+**Dazugehörige Übung(en):** ![ue03](projects/ue03)  ![ue04](projects/ue04)  
+**Inhalt:**  
+1. In dieser Einheit wurden neue Methoden für Javascript gelernt
+- import * as fs from 'fs'; fs ... Filesystem, zum Lesen und schreiben von Dateien
+ In Datei schreiben: fs.writeFileSync(, ); 
+ Aus Datei lesen: fs.readFileSync();
+- Nach dem Einlesen befinden sich die Daten in einem Buffer. Um sie verwenden zu können muss man diese mit toString() in einem String umwandeln. Nach dem Einlesen ist auch eine Kompatilitätsprüfung der Daten durchzuführen.
+2. String als .json speichern
+- Speichern: JSON.stringify();
+- Einlesen: JSON.parse();
+3. ue04 erstellen
+- Dafür wurde ue03 kopiert und es wurden die .ts Dateien gelöscht
+- Interface: legt fest welche Daten übergeben werden müsssen/können
