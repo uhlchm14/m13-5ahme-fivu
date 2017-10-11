@@ -1,7 +1,7 @@
 {
-    "name": "ue03",
+    "name": "ue04",
     "version": "1.0.0",
-    "description": "Project Template for Node.js/Typescript FIVU 5AHME",
+    "description": "Beschreibung",
     "main": "dist/main.js",
     "repository": {},
     "scripts": {
