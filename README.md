@@ -3,12 +3,10 @@
 ## Schuljahr: 2017/18
 ## Lehrer: Prof. Steiner
 ## Verfasser: Fabio Pölzl
-
-
+  
 
 ### Übersicht und Kurzbeschreibung der Lehreinheiten
-
-
+  
 
 ### 1. Einheit  
 **Datum:** 14.09.2017  
@@ -18,8 +16,7 @@
 2. Allgemeine Wiederholung über die Entwicklung der Programmiersprachen
   - Genauere Betrachtung der Programmiersprachen für die serverseitige Programmierung
 3. Installation von Node.js und Visual Studio Code
-
-
+  
 
 ### 2. Einheit  
 **Datum:** 21.09.2017  
@@ -31,8 +28,7 @@
   - Unterschied zwischen lokaler und globaler Installation von Bibliotheken
   - Erstellung eines Projekts
   - Umgang mit Node Package Manager
-
-
+  
 
 ### 3. Einheit
 **Datum:** 28.09.2017  
@@ -45,10 +41,9 @@
   - Erstellung einer Klasse in TypeScript
   - Unterhaltung über die JavaScript Target Version
   - Download und Besprechung der ersten Dateien des Templates für ue03
+  
 
-
-
-### 4. Einheit
+### 4. Einheit  
 **Datum:** 04.10.2017  
 **Dazugehörige Übung(en):** ![ue03](projects/ue03)  
 **Inhalt:**  
@@ -60,6 +55,29 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 3. gulpfile.js
   - Regelung der Programmübersetzung
 4. tasks.json
-  - Eigene Tasks können definiert werden (z.B. clean, build, cleanAndBuild)
+  - Eigene Tasks können definiert werden (z.B. clean, build, cleanAndBuild).
 5. launch.json
-  - Eigens parametrisierte Konfiguraionen können für den Debugger erstellt werden
+  - Eigens parametrisierte Konfiguraionen können für den Debugger erstellt werden.
+  
+
+### 5. Einheit
+**Datum:** 05.10.2017  
+**Dazugehörige Übung(en):** ![ue03](projects/ue03), ![ue04](projects/ue04)  
+**Inhalt:**  
+1. set/get
+  - Setter- und Getter-Methoden werden mithilfe der Keywords 'set' und 'get' erstellen.
+  - Namenskollisionen müssen vermieden werden.
+2. Array
+  - Durch die Methode 'push' kann ein Datenelement hinzugefügt werden.
+3. Dateien lesen/schreiben
+  - 'import * as fs from 'fs';' wird zum Lesen und Schreiben von Dateien verwendet.
+  - Mit 'fs.writeFileSync(<Path>, <Data>);' kann in Dateien geschrieben werden.
+  - Mit 'fs.readFileSync(<Path>);' können Dateien eingelesen werden.  
+    Die engelesenen Daten befinden sich in einem Buffer. Dieser kann mithilfe der Methode 'toString()' in einen String ungewandelt werden.  
+    Bei Einlesen von Daten ist zu beachten, dass keine Kompatibilitätsprüfung durchgeführt wird, wenn man diese Daten z.B. einer Datenhaltungsklasse zuweist.
+4. JSON
+  - Möchte man einen String im JSON-Format speichern, kann man dies mit 'JSON.stringify()' tun. Die Gegenoperation dazu ist 'JSON.parse()'.
+5. Eigene Tastenkombinationen (Shortcuts) einfügen.
+6. ue04 erstellen (= ue03 kopieren und .ts-Dateien löschen)
+7. Interface
+  - Durch ein Interface kann festgelegt werden, welche Datenelemente bei der Erstellung eines Objektes einer Klasse übergeben werden müssen und/oder können.

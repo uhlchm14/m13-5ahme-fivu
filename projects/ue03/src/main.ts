@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 class Car
 {
     private kennzeichen: string;
@@ -28,7 +30,30 @@ class Car
     }
 }
 
-const mySupiAuto = new Car('LB 123AB');
-// (<any>mySupiAuto).hersteller = 'BMW';     //overruling private
-mySupiAuto.hersteller = 'Audi';
-console.log(mySupiAuto.hersteller);
+const autos: Car [] = [];
+
+autos.push(new Car('LB 123AB'));
+autos.push(new Car('LB 123CD'));
+autos.push(new Car('LB 123EF'));
+autos.push(new Car('LB 123GH'));
+autos.push(new Car('LB 123IJ'));
+
+for (const a of autos)
+{
+    console.log(a);
+}
+
+fs.writeFileSync('C:\\Schule\\5AHME\\FIVU\\autos.json', JSON.stringify(autos));
+
+try
+{
+    const buffer = fs.readFileSync('C:\\Schule\\5AHME\\FIVU\\autos.json');
+    const str = buffer.toString();
+    const autos2 = JSON.parse(str);  // eingelesener String wird nicht auf Kompatibilität mit Klasse Car geprüft
+    console.log(autos2);
+}
+catch (err)
+{
+    console.log('I bims 1 Fehler');
+    console.log(err);
+}
