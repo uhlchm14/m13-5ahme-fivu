@@ -17,7 +17,7 @@
 
 ### 2. Einheit  
 **Datum:** 21.09.2017  
-**Dazugehörige Übung(en):** ![ue01](projects/ue01)  
+**Dazugehörige Übung(en):** ![ue01](projects/ue_01)  
 **Inhalt:**  
 1. Einstieg in die Programmiersprache Javascript
 2. Anlegen eines neuen Projektes mit Node.js
