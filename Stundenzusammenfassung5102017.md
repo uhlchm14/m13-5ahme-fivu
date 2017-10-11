@@ -26,7 +26,7 @@ Am Anfang unserer Einheit widerholten wir kurz was wir in der letzte Stunde gema
 ```JavaScript
     public get hersteller(): string
     {
-        return this._hersteller + ' is supa';
+        return this._hersteller;
     }
 ```
 
