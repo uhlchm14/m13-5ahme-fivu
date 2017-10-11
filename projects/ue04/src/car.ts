@@ -10,7 +10,19 @@ export class Car {
         }
         this._kennzeichen = data.kennzeichen;
 
-        Object.keys(data).length; // anzahl der Antribute in Objekt 
+        if(!data.hersteller || typeof data.hersteller !== 'string')
+        {
+            throw new Error ('Hersteller fehlt');
+        }
+        this._hersteller = data.hersteller;
+
+        if(typeof data.baujahr !== 'number')
+        {
+            throw new Error ('Falscher Datentyp');
+        }
+        this.baujahr = data.baujahr;
+
+        // Object.keys(data).length; // anzahl der Antribute in Objekt 
     }
 
 
