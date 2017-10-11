@@ -53,8 +53,18 @@ Begonnen mit:
 - Besprechung von gulp
 - get und set besprochen
 
-### Einheit 5:  
+### Einheit 5: 
+
+[ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue04)  
+und  
+[ue03](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue03)
 
 ### Inhalt der Stunde
 
 - Felder erstellen 
+- get / set
+- File lesen/schreiben
+- shortcut hinzufügen
+- beginn mit ue04
+
+[Meine Zusammenfasssung](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue03)
