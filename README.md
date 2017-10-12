@@ -55,10 +55,18 @@
   * In einen String speicher -> const str = buffer.toString();
   * Mithilfe von parse in ein Feld speichern -> const autos2 = JSON.parse(str);
   * Ausgabe -> console.log(autos2);
-  * [Übung 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue03)
+* [Übung 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue03)
 
-* ue04 erstellen um eine schön strukturierte Klasse zu programmieren.
+* ue04 erstellen um eine schön strukturierte Klasse zu programmieren.  
   * alles kopiert mit rsynch -aP ue03/ ue04/
+* z.B baujahr? : number; -> ? bedeutet das baujahr nicht aufgerufen werden muss.
 * [Übung 4](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue04)
 
+## 6.Einheit 12.10.2017 (Donnerstag)
+* Nachbesprechung der Probleme die beim Lesen der File auftreten können. 
+  * Wenn man beim Einlesen die Daten nicht überprüfen, kann man einfach so Wörter in die Datei schreiben und das funktioniert, weil die Attribute des eingelesenen Objekts als `any` behandelt werden. 
+* Interface zeigt nur an aus welchen Teilen ein Objekt besteht.(implements).
+  * Man sollte immer alle Elemente aufrufen, da er sonst einen Fehler meldet. 
+* 
+* Wenn man von außen Datenstrukturen bekommt ist es wichtig diese zu Prüfen und wenn ein Fehler auftritt unbedigt eine Exception werfen.
 
