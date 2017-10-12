@@ -1,5 +1,5 @@
 
-export class Car {
+export class Car implements ICar {
     private _kennzeichen: string;
     private _hersteller: string;
     private _baujahr: number;
@@ -15,10 +15,16 @@ export class Car {
         }
         this._hersteller = data.hersteller;
 
-        if (typeof data.baujahr !== 'number') {
+        if (data.baujahr !== undefined) {
+            if (typeof data.baujahr !== 'number') {
             throw new Error('Falscher Datentyp');
+            }
+            this._baujahr = data.baujahr;
         }
-        this._baujahr = data.baujahr;
+
+        if (Object.keys(data).length !== Object.keys(this).length) {
+            throw new Error ('data hat üngültige Attribute');
+        }
     }
     public get kennzeichen(): string {
         return this._kennzeichen;
