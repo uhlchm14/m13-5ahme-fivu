@@ -10,8 +10,9 @@
 ### 1. Problem - lösen
 
 Wenn man bei Webservern von außen Daten bekommt (z.B lesen von Daten), muss man die Info gründlich prüfen ob etwas nicht stimmt, im Konstruktor mit einer Exception.
-
 Ansonsten könnte dies zu erheblichen Problemen führen.
+
+**Begriffe**:
 
 - Interface: sagt aus, aus welchen Teilen ein Objekt besteht bzw. bestehen muss
     - --> Attribute müssen genau mit dem übereinstimmen, was darin steht, eine Festlegung wie das Objekt später aussehen soll
