@@ -6,6 +6,7 @@
 
 1. Problem - lösen
 2. Debuggen
+3. Server einbauen
 
 ### 1. Problem - lösen
 
@@ -20,7 +21,9 @@ Ansonsten könnte dies zu erheblichen Problemen führen.
 - **baujahr?:** Optionales Objekt, kann man haben, muss man nicht 
 
 - **if (!data.kennzeichen || typeof data.kennzeichen !== 'string'):** bei Java eine Überprüfung ob der String ein leerer String ist 
-  
+
+- **farbe: 'rot' | 'blau' | 'gruen';** Somit sind NUR diese Farben zulässig!!!!
+
 ### 2. Debuggen
 Wir haben über die Möglichkeit der Fehlersuche gesprochen. Man könnte dazu:
 - einen **Breakpoint** setzen
@@ -31,4 +34,7 @@ Wir haben über die Möglichkeit der Fehlersuche gesprochen. Man könnte dazu:
 - **debugger;** als Wort hinschreiben
     - Dies funktioniert lt. Sx immer
 
+### 3. Server einbauen
+Wir lernen das Java-Script programmieren, um die Server-Seitige Programmierung abzudecken.
 
+Das Einbauen des Web-Servers wird in der nächsten Einheit gestartet.
