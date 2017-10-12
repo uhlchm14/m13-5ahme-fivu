@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        ".vscode/": false,
+        "**/node_modules/": true,
+        "**/.gitkeep": true,
+        "**/.gitignore": false,
+        "**/dist": false,
+        "**/package.json": false,
+        "**/package-lock.json": true,
+        "**/gulpfile.js": false,
+        "**/tsconfig.json": true,
+        "**/tslint.json": true
+    },
+    "prettier.singleQuote": true
+}
