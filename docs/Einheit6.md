@@ -15,7 +15,7 @@ Ansonsten könnte dies zu erheblichen Problemen führen.
 **Begriffe**:
 
 - Interface: sagt aus, aus welchen Teilen ein Objekt besteht bzw. bestehen muss
-    - --> Attribute müssen genau mit dem übereinstimmen, was darin steht, eine Festlegung wie das Objekt später aussehen soll
+    - Attribute müssen genau mit dem übereinstimmen, was darin steht, eine Festlegung wie das Objekt später aussehen soll
 
 - baujahr?: Optionales Objekt, kann man haben, muss man nicht 
 
