@@ -65,3 +65,14 @@
   * alte Übung kopieren (ue03) und in ue04 einfügen
   * main.ts löschen und dann eine neue Classe erstellen (Car.ts).
   * Quellcode: [ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue04/src/car.ts)
+  
+### Einheit 6: 12.10.2017
+
+* Kurze Wiederholung der letzten Einheit
+  * Interface: Ein Interface sagt aus, aus welchen Teilen ein Objekt besteht
+  * sinnvoll bei Mehrfachableitung
+  
+* debugger 
+  * man kann einen breakpoint setzen, indem man links neben der Zeilennummer hineinklickt. Dann erscheint ein roter Punkt und es wird genau bis dort hin debugged. Jedoch kann es sein, dass diese Variante nicht immer funktioniert!
+  * Das gleiche funktioniert auch wenn man debugger; hinschreibt (funktioniert immer)
+  
