@@ -2,6 +2,7 @@
 export class Car implements ICar {
     private _kennzeichen: string;
     private _hersteller: string;
+    private _farbe: 'rot' | 'blau' | 'grün';
     private _baujahr: number;
 
     constructor (data: ICar) {
@@ -22,6 +23,12 @@ export class Car implements ICar {
             this._baujahr = data.baujahr;
         }
 
+        if (data.farbe !== undefined) {
+            if (data.farbe !== 'rot' && data.farbe !== 'blau' && data.farbe !== 'grün') {
+            throw new Error('Kann nur rot balu oder grün sein');
+            }
+            this._farbe = data.farbe;
+        }
         if (Object.keys(data).length !== Object.keys(this).length) {
             throw new Error ('data hat üngültige Attribute');
         }
@@ -35,7 +42,9 @@ export class Car implements ICar {
     public get baujahr(): number {
         return this._baujahr;
     }
-
+    public get farbe(): 'rot' | 'blau' | 'grün' {
+        return this._farbe;
+    }
 
     public set kennzeichen(value: string) {
         this._kennzeichen = value;
@@ -48,10 +57,28 @@ export class Car implements ICar {
     public set baujahr(value: number) {
         this._baujahr = value;
     }
+
+    public set farbe(f: 'rot' | 'blau' | 'grün') {
+        this._farbe = f;
+    }
+    public tooObject(): ICar {
+        const rv: ICar = {
+            kennzeichen: this._kennzeichen,
+            hersteller: this._hersteller
+        };
+        if (this._baujahr) {
+            rv.baujahr = this._baujahr;
+        }
+        if (this._farbe) {
+            rv.farbe = this._farbe;
+        }
+        return rv;
+    }
 }
 
 export interface ICar {
     kennzeichen: string;
     hersteller: string;
+    farbe?: 'rot' | 'blau' | 'grün';
     baujahr?: number;
 }
