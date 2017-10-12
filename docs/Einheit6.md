@@ -23,7 +23,7 @@ Ansonsten könnte dies zu erheblichen Problemen führen.
   
 ### 2. Debuggen
 Wir haben über die Möglichkeit der Fehlersuche gesprochen. Man könnte dazu:
-- einen Breakpoint setzen
+- einen **Breakpoint** setzen
     - man klickt links neben der Zeilennummerierung auf den roten Punkt, welcher erscheint, somit setzt man ihn
     - Dies dient dazu, dass das Programm nur bis zu diesem Punkt debugged wird. (Fehlersuche)
     - hier könnte es lt. Sx Probleme geben 
