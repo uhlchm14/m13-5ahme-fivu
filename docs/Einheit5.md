@@ -16,6 +16,7 @@
   daher wird bei der Variablen-Deklaration ein "_" gesetzt.  
     - z.B  private _hersteller: string;
 - Gegenteil von stringify = parse
+    - Convert a JavaScript object into a string with **JSON.stringify()**.
 - Buffer = Feld von Zeichen, hat eine Methode 
     - --> to String (kann damit Buffer in String umwandeln )
 
