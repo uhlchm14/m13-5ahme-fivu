@@ -12,8 +12,10 @@ Wenn man bei Webserver von außen Daten bekommt (z.B lesen von Daten), muss man 
 
 Ansonsten könnte dies zu erheblichen Problemen führen.
 
-- Interface: sagt nur aus, aus welchen Teilen ein Objekt besteht
-
-- baujahr?: Optionales Objekt, kann man haben, muss man nicht 
+- Interface: sagt aus, aus welchen Teilen ein Objekt besteht bzw. bestehen muss
     - --> Attribute müssen genau mit dem übereinstimmen, was darin steht, eine Festlegung wie das Objekt später aussehen soll
+
+- baujahr**?:** Optionales Objekt, kann man haben, muss man nicht 
+
+  
 
