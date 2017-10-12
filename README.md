@@ -68,6 +68,8 @@
 * Interface zeigt nur an aus welchen Teilen ein Objekt besteht.(implements).
   * Man sollte immer alle Elemente aufrufen, da er sonst einen Fehler meldet. 
 * Fertigstellung des Konstruktors.
+* Beim Auslesen der Datei kam ein nicht erwünschtes Ergebnis z.B _kennzeichen
+  * Lösung = Umspeichern in ein anderes Objekt damit er _kennzeichen in kennzeichen speichert.
 * Wenn man von außen Datenstrukturen bekommt ist es wichtig diese zu Prüfen und wenn ein Fehler auftritt unbedigt eine Exception werfen.
 * [Übung 4](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue04)
 
