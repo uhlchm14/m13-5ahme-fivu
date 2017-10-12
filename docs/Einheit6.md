@@ -9,7 +9,7 @@
 
 ### 1. Problem - lösen
 
-Wenn man bei Webserver von außen Daten bekommt (z.B lesen von Daten), muss man die Info gründlich prüfen ob etwas nicht stimmt, im Konstruktor mit try-catch.
+Wenn man bei Webservern von außen Daten bekommt (z.B lesen von Daten), muss man die Info gründlich prüfen ob etwas nicht stimmt, im Konstruktor mit try-catch.
 
 Ansonsten könnte dies zu erheblichen Problemen führen.
 
