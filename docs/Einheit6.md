@@ -27,4 +27,7 @@ Wir haben über die Möglichkeit der Fehlersuche gesprochen. Man könnte dazu:
     - Dies dient dazu, dass das Programm nur bis zu diesem Punkt debugged wird. (Fehlersuche)
     - hier könnte es lt. Sx Probleme geben 
     
-- debugger; als Wort hinschreiben
+- **debugger;** als Wort hinschreiben
+    - Dies funktioniert lt. Sx immer
+
+
