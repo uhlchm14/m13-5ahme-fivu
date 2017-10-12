@@ -67,6 +67,7 @@
   * Wenn man beim Einlesen die Daten nicht überprüfen, kann man einfach so Wörter in die Datei schreiben und das funktioniert, weil die Attribute des eingelesenen Objekts als `any` behandelt werden. 
 * Interface zeigt nur an aus welchen Teilen ein Objekt besteht.(implements).
   * Man sollte immer alle Elemente aufrufen, da er sonst einen Fehler meldet. 
-* 
+* Fertigstellung des Konstruktors.
 * Wenn man von außen Datenstrukturen bekommt ist es wichtig diese zu Prüfen und wenn ein Fehler auftritt unbedigt eine Exception werfen.
+* [Übung 4](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue04)
 
