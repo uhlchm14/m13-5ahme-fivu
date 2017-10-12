@@ -38,6 +38,13 @@ Anlegen mehrerer Files:
   UE04: [Übung 4]
 * Anlegen der Klasse [car.ts] mit Interface zur Überprüfung der Datenattribute die in den Konstruktor übergeben werden
 
+## Einheit 6: 12.10,17
+* Besprechung Probleme, die beim Einlesen auftreten können
+* Wiederholung, was ist ein Interface und wie verwenden wir es --> Prüfung der eingelesenen Daten
+* Fertigstellung der Überprüfung des eingelesenen Car Arrays im Konstruktor
+* JSON File hat die '_'s vor den Attributen --> anlegen der `toObject()` Methode, die ein eigenes, primitives, Objekt zurückliefert
+* Hinzufügen des optionalen Parameters Farbe im Interface ICar
+
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
