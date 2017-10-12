@@ -10,5 +10,6 @@
         "**/gulpfile.js": false,
         "**/tsconfig.json": true,
         "**/tslint.json": true
-    }
+    },
+    "prettier.singleQuote": true
 }
