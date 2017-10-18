@@ -70,9 +70,13 @@
 
 * Kurze Wiederholung der letzten Einheit
   * Interface: Ein Interface sagt aus, aus welchen Teilen ein Objekt besteht
-  * sinnvoll bei Mehrfachableitung
-  
+  * sinnvoll bei Mehrfachableitung 
+* Interface
+  * bestimmt aus welchen Teilen ein Objekt besteht bzw. bestehen muss
+  * -> Attribute müssen genau mit dem übereinstimmen, was darin steht!
 * debugger 
   * man kann einen breakpoint setzen, indem man links neben der Zeilennummer hineinklickt. Dann erscheint ein roter Punkt und es wird genau bis dort hin debugged. Jedoch kann es sein, dass diese Variante nicht immer funktioniert!
   * Das gleiche funktioniert auch wenn man debugger; hinschreibt (funktioniert immer)
-  
+* Programm: 
+  * [cars.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue04/src/car.ts)  
+  * [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue04/src/main.ts)
