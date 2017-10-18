@@ -9,6 +9,7 @@
 - Einheit 3
 - Einheit 4
 - Einheit 5
+- Einheit 6
 
 ### Einheit 1:
 #### Inhalt der Stunde 
@@ -59,7 +60,7 @@ Begonnen mit:
 und  
 [ue03](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue03)
 
-### Inhalt der Stunde
+#### Inhalt der Stunde
 
 - Felder erstellen 
 - get / set
@@ -68,3 +69,13 @@ und
 - beginn mit ue04
 
 [Meine Zusammenfasssung](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/frelum13/Stundenzusammenfassung5102017.md)
+
+### Einheit 6:
+[ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue04)  
+
+#### Inhat der Stunde
+
+- Wiederholung der letzten Stunde
+- Besprechung was ein Interface ist und wie man es verwndet
+- Fehler beim Einlesen
+- Breakpoint setzten / debugger 
