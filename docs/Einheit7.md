@@ -47,7 +47,11 @@ Beispiel: (in myStyle.css)
     border: solid 5px black;
 }
 ```
+    - Es wird ein schwarzer Rahmen mit 5px Linienstärke erzeugt, beim **absatz2**
+    
 (in index.html)
 ```
 <p id = "absatz2"> Zweite Absatz </p>
 ```
+    - Hier wird der Inhalt des **absatz2** definiert
+    
