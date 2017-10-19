@@ -17,9 +17,19 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
 **Begriffe**:
 
 - **Interface:** sagt aus, aus welchen Teilen ein Objekt besteht bzw. bestehen muss
-    - Der Bergiff "Interface" stammt ursprünglich aus der Naturwissenschaft und beschreibt bildhaft die Eigenschaften eines       Systems als **"Black-Box"** (= möglicherweise komplexes System), von welcher nur die Oberfläche sichtbar ist. Es ist nur eine Kommunikation über diese Oberfläche möglich. Zwei Black-Boxes können also nur miteinander kommunizieren, wenn deren Oberflächen zusammenpassen.
-    - Attribute müssen genau mit dem übereinstimmen, was darin steht, eine Festlegung wie das Objekt später aussehen soll
+    - Der Bergiff "Interface" stammt ursprünglich aus der Naturwissenschaft und beschreibt die Eigenschaften eines Systems als **"Black-Box"** (= möglicherweise komplexes System), von welcher nur die Oberfläche sichtbar ist. Es ist nur eine Kommunikation über diese Oberfläche möglich. Zwei Black-Boxes können also nur miteinander kommunizieren, wenn deren Oberflächen zusammenpassen.
+    - Einfach gesagt: Attribute müssen genau mit dem übereinstimmen, was im Interface steht, es ist also eine Festlegung wie das    Objekt später aussehen soll
+    - Beispiel: 
+    ```
+    export interface ICar {
+    kennzeichen: string;
+    hersteller: string;
+    farbe: 'rot' | 'blau' | 'gruen'; // Somit sind NUR diese Farben zulässig!!!!
+    baujahr?: number;
 
+}
+```
+- 
 - **baujahr?:** Optionales Objekt, kann man haben, muss man nicht 
 
 - **if (!data.kennzeichen || typeof data.kennzeichen !== 'string'):** bei Java eine Überprüfung ob der String ein leerer String ist 
