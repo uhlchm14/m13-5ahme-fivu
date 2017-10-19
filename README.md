@@ -74,3 +74,32 @@
 * Wenn man von außen Datenstrukturen bekommt ist es wichtig diese zu Prüfen und wenn ein Fehler auftritt unbedigt eine Exception werfen.
 * [Übung 4](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue04)
 
+## 7.Einheit 19.10.2017 (Donnerstag)
+
+### Webserver 
+* Web-Server ist ein Programm, das auf unterschiedlichen Betriebssystemen laufen kann.
+* Die Sprache ist "HTTP" mit der sie Kommunizieren, viele glauben es ist HTML ist aber falsch weil es eine Codierungsform ist.
+  * Arten von Server Erstellung: Apache, nginx, Java Enterprise Edition -> Glassfish.Server -> Wildfly, Node.js -> express.
+* Datenprotkoll wie Daten übertragen werden, sorgt dafür das in den Subnetzen Daten übertragen werden-> TCP/IP
+* Ethernet und WLAN Verbindet die einzelnen Subnetze.
+* TLS (Transport Layer Security entspricht https) Datenverschlüsselung.
+* ue05 erstellt. (rsync -aP ./sx-fiv/5AHME/typescript-template/ ./) aus LMS.
+* express instalieren: npm install --save express @types/express.
+* Express Websever erstellen.
+  * const server = express();
+* Verzeichnis public für statische HTML Seiten definieren
+  * server.use(express.static('public'));
+* public Datei erstellen und aus Wikepedia die Struktur kopieren.
+* URL -> Uniform Resource Locator.
+* f5 für server starten und im Browser unter http//:localhost:4711/index.html des Server aufrufen.
+* f12 im Browser
+  * Elements: aktuellen Elemente der Seite. 
+  * Console: normale Konsole.
+  * Network: Zeigt an wie kommuniziert worden ist.
+* DOM -> Domain Object Model -> ist der Bausteil für die HTML-Seite (es wird aus dem HTML ein Object erzeugt und dieses angezeigt).
+  * kann man unter Elements ändern.
+* <link rel = "stylesheet" href = "myStyles.css" /> in die index.html aufgerufen.
+ 
+* [Übung 5](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue05)
+
+
