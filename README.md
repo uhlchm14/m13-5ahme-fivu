@@ -99,7 +99,8 @@
 * DOM -> Domain Object Model -> ist der Bausteil für die HTML-Seite (es wird aus dem HTML ein Object erzeugt und dieses angezeigt).
   * kann man unter Elements ändern.
 * <link rel = "stylesheet" href = "myStyles.css" /> in die index.html aufgerufen.
- 
+* Unter public neue Datei erstellen myStyles.css
+  * Unter dieser Datei kann man nun die Seite verschiedene Elemente hinzufügen. (z.b Farben, Borders...)
 * [Übung 5](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue05)
 
 
