@@ -47,7 +47,7 @@ Beispiel: (in myStyle.css)
     border: solid 5px black;
 }
 ```
-- (in index.html)
+(in index.html)
 ```
 <p id = "absatz2"> Zweite Absatz </p>
 ```
