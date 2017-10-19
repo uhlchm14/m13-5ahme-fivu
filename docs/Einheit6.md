@@ -10,8 +10,9 @@
 
 ### 1. Problem - lösen
 
-Wenn man bei Webservern von außen Daten bekommt (z.B lesen von Daten), muss man die Info gründlich prüfen ob etwas nicht stimmt, im Konstruktor mit einer Exception.
-Ansonsten könnte dies zu erheblichen Problemen führen.
+Wenn man bei Webservern von außen Daten bekommt (z.B im Falle: "lesen von Daten"), muss man die Info gründlich prüfen.
+Sollte etwas nicht stimmen, wird dies zu erheblichen Problemen führen. 
+Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
 
 **Begriffe**:
 
