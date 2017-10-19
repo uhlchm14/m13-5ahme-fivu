@@ -42,9 +42,9 @@
 - Man kann auch nur gewisse Bereiche hinterlegen / verändern, dann muss man diese genau definieren!
 
 Beispiel: (in myStyle.css)
-#absatz2{
+```#absatz2{
     border: solid 5px black;
 }
-
+```
 - (in index.html)
 <p id = "absatz2"> Zweite Absatz </p>
