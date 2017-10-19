@@ -11,12 +11,13 @@
 ### 1. Problem - lösen
 
 Wenn man bei Webservern von außen Daten bekommt (z.B im Falle: "lesen von Daten"), muss man die Info gründlich prüfen.
-Sollte etwas nicht stimmen, wird dies zu erheblichen Problemen führen. 
+Sollte etwas nicht stimmen, wird dies zu erheblichen Problemen führen. (z.B ebenfalls beim Lesen von Daten könnten Schwierigkeiten auftreten).
 Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
 
 **Begriffe**:
 
 - **Interface:** sagt aus, aus welchen Teilen ein Objekt besteht bzw. bestehen muss
+    - Der Bergiff "Interface" stammt ursprünglich aus der Naturwissenschaft und beschreibt bildhaft die Eigenschaften eines       Systems als **"Black-Box"** (= möglicherweise komplexes System), von welcher nur die Oberfläche sichtbar ist. Es ist nur eine Kommunikation über diese Oberfläche möglich. Zwei Black-Boxes können also nur miteinander kommunizieren, wenn deren Oberflächen zusammenpassen.
     - Attribute müssen genau mit dem übereinstimmen, was darin steht, eine Festlegung wie das Objekt später aussehen soll
 
 - **baujahr?:** Optionales Objekt, kann man haben, muss man nicht 
