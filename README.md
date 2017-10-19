@@ -11,4 +11,5 @@
 |  4  | 04.10 |![Einheit 4](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit4.md) & ![Praxis 3](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue04)| Gulp |
 |  5  | 05.10 |![Einheit 5](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit5.md) & ![Praxis 4](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue05) | Lesen & Schreiben von Dateien | 
 |  6  | 12.10 |![Einheit 6](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit6.md) & ![Praxis 5](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue06) | Inteface + Debuggen | 
-|  7  | 19.10 |![Einheit 7](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit7.md) & ![Praxis](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue07) | Ersten Server erstellen | 
+|  7  | 19.10 |![Einheit 7](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit7.md) & ![Praxis 6](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue07) | Ersten Server erstellen | 
+|  8  | 26.10 |![Einheit 8](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit8.md) & ![Praxis 7](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue08) | | 
