@@ -38,12 +38,26 @@ Anlegen mehrerer Files:
   UE04: [Übung 4]
 * Anlegen der Klasse [car.ts] mit Interface zur Überprüfung der Datenattribute die in den Konstruktor übergeben werden
 
-## Einheit 6: 12.10,17
+## Einheit 6: 12.10.17
 * Besprechung Probleme, die beim Einlesen auftreten können
 * Wiederholung, was ist ein Interface und wie verwenden wir es --> Prüfung der eingelesenen Daten
 * Fertigstellung der Überprüfung des eingelesenen Car Arrays im Konstruktor
 * JSON File hat die '_'s vor den Attributen --> anlegen der `toObject()` Methode, die ein eigenes, primitives, Objekt zurückliefert
 * Hinzufügen des optionalen Parameters Farbe im Interface ICar
+
+
+## Einheit 7: 19.10.17
+#### Erstellung Webserver
+* Theorie Webserver (Client, Netzwerk, Web-Server, Subnetze, HTTP, HTML)
+* Begriffe der Datenübertragung (TCP/IP, Ethernet, WLAN, TLS)
+* Arten von Server Erstellung (Apache, nginx, Java EE - Glassfish und Wildfly, __Node.js__)
+* Erstellung ue05 aus dem LMS-Template  
+  UE05: [Übung 5]
+* Installation node.js express und @types/express (für Typescirpt Definitionen) Modul
+* Schreiben des Servers in der main.ts und anlegen der index.html
+* Arbeiten mit Chromium Debugger
+* Verschönern des DOM mit CSS
+* HTTP Statustags (1xx --> Information, 2xx --> Erfolg, 3xx --> Umleitung, 4xx --> Fehler, 5xx --> interner Serverfehler)
 
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
@@ -58,3 +72,4 @@ Anlegen mehrerer Files:
 [main.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/src/main.ts
 [Übung 4]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue04
 [car.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue04/src/car.ts
+[Übung 5]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue05
