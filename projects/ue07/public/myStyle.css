@@ -1,0 +1,20 @@
+
+body {
+    background: lightblue;
+}
+
+h1 {
+    background: grey;
+}
+p {
+    background-color: green;
+    border: solid 5px yellow;
+}
+
+#absatz2{
+    border: solid 5px black;
+}
+
+.gelbeAbsaetze {
+    border: solid 5px pink;
+}
