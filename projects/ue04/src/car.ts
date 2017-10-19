@@ -60,6 +60,7 @@ export class Car implements ICar{
 			kennzeichen: this._kennzeichen,
 			hersteller: this._hersteller,
 		};
+		
 		if(this._baujahr)
 		{
 			rv.baujahr = this._baujahr;

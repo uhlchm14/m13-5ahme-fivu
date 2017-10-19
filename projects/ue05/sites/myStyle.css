@@ -1,0 +1,12 @@
+body {
+    background-color: brown;
+}
+p {
+    background-color: rgba(251, 255, 0, 0.7);
+    border: solid 3px red;
+}
+
+#zwei {
+    border: solid 3px black;
+    background-color: violet;
+}
