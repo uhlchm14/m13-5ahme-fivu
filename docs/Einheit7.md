@@ -33,3 +33,18 @@
 ### 3. Cascaded Style Sheets
 -  Dient zum Definieren des Aussehens
 -  neue Datei in public erzeugen --> **index.html**
+-  Beispiel:
+   body {
+    background: lightblue;
+}
+    - Hier wird der Hintergrund des gesamten "Körpers" blau hinterlegt!
+
+- Man kann auch nur gewisse Bereiche hinterlegen / verändern, dann muss man diese genau definieren!
+
+Beispiel: (in myStyle.css)
+#absatz2{
+    border: solid 5px black;
+}
+
+- (in index.html)
+<p id = "absatz2"> Zweite Absatz </p>
