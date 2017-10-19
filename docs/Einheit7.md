@@ -6,6 +6,7 @@
 
 1. Grundlegendes
 2. Server programmieren - Start
+3. Cascaded Style Sheets
 
 
 ### 1. Grundlegendes
@@ -18,7 +19,7 @@
      - Web-Server sendet daraufhin Daten zurück, wenn alles hinhaut
 -   **Web-Server-Programme** sind z.B Apache oder Nginx. Man kann auch Java verwenden (Java EE --> Enterprise Edition)
 
-### Server programmieren - Start
+### 2. Server programmieren - Start
 -   Wir verwenden unter _Node.js_ den Server **express**
 -   **npm install --save express @types/express** --> Packages installieren
 -   **import * ** heißt, ich impotiere alles, dieses Modul zur Verfügung stellt
@@ -28,3 +29,7 @@
 -   Wenn man sich auf dieser Seite befindet und **F12** drückt, denn öffnet sich eine Debugger-Konsole
      - Bevorzugter Browser ist hierbei Chrome (nicht Fire-Fox)
 -  **Achtung!** --> Nach dem Öffnen der Debugging-Konsole gibt es den Unterpunkt Network. Dort wird index.html angezeigt, welches nicht das Programm zeigt, sondern nur die Anleitung, nach welchem der das Programm / der Server aufgebaut wurde.
+
+### 3. Cascaded Style Sheets
+-  Dient zum Definieren des Aussehens
+-  neue Datei in public erzeugen --> **index.html**
