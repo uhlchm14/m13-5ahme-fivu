@@ -16,5 +16,7 @@
 -   Wenn Client vom Server Daten haben möchte, sendet dieser ein Kommando, namens: **HTTP GET**
      - Web-Server sendet daraufhin Daten zurück, wenn alles hinhaut
 -   **Web-Server-Programme** sind z.B Apache oder Nginx. Man kann auch Java verwenden (Java EE --> Enterprise Edition)
+
+### Server programmieren - Start
 -   Wir verwenden unter _Node.js_ den Server **express**
 -   **npm install --save express @types/express** --> Packages installieren
