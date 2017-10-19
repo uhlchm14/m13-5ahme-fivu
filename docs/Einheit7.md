@@ -21,3 +21,8 @@
 ### Server programmieren - Start
 -   Wir verwenden unter _Node.js_ den Server **express**
 -   **npm install --save express @types/express** --> Packages installieren
+-   **import * ** heißt, ich impotiere alles, dieses Modul zur Verfügung stellt
+-   Es gibt bis jetzt 5 Varianten von HTML - ab HTML 5 wurde "alles" vereinfacht, Kennzeichen für HTML 5 = **<!DOCTYPE html>**
+-   Wir kopieren aus Wikipedia den Standardaufbau des Servers
+     - Danach erreichen wir ihn mit: "http://localhost:4711/index.html"
+-   Wenn man sich auf dieser Seite befindet und **F12** drückt, denn öffnet sich eine Debugger-Konsole
