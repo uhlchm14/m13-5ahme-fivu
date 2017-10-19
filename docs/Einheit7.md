@@ -26,3 +26,5 @@
 -   Wir kopieren aus Wikipedia den Standardaufbau des Servers
      - Danach erreichen wir ihn mit: "http://localhost:4711/index.html"
 -   Wenn man sich auf dieser Seite befindet und **F12** drückt, denn öffnet sich eine Debugger-Konsole
+     - Bevorzugter Browser ist hierbei Chrome (nicht Fire-Fox)
+-  **Achtung!** --> Nach dem Öffnen der Debugging-Konsole gibt es den Unterpunkt Network. Dort wird index.html angezeigt, welches nicht das Programm zeigt, sondern nur die Anleitung, nach welchem der das Programm / der Server aufgebaut wurde.
