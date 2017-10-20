@@ -5,8 +5,9 @@
 ## Übersicht: 
 
 1. Problem - lösen
-2. Debuggen
-3. Server einbauen
+2. Interface
+3. Debuggen
+4. Server einbauen
 
 ### 1. Problem - lösen
 
@@ -14,7 +15,7 @@ Wenn man bei Webservern von außen Daten bekommt (z.B im Falle: "lesen von Daten
 Sollte etwas nicht stimmen, wird dies zu erheblichen Problemen führen. (z.B ebenfalls beim Lesen von Daten könnten Schwierigkeiten auftreten).
 Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
 
-**Begriffe**:
+### 2. Interface
 
 - **Interface:** sagt aus, aus welchen Teilen ein Objekt besteht bzw. bestehen muss
     - Der Bergiff "Interface" stammt ursprünglich aus der Naturwissenschaft und beschreibt die Eigenschaften eines Systems als **"Black-Box"** (= möglicherweise komplexes System), von welcher nur die Oberfläche sichtbar ist. Es ist nur eine Kommunikation über diese Oberfläche möglich. Zwei Black-Boxes können also nur miteinander kommunizieren, wenn deren Oberflächen zusammenpassen.
@@ -28,7 +29,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
     baujahr?: number;
 
 }
-```
+    ```  
 
 - **baujahr?:** Optionales Objekt, kann man haben, muss man nicht 
 
@@ -36,7 +37,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
 
 - **farbe: 'rot' | 'blau' | 'gruen';** Somit sind NUR diese Farben zulässig!!!!
 
-### 2. Debuggen
+### 3. Debuggen
 Wir haben über die Möglichkeit der Fehlersuche gesprochen. Man könnte dazu:
 - einen **Breakpoint** setzen
     - man klickt links neben der Zeilennummerierung auf den roten Punkt, welcher erscheint, somit setzt man ihn
@@ -46,7 +47,7 @@ Wir haben über die Möglichkeit der Fehlersuche gesprochen. Man könnte dazu:
 - **debugger;** als Wort hinschreiben
     - Dies funktioniert lt. Sx immer
 
-### 3. Server einbauen
+### 4. Server einbauen
 Wir lernen das Java-Script programmieren, um die Server-Seitige Programmierung abzudecken.
 
 Das Einbauen des Web-Servers wird in der nächsten Einheit gestartet.
