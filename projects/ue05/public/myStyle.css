@@ -1,0 +1,26 @@
+
+p {
+    background-color: blue; 
+    text-align: center;
+    border: solid 3px tomato;
+    color: red;
+}
+
+h1 {
+    background-color: blue; 
+    color: tomato;
+    text-align: center; 
+}
+
+body {
+    background-color: blue
+    ; 
+}
+
+#absatz3 {   
+    border: solid 3px black; 
+}
+
+.lesbareAbsätze {
+    background-color: white; 
+}
