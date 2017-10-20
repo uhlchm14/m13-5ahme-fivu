@@ -70,7 +70,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
             rv.farbe = this._farbe;
         }
 ```
-     - In dieser werden die verschiedenen Datentypen in ein Object (ICar) umgewandelt.
+    - In dieser werden die verschiedenen Datentypen in ein Object (ICar) umgewandelt.
 
     
 
