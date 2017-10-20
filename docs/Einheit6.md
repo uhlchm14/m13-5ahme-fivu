@@ -26,9 +26,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
     kennzeichen: string;
     hersteller: string;
     farbe: 'rot' | 'blau' | 'gruen'; // Somit sind NUR diese Farben zulässig!!!!
-    baujahr?: number;
-
-}
+    baujahr?: number; }
     ```  
 
 - **baujahr?:** Optionales Objekt, kann man haben, muss man nicht 
