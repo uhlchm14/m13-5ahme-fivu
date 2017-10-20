@@ -51,8 +51,8 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
         }
         this._kennzeichen = data.kennzeichen;
     ```
-    -auch im Konstruktor kann nun der "Datentyp" ICar verwendet werden.
-    -**(!data.kennzeichen || typeof data.kennzeichen !== 'string')** = Hier wird überprüft, ob der String leer ist.
+    - auch im Konstruktor kann nun der "Datentyp" ICar verwendet werden.
+    - **(!data.kennzeichen || typeof data.kennzeichen !== 'string')** = Hier wird überprüft, ob der String leer ist.
     
 - Letzlich nach den **Getter** und **Setter** Methoden benötigt man noch eine Methode **toObject**:
 ```javascript
@@ -70,7 +70,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
             rv.farbe = this._farbe;
         }
 ```
-    - In dieser werden die verschiedenen Datentypen in ein Object (ICar) umgewandelt.
+     - In dieser werden die verschiedenen Datentypen in ein Object (ICar) umgewandelt.
 
     
 
