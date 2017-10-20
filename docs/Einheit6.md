@@ -29,7 +29,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
 
 }
 ```
-- 
+
 - **baujahr?:** Optionales Objekt, kann man haben, muss man nicht 
 
 - **if (!data.kennzeichen || typeof data.kennzeichen !== 'string'):** bei Java eine Überprüfung ob der String ein leerer String ist 
