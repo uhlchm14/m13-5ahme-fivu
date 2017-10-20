@@ -20,7 +20,7 @@ Um diese Probleme vorzubeugen, werden Exceptions im Konstruktor verwendet.
     - Der Bergiff "Interface" stammt ursprünglich aus der Naturwissenschaft und beschreibt die Eigenschaften eines Systems als **"Black-Box"** (= möglicherweise komplexes System), von welcher nur die Oberfläche sichtbar ist. Es ist nur eine Kommunikation über diese Oberfläche möglich. Zwei Black-Boxes können also nur miteinander kommunizieren, wenn deren Oberflächen zusammenpassen.
     - Einfach gesagt: Attribute müssen genau mit dem übereinstimmen, was im Interface steht, es ist also eine Festlegung wie das    Objekt später aussehen soll
     - Beispiel: 
-    ```
+    ```javascrpit
     export interface ICar {
     kennzeichen: string;
     hersteller: string;
