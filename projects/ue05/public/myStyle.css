@@ -1,0 +1,21 @@
+body
+{
+    background-color: red;
+}
+
+p
+{
+    background-color: skyblue;
+    border: solid 30px black;
+}
+
+#zeile2
+{
+    background-color: green;
+    border: solid 3px gray;
+}
+
+.deineMudda
+{
+    background-color: yellow;
+}

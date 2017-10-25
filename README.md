@@ -94,3 +94,43 @@ Download und Besprechung der letzten Dateien des Templates für ue03
     - Mithilfe des Breakpoints stoppt das Programm an dieser Stelle. Alle Variablen und deren Inhalt können geprüft werden um Fehler zu finden.
   - 'debugger;'
     - Dieser Inline-Befehl bewirkt das Gleiche wie der Breakpoint, jedoch funktioniert er zuverlässiger.
+  
+  
+### 7. Einheit
+**Datum:** 19.10.2017  
+**Dazugehörige Übung(en):** ![ue05](projects/ue05)  
+**Inhalt:**  
+1. Begriffsklärung
+  - **HTTP** (Hypertext Transfer Protocol): Programmiersprache
+  - **HTML** (Hypertext Markup Language): Codierung (keine Programmiersprache)
+  - **TCP/IP** (Transmission Control Protocol / Internet Protocol): Übertragungsprotokoll
+  - **Ethernet und WLAN** (Wireless Local Area Network): Protokolle in Subnetzen
+  - **TLS** (Transport Layer Security): Verschlüsselungsprotkoll
+2. Web-Server
+  - Apache
+  - nginx
+  - Java EE Glassfish
+  - Wildfly
+  - Node.js
+    - express
+    - ...
+3. 'HTTP GET'
+  - Über das Kommando 'HTTP GET <Ressource>' stellt der Client beim Server eine Anfrage, um eine bestimmte Ressource zu erhalten (z.B.: index.html).
+4. Eigenen Web-Server programmieren
+  - 'npm install --save express @types/express'
+    - Befehl für die Installation der Datenpacktet für den Node.js-Express-Server.
+  - 'import * as express from 'express';'
+    Import-Kommando, um den Express-Server in unserer 'main.ts' verwenden zu können.
+  - Quellcode zur Erstellung des Servers (Port 4711):
+    
+    '''
+    const server = express();
+    server.use(express.static('public'));  // Verzeichnis public für statische HTML-Seiten definieren
+    server.listen(4711);  // http://localhost:4711/index.html
+    '''
+
+  - 'http://localhost:4711/index.html'
+    - Mit dieser URL (Uniform Ressource Locator) kann der Web-Server mithilfe eines Browsers angesprochen werden.
+    - öffnet man die Debugger-Konsole im Browser (F12), kann die Kommunikation zwischen Client und Server genau analysiert werden. Dadruch können auch Fehler gesucht bzw. gefunden werden.
+5. CSS (Cascading Style Sheets)
+  - Durch die Verwendung von Style Sheets kann das Aussehen einer HTML-Seite auf einfache Art und Weise verändert werden. Über Klassen können Elemente zusammengefasst werden, die das selbe Aussehen haben soll. Soll nur ein Element anders aussehen, kann man dies über die ID des Elements realisieren.
