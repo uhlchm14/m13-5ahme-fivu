@@ -86,7 +86,7 @@
    * Bearbeitet anfragen vom Client 
    * Web-Server kommuniziert mit Client
    * kommunizieren mit http (Sprache der beiden)
-   * wobei html eine Codierungsform ist 
+   * html ist eine Codierungsform
    * TCP/IP stellt sicher das die Daten sicher zwischen 2 Geräten ausgetauscht werden
    * TLS: Verschlüsselte Form der Datenübertragung bei https
    * innerhalb eines Subnetz wird Wlan / Ethernet verwendet, außerhalb werden die Daten via TCP/IP übertragen
@@ -106,4 +106,8 @@
  * mit html wird ein Object gebildet (DOM)
    * mit DOM kann man von Typescript aus den Web-Server bearbeiten
  * CSS (Cascaded Style Sheet)
-   * 
+   * durch CSS kann das Aussehen einer Web-Seite leicht verändert werden
+   * Elemente können über Klassen zusammengefasst werden
+   * über ID können einzelne Elemente verändert werden
+ * Programm
+   * [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue05/src/main.ts)
