@@ -70,9 +70,40 @@
 
 * Kurze Wiederholung der letzten Einheit
   * Interface: Ein Interface sagt aus, aus welchen Teilen ein Objekt besteht
-  * sinnvoll bei Mehrfachableitung
-  
+  * sinnvoll bei Mehrfachableitung 
+* Interface
+  * bestimmt aus welchen Teilen ein Objekt besteht bzw. bestehen muss
+  * -> Attribute müssen genau mit dem übereinstimmen, was darin steht!
 * debugger 
   * man kann einen breakpoint setzen, indem man links neben der Zeilennummer hineinklickt. Dann erscheint ein roter Punkt und es wird genau bis dort hin debugged. Jedoch kann es sein, dass diese Variante nicht immer funktioniert!
   * Das gleiche funktioniert auch wenn man debugger; hinschreibt (funktioniert immer)
+* Programm: 
+  * [cars.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue04/src/car.ts)  
+  * [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue04/src/main.ts)
   
+### Einheit 7: 19.10.2017
+ * Server Grundlagen
+   * Bearbeitet anfragen vom Client 
+   * Web-Server kommuniziert mit Client
+   * kommunizieren mit http (Sprache der beiden)
+   * wobei html eine Codierungsform ist 
+   * TCP/IP stellt sicher das die Daten sicher zwischen 2 Geräten ausgetauscht werden
+   * TLS: Verschlüsselte Form der Datenübertragung bei https
+   * innerhalb eines Subnetz wird Wlan / Ethernet verwendet, außerhalb werden die Daten via TCP/IP übertragen
+   * http get kommando: Ressource wird angegeben, die zurück gesendet werden soll
+   * Web-Server sendet dann die Daten an den Client zurück 
+ * Um Web-Server zu erstellen kann man verwenden:
+   * Apache
+   * nginx
+   * Java EE
+   * Glassfish Server
+   * Wildfly
+   * unter Node.js -> express
+ * Package installieren: 
+   * npm install --save express @types/express
+   * nun importieren: import * as express from 'express'
+ * Programmierung
+ * mit html wird ein Object gebildet (DOM)
+   * mit DOM kann man von Typescript aus den Web-Server bearbeiten
+ * CSS (Cascaded Style Sheet)
+   * 
