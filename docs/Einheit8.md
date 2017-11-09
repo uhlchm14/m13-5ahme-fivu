@@ -7,6 +7,7 @@
 1. To do
 2. In General
 3. Program change
+4. Pug
 
 ### 1. To do
 - Wir wollen keine Zustandslosigkeit haben, Webseite hängt nun vom Zustand des Serversystems ab
@@ -57,6 +58,18 @@ server.use(express.static('public')); // es gibt statische HTML-Seiten im Verzei
 server.listen(4711); // 4711 = Port
 console.log('Server ist gestartet');
 ```
+
+### Pug
+- Wir installieren das Modul "Pug" 
+   - npm install --save pug
+   - npm install --save-dev @types/pug
+
+```javascript
+// Rendering engine pug in Express einbinden
+server.set('view engine', 'pug');
+```
+
+
 
 
 
