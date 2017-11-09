@@ -50,5 +50,45 @@ Interface legt fest, wie Objekt aussehen soll/ aus welchen Dateien das Objekt be
 ### Einheit 6: 19.10.2017
 
 
+### Einheit 7: 9.11.2017
 
-	
+- Fortsetzung mit css
+- Kurze Wiederholung
+- Webseiten bestehen aus 3 Teilen:
+
+HTML, CSS, Javascript
+
+HTML: Erzeugung der Struktur der Seite
+CSS: wie die Webseite wirklich aussieht (aussehen)
+Javascript: ist eine Möglichkeit programme am Client vorzunehmen (dynamische Veränderung)
+
+Begründung: Grafiker kann meist nicht programmieren und umgekehrt. 
+
+Selektoren -> Fachbegriffe für Elemente in der CSS-Datei
+
+Express-Server arbeitet mit einem Schichtensystem
+
+Man kann alle Schichten definieren.
+
+
+- Bedingung festlegen: 
+```
+server.get('/test', (req, res, next) ..... usw. )
+```
+
+-> neue HTML-Maske aufbauen, wenn URL mit `/test`aufgerufen wird
+
+Alle HTML-neu aufrufen und definieren um Maske zu erstellen. 
+
+Schönere Variante: Rendering
+
+-Render Datei erstellen
+
+- Ordner views anlegen
+- Datei test.pug
+- HTML inhalt eingeben ohne html- Aufrufe
+
+
+Moderne technologie für Serverprogrammierung : PHP
+
+
