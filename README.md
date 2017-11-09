@@ -6,3 +6,4 @@ Einheit:
 4. [05.10.2017](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.10.05.md) [ue03](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue03) [ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue04)
 5. [12.10.2017](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.10.12.md) [ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue04)
 6. [19.10.2017](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.10.19.md) [ue05](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue05)
+7. [09.11.2017](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.11.09.md) [ue05](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue05)
