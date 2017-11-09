@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 
 class Car {
     private kennzeichen: string;
@@ -39,3 +40,15 @@ for (const a of autos) {
 // (<any>meinAuto).hersteller = 'Dodge'; // nicht gut :( Type Cast
 // meinAuto.hersteller = 'Honda';
 // console.log(meinAuto.hersteller);
+
+// fs.writeFileSync('/home/julian/Labor_FIVU/m13-5ahme-fivu/projects/UE03/Test_Autos', JSON.stringify(autos));
+
+try {
+    const buffer = fs.readFileSync('/home/julian/Labor_FIVU/m13-5ahme-fivu/projects/UE03/Test_Autos');
+    const str = buffer.toString();
+    const autos2 = JSON.parse(str);
+    console.log(autos2);
+} catch (err) {
+    console.log('Fehler aufgetreten');
+    console.log(err);
+}
