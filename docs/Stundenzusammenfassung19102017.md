@@ -1,11 +1,11 @@
-**Verfasser:** Julian Wolf
+**Verfasser:** Julian Wolf  
 **Lehrer:** Steiner   
 **Datum der Einheit:** 19.10.2017
    
 ## Übersicht: 
 
 1. Was ist ein Webserver
-2. Web-Server erstellen
+2. Webserver erstellen
 3. HTML Seiten
 
 ### 1. Was ist ein Webserver
@@ -19,7 +19,7 @@ Weitere Informationen: Client und Server sind mit einem Netzwerk gemeinsamen Net
 Ethernet oder Wlan sind nur Verbindungs-Schnittstellen zwischen Subnetzen und Programmen.
 Zur verschlüsselten Übertragung zwischen den Subnetzen kann https oder TLS (Transport Layer Security) verwendet werden.
 
-### 2. Interface
+### 2. Webserver erstellen
 
 Es gibt viele Webserver-Programme, wie z.B. Apache, nginx, JavaEE,...
 Wir verwenden 'express' von Node.js
@@ -81,17 +81,17 @@ Es wurde eine Probe HTML-Seite von Wikipedia kopiert und von uns bearbeitet:
 
 Benutzte Befehle:
 
-- Doctype: Gibt den Dateityp an
-- html: schließt alles der HTML-Seite ein
-- head: schließt alles ein, was den Titel der Seite bearbeitet
-- title: Definiert den Inhalt des Seitentitels
-- link: Linked Dateien zur HTML-Seite
-- body: schließt alles ein, was den Körper der HTML-Seite bearbeitet
-- h1: Zum erstellen einer Überschrift
-- p: Zum erstellen von einzelnen Absätzen
+- **!DOCTYPE:** Gibt den Dateityp an
+- **html:** schließt alles der HTML-Seite ein
+- **head:** schließt alles ein, was den Titel der Seite bearbeitet
+- **title:** Definiert den Inhalt des Seitentitels
+- **link:** Linked Dateien zur HTML-Seite
+- **body:** schließt alles ein, was den Körper der HTML-Seite bearbeitet
+- **h1:** Zum erstellen einer Überschrift
+- **p:** Zum erstellen von einzelnen Absätzen
 
 - Der Befehl `<p id="absatz2">` weist dem Absatz eine ID zu, welche mit der CSS zugeordnet werden kann.
-- Der Befehl `<p class="gelbeAbsaetze">``weist dem Absatz einer Klasse zu, welche mit der CSS zugeordnet werden kann.
+- Der Befehl `<p class="gelbeAbsaetze">`weist dem Absatz eine Klasse zu, welche mit der CSS zugeordnet werden kann.
 
 Damit ein Browser weiß, wie er eine HTML-Seite dagestellt werden soll, gibt es das sogenannte DOM.
 
@@ -123,12 +123,12 @@ p {
 }
 ```
 
-- body: legt die Hintergrundfarbe für den Körper der HTML-fest
-- p: legt die Hintergrundfarbe für die Absätze fest.
+- **body:** legt die Hintergrundfarbe für den Körper der HTML-fest
+- **p:** legt die Hintergrundfarbe für die Absätze fest.
 
 Zum bearbeiten einzelner Absätze gibt es 2 Varianten:
-1. Variante: mit ID. #absatz2: setzt die Umrandungsfarbe für Absätze mit dieser ID fest.
-2. Variante: mit Klassen. .gelbeAbsaetze: legt die Hintergrundfarbe für Absätze diese Klasse fest.
+1. Variante: mit ID. **#absatz2:** setzt die Umrandungsfarbe für Absätze mit dieser ID fest.
+2. Variante: mit Klassen. **.gelbeAbsaetze:** legt die Hintergrundfarbe für Absätze diese Klasse fest.
 
 
 Wenn sich mehrere Farbdefinitionen überschneiden, z.B. Hintergrundfarbe des Body ist blau definiert, Hintergundfarbe des Absatzes im Body ist gelb definiert, so setzt sich immer die untergeordnetzte Farbdefinition durch. Absatz ist dem Body untergeordnet also setzt sich als Hintergrundfarbe für den Absatz gelb durch.
@@ -136,6 +136,6 @@ Wenn sich mehrere Farbdefinitionen überschneiden, z.B. Hintergrundfarbe des Bod
 Zum Überprüfen der HTML in einem Browser, kann eine Debugging-Konsole verwendet werden.
 Wir verwendeten folgende Funktionen in der Debugging-Konsole von Chromium:
 
-- Elements: zeigt die aktuellen Elemente an
-- Console: Die Konsole für z.B. Ausgaben und Fehler 
-- Network: Zeigt die geladenen Datenpakete
+- **Elements:** zeigt die aktuellen Elemente an
+- **Console:** Die Konsole für z.B. Ausgaben und Fehler 
+- **Network:** Zeigt die geladenen Datenpakete
