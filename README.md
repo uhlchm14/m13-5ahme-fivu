@@ -109,15 +109,16 @@
 * Wiederholung der letzten Einheit.
 * Webserver besteht 3 Teilen 
   * HTML -> Ist die Codierung wie ich die Information in die Datei einbringe. Zum Erzeugen der Struktur der Seite.
-  * css -> Design der Seite
+  * css -> Design der Seite.
   * Javascript -> dynamisyche veränderung am Client.
   * Vorteil: Jeder hat seinen eigenen Zweig, da z.B ein Designer nicht mit dem Javascript also da Programmieren klar kommt dafür kann er in 		seinem Zweig css seine arbeit gut erledigen.
-* p -> HTML Element das 
-* # -> id nur einen Absatz in unseren Fall eine Farbe geben
-* . -> class, kann mehreren HTML Elementen zugewießen werden. 
+* p   -> HTML Element das 
+* #id -> id nur einen Absatz in unseren Fall eine Farbe geben
+* .   -> class, kann mehreren HTML Elementen zugewießen werden. 
 
 * Selection
-  * Bsp: ```javascript
+  * Bsp: 
+```javascript
 p {
     background-color: green;
     border: solid 3px red;
