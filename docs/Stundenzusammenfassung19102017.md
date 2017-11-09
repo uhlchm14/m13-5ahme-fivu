@@ -13,7 +13,7 @@
 Ein Webserver ist ein Programm, welches anfragen von z.B. Clients bearbeitet.
 
 Der Server kommuniziert im normalvall über Ethernet mit dem Client. Als Sprache zur Verbindung wird HTTP verwendet.
-Meistens wird verwechselt, dass als Sprache HTML verwendet wird. Jedoch st HTML keine Sprache sondern nur eine Codierungsform.
+Meistens wird verwechselt, dass als Sprache HTML verwendet wird. Jedoch ist HTML keine Sprache sondern nur eine Codierungsform.
 
 Weitere Informationen: Client und Server sind mit einem Netzwerk gemeinsamen Netzwerk verbunden, welches die Informationen über Subnetze austauscht. Zur Übertragung wird das Sicherheitsprotokoll TCP/IP verwendet, welches dass sichere ankommen von Paketen zwischen den den einzelnen Subnetzen managed.
 Ethernet oder Wlan sind nur Verbindungs-Schnittstellen zwischen Subnetzen und Programmen.
