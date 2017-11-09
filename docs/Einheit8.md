@@ -25,6 +25,10 @@
 
 ### 3. Program change
 - Wir müssen beachten, dass Express in **Schichten** arbeitet!
+- Nun kann man unseren Server mit dem folgenden Link erreichen:
+   - http://localhost:4711/test 
+   - Es wurde ein Counter angelegt, der bei jedem Seitenaufruf um +1 hochgezählt wird.
+
 - 1.Schicht:
 
 ```javascript
@@ -53,4 +57,6 @@ server.use(express.static('public')); // es gibt statische HTML-Seiten im Verzei
 server.listen(4711); // 4711 = Port
 console.log('Server ist gestartet');
 ```
+
+
 
