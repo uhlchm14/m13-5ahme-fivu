@@ -59,7 +59,7 @@ server.listen(4711); // 4711 = Port
 console.log('Server ist gestartet');
 ```
 
-### Pug
+### 4. Pug
 - Wir installieren das Modul "Pug" 
    - npm install --save pug
    - npm install --save-dev @types/pug
@@ -68,7 +68,8 @@ console.log('Server ist gestartet');
 // Rendering engine pug in Express einbinden
 server.set('view engine', 'pug');
 ```
-
+- Danach Ordner erstellen (Views) und darin die Datei **test.pug** erstellen
+   - pug hat den Vorteil, dass alles auf das Minimum reduziert wird, auf welches es wirklich ankommt!
 
 
 
