@@ -111,3 +111,25 @@
    * über ID können einzelne Elemente verändert werden
  * Programm
    * [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue05/src/main.ts)
+   
+### Einheit 8: 09.11.2017
+ * dynamische Webseite
+ * Webseiten
+   * **html** dient dazu, zum Erzeugen der Struktur der Seite
+   * **CSS** dient dazu, um das Design der Seite festzulegen
+   * **Javascript** dient dazu, um dynamische Veränderungen am Client zu machen
+ * CSS  
+   * Klasse in CSS beginnt mit .beispielGelb
+   * Ein # ist die ID, kann nur einem Element übergeben werden
+   * Überbegriff für beide **Selectoren**
+ * => Erroroperator, die Funktion die wir schreiben wird mit dem aktuellen Object verbunden
+ * Express ist in Schichten aufgebaut
+   * nach der Reihenfolge der Definitionen im Quelltext
+ * Modul pug
+   * Modul hinzufpügen mit npm install --save pug
+   * Auch für Typescript npm install --save-dev @types/pug
+ * Seite mit pug erstellen
+   * neuen Ordner erstellen views
+   * neue Datei erstellen test.pug
+ * Programm
+ 
