@@ -127,8 +127,8 @@ p {
 - **p:** legt die Hintergrundfarbe für die Absätze fest.
 
 Zum bearbeiten einzelner Absätze gibt es 2 Varianten:
-1. Variante: mit ID. **#absatz2:** setzt die Umrandungsfarbe für Absätze mit dieser ID fest.
-2. Variante: mit Klassen. **.gelbeAbsaetze:** legt die Hintergrundfarbe für Absätze diese Klasse fest.
+1. Variante: mit ID. **#absatz2:** setzt die Umrandungsfarbe für Absätze mit dieser ID fest. Kann aber nur für ein Element verwendet werden!
+2. Variante: mit Klassen. **.gelbeAbsaetze:** legt die Hintergrundfarbe für Absätze diese Klasse fest. Kann für mehrere Elemente verwendet werden.
 
 
 Wenn sich mehrere Farbdefinitionen überschneiden, z.B. Hintergrundfarbe des Body ist blau definiert, Hintergundfarbe des Absatzes im Body ist gelb definiert, so setzt sich immer die untergeordnetzte Farbdefinition durch. Absatz ist dem Body untergeordnet also setzt sich als Hintergrundfarbe für den Absatz gelb durch.
