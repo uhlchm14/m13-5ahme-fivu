@@ -27,7 +27,7 @@ Anlegen mehrerer Files:
 * Tool Gulp: [gulpfile.js] und [tasks.json] (in .vscode) für die Übersetzung des Quellcodes
 * [launch.json] in .vscode für Debug Launcher Einstellungen
 * \*.js.map Files: Verantwortlich für das Anzeigen von Fehlern und in welcher Zeile er im Typescriptcode aufgetreten ist - Fehlermapping
-* [main.ts]: Car Klasse erstellt.
+* [main.ts][main.ts - UE03]: Car Klasse erstellt.
 
 ## Einheit 5: 5.10.17
 * Anlegen und ausgeben eines Arrays in der main.ts.
@@ -59,6 +59,15 @@ Anlegen mehrerer Files:
 * Verschönern des DOM mit CSS
 * HTTP Statustags (1xx --> Information, 2xx --> Erfolg, 3xx --> Umleitung, 4xx --> Fehler, 5xx --> interner Serverfehler)
 
+## Einheit 8: 9.11.17
+* Ziel für heute: HTML dynamisch erzeugen
+* Theorie: Wiederholung HTML, CSS und JS --> Erklärung was ist was
+* Wiederholung der letzten Einheit - [CSS-File], [HTML-File] und [main.ts][main.ts - UE05] von UE05
+* CSS Files bestehen aus __Selectors__
+* Anfragen vom Client am Server auswerten
+* RequestHandler & Arrow Operator (=>)
+* Verbreitetste Server Sprache: PHP
+* Rendering Engine zur HTML Erzeugung: Pug (früher: Jade)
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
@@ -69,7 +78,10 @@ Anlegen mehrerer Files:
 [gulpfile.js]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/gulpfile.js
 [tasks.json]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/.vscode/tasks.json
 [launch.json]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/.vscode/launch.json
-[main.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/src/main.ts
+[main.ts - UE03]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue03/src/main.ts
 [Übung 4]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue04
 [car.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue04/src/car.ts
 [Übung 5]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue05
+[CSS-File]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue05/public/myStyle.css
+[HTML-File]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue05/public/index.html
+[main.ts - UE05]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue05/src
