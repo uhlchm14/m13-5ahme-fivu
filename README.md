@@ -103,7 +103,7 @@
   * Unter dieser Datei kann man nun die Seite verschiedene Elemente hinzufügen. (z.b Farben, Borders...)
 * [Übung 5](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue05)
 
-## 7.Einheit 09.11.2017 (Donnerstag)
+## 8.Einheit 09.11.2017 (Donnerstag)
 
 * Heutige Aufgabe: Dynamisch produzierte HTML-Seiten.
 * Wiederholung der letzten Einheit.
@@ -122,6 +122,7 @@ p {
     background-color: green;
     border: solid 3px red;
   }
-```
-* 
+````
+* Die heutzutage meist genutzte Sprache ist PHP
+* pug
 
