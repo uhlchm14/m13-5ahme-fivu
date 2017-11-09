@@ -5,23 +5,24 @@
     "main": "dist/main.js",
     "repository": {},
     "scripts": {
-        "clean": "./node_modules/gulp/bin/gulp.js clean",
-        "build": "./node_modules/gulp/bin/gulp.js build",
-        "prestart": "./node_modules/gulp/bin/gulp.js cleanAndBuild",
+        "clean": "gulp clean",
+        "build": "gulp build",
+        "prestart": "gulp cleanAndBuild",
         "start": "sudo node dist/main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "greflm13",
     "license": "ISC",
     "dependencies": {
-        "@types/express": "^4.0.37",
-        "@types/node": "^8.0.31",
-        "@types/sprintf-js": "^1.1.0",
         "express": "^4.16.2",
-        "fs": "0.0.1-security",
+        "pug": "^2.0.0-rc.4",
         "sprintf-js": "^1.1.1"
     },
     "devDependencies": {
+        "@types/express": "^4.0.37",
+        "@types/node": "^8.0.31",
+        "@types/pug": "^2.0.4",
+        "@types/sprintf-js": "^1.1.0",
         "del": "^3.0.0",
         "gulp": "^3.9.1",
         "gulp-changed": "^3.1.0",
