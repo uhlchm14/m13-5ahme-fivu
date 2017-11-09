@@ -103,4 +103,25 @@
   * Unter dieser Datei kann man nun die Seite verschiedene Elemente hinzufügen. (z.b Farben, Borders...)
 * [Übung 5](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue05)
 
+## 7.Einheit 09.11.2017 (Donnerstag)
+
+* Heutige Aufgabe: Dynamisch produzierte HTML-Seiten.
+* Wiederholung der letzten Einheit.
+* Webserver besteht 3 Teilen 
+  * HTML -> Ist die Codierung wie ich die Information in die Datei einbringe. Zum Erzeugen der Struktur der Seite.
+  * css -> Design der Seite
+  * Javascript -> dynamisyche veränderung am Client.
+  * Vorteil: Jeder hat seinen eigenen Zweig, da z.B ein Designer nicht mit dem Javascript also da Programmieren klar kommt dafür kann er in 		seinem Zweig css seine arbeit gut erledigen.
+* p -> HTML Element das 
+* # -> id nur einen Absatz in unseren Fall eine Farbe geben
+* . -> class, kann mehreren HTML Elementen zugewießen werden. 
+
+* Selection
+  * Bsp: ```javascript
+p {
+    background-color: green;
+    border: solid 3px red;
+  }
+```
+* 
 

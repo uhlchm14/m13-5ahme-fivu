@@ -6,7 +6,7 @@
     "**/.gitkeep": true,
     "**/.gitignore": true,
     "**/dist": true,
-    "**/package.json": true,
+    "**/package.json": false,
     "**/package-lock.json": true,
     "**/gulpfile.js": true,
     "**/tsconfig.json": true,
