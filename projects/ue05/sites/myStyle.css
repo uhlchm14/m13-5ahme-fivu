@@ -1,12 +1,11 @@
 body {
-    background-color: brown;
+    background-color: rgba(243, 224, 224, 0.63);
 }
 p {
-    background-color: rgba(251, 255, 0, 0.7);
-    border: solid 3px red;
+    background-color: rgba(145, 112, 112, 0.7);
+    border: solid 3px rgba(0, 0, 0, 0.43);
 }
 
 #zwei {
-    border: solid 3px black;
-    background-color: violet;
+    background-color: #FFFFFF;
 }
