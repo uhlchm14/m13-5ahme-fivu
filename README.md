@@ -123,14 +123,78 @@ Download und Besprechung der letzten Dateien des Templates für ue03
     Import-Kommando, um den Express-Server in unserer `main.ts` verwenden zu können.
   - Quellcode zur Erstellung des Servers (Port 4711):
     
-    ```
-    const server = express();
-    server.use(express.static('public'));  // Verzeichnis public für statische HTML-Seiten definieren
-    server.listen(4711);  // http://localhost:4711/index.html
-    ```
+  ```typescript
+      const server = express();
+      server.use(express.static('public'));  // Verzeichnis public für statische HTML-Seiten definieren
+      server.listen(4711);  // http://localhost:4711/index.html
+  ```
 
   - `http://localhost:4711/index.html`
     - Mit dieser URL (Uniform Ressource Locator) kann der Web-Server mithilfe eines Browsers angesprochen werden.
     - öffnet man die Debugger-Konsole im Browser (F12), kann die Kommunikation zwischen Client und Server genau analysiert werden. Dadruch können auch Fehler gesucht bzw. gefunden werden.
 5. CSS (Cascading Style Sheets)
   - Durch die Verwendung von Style Sheets kann das Aussehen einer HTML-Seite auf einfache Art und Weise verändert werden. Über Klassen können Elemente zusammengefasst werden, die das selbe Aussehen haben soll. Soll nur ein Element anders aussehen, kann man dies über die ID des Elements realisieren.
+  
+
+### 8. Einheit
+**Datum:** 09.11.2017  
+**Dazugehörige Übung(en):** ![ue05](projects/ue05)  
+**Inhalt:**  
+1. Aufbau einer Webside
+  - **HTML**: Struktur der Seite
+  - **CSS**: Aussehen der Seite
+  - **JavaScript**: dynamische Veränderungen der Seite am Client
+2. Pug
+  - Installation
+    - `npm install --save pug`
+    - `npm install --save-dev @types/pug`
+  - Pug ist für das Rendern der Webside verantwortlich.
+    - `server.set('view engine', 'pug');`
+  - `test.pug` in dem neuen Unterordner `views` des Projektverzeichnisses
+
+  ```pug
+      doctype html
+      html(lang="de")
+          head
+              title="I bims 1 pug"
+              meta(charset="UTF-8")
+              link(rel="stylesheet" href="myStyle.css")
+          body
+              h1 Seite mit pug
+              p 1 Text
+  ```
+
+3. Änderungen an ue05
+  - Über `http://localhost:4711/test` kann nun eine Seite erreicht werden, bei der ein Counter die Anzahl der Aufrufe mitzählt:
+    
+  ```typescript
+      let counter = 1;
+
+      server.get('/test', (req, res, next) => {
+          let html = '';
+          html += '<!DOCTYPE html>';
+          html += '<html>';
+          html += '<head>';
+          html += '<title>I bims 1 Website</title>';
+          html += '<link rel = "stylesheet" href = "myStyle.css"/>';
+          html += '</head>';
+          html += '<body>';
+          html += '<h1>mySupiTestHomepage</h1>';
+          html += '<h2>Anfrage Nummer ' + counter++ + '.</h2>';
+          html += '<p id="zeile2">Test? Test?</p>';
+          html += '<p class="gelberAbsatz">Are you receiving me?</p>';
+          html += '</body>';
+          html += '</html>';
+
+          res.send(html);
+      }
+      );
+  ```
+  - Weiters kann über `http://localhost:4711/pug` die in Seite `test.pug` erreicht werden:
+
+  ```typescript
+      server.get('/pug', (req, res, next) => {
+          res.render('test.pug');
+      });
+  ```
+

@@ -1,21 +1,23 @@
+/* Selectoren */
 body
 {
-    background-color: red;
+    background-color: rgb(255, 0, 255);
 }
 
 p
 {
-    background-color: skyblue;
-    border: solid 30px black;
+    background-color: yellow;
+    border: solid 6px black;
 }
 
 #zeile2
 {
-    background-color: green;
-    border: solid 3px gray;
+    background-color: yellow;
+    border: solid 3px black;
 }
 
-.deineMudda
+.gelberAbsatz
 {
     background-color: yellow;
+    border: solid 9px black;
 }
