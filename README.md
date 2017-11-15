@@ -14,3 +14,6 @@ Von Stefan Ornik: [Interface und Debuggen](https://github.com/HTLMechatronics/m1
 
 ## Einheit 5, 19.10.2017
 Von Julian Wolf: [Webserver und HTML](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/woljum13/docs/Stundenzusammenfassung19102017.md)
+
+## Einheit 6, 09.11.2017
+Von Dominik Pichler: [Dynamischer Server (Pug)](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/picdom12/Zusammenfassung_09112017.md)
