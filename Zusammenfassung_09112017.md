@@ -1,4 +1,16 @@
-## 6.Einheit 09.11.2017 (Donnerstag)
+# 6.Einheit 09.11.2017 (Donnerstag)
+
+**Verfasser:** Dominik Pichler  
+**Lehrer:** Steiner   
+**Datum der Einheit:** 12.10.2017
+   
+## Übersicht: 
+
+1. Wiederholung und Einführung  
+2. Dynamische HTML im RequestHandler  
+3. Pug  
+
+### 1. Wiederholung und Einführung 
 
 * Heutiges Ziel: Dynamisch produzierte HTML-Seiten zu erstellen.
 * Wiederholung der letzten Einheit.
@@ -18,6 +30,7 @@ p {
   }
 ```
 
+### 2. Dynamische HTML im RequestHandler
 
 ```typescript
 
@@ -61,6 +74,7 @@ server.get('/test', (req, res, next) => {
   
 });
 ```
+### 3. Pug
 
 * Sagt dem Express dass Pug seine Render engine ist.
 
