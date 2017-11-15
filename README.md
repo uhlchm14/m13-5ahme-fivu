@@ -167,7 +167,7 @@ server.get('/test', (req, res, next) => {
 });
 ```
 
-* Sagt dem Express dass Pug sein Render engine ist.
+* Sagt dem Express dass Pug seine Render engine ist.
 
 ```typescript
 
@@ -175,7 +175,8 @@ server.set('view engine', 'pug');
 
 ```
 
-* Client schickt den Server eine Anfrage, rendert er die Pug Datei also HTML und sendet sie and den Client.
+* Wenn der Client eine Anfrage an den Server schickt, rendert dieser die Pug Datei zu HTML und schickt sie an den Client zurück.
+* Im unserem Fall passiert dies nur wenn man /pug eingibt.
 
 ```typescript
 
