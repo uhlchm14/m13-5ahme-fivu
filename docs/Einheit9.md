@@ -10,6 +10,7 @@
 
 ### 1. Wiederholung
 - Erstellen eines dynamischen Servers
+
 - Einbinden von Pug:
     	- Es wird die Komplexität verringert, man beschrenkt sich auf das Wesentliche
 	- Übersichtlicher, weniger fehleranfällig, schneller/besser ergänzbar, ....
@@ -31,6 +32,7 @@ p Counter #{counterValue}
 
 ### 3. Bootstrap
 - = Eine sehr bekannte Bibliothek
+- Link: https://getbootstrap.com/
 
 - **Responsive:** Berücksichtigt, dass die Endgeräte verschiedene größen haben.
 - **Z-index:** z.B: Wenn sich zwei Textfelder überdecken, kann ich nur mehr eines sehen. Durch den Z-index kann ich die Sichtbarkeit ganz klar festlegen. Ansonsten geht es rein um den Aufbau, die Reihenfolge die ich am Anfang festgelegt habe wird dann auch verwendet.
