@@ -133,3 +133,42 @@
    * neue Datei erstellen test.pug
  * Programm
  
+### Einheit 9: 16.11.2017
+
+ * Dynamischer Server
+   * Seiteninhalt wird durch Server Programm verändert
+   
+ * Test.pug 
+   * zum Rendern von HTML Seiten
+   * auch zum Fehlerverhindern
+
+ * Einbinden von Counter bei test.pug
+```Javascript
+   doctype html
+html(lang="de")
+    head
+        title = "Testseite mit pug rendering"
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href ="myStyle.css")
+    body
+        h1 Seite mit pug generiert
+        p Das ist der erste Absantz
+        p Counter #{counterValue}
+```
+  * Auch im main.ts res.render ändern: 
+ ```Javascript
+  server.get('/pug', (req, res, next) => {
+    res.render('test.pug', {counterValue: counter++});
+});
+```
+* Bootstrap 
+  * Responsive Breakpoints: Damit die Größe auf den Endgeräten angepasst wird.
+  * Z-index: Die Elemente können eine gewisse Höhe zugeordnet werden.
+  * DOM (Domain Object Model): Das was im Browser als Object gesehen wird. 
+
+* ue06 erstellt
+Bei Bootstap gibt es zwei Arten von Kommentaren: 
+  * // So wird es im Quelletext bei html als Kommentar angezeigt
+  * //- So wird es im Quelltext bei html nicht mehr angezeigt
+  
+* Programm: 
