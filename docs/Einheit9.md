@@ -6,6 +6,7 @@
 
 1. Wiederholung
 2. Einbinden von Counter bei Pug
+3. Bootstrap
 
 ### 1. Wiederholung
 - Erstellen eines dynamischen Servers
@@ -14,7 +15,6 @@
 	- Übersichtlicher, weniger fehleranfällig, schneller/besser ergänzbar, ....
 
 ### 2. Einbinden von Counter bei Pug  
-
 - in der Main.ts Counter für das Pug-file übergeben
 
 ```javascript
@@ -28,6 +28,10 @@ res.render('test.pug', {counterValue: counter++});
 ```javascript
 p Counter #{counterValue}
 ```
+
+### 3. Bootstrap
+- Eine sehr bekannte Bibliothek
+- Berücksichtigt, dass die Endgeräte verschiedene größen haben (ist **responsive**)
 
 
 
