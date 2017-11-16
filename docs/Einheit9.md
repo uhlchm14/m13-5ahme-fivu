@@ -45,13 +45,21 @@ p Counter #{counterValue}
 
 - Mit: view-source:http://localhost:4711/ kann man die Source im Browser anzeigen lassen
 
-- Link aus dem Internet kopieren: 
+- Link aus dem Internet kopieren und in index.html einfügen: 
 
 ```javascript
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 ```
 
+- Meta-name aus dem Internet kopieren und ebenfalls in index.html einfügen:
 
+```javascript
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+```
+
+- Danach mit dem Layout beginnen! 
+	- wir lernen das <div> element kennen! --> ist nur ein **Strukturelement** 
+	- Einbinden von Name / @-mail / Passwort-Eingabe 
 
 
 
