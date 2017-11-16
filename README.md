@@ -9,3 +9,4 @@
 | 5 | 12.10.2017 | [ue04](projects/ue04/src/main.ts) |
 | 6 | 19.10.2017 | [ue05](projects/ue05/src/main.ts) |
 | 7 | 09.11.2017 | [ue05](projects/ue05/src/main.ts) |
+| 8 | 16.11.2017 | [ue05](projects/ue05/src/main.ts) & [ue06](projects/ue06/src/main.ts) |
