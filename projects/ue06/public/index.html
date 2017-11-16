@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Meine Hompage</title>
-    <link rel="stylesheet" href="myStyle.css" />
+    <title>Ue06 Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
-    <h1> Meine Hompage</h1>
-    <p>Das ist eine Testseite</p>
-    <p id="absatz2"> Das ist der 2te Absatz</p>
-    <p class="gelbeAbsaetze"> Das ist der 2te Absatz</p>
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div>
+
+          <form action="/saveuser" method="post">
+              <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="name" class="form-control" id="inputName"  placeholder="Name" value="name">
+                <small id="nameHelp" class="form-text text-muted">Please enter your full name</small>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail">Email address</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" value="email">
+                  <small id="emailHelp" class="form-text text-muted">Please enter your email</small>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" value="password">
+              </div>
+              <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    keep me signed in
+                  </label>
+                </div>
+              <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+            </form>
+    </div>
+
   </body>
 </html>
