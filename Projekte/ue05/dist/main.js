@@ -29,7 +29,7 @@ server.get('/test', (req, res, next) => {
     res.send(html);
 });
 server.get('/pug', (req, res, next) => {
-    res.render('test.pug');
+    res.render('test.pug', { counterValue: counter++ });
 });
 server.use(express.static('public'));
 server.listen(4711);

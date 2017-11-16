@@ -42,7 +42,7 @@ server.get('/test', (req, res, next) => {
 });
 
 server.get('/pug', (req, res, next) => {
-    res.render('test.pug');
+    res.render('test.pug', { counterValue: counter++});
 });
 // 2.Schicht
 server.use(express.static('public'));

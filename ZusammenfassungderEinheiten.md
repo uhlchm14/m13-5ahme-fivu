@@ -92,3 +92,43 @@ Schönere Variante: Rendering
 Moderne technologie für Serverprogrammierung : PHP
 
 
+### Einheit 8: 16.11.2017
+
+- Wiederholung Einheit 7 
+
+Bedeutung dynamisch bei Serverprogrammierung -> Seiteninhalt wird immer Programmatisch zusammengebaut und verändert
+
+.css ist für das Aussehen der Webseite zuständig -> gültige HTML-Codes müssen eingehalten werden
+
+In .css -> mit einem Punkt (.) werden Klassen gebildet.
+	-> mit einer Raute (#) wird der Aufruf genau dann aufgerufen, wenn die ID aufgerufen wird 
+	-> Prioritäten gibt es auch bei .css
+	-> 
+
+Bessere und einfachere Stile einbauen -> Bootstrap
+
+Homepage Bootstrap: (Version 4) getbootstrap.com
+
+Responsive -> Für jedes Gerät das Design angepasst (automatisch)
+
+Z-index -> Wir haben eine Ebene wo wir mit dem Auge daraufschauen
+	-> Elementen werden mit Z-index eine Höhe zugeordnet
+	-> ansonsten liegen Elemente übereinander und verdecken sich
+
+DOM: Domain Object Model -> Realisiert HTML in das was wir sehen 
+
+- Verschiedene Komponenten können aus der Documentation von Bootstrap entnehmen
+-> Elemente werden dadurch ziemlich einfach
+
+
+- Neue: ue06 erstellen (ue05 in ue06 kopieren)
+
+- Server überarbeiten
+
+div-Element in HTML -> Strukturelement -> Von sich aus kein Aussehen
+
+- Eine kleine Eingabe realisieren
+
+Fortsetzubng: Nächste Einheit
+
+
