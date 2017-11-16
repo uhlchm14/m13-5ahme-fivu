@@ -15,14 +15,14 @@
 
 ### 2. Einbinden von Counter bei Pug
 - in der Main.ts Counter für das Pug-file übergeben
-	- ```javascript
-	server.get('/pug', (req, res, next) => {
-    	res.render('test.pug', {counterValue: counter++});
-	});```
+```javascript
+server.get('/pug', (req, res, next) => {
+res.render('test.pug', {counterValue: counter++});
+});```
 - Danach in test.pug definieren
-	- ```javascript
-	p Counter #{counterValue}
-	```
+```javascript
+p Counter #{counterValue}
+```
 
 
 
