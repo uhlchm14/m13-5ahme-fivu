@@ -30,8 +30,14 @@ p Counter #{counterValue}
 ```
 
 ### 3. Bootstrap
-- Eine sehr bekannte Bibliothek
-- Berücksichtigt, dass die Endgeräte verschiedene größen haben (ist **responsive**)
+- = Eine sehr bekannte Bibliothek
+
+- **Responsive:** Berücksichtigt, dass die Endgeräte verschiedene größen haben.
+- **Z-index:** z.B: Wenn sich zwei Textfelder überdecken, kann ich nur mehr eines sehen. Durch den Z-index kann ich die Sichtbarkeit ganz klar festlegen. Ansonsten geht es rein um den Aufbau, die Reihenfolge die ich am Anfang festgelegt habe wird dann auch verwendet.
+- **DOM:** Domain Object Model --> Ist das, was dann im Browser als Objekt vorliegt. 
+
+
+
 
 
 
