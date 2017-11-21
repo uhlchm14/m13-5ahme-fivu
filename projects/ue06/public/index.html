@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ue06 - Bootstrap</title>
+    <!-- <link rel = "stylesheet" href = mystyle.css />  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- verhindert das die Seite kleiner skaliert wird -->
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div>
+
+          <form action="/saveuser" method="put"> <!-- action sagt welche methode aufgerufen werden soll -->
+
+              <div class="form-group">
+                  <label for="inputName">Name</label>
+                  <input type="text" class="form-control" value="name"
+                         id="inputName" placeholder="Name">
+                  <small id="nameHelp" class="form-text text-muted">
+                    Bitte hier den vollen Name eingeben!
+                  </small>
+                </div>
+
+              <div class="form-group">
+                <label for="inputEmail">Email Adresse</label>
+                <input type="email" class="form-control" id="inputEmail" value="email" 
+                       placeholder="Email eingeben">
+                <small id="emailHelp" class="form-text text-muted">
+                  Bitte Email Adresse eingeben.
+                </small>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPasswort" value="password"
+                       placeholder="Passwort">
+              </div>
+              
+              <button type="submit" class="btn btn-primary" value="submit" >Speichern</button>
+            </form>
+
+      </div>
+    
+  </body>
+</html>
