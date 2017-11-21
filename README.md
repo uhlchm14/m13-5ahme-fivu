@@ -68,43 +68,43 @@ Besprechen der letzten Dateien des Templates für ue03
 **Datum:** 16.11.2017  
 **Dazugehörige Übung(en):** ![ue05](projects/ue05) ![ue06](projects/ue06)  
 **Inhalt**:   
-1. Dynamische Website  
-- Bei einer dynamischen Website kann der Inhalt und das Aussehen vom Server verändert werden.  
-Beispiel: Verändern einer angezeigten Varibale  
-In der Test.pug
- ```typescript
-    p Counter #{counterValue}
+#### Dynamische Website  
+  Bei einer dynamischen Website kann der Inhalt und das Aussehen vom Server verändert werden.  
+  Beispiel: Verändern einer angezeigten Varibale  
+  In der Test.pug
+```typescript
+      p Counter #{counterValue}
 ```
-In der main.ts
- ```typescript
+  In der main.ts
+```typescript
      server.get('/pug', (req, res, next) => {
        res.render('test.pug', {counterValue: counter++});
      });
 ```
-Das Objekt der Varialbe wird als Parameter mitübergeben. 
+  Das Objekt der Varialbe wird als Parameter mitübergeben. 
 
-2. Bootstrap  
-In dieser Einheit haben wir mit der Einarbeitung in die [Bootstrap Version 4](http://getbootstrap.com/docs/4.0/getting-started/download/). Bootstrap ist responsive. Das heißt das sich das Design automatisch an verschieden Große Geräte (PC, Smartphone, ...) anpasst. 
+#### Bootstrap  
+In dieser Einheit haben wir mit der Einarbeitung in die [Bootstrap Version 4](http://getbootstrap.com/docs/4.0/getting-started/download/). Bootstrap ist responsive. Das heißt das sich das Design automatisch an verschieden Große Geräte (PC, Smartphone, ...) anpasst.  
 Wenn sich zwei Elmente überlappen kann mit dem Z-Index (Z-Achse) festgelegt werden welches Element sichtbar sein soll. 
 Von der HTML Seite wird der DOM (Domain Object Model) generiert. Dieser ist auch veränderbar.
 
-Besprochene Komponenten:
-  [Badge](http://getbootstrap.com/docs/4.0/components/badge/): Darstellung von Informationen  
-  [Breadcrumb](http://getbootstrap.com/docs/4.0/components/breadcrumb/): Zum Hinterlegen eines Links  
-  [Card](http://getbootstrap.com/docs/4.0/components/card/): Zum erstellen eines Bereichs, zum Beispiel Visitenkarten  
-  [Carousel](http://getbootstrap.com/docs/4.0/components/carousel/): Bilder zum Weiterschalten  
-  [Collapse](http://getbootstrap.com/docs/4.0/components/collapse/): Unterpunkte unter denen sich Text öffnet  
-  [Dropdowns](http://getbootstrap.com/docs/4.0/components/dropdowns/): Menü welches sich nach unten öffnet  
-  [Forms](http://getbootstrap.com/docs/4.0/components/forms/): fertige Eingabedialoge   
-  [List Group](http://getbootstrap.com/docs/4.0/components/list-group/): Designs für Listen  
-  [Modal](http://getbootstrap.com/docs/4.0/components/modal/): Dialogfenster   
-  [Navs](http://getbootstrap.com/docs/4.0/components/navs/): Navigationsleiste   
-  [Pageination](http://getbootstrap.com/docs/4.0/components/pagination/): mehrere Seiten, weiterschaltbar  
-  [Popovers](http://getbootstrap.com/docs/4.0/components/popovers/): Zeigt etwas an wenn man mit der Maus darüber fährt  
-  [Progress Bars](http://getbootstrap.com/docs/4.0/components/progress/): Ladeanzeige  
-  [Scrollspy](http://getbootstrap.com/docs/4.0/components/scrollspy/): Wechselt beim Scrollen zwischen den Linkelementen   
-  [Tooltips](http://getbootstrap.com/docs/4.0/components/tooltips/): Zeigt eine Information zu einem Element an  
-  
+Besprochene Komponenten:  
+  -[Badge](http://getbootstrap.com/docs/4.0/components/badge/): Darstellung von Informationen  
+  -[Breadcrumb](http://getbootstrap.com/docs/4.0/components/breadcrumb/): Zum Hinterlegen eines Links  
+  -[Card](http://getbootstrap.com/docs/4.0/components/card/): Zum erstellen eines Bereichs, zum Beispiel Visitenkarten  
+  -[Carousel](http://getbootstrap.com/docs/4.0/components/carousel/): Bilder zum Weiterschalten  
+  -[Collapse](http://getbootstrap.com/docs/4.0/components/collapse/): Unterpunkte unter denen sich Text öffnet  
+  -[Dropdowns](http://getbootstrap.com/docs/4.0/components/dropdowns/): Menü welches sich nach unten öffnet  
+  -[Forms](http://getbootstrap.com/docs/4.0/components/forms/): fertige Eingabedialoge   
+  -[List Group](http://getbootstrap.com/docs/4.0/components/list-group/): Designs für Listen  
+  -[Modal](http://getbootstrap.com/docs/4.0/components/modal/): Dialogfenster   
+  -[Navs](http://getbootstrap.com/docs/4.0/components/navs/): Navigationsleiste   
+  -[Pageination](http://getbootstrap.com/docs/4.0/components/pagination/): mehrere Seiten, weiterschaltbar  
+  -[Popovers](http://getbootstrap.com/docs/4.0/components/popovers/): Zeigt etwas an wenn man mit der Maus darüber fährt  
+  -[Progress Bars](http://getbootstrap.com/docs/4.0/components/progress/): Ladeanzeige  
+  -[Scrollspy](http://getbootstrap.com/docs/4.0/components/scrollspy/): Wechselt beim Scrollen zwischen den Linkelementen   
+  -[Tooltips](http://getbootstrap.com/docs/4.0/components/tooltips/): Zeigt eine Information zu einem Element an  
+
 Anlegen des Projekts [ue06](projects/ue06).
 Anschließend muss im Projekt Bootstrap mit folgendem Befehl installiert werden: npm install --save bootstrap@4.0.0-beta.2 .
 
