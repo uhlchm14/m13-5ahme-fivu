@@ -108,9 +108,9 @@ Besprochene Komponenten:
 Anlegen des Projekts [ue06](projects/ue06).
 Anschließend muss im Projekt Bootstrap mit folgendem Befehl installiert werden: npm install --save bootstrap@4.0.0-beta.2 .
 
-Auskommentieren in pug.
-// ... Element wird mitgerendert
-//- ... Element wird nicht mitgerendert 
+Auskommentieren in pug:  
+// ... Element wird mitgerendert  
+//- ... Element wird nicht mitgerendert  
 
 Strukturierung des Seitenquelltextes:
 ```Typescript
