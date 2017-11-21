@@ -54,3 +54,20 @@ Besprechen der letzten Dateien des Templates für ue03
 3. ue04 erstellen
 - Dafür wurde ue03 kopiert und es wurden die .ts Dateien gelöscht
 - Interface: legt fest welche Daten übergeben werden müsssen/können
+
+### 6. Einheit
+**Datum:** 12.10.2017
+
+### 7. Einheit
+**Datum:** 19.10.2017
+
+### 8. Einheit
+**Datum:** 09.11.2017
+
+### 9. Einheit
+**Datum:** 16.11.2017
+**Dazugehörige Übung(en):** ue05 ue06
+**Inhalt**: 
+1. Dynamische Website
+2. Bootstrap
+
