@@ -38,7 +38,7 @@ server.get('/test', (req, res, next) => {
 
 
 server.get('/pug', (req, res, next) => {
-    res.render('test.pug');
+    res.render('test.pug', {counterValue: counter++});
 });
 
 server.use(express.static('public'));  // Verzeichnis public für statische HTML-Seiten definieren

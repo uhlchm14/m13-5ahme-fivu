@@ -1,0 +1,23 @@
+/* Selectoren */
+body
+{
+    background-color: rgb(255, 0, 255);
+}
+
+p
+{
+    background-color: yellow;
+    border: solid 6px black;
+}
+
+#zeile2
+{
+    background-color: yellow;
+    border: solid 3px black;
+}
+
+.gelberAbsatz
+{
+    background-color: yellow;
+    border: solid 9px black;
+}

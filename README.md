@@ -197,4 +197,58 @@ Download und Besprechung der letzten Dateien des Templates für ue03
           res.render('test.pug');
       });
   ```
+  
 
+### 9. Einheit
+**Datum:** 16.11.2017  
+**Dazugehörige Übung(en):** ![ue05](projects/ue05), ![ue06](projects/ue06)  
+**Inhalt:**  
+1. Counter-Variable nach `test.pug` übergeben
+  - Übergabe des Counters in `main.ts`
+
+  ```typescript
+      server.get('/pug', (req, res, next) => {
+          res.render('test.pug', {counterValue: counter++});
+      });
+  ```
+
+  - Verwendung des Counters in `test.pug`
+
+  ```pug
+      p Counter #{counterValue}
+  ```
+  
+2. Pug
+  - Es gibt zwei Methoden, um etwas auszukommentieren.
+    - `// `: Der Kommentar ist auch am Client als Kommentar im Quelltext sichtbar.
+    - `//- `: Der Kommentar ist am Client nicht sichtbar.
+  - Die Anzeige des Quelltextes am Client kann verschönert werden (bessere Lesbarkeit).
+  
+  ```typescript
+    const pugRenderingEngine = server.set('view engine', 'pug');
+    pugRenderingEngine.locals.pretty = true;
+  ```
+  
+3. Bootstrap
+  - freies CSS-Framework
+  - Von Twitter entwickelt.
+  - Eine Bibliothek, die Grundelemente für die grafische Gestaltung einer Website enthält.
+  - Ist resposiv (passt sich an die Größe des Bildschirmes an).
+  - Für den Fall das sich zwei oder mehrere Elemente überlappen, hat jedes Element einen Z-Index. Der Z-Index entscheidet, welches Element über dem anderen angezeigt wird.
+  
+4. ue06
+  - Erstellung
+  -  Installation der Bootstrap-Bibliothek
+    - `npm install --save bootstrap@4.0.0-beta.2`
+  - index.html
+    - `Link` und `Meta` im **head** hinzufügen.
+
+    ```
+      <head>
+        <title>I bims 1 Website vong Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      </head>
+    ```
+
+    - Alle weiteren Elemente können nach eigenem Ermessen im **body** eingefügt und, wenn nötig, noch für die eigene Anwendung abgeändert werden.
