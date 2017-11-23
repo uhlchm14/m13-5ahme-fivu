@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>ue06</title>
     <!-- <link rel="stylesheet" href="myStyle.css"/> -->
@@ -8,7 +7,6 @@
         crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-
 <body>
     <div class="container">
         <div class="alert alert-success" role="alert">
@@ -22,28 +20,20 @@
         <form action="/saveuser" method="post">
             <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="name" class="form-control" id="inputName" placeholder="Enter Name" value="name">
+                <input type="name" class="form-control" id="inputName" placeholder="Enter Name" name="name">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your Name with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="inputEmail">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" value="email">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" name="email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="inputPasswort">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" value="passwort">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="passwort">
             </div>
             <button type="submit" class="btn btn-primary" value="submit">Submit</button>
         </form>
-
-
-
-
     </div>
-
-
-
 </body>
-
 </html>
