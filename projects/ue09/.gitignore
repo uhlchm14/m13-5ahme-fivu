@@ -1,0 +1,47 @@
+ 1 # See http://help.github.com/ignore-files/ for more about ignoring files.
+   2 
+   3 # config files
+   4 config.json
+   5 
+   6 # compiled output
+   7 /dist
+   8 /tmp
+   9 /out-tsc
+  10 
+  11 # dependencies
+  12 node_modules
+  13 package-lock.json
+  14 
+  15 # IDEs and editors
+  16 /.idea
+  17 .project
+  18 .classpath
+  19 .c9/
+  20 *.launch
+  21 .settings/
+  22 *.sublime-workspace
+  23 
+  24 # IDE - VSCode
+  25 .vscode/*
+  26 !.vscode/settings.json
+  27 !.vscode/keybindings.json
+  28 !.vscode/tasks.json
+  29 !.vscode/launch.json
+  30 !.vscode/extensions.json
+  31 
+  32 # misc
+  33 /.sass-cache
+  34 /connect.lock
+  35 /coverage
+  36 /libpeerconnection.log
+  37 npm-debug.log
+  38 testem.log
+  39 /typings
+  40 
+  41 # e2e
+  42 /e2e/*.js
+  43 /e2e/*.map
+  44 
+  45 # System Files
+  46 .DS_Store
+  47 Thumbs.db
