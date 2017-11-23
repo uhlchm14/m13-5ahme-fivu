@@ -171,4 +171,13 @@ Bei Bootstap gibt es zwei Arten von Kommentaren:
   * // So wird es im Quelletext bei html als Kommentar angezeigt
   * //- So wird es im Quelltext bei html nicht mehr angezeigt
   
+* Programm:
+
+### Einheit 10: 23.11.2017
+* Daten werden zurzeit in Klartext übertragen
+* nächster Schritt: Daten die übertragen werden, sollen verarbeitet werden
+* server.body: speichert die Daten im body, somit kann keiner sie sehen
+* body-parser installieren: npm install --save-dev @types/body-parser
+* cookie: 
+* in typescript installieren: npm install --save-dev @types/cookie
 * Programm: 
