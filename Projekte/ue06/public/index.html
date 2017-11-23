@@ -22,21 +22,21 @@
           <form action="/saveuser" method="post">
               <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Name" value="name">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" name="name">
                 <small id="emailHelp" class="form-text text-muted">Bitte hier den vollen Namen eingeben.</small>
               </div>
               <div class="form-group">
                   <label for="inputEmail">Email</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Emailadresse" value="email">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Emailadresse" name="email">
                   <small id="emailHelp" class="form-text text-muted">Bitte hier Ihre Email eingeben.</small>
                 </div>
 
               <div class="form-group">
                 <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" value="password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
               </div>
     
-              <button type="submit" class="btn btn-primary" value="submit">Speichern</button>
+              <button type="submit" class="btn btn-primary" name="submit">Speichern</button>
             </form>
 
         </div>

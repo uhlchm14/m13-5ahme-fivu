@@ -129,6 +129,25 @@ div-Element in HTML -> Strukturelement -> Von sich aus kein Aussehen
 
 - Eine kleine Eingabe realisieren
 
-Fortsetzubng: Nächste Einheit
+Fortsetzung: Nächste Einheit
+
+### Einheit 9: 23.11.2017
+
+- Fortsetzung ue06
+- Passwort eingabe
+- 2.Schicht eingefügt -> server.post
+
+BodyParser -> Text aus BodyText holen -> Zugriff auf fertiges Object
+
+- Probleme auf der Client Seite -> Nicht testbar
+
+- Mit `server.use(bodyParser.urlencoded())` werden die Daten als Objekt zurückgeliefert.
+
+
+- Cookie -> Einbinden in ue06
+
+- Fortsetzung -> nächste Einheit
+
+### Einheit 10: xx.xx.xxxx
 
 
