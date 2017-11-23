@@ -1,7 +1,7 @@
 
 import {sprintf} from 'sprintf-js';
 import * as express from 'express'; // express importieren
-
+import * as bodyParser from 'body-parser';
 class Main {
     constructor () {
         console.log('Start');
@@ -15,11 +15,19 @@ const server = express();
 // Rendering engine pug in Express einbinden
 const pugRenderingEngine = server.set('view engine', 'pug');
 pugRenderingEngine.locals.pretty = true;
+
+server.use(bodyParser.json());
+// 1.Schicht
 server.get('/', (req, res, next) => {
     // res.render('index.pug');
     next();
 });
-// 2 Schicht
+// 2.Schicht
+server.post('/saveuser', (req, res, next) => {
+    // res.render('index.pug');
+    next();
+});
+// 3. Schicht
 // Verzeichnis public für statische HTML Seiten erstellen
 server.use(express.static('public'));
 
