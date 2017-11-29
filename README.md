@@ -86,7 +86,7 @@
    * Bearbeitet anfragen vom Client 
    * Web-Server kommuniziert mit Client
    * kommunizieren mit http (Sprache der beiden)
-   * wobei html eine Codierungsform ist 
+   * html ist eine Codierungsform
    * TCP/IP stellt sicher das die Daten sicher zwischen 2 Geräten ausgetauscht werden
    * TLS: Verschlüsselte Form der Datenübertragung bei https
    * innerhalb eines Subnetz wird Wlan / Ethernet verwendet, außerhalb werden die Daten via TCP/IP übertragen
@@ -106,4 +106,78 @@
  * mit html wird ein Object gebildet (DOM)
    * mit DOM kann man von Typescript aus den Web-Server bearbeiten
  * CSS (Cascaded Style Sheet)
-   * 
+   * durch CSS kann das Aussehen einer Web-Seite leicht verändert werden
+   * Elemente können über Klassen zusammengefasst werden
+   * über ID können einzelne Elemente verändert werden
+ * Programm
+   * [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue05/src/main.ts)
+   
+### Einheit 8: 09.11.2017
+ * dynamische Webseite
+ * Webseiten
+   * **html** dient dazu, zum Erzeugen der Struktur der Seite
+   * **CSS** dient dazu, um das Design der Seite festzulegen
+   * **Javascript** dient dazu, um dynamische Veränderungen am Client zu machen
+ * CSS  
+   * Klasse in CSS beginnt mit .beispielGelb
+   * Ein # ist die ID, kann nur einem Element übergeben werden
+   * Überbegriff für beide **Selectoren**
+ * => Erroroperator, die Funktion die wir schreiben wird mit dem aktuellen Object verbunden
+ * Express ist in Schichten aufgebaut
+   * nach der Reihenfolge der Definitionen im Quelltext
+ * Modul pug
+   * Modul hinzufpügen mit npm install --save pug
+   * Auch für Typescript npm install --save-dev @types/pug
+ * Seite mit pug erstellen
+   * neuen Ordner erstellen views
+   * neue Datei erstellen test.pug
+ * Programm
+ 
+### Einheit 9: 16.11.2017
+
+ * Dynamischer Server
+   * Seiteninhalt wird durch Server Programm verändert
+   
+ * Test.pug 
+   * zum Rendern von HTML Seiten
+   * auch zum Fehlerverhindern
+
+ * Einbinden von Counter bei test.pug
+```Javascript
+   doctype html
+html(lang="de")
+    head
+        title = "Testseite mit pug rendering"
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href ="myStyle.css")
+    body
+        h1 Seite mit pug generiert
+        p Das ist der erste Absantz
+        p Counter #{counterValue}
+```
+  * Auch im main.ts res.render ändern: 
+ ```Javascript
+  server.get('/pug', (req, res, next) => {
+    res.render('test.pug', {counterValue: counter++});
+});
+```
+* Bootstrap 
+  * Responsive Breakpoints: Damit die Größe auf den Endgeräten angepasst wird.
+  * Z-index: Die Elemente können eine gewisse Höhe zugeordnet werden.
+  * DOM (Domain Object Model): Das was im Browser als Object gesehen wird. 
+
+* ue06 erstellt
+Bei Bootstap gibt es zwei Arten von Kommentaren: 
+  * // So wird es im Quelletext bei html als Kommentar angezeigt
+  * //- So wird es im Quelltext bei html nicht mehr angezeigt
+  
+* Programm:
+
+### Einheit 10: 23.11.2017
+* Daten werden zurzeit in Klartext übertragen
+* nächster Schritt: Daten die übertragen werden, sollen verarbeitet werden
+* server.body: speichert die Daten im body, somit kann keiner sie sehen
+* body-parser installieren: npm install --save-dev @types/body-parser
+* cookie: 
+* in typescript installieren: npm install --save-dev @types/cookie
+* Programm: 
