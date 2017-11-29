@@ -252,3 +252,93 @@ Download und Besprechung der letzten Dateien des Templates für ue03
     ```
 
     - Alle weiteren Elemente können nach eigenem Ermessen im **body** eingefügt und, wenn nötig, noch für die eigene Anwendung abgeändert werden.
+  
+  
+### 10. Einheit
+**Datum:** 23.11.2017  
+**Dazugehörige Übung(en):** ![ue06](projects/ue06)  
+**Inhalt:**  
+1. Besprechung
+  - Lehrausgang 24.11.2017
+  - Festlegung des PLF-Termins in LA1 auf den 18.12.2017
+  - Sure-Boards für AIIT
+  
+2. Fehlerbehebung
+  - Es gab in der letzten Einheit einen Fehler der die drei Eingabefelder für E-Mail, Name und Passwort betrifft. Bei laden der Seite waren die Felder bereits befüllt. Der Fehler bestand darin, dass das Attribut `value` beschrieben wurde und nicht das Attribut `name`. Daher musste bei jedem der drei Eingabefelder `value` auf `name` geändert werden.
+  Beispiel:
+
+  von
+  ```html
+    <input type="email" class="form-control" id="inputEmail" value="email" placeholder="E-Mail">
+  ```
+  auf
+  ```html
+    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-Mail">
+  ```
+
+  Kontrolle durch die Öffnung der Debugger-Konsole im Browser mit `F12`.
+  
+3. Problem mit HTTP
+  - Ein großes Problem mit HTTP ist, dass die Daten unverschlüsselt, also im Klartext, übertragen werden. Die Lösung dafür ist HTTPS. Hier wird automatisch eine Verschlüsselung vorgenommen.
+    - Diese Problem betrifft jedoch nur die Übertragung selbst, da Passwörter im normal am Server nicht direkt gespeichert werden, sondern nur deren Hash. Bei einer Authentifizierung errechnet der Server nur den Hash des übermittelten Passworts und vergleicht es mit dem am Server abgelegten Hash.
+
+4. Body-Parser
+  - Installation
+    - `npm install --save body-parser`
+    - `npm install --save-dev @types/body-parser`
+  - Einbindung
+    - `import * as bodyParser from 'body-parser';`
+  - Der Body-Parser hat den Zweck, eine Anfrage des Clients vorzuverarbeiten, um dem Programmierer die Arbeit der händischen Verarbeitung zu ersparen. Mit Hilfe des Body-Parser kann über `req.body` bereits auf die einzelnen Attribute zugegriffen werden.
+
+5. Neue Schicht einfügen (Saveuser)
+  - Diese neu eingefügte Schicht soll es erlauben, einen neuen User am Client anzulegen, der dann am Server gespeichert wird.
+  - Ein großer Teil der Einheit wurde damit verbracht herrauszufinden, wie die Daten aus dem **Body** ausgelesen werden können. Schließlich wurde mit `urlendcoded` die Lösung gefunden.
+
+  ```typescript
+    server.use(bodyParser.urlencoded());
+  ```
+
+  - Die Speicherung des neuen Users wurde zu diesem Zeitpunkt noch nicht implementiert, doch für Testzwecke wird dem Client eine Nachricht übermittelt, ob er Name und Passwort "richtig" angegeben hat oder nicht. Der "richtige" Name und das "richtige" Passwort sind derzeit statisch im Quelltext eingetragen. Es dient, wie gesagt, nur für Testzwecke.
+
+  ```typescript
+    // 2. Schicht
+    server.post('/saveuser', (req, res, next) => {
+    // res.render('index.pug');
+    if (req.body)
+    {
+        console.log(req.body);
+    }
+
+    if (req.body.name === 'I bims' && req.body.password === '')
+    {
+        res.setHeader('Set-Cookie', cookie.serialize('name', req.body.name, {
+            httpOnly: true,
+            maxAge: 60 * 60 * 24
+        }));
+        res.send('Is OK');
+    }
+    else
+    {
+        res.status(401).send('Is net OK');
+    }
+});
+  ```
+
+6. Cookies
+  - Installation
+    - `npm install --save cookie`
+    - `npm install --save-dev @types/cookie`
+  - Einbindung
+    - `import * as cookie from 'cookie';`
+  - Cookies sind ein Möglichkeit, um Daten clientseitig speichern zu können.
+  - In der 2.Schicht wird bereits ein Cookie verwendet:
+
+  ```typescript
+    res.setHeader('Set-Cookie', cookie.serialize('name', req.body.name, {
+        httpOnly: true,
+        maxAge: 60 * 60 * 24
+    }));
+  ```
+
+  - Setzt man das Attribut `httpOnly` auf `true` kann verhindert werden, dass Scripte das Cookie lesen können. Standardmäßig ist `httpOnly` `false`.
+  - Über das Attribut `maxAge` kann festgelegt werden, wie lange das Cookie gültig ist. Im Fall von `maxAge: 60 * 60 * 24` ist es ein Tag.
