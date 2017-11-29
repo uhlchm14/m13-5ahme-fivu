@@ -178,6 +178,7 @@ Bei Bootstap gibt es zwei Arten von Kommentaren:
 * nächster Schritt: Daten die übertragen werden, sollen verarbeitet werden
 * server.body: speichert die Daten im body, somit kann keiner sie sehen
 * body-parser installieren: npm install --save-dev @types/body-parser
-* cookie: 
+  * dient dazu um eine Anfrage des Clients vorzuverarbeiten, um dem Programmierer die Arbeit der händischen Verarbeitung zu ersparen. Mit Hilfe des Body-Parser kann über req.body bereits auf die einzelnen Attribute zugegriffen werden.
+* Cookies: Cookies sind eine Möglichkeit um Daten clientseitig speichern zu können
 * in typescript installieren: npm install --save-dev @types/cookie
 * Programm: [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue06/src/main.ts)
