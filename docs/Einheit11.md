@@ -24,3 +24,19 @@ und
 ```javascript
 npm install --save cookie-parser
 ```
+dann importieren
+```javascript
+import * as cookieParser from 'cookie-parser'
+```
+dann
+```javascrpit
+server.use(cookieParser());
+```
+um eine spezielle Anfrage anzuzeigen:
+```javascript
+ console.log(req.cookies);
+    if(req.cookies && req.cookies.name ==='maxi')
+    {
+        console.log('Anfrage von Maxi');
+    }
+```
