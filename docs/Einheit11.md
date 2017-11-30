@@ -8,6 +8,7 @@
 2. Fortsetzung Cookies
 3. Web-Token / JSON Webtoken
 4. Beginn ue07 mit Verwendung von Token
+5. Schlüssel erzeugen
 
 ### 1. Wiederholung Cookies
 - Cookies speichern Daten im Client
@@ -63,4 +64,14 @@ npm install --save-dev @types/jsonwebtoken
 dann importieren
 ```javascript
 import * as jwt from 'jsonwebtoken';
+```
+
+### 5. Schlüssel erzeugen
+- folgende Befehle:
+```javascript
+openssl genrsa -out keys/server-private.pem
+```
+und
+```javascript
+openssl rsa -in keys/server-private.pem -pubout -out keys/server-public.pem
 ```
