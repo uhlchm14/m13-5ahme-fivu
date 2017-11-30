@@ -7,6 +7,7 @@
 1. Wiederholung Cookies
 2. Fortsetzung Cookies
 3. Web-Token / JSON Webtoken
+4. Beginn ue07 mit Verwendung von Token
 
 ### 1. Wiederholung Cookies
 - Cookies speichern Daten im Client
@@ -48,3 +49,6 @@ um eine spezielle Anfrage anzuzeigen:
 - Im Gegensatz zum Cookie findet Signatur statt und der Token wird nicht von Haus aus mitgesendet
 - Ein signierter Token hat auch eine Gültigkeit, ist wie ein Stück Ausweis, der für eine gewisse Zeit da ist
 - Token werden gerne von Banken übergeben, um sie genau für eine Operation zu verwenden, z.B wenn man auf E-Banking Seite lange eingeloggt bleibt und die Seite dann irgendwann nicht mehr gültig ist
+
+### 4. Beginn ue07 mit Verwendung von Token
+- Wir kopieren von Herrn Sx das Projekt
