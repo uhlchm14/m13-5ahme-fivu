@@ -211,3 +211,34 @@ html(lang="de")
 
 ## 10.Einheit 23.11.2017 (Donnerstag)
 
+* Daten aus der Form bekommen mit body-parser Modul
+* Problem aufgrund des falschen Headers (Problem konnte nicht gelöst werden).
+* Verwendung von urlcoded, damit die Forms zum Object werden.
+* Verwendung von Cookies
+  *  Zur Authentifizierung damit man auf der Webside bleiben darf.
+
+* Hier muss man die vorgegebenen Anweisungen angeben ansonsten kommt man nicht weiter.
+``` typescript
+server.post('/saveuser', (req, res, next) => {  
+    // res.render('index.pug');
+    if(req.body)
+    {
+        console.log(req.body);
+    }
+    if(req.body.name === 'maxi' && req.body.password === 'geheim'){
+        res.setHeader('Set-Cookie', cookie.serialize('name', req.body.name, {
+            httpOnly: true,
+            maxAge: 60 * 60 * 24 * 7 // 1 week 
+          }));
+        res.send('OK ('+ req.body.email + ')');
+    } else {
+        res.status(401).send('ERROR');
+    }
+    // next();
+ });
+
+```
+
+## 11.Einheit 30.11.2017 (Donnerstag)
+
+
