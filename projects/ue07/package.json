@@ -1,0 +1,45 @@
+{
+    "name": "ue07",
+    "version": "1.0.0",
+    "description": "UE07 - JSON Web Token (FIVU 5AHME)",
+    "main": "dist/main.js",
+    "repository": {},
+    "scripts": {
+        "clean": "gulp clean",
+        "build": "gulp build",
+        "prestart": "gulp cleanAndBuild",
+        "restart": "gulp cleanAndBuild",
+        "start": "nodemon dist/main.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "sx",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "jsonwebtoken": "^8.1.0",
+        "nodemon": "^1.12.1",
+        "pug": "^2.0.0-rc.4",
+        "sprintf-js": "^1.1.1"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.16.8",
+        "@types/express": "^4.0.37",
+        "@types/jsonwebtoken": "^7.2.3",
+        "@types/node": "^8.0.31",
+        "@types/pug": "^2.0.4",
+        "@types/sprintf-js": "^1.1.0",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-changed": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.1",
+        "gulp-tslint": "^8.1.2",
+        "gulp-typescript": "^3.2.2",
+        "gulp-using": "^0.1.1",
+        "merge-stream": "^1.0.1",
+        "path": "^0.12.7",
+        "run-sequence": "^2.2.0",
+        "tslint": "^5.7.0",
+        "typescript": "^2.5.3"
+    }
+}

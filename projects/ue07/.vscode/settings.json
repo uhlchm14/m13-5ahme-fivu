@@ -1,3 +1,4 @@
+// Place your settings in this file to overwrite default and user settings.
 {
     "files.exclude": {
         ".vscode/": false,
@@ -10,6 +11,5 @@
         "**/gulpfile.js": false,
         "**/tsconfig.json": true,
         "**/tslint.json": true
-    },
-    "prettier.singleQuote": true
+    }
 }
