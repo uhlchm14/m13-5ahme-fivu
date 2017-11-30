@@ -23,3 +23,6 @@ Von Florian Harrer: [Bootstrap](https://github.com/HTLMechatronics/m13-5ahme-fiv
 
 ## Einheit 8, 23.11.2017
 Von Fabio Pölzl: [Body-Parser und Cookie](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/poefam13/docs/8.Einheit-2017-11-23.md)
+
+## Einheit 9, 30.11.2017
+Von Ritter Mario: [Cookie und JWT](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.11.30.md)
