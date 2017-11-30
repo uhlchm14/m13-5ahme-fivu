@@ -6,6 +6,7 @@
 
 1. Wiederholung Cookies
 2. Fortsetzung Cookies
+3. Web-Token / JSON Webtoken
 
 ### 1. Wiederholung Cookies
 - Cookies speichern Daten im Client
@@ -40,3 +41,10 @@ um eine spezielle Anfrage anzuzeigen:
         console.log('Anfrage von Maxi');
     }
 ```
+### 3. Web-Token / JSON Webtoken
+- Server gibt Client Token, dieser Token wird signiert.
+- Wenn der Token dann vom Client verwendet wird, kann die Signatur geprüft werden und letztendlich (wenn sie als gültig empfunden wird) verwendet werden
+- trotzdem findet hierbei keine Verschlüsselung statt
+- Im Gegensatz zum Cookie findet Signatur statt und der Token wird nicht von Haus aus mitgesendet
+- Ein signierter Token hat auch eine Gültigkeit, ist wie ein Stück Ausweis, der für eine gewisse Zeit da ist
+- Token werden gerne von Banken übergeben, um sie genau für eine Operation zu verwenden, z.B wenn man auf E-Banking Seite lange eingeloggt bleibt und die Seite dann irgendwann nicht mehr gültig ist
