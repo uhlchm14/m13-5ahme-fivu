@@ -77,7 +77,25 @@ Abwesend
 * Daten aus der Form bekommen mit body-parser Modul
 * Probleme aufgrund falschen Headers
 * Verwendung von 'urlencoded' um Body als Objekt zu bekommen
-* Verwendung von Cookies mit npm Modul Cookie
+* Verwendung von Cookies mit npm Modul cookie
+
+## Einheit 11: 30.11.17
+* Wiederholung Cookie
+  + speichert Daten
+  + verfällt
+  + gebunden an die URL
+  + Wenn die URL aufgerufen wird, so wird automatisch die Cookieinformation mitgesendet
+  + 'httpOnly': JS kann nicht auf Cookie zugreifen, nur http
+* Problem von Cookies: Daten werden automatisch mitgesendet
+* 'cookie-parser' um auf Cookies zuzugreifen
+* [Übung 6] abgeschlossen
+* Bessere Methode: Web-Token, JSON Webtoken --> Daten, die ich mitgeben _kann_
+  + werden signiert
+  + nicht verschlüsselt
+* Neues Projekt vom Server: [Übung 7] - als Token Basis
+* Erzeugen eines Schlüsselpaares mit openssl
+* Node.js Buffer Datentyp = byte[] in Java
+* Verwendung des Node.js Moduls 'path' um absolute Pfade zu erzeugen
 
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
@@ -96,3 +114,5 @@ Abwesend
 [CSS-File]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue05/public/myStyle.css
 [HTML-File]: https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/projects/ue05/public/index.html
 [main.ts - UE05]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue05/src
+[Übung 6]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue06
+[Übung 7]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
