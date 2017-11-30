@@ -7,8 +7,9 @@
     "scripts": {
         "clean": "gulp clean",
         "build": "gulp build",
+        "restart": "gulp cleanAndBuild",
         "prestart": "gulp cleanAndBuild",
-        "start": "node dist/main.js",
+        "start": "nodemon dist/main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "greflm13",
@@ -18,13 +19,16 @@
         "body-parser": "^1.18.2",
         "bootstrap": "^4.0.0-beta.2",
         "cookie": "^0.3.1",
+        "cookie-parser": "^1.4.3",
         "express": "^4.16.2",
+        "nodemon": "^1.12.1",
         "pug": "^2.0.0-rc.4",
         "sprintf-js": "^1.1.1"
     },
     "devDependencies": {
         "@types/body-parser": "^1.16.8",
         "@types/cookie": "^0.3.1",
+        "@types/cookie-parser": "^1.4.1",
         "@types/express": "^4.0.37",
         "@types/node": "^8.0.31",
         "@types/pug": "^2.0.4",
