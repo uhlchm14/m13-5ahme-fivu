@@ -24,7 +24,7 @@ npm install --save cookie-parser
 ```
 und
 ```javascript
-npm install --save cookie-parser
+npm install --save-dev @types/cookie-parser
 ```
 dann importieren
 ```javascript
@@ -52,3 +52,15 @@ um eine spezielle Anfrage anzuzeigen:
 
 ### 4. Beginn ue07 mit Verwendung von Token
 - Wir kopieren von Herrn Sx das Projekt
+- jetzt brauchen wir den jsonwebtoken, installieren:
+```javascript
+npm install --save jsonwebtoken
+```
+und
+```javascript
+npm install --save-dev @types/jsonwebtoken
+```
+dann importieren
+```javascript
+import * as jwt from 'jsonwebtoken';
+```
