@@ -3,6 +3,7 @@ import {sprintf} from 'sprintf-js';
 import * as express from 'express'; // express importieren
 import * as bodyParser from 'body-parser';
 import * as cookie from 'cookie';
+import * as cookieParser from 'cookie-parser';
 class Main {
     constructor () {
         console.log('Start');
@@ -17,9 +18,14 @@ const server = express();
 const pugRenderingEngine = server.set('view engine', 'pug');
 pugRenderingEngine.locals.pretty = true;
 server.use(bodyParser.urlencoded());
+server.use(cookieParser());
 // 1.Schicht
 server.get('/', (req, res, next) => {
     // res.render('index.pug');
+    console.log(req.cookies);
+    if (req.cookies && req.cookies.name === 'max') {
+        console.log('Anfrage von Maxi');
+    }
     next();
 });
 // 2.Schicht
@@ -48,4 +54,3 @@ server.use(express.static('public'));
 
 server.listen(4711); // Port des Servers = 4711
 console.log('Server auf Port 4711 gestartet (http://localhost:4711)');
-
