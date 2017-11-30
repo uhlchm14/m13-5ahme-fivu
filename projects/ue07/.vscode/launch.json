@@ -4,7 +4,7 @@
             {
                 "type": "node",
                 "request": "launch",
-                "name": "Program Start",
+                "name": "Launch Program",
                 // "program": "${file}"
                 "program": "${workspaceRoot}/src/main.ts",
                 "cwd": "${workspaceRoot}",
