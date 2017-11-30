@@ -10,11 +10,16 @@ class Main
 }
 
 const main = new Main();
-let counter: number = 1;
+
 //Express Web Server erstellen
 const server = express();
 
+//Rendering engine pug in Express einbinden
+server.set('view engine', 'pug');
+
 //Express arbeitet in Schichten nach der Reihenfolge der Definition im Quelltext
+
+let counter: number = 1;
 
 //1.Schicht
 // '=>' Error Operator (Das die Funktion ans aktuelle Objekt gebunden ist) 
@@ -37,7 +42,12 @@ server.get('/test', (req, res, next) => {
     html += '</html>';
 
     res.send(html);
-    next();
+});
+
+server.get('/pug', (req, res, next) => {
+    res.render('test.pug', { counterValue: counter++ });
+
+
 });
 
 //2.Schicht
