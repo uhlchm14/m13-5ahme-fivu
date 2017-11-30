@@ -76,3 +76,5 @@ und
 ```javascript
 openssl rsa -in keys/server-private.pem -pubout -out keys/server-public.pem
 ```
+- Danach: public and private key als _Buffer_ anlegen!
+
