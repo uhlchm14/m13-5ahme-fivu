@@ -182,3 +182,39 @@ Bei Bootstap gibt es zwei Arten von Kommentaren:
 * Cookies: Cookies sind eine Möglichkeit um Daten clientseitig speichern zu können
 * in typescript installieren: npm install --save-dev @types/cookie
 * Programm: [main.ts](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/finmam13/projects/ue06/src/main.ts)
+
+### Einheit 11: 30.11.2017
+
+* Cookie: * Speicherung von Daten im Client
+          * haben oftmals ein Verfalldatum
+          * gebunden an die URL
+          * wenn die URL aufgerufen wird, so wird automatisch die Cookie Information mitgesendet
+          * wird auch für Autenthifizierung verwendet
+
+* httpOnly: damit Javascript kein Zugriff aufs eigene Cookie hat (keine manipulation durch Schadsoftware)
+* cookieParser installieren: npm install --save cookie-parser
+  * dann importieren
+  * hier einfügen: cookie ausgabe und eine abfrage
+  ```Javascript
+  server.get('/', (req, res, next) => {
+    // res.render('index.pug');
+    console.log(req.cookies);
+    if(req.cookies && req.cookies.name === 'maxi')
+    {
+        console.log('Anfrage von maxi');
+    }
+    next();
+  });
+  ```
+  
+* Web-Token: * Daten, die man mitgeben kann und diese werden vom Server überprüft, ob die Daten von einer gewissen Person stammen
+             * Ansich findet keine Verschlüsselung statt
+             * es findet ein Signaturvorgang statt
+             * Token wird nicht von selbst automatisch gesendet
+             * Token kann auch nur für eine gewisse Zeit gültig sein
+             
+* erstellen der ue07:
+* modul einfügen: jsonwebtoken
+* Schlüsselpaar erzeugen mit: * openssl rsa -in keys/server-private.pem -pubout -out keys/server-public.pem
+                              * openssl genrsa -out keys/server-private.pem
+* Buffer entspricht einen Byte [] in Java
