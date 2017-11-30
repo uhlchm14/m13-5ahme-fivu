@@ -77,4 +77,18 @@ und
 openssl rsa -in keys/server-private.pem -pubout -out keys/server-public.pem
 ```
 - Danach: public and private key als _Buffer_ anlegen!
+```javascript
+class Main {
+
+    private _privateKey: Buffer;
+    private _publicKey: Buffer;
+
+    constructor () {
+        console.log('Start');
+        this._publicKey = fs.readFileSync('../keys/server-public.pem'); // System wartet bis file wirklich eingelesen ist, nix im Hintergrund
+        this._privateKey = fs.readFileSync('../keys/server-private.pem');
+        console.log('Key-pair read from files');
+    }
+}
+```
 
