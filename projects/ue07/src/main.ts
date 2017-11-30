@@ -35,13 +35,13 @@ server.post('/saveuser', (req, res, next) => {
         console.log(req.body);
     }
     if (req.body.name === 'max' && req.body.password === 'geheim') {
-        res.setHeader(
-            'Set-Cookie',
-            cookie.serialize('name', req.body.name, {
-                httpOnly: true,
-                maxAge: 60 * 60 * 24 * 7 // 1 week
-            })
-        );
+        // res.setHeader(
+        //     'Set-Cookie',
+        //     cookie.serialize('name', req.body.name, {
+        //         httpOnly: true,
+        //         maxAge: 60 * 60 * 24 * 7 // 1 week
+        //     })
+        // );
         res.send('Supa (' + req.body.email + ')');
     } else {
         res.status(401).send('Error');
