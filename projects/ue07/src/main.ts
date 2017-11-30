@@ -3,10 +3,22 @@ import { sprintf } from 'sprintf-js';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as jwt from 'jsonwebtoken';
+import * as fs from 'fs';
+import * as path from 'path';
 
 class Main {
+
+    private _privateKey: Buffer;
+    private _publicKey: Buffer;
     constructor () {
         console.log('Start');
+        const pubFileName = path.join(__dirname, '..', 'keys/server-public.pem');
+        const privateFileName = path.join(__dirname, '..', 'keys/server-private.pem');
+        this._publicKey = fs.readFileSync(pubFileName);
+        console.log('reading public Key from : ' + pubFileName);
+        this._privateKey = fs.readFileSync(privateFileName);
+        console.log('reading private Key from : ' + privateFileName);
+        console.log('Key-Pair read from files');
     }
 }
 
