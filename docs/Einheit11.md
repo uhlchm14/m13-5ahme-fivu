@@ -67,6 +67,7 @@ import * as jwt from 'jsonwebtoken';
 ```
 
 ### 5. Schlüssel erzeugen
+- zuerst Ordner **keys** erstellen, dann:
 - folgende Befehle:
 ```javascript
 openssl genrsa -out keys/server-private.pem
