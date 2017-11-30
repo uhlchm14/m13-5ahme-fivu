@@ -148,6 +148,54 @@ BodyParser -> Text aus BodyText holen -> Zugriff auf fertiges Object
 
 - Fortsetzung -> nächste Einheit
 
-### Einheit 10: xx.xx.xxxx
+### Einheit 10: 30.11.2017
+
+- Fehlstundenüberprüfung
+
+Cookie: 
+- dient Speicherung von Daten beim Client
+- Oftmals mit Verfallsdaten festgelegt
+- Gebunden an die URL
+- Wenn URL aufgerufen wird -> Cookie Informationen werden mitgesendet 
+- Auf Cookies kann nur der eigene PC zugreifen.
+- Durch schadsoftware können Cookies dennoch ausgelesen werden
+- Cookies werden mitlerweile automatisch mitgesendet -> da Cookies erlaubt
+- - - -	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Moderne Variante zu Cookies:
+
+Web-Token oder JSON-Token
+
+- Web-Token -> ist ein Stück an Daten, welche ich mitgeben kann. 
+- Kann von Server überprüfen ob es wirklich von der jeweiligen Person kommt
+- Server sendet das Token signiert zum Client und wird danach wird die Signatur überprüft
+
+Unterschied zum Cookie:
+
+- Signiert
+- Token wird nicht automatisch gespeichert
+
+
+ue07 aus ue06 erstellen
+
+- Alle Cookies entfernen
+- `npm install --save jsonwebtoken`
+- Umbauen auf WebToken
+
+- Um Signatur realisieren zu können brauchen wir öffentlichen und einen privaten Schlüssel
+- github.com/ManfredSteiner/webserver-template
+- In Branch mit JSONWEBTOKEN wechseln und README lesen
+https://github.com/ManfredSteiner/webserver-template/tree/step8b-json-web-token
+
+- Schlüssel erzeugen
+
+- Schlüssel in main.ts einbinden
+```typescript
+private _privateKey: Buffer;
+private _publicKey: Buffer;
+```
+
+
+Fortsetzung in der nächsten Einheit!
 
 
