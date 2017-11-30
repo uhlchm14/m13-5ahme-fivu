@@ -11,3 +11,4 @@
 | 7 | 09.11.2017 | [ue05](projects/ue05/src/main.ts) |
 | 8 | 16.11.2017 | [ue05](projects/ue05/src/main.ts) & [ue06](projects/ue06/src/main.ts) |
 | 9 | 23.11.2017 | [ue06](projects/ue06/src/main.ts) |
+| 10 | 30.11.2017 | [ue06](projects/ue06/src/main.ts) |
