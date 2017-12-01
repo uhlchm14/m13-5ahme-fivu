@@ -1,0 +1,22 @@
+body {
+    background-color: #3fa3be;
+}
+
+h1 {
+    color: tomato
+}
+
+p {
+    background-color: #1edb1e;
+    border: solid 3px red;
+    color: #f1748b;
+}
+
+#absatz2 {
+    border: solid 3px black;
+    color: #f1748b;
+}
+
+.gelbeAbsaetze {
+    background-color: yellow;
+}
