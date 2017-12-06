@@ -342,3 +342,69 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 
   - Setzt man das Attribut `httpOnly` auf `true` kann verhindert werden, dass Scripte das Cookie lesen können. Standardmäßig ist `httpOnly` `false`.
   - Über das Attribut `maxAge` kann festgelegt werden, wie lange das Cookie gültig ist. Im Fall von `maxAge: 60 * 60 * 24` ist es ein Tag.
+
+
+### 11. Einheit
+**Datum:** 30.11.2017  
+**Dazugehörige Übung(en):** ![ue06](projects/ue06), ![ue07](projects/ue07)  
+**Inhalt:**  
+1. Cookie-Parser
+  - Installation
+    - `npm install --save cookie-parser`
+    - `npm install --save-dev @types/cookie-parser`
+  - Einbindung
+    - `import * as cookieParser from 'cookie-parser';`
+  - Wird zum Lesen von Cookies verwendet, die der Client an den Server mit einer Anfrage mitsendet.
+
+  ```typescript
+    server.use(cookieParser());
+
+    // 1. Schicht
+    server.get('/', (req, res, next) => {
+      // res.render('index.pug');
+      console.log(req.cookies);
+      if (req.cookies && req.cookies.name === 'I bims')
+      {
+        console.log('Du bimsts');
+      }
+      next();
+    });
+  ```
+
+2. JSON Web-Token
+  - Der Server sendet dem Client einen signierten Token. Diesen sendet der Client bei seiner nächsten Anfrage an den Server zurück. Anschließend überprüft der Server den Token.
+  - Ähnlich wie bei einem Cookie, hat der Token eine befristete Gültigkeit und es findet keine Verschlüsselung statt.
+  - Im Gegensatz zu einem Cookie, wird ein Token nicht automatisch mitgesendet. Darüber hinaus ist der Token nicht an die URL gebunden.
+  
+3. ue07
+  - Als Grundlage für ![ue07](projects/ue07) wurde die Übung ![ue06](projects/ue06) kopiert. Anschließend wurden die Dateien ![index.html](projects/ue07/public/index.html), ![myStyle.css](projects/ue07/public/myStyle.css) und natürlich ![main.ts](projects/ue07/src/main.ts) abgeändert.
+  - JSON Web-Token einbinden
+    - `import * as jwt from 'jsonwebtoken';` 
+
+4. Schlüsselpaar erzeugen
+  - Unterverzeichnis `keys` in `ue07` erstellen.
+  - Im Verzeichnis `ue07` mit Rechtsklick die **Git Bash Konsole** öffen.
+  - Erzeugen des privaten Schlüsseles:
+    - `openssl genrsa -out keys/server-private.pem`
+  - Erzeugen des öffentlichen Schlüsseles:
+    - `openssl rsa -in keys/server-private.pem -pubout -out keys/server-public.pem`
+  - Einbinden von **fs** und **path** in `ue07`
+    - `import * as fs from 'fs';`
+    - `import * as path from 'path';`
+  - Einlesen der Schlüssel in `main.ts`
+
+  ```typescript
+    class Main
+    {
+      private _privateKey: Buffer;
+      private _publicKey: Buffer;
+    
+      constructor ()
+      {
+        this._publicKey = fs.readFileSync(path.join(__dirname, '..', 'keys/server-public.pem'));
+        this._privateKey = fs.readFileSync(path.join(__dirname, '..', 'keys/server-private.pem'));
+
+        console.log('Schlüssel san drin');
+      }
+    }
+  ```
