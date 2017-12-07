@@ -40,7 +40,7 @@ Einleitung in das Schuljahr:
 
 - Wiederholung von Einheit 4
 - Besprechung von Interface
-- Exceptions (Errors) setzen / Überprüfung im Constructor durchführen
+https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue03- Exceptions (Errors) setzen / Überprüfung im Constructor durchführen
 - Datei "Data" schreiben um Daten abzuspeichern
 - Serverseitige Programmierung abecken
 - Server erstellen
@@ -61,7 +61,7 @@ HTML, CSS, Javascript
 HTML: Erzeugung der Struktur der Seite
 CSS: wie die Webseite wirklich aussieht (aussehen)
 Javascript: ist eine Möglichkeit programme am Client vorzunehmen (dynamische Veränderung)
-
+https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue03
 Begründung: Grafiker kann meist nicht programmieren und umgekehrt. 
 
 Selektoren -> Fachbegriffe für Elemente in der CSS-Datei
@@ -158,7 +158,8 @@ Cookie:
 - Gebunden an die URL
 - Wenn URL aufgerufen wird -> Cookie Informationen werden mitgesendet 
 - Auf Cookies kann nur der eigene PC zugreifen.
-- Durch schadsoftware können Cookies dennoch ausgelesen werden
+- Durch Schadsoftware können Cookies dennoch ausgelesen werden
+- Muss im Header vom Response deklariert sein
 - Cookies werden mitlerweile automatisch mitgesendet -> da Cookies erlaubt
 - - - -	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -185,12 +186,12 @@ ue07 aus ue06 erstellen
 - Um Signatur realisieren zu können brauchen wir öffentlichen und einen privaten Schlüssel
 - github.com/ManfredSteiner/webserver-template
 - In Branch mit JSONWEBTOKEN wechseln und README lesen
-https://github.com/ManfredSteiner/webserver-template/tree/step8b-json-web-token
+[Repository](https://github.com/ManfredSteiner/webserver-template/tree/step8b-json-web-token)
 
 - Schlüssel erzeugen
 
 - Schlüssel in main.ts einbinden
-```typescript
+### Einheit 10: 30.11.2017```typescript
 private _privateKey: Buffer;
 private _publicKey: Buffer;
 ```
@@ -199,3 +200,32 @@ private _publicKey: Buffer;
 Fortsetzung in der nächsten Einheit!
 
 
+### Einheit 11: 07.12.2017
+
+- Wichteln
+- Wiederholung Cookies, 
+
+- Theoriemitschrift ist aus unerklärlichen Gründen verschwunden??????
+
+JSON-Web-Token
+
+Speichert nicht jedes mal die Daten auf den Server
+Nach einen bestimmten Zeitraum wird erneut überprüft ob der jeweilige User noch der richtige ist. 
+#### Wir sind Knapp am Ziel!
+
+Nächste Einheit:
+
+### Einheit 12:
+
+
+
+
+
+Einzelne Einheiten:
+
+- [ue02](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue02)
+- [ue03](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue03)
+- [ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue04)
+- [ue05](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue05)
+- [ue06](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue06)
+- [ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue07)
