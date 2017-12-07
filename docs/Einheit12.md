@@ -6,6 +6,7 @@
 
 1. Wiederholung Cookies / Fortsetzung Cookies
 2. Web-Token
+3. Download ARC
 
 ### 1. Wiederholung Cookies / Fortsetzung Cookies
 - Wiederholen von Cookies
@@ -23,3 +24,8 @@ this._privateKey,
 { expiresIn: '10min', algorithm: 'rs256'});
 ```
 - Was will ich haben(Information), Schlüssel zum Verschlüsseln, Algorithmus
+- Weil wir die Schichten nicht in der Methode Main geschrieben haben, mussten wir das komplette Programm umbauen. (Siehe Project)
+
+### 3. Download ARC
+- Wir downloaden über Chromium den Advances REST Client
+- Wir setzen das nächste Mal fort beim Programm
