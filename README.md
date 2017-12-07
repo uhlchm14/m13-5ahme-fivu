@@ -16,4 +16,4 @@
 |  9  | 16.11 |![Einheit 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit9.md) & ![Praxis 8](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue09) | Pug & Bootstrap | 
 | 10  | 23.11 |![Einheit 10](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit10.md) & ![Praxis 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue10) | Cookies | 
 | 11  | 30.11 |![Einheit 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit11.md) & ![Praxis 10](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue11) | Cookies + Web-Token | 
-| 12  | 07.12 |![Einheit 12](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit12.md) & ![Praxis 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue12) | Cookies + Web-Token | 
+| 12  | 07.12 |![Einheit 12](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit12.md) & ![Praxis 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ornstm13/projects/ue12) | | 
