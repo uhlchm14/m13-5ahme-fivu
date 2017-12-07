@@ -83,10 +83,12 @@ Abwesend
 * Wiederholung Cookie
   + speichert Daten
   + verfällt
-  + gebunden an die URL
+  + gebunden an die URL/an den Host
   + Wenn die URL aufgerufen wird, so wird automatisch die Cookieinformation mitgesendet
   + 'httpOnly': JS kann nicht auf Cookie zugreifen, nur http
-* Problem von Cookies: Daten werden automatisch mitgesendet
+* Probleme von Cookies
+  + Daten werden automatisch mitgesendet
+  + Dadurch bekommt der Server Infos vom User mit dem Cookie (selber Cookie, IP verändert sich ortsabhängig)
 * 'cookie-parser' um auf Cookies zuzugreifen
 * [Übung 6] abgeschlossen
 * Bessere Methode: Web-Token, JSON Webtoken --> Daten, die ich mitgeben _kann_
@@ -96,6 +98,12 @@ Abwesend
 * Erzeugen eines Schlüsselpaares mit openssl
 * Node.js Buffer Datentyp = byte[] in Java
 * Verwendung des Node.js Moduls 'path' um absolute Pfade zu erzeugen
+
+## Einheit 12: 7.12.17
+* Wiederholung Cookies
+* Wiederholung JSON Webtoken
+* Verwendung von Webtokens in [ue07]
+* Requests mit ARC an Server senden
 
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
@@ -116,3 +124,4 @@ Abwesend
 [main.ts - UE05]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue05/src
 [Übung 6]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue06
 [Übung 7]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
+[ue07]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
