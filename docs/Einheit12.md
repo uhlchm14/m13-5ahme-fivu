@@ -14,4 +14,12 @@
   - Vorteil / Hauptgewinn: Bei Anfrage muss man **nicht in Datenbank** nachsehen
 
 ### 2. Web-Token
-- Ziel Web-Token erzeugen und mitsenden
+- Ziel: Web-Token erzeugen und mitsenden
+- Web-Token erzeugen:
+```javascript
+const token = 
+jwt.sign({name: 'maxi'}, 
+this._privateKey,
+{ expiresIn: '10min', algorithm: 'rs256'});
+```
+- Was will ich haben(Information), Schlüssel zum Verschlüsseln, Algorithmus
