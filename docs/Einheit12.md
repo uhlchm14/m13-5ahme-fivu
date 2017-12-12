@@ -1,5 +1,10 @@
 ### Einheit 12: 07.12.2017
 
+**Lehrer:** DI Manfred Steiner
+**Schriftführer:** Matthias Fink 
+**Abwesend:** niemand
+
+
 Wiederholung Cookie: 
  * Speichern die Daten Clientseitig
  * Client kann an der URL erkennen ob er ein Cookie mitsendet oder nicht
