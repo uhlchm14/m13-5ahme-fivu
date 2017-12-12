@@ -1,8 +1,8 @@
 ### Einheit 12: 07.12.2017
 
-**Lehrer:** DI Manfred Steiner
-**Schriftführer:** Matthias Fink 
-**Abwesend:** niemand
+**Lehrer:** DI Manfred Steiner  
+**Schriftführer:** Matthias Fink   
+**Abwesend:** niemand  
 
 
 Wiederholung Cookie: 
