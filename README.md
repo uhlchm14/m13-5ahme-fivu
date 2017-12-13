@@ -408,3 +408,45 @@ Download und Besprechung der letzten Dateien des Templates für ue03
       }
     }
   ```
+  
+
+### 12. Einheit
+**Datum:** 07.12.2017  
+**Dazugehörige Übung(en):** ![ue07](projects/ue07)  
+**Inhalt:**  
+1. Vorteile des Web-Tokens gegenüber Cookie
+  - Da der Web-Token nicht jedes mal mitgesendet wird, wird das Sammeln von persönlichen Daten und das Erstellen von personalisierter Werbung erschwert.
+  - Durch die Signierung des Web-Tokens muss der Server nicht bei jeder Anfrage des Clients die Validität des Clients in einer Datenbank prüfen.
+  
+2. Umbau von `main.ts`
+  - Die Behandlung der einzelnen Schichten wurde in den Konstruktor verlegt.
+  - Für den Start des Servers, das Senden einer Respose mit einem Web-Token und das Lesen einer Request mit einem Web-Token wurden eigene Funktionen in der Klasse `Main` erstellt.
+  
+3. Erzeugung und Versendung eines Web-Tokens
+  
+  ```typescript
+    if (req.body.name === 'I bims' && req.body.password === '')
+    {
+      const token = jwt.sign({name: 'I bims'}, this._privateKey, {expiresIn: '5min', algorithm: 'RS256'});
+      console.log(token);
+      res.json({token: token});
+    }
+  ```
+  
+4. Lesen eines Web-Tokens
+  
+  ```typescript
+    const value = <string>req.headers.authorization;
+
+    if (value.startsWith('Bearer: '))
+    {
+      const token = value.substr(8);
+      console.log(token);
+      jwt.verify(token, this._privateKey, (err, decoded) => {
+          console.log(decoded);
+      });
+    }
+  ```
+  
+5. ARC
+  - Um die Funktion des Programms zu testen, wurde unter Chrome der **Advanced REST Client** installiert. Damit kann im Browser ein **POST** gesendet werden.
