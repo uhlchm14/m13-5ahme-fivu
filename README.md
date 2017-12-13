@@ -12,6 +12,9 @@
 - Einheit 6
 - Einheit 7  
 - Einheit 8
+- Einheit 9
+- Einheit 10
+- Einheit 11
 
 ### Einheit 1:
 #### Inhalt der Stunde 
@@ -102,27 +105,20 @@ und
 
 #### Inhalt der Stunde
 
-<<<<<<< HEAD
-## Einheit 6, 09.11.2017
-Von Dominik Pichler: [Dynamischer Server (Pug)](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/picdom12/Zusammenfassung_09112017.md)
 
-## Einheit 7, 16.11.2017
-Von Florian Harrer: [Bootstrap](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/harflm13/docs/protokoll_16_11_2017.md)
-
-## Einheit 8, 23.11.2017
-Von Fabio Pölzl: [Body-Parser und Cookie](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/poefam13/docs/8.Einheit-2017-11-23.md)
-<<<<<<< HEAD
-
-## Einheit 9, 30.11.2017
-Von Ritter Mario: [Cookie und JWT](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.11.30.md)
-=======
-=======
 - Widerholung der letzten Stunde
 - dynamische HTML Website
 - Server abfragen auswerten
 - Arrow operator 
 - Schichtensystem
 - pug
->>>>>>> 3e67238b0dac2ccb6aff0406c41a0c3712de46dc
->>>>>>> f171df2ef8bba3883dce4b83c013e49c0ebb440d
->>>>>>> 11a46df0ca56d3285e9b2e2ed37c846adf4efacd
+
+### Einheit 12:
+[ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue07)
+
+### Inhalte der Stunden
+
+- Wiederholung Cookie und Webtoken
+- Verwendung der Webtokens
+- Rewuest mit Webtokens
+
