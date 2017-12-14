@@ -26,19 +26,16 @@ class Main {
         this._server = express();
 
         this._server.use(bodyParser.urlencoded({extended: true}));
-        
         // 1. Schicht
         this._server.get('/', (req, res, next) => {
             next();
         });
-        
         // 2. Schicht
         this._server.post('/login', (req, res, next) => this.getLogin(req,res,next));
         // 3. Schicht
         this._server.get('/data', (req, res, next) => this.getData(req,res,next))
         // 4. Schicht
         this._server.use(express.static('public'));
-        
     }
 
     public startServer(port: number) {
@@ -52,7 +49,7 @@ class Main {
         if (req.body.name === 'maxi' && req.body.password === 'geheim') {
             const token = jwt.sign({
                                         name: 'maxi'},
-                                        this._privateKey, 
+                                        this._privateKey,
                                         { expiresIn: '10min', algorithm: 'RS256'}
                                     );
             console.log(token);
@@ -65,11 +62,11 @@ class Main {
     }
 
     private getData ( req: express.Request, res: express.Response, next: express.NextFunction) {
-        const value = <string>req.headers.authorization; 
-        if(value.startsWith('Bearer: ')){
+        const value = <string>req.headers.authorization;
+        if(value.startsWith('Bearer: ')) {
             const token = value.substr(8);
             console.log(token);
-            jwt.verify(token,this._publicKey,(err, decoded) => {
+            jwt.verify(token, this._publicKey, (err, decoded) => {
                 console.log(decoded);
             });
         }
