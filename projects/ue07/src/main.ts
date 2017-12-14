@@ -50,7 +50,7 @@ class Main {
             const token = jwt.sign({
                                         name: 'maxi'},
                                         this._privateKey,
-                                        { expiresIn: '10min', algorithm: 'RS256'}
+                                        { expiresIn: '2h', algorithm: 'RS256'}
                                     );
             console.log(token);
             res.json({ token: token});
@@ -63,14 +63,30 @@ class Main {
 
     private getData ( req: express.Request, res: express.Response, next: express.NextFunction) {
         const value = <string>req.headers.authorization;
-        if(value.startsWith('Bearer: ')) {
+        if (value.startsWith('Bearer: ')) {
             const token = value.substr(8);
             console.log(token);
-            jwt.verify(token, this._publicKey, (err, decoded) => {
+            jwt.verify(token, this._publicKey, (err, decoded: any) => {
                 console.log(decoded);
+                try {
+                    if (err) {
+                        throw err;
+                    }
+                    if (decoded.name && decoded.name === 'maxi') {
+                        console.log(decoded);
+                        const issuedAt = new Date(decoded.iat * 1000);
+                        console.log(issuedAt.toLocaleString());
+                        res.send('OK');
+                    } else {
+                        throw new Error('invalid token object');
+                    }
+                } catch (err) {
+                    console.log(err);
+                    res.status(401).send('Error');
+                }
             });
         }
-        res.status(500).send('Not implemented');
+        res.status(500).send('Internal server Error');
     }
 }
 
