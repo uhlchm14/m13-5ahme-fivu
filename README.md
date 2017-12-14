@@ -105,6 +105,14 @@ Abwesend
 * Verwendung von Webtokens in [ue07]
 * Requests mit ARC an Server senden
 
+## Einheit 13: 14.12.17
+* Wiederholung JSON Webtoken
+* Fertigstellung des Webtokens in ue07
+* Installation von Angular --> JS Framework
+  + alternativ: JS Files selber schreiben oder Nutzen von JS libraries (jquery)
+* Anlegen der [Übung 8] als Angular CLI Projekt
+
+
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
@@ -125,3 +133,4 @@ Abwesend
 [Übung 6]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue06
 [Übung 7]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
 [ue07]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
+[Übung 8]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08

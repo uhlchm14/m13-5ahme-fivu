@@ -1,0 +1,30 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/node_modules/": false,
+        "**/.gitkeep": true,
+        ".vscode/": false,
+        "**/e2e": true,
+        "**/environments": true,
+
+        "**/favicon.ico": false,
+
+        "**/.angular-cli.json": true,
+        "**/.angulardoc.json": true,
+        "**/.editorconfig": true,
+        "**/karma.conf.js": true,
+        "**/package-lock.json": true,
+        "**/protractor.conf.js": true,
+        "**/tsconfig.json": true,
+        "**/tslint.json": true,
+
+        "**/polyfills.ts": true,
+        "**/test.ts": true,
+        "**/tsconfig.app.json": true,
+        "**/tsconfig.spec.json": true,
+        "**/typings.d.ts": true,
+
+        "**/*.spec.ts": true
+    },
+    "git.ignoreLimitWarning": true
+}

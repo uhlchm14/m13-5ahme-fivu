@@ -35,7 +35,7 @@ class Main {
         // 3. Schicht
         this._server.post('/login', (req, res, next) => this.getLogin(req, res, next));
 
-        this._server.post('/data', (req, res, next) => this.getData(req, res, next));
+        this._server.get('/data', (req, res, next) => this.getData(req, res, next));
 
         // 4. Schicht
         // Verzeichnis public für statische HTML Seiten definieren
@@ -53,7 +53,7 @@ class Main {
                 { name: 'maxi' },
                 this._privateKey,
                 {
-                    expiresIn: '10min',
+                    expiresIn: '2h',
                     algorithm: 'RS256'
                 }
             );
@@ -70,8 +70,23 @@ class Main {
         if (value.startsWith('Bearer')) {
             const token = value.substring(8);
             console.log(token);
-            jwt.verify(token, this._publicKey, (err, decoded) => {
-                console.log(decoded);
+            jwt.verify(token, this._publicKey, (err, decoded: any) => {
+                try {
+                    if (err) {
+                        throw err;
+                    }
+                    if (decoded.name && decoded.name === 'maxi') {
+                        console.log(decoded);
+                        const issuedAt = new Date(decoded.iat * 1000);
+                        console.log(issuedAt.toLocaleString());
+                        res.send('OK');
+                    } else {
+                        throw new Error ('invalid token object');
+                    }
+                } catch (err) {
+                    console.log(err);
+                    res.status(401).send('Error');
+                }
             });
         }
     }
