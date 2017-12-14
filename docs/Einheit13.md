@@ -36,6 +36,9 @@ if(decoded.name && decoded.name === 'maxi') {
 - Eines dieser Frame-Works ist **Angular** und läuft ca. seit einem Jahr stabil. Laut Herr Sx ist die neueste Version ( up-to-Date = 1.6.1) mit Bestands-Potential ausgestattet.
 - Angular wird von _Google_ betrieben.
 - Bei Angular sind Erneuerungen (neue - Angular Version) nicht mehr (meistens) kompatibel mit älteren Versionen.
-
+- **_Angular Command Line Interface_**
+    - verwenden wir, bzw haben wir installiert (sudo npm install -g @angular/cli --unsafe-perm)
+    - ng new <Projektname> --> Neues Projekt erstellen
+    
 
 
