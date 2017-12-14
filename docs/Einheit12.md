@@ -17,9 +17,9 @@ Wiederholung Cookie:
  * Client sendet Anfrage an Server, Server sendet Login an Client -> Client logt sich ein -> Server sendet SetCookie zurück -> Client kommuniziert dann mit Server mit dem Cookie (über die ID) -> so lange gültig bis sich der Client abmeldet. Nachteil ist, da der Server immer wieder in der Datenbank nachschauen muss ob die ID gültig ist.
  
  Web-Token:
- * Client schickt eine Anfrage, der Server erzeugt ein Token und signiert die Anfrage (mit öffentlichen Schlüssel)
+ * Client schickt eine Anfrage, der Server erzeugt ein Token und signiert die Anfrage (mit privatem Schlüssel)
  * Token wird zurück zum Client gesendet
- * Wenn der Token vom Client mitgesendet wird bei einer Frage, entsteht eine Verifizierung (mit privatem Schlüssel) und dient für automatische Erkennung des Clients
+ * Wenn der Token vom Client mitgesendet wird bei einer Frage, entsteht eine Verifizierung (mit öffentlichen Schlüssel) und dient für automatische Erkennung des Clients
  * Vorteil des Systems: 
     * muss im gegensatz zum Cookie-Verfahren nicht in einer Datenbank nachschaun (vergeben für eine gewisse Zeit einen Token)
     * keine Benutzerdatenbank
