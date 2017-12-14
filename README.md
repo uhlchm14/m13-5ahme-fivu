@@ -233,9 +233,9 @@ Wiederholung Cookie:
  * Client sendet Anfrage an Server, Server sendet Login an Client -> Client logt sich ein -> Server sendet SetCookie zurück -> Client kommuniziert dann mit Server mit dem Cookie (über die ID) -> so lange gültig bis sich der Client abmeldet. Nachteil ist, da der Server immer wieder in der Datenbank nachschauen muss ob die ID gültig ist.
  
  Web-Token:
- * Client schickt eine Anfrage, der Server erzeugt ein Token und signiert die Anfrage (mit öffentlichen Schlüssel)
+ * Client schickt eine Anfrage, der Server erzeugt ein Token und signiert die Anfrage (mit privaten Schlüssel)
  * Token wird zurück zum Client gesendet
- * Wenn der Token vom Client mitgesendet wird bei einer Frage, entsteht eine Verifizierung (mit privatem Schlüssel) und dient für automatische Erkennung des Clients
+ * Wenn der Token vom Client mitgesendet wird bei einer Frage, entsteht eine Verifizierung (mit öffentlichem Schlüssel) und dient für automatische Erkennung des Clients
  * Vorteil des Systems: 
     * muss im gegensatz zum Cookie-Verfahren nicht in einer Datenbank nachschaun (vergeben für eine gewisse Zeit einen Token)
     * keine Benutzerdatenbank
@@ -266,3 +266,54 @@ Wiederholung Cookie:
    ```Javascript
     res.json({token: token});
    ```
+   
+ ### Einheit 13: 14.12.2017
+ 
+ Wiederholung WebToken: 
+   *  Signierung mit privatem Schlüssel
+   * Verifizierung mit öffentlichem Schlüssel
+
+Weiterprogrammierung des Programms: 
+
+```Javascript
+const value = <string> req.headers.authorization;
+        if(value.startsWith('Bearer: '))
+        {
+            const token = value.substr(8);
+            console.log(token);
+            const data = jwt.verify(token, this._publicKey, (err, decoded: any) => {
+                try
+                {
+                    if(err)
+                    {
+                        throw err;
+                    }
+                    if(decoded.name && decoded.name === 'maxi')
+                    {
+                        console.log(decoded);
+                        const issueAt = new Date(decoded.iat * 1000);
+                        console.log(issueAt.toLocaleString);
+                        res.send('Ok');
+                    } else
+                    {
+                        throw new Error('invalid token object');
+                    }
+                } catch(err)
+                {
+                    console.log(err);
+                    res.status(401).send('Error');
+                }
+            });
+            console.log(data);
+        }
+```
+Client seitige Programmierung: 
+   * selbst Javascript Programm schreiben
+   * Javascript Library zB: jquery
+   * Javascript frame work (angular)
+   
+Angular Commond Line Interface:
+   * mit ng new <name> erstellen
+   * Angular installieren: npm install -g @angular/cli
+   * Angular Projekt erstellen: ng new ue08
+   * mit ng server starten
