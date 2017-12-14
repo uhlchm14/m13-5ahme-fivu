@@ -1,0 +1,8 @@
+{
+	"files.excluded": {
+		"**/e2e": true,
+		"**/node_modules": true,
+		"**/e2e": true,"**/.vscode": true,
+		"**/karma.conf.js": true,
+		"**/protractor.conf.js": true,
+		

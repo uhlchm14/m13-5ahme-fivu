@@ -25,15 +25,14 @@ class Main {
 
         // 1.Schicht
         this._server.get('/', (req, res, next) => {
-            // res.render('index.pug');
             next();
         });
 
 
         // 2.Schicht
-        this._server.post('/login', (req, res, next) => this.getLogin(req, res, next));
+        this._server.post('/login', (req, res, next) => this.postLogin(req, res, next));
 
-        this._server.post('/data', (req, res, next) => this.getData(req, res, next));
+        this._server.get('/data', (req, res, next) => this.getData(req, res, next));
 
         this._server.use(express.static('sites'));
 
@@ -44,32 +43,40 @@ class Main {
         console.log('Server gestartet (http://localhost:4711)');
     }
 
+    private postLogin(req: express.Request, res: express.Response, next: express.NextFunction) {
+        if (req.body) {
+            console.log(req.body);
+        }
+        if (req.body.name === 'maxi' && req.body.passwort === 'geheim') {
+            const token = jwt.sign({name: 'maxi'}, this._privateKey, {expiresIn: '2h', algorithm: 'RS256'});
+            console.log(token);
+            res.json({token: token})
+        }
+        next();
+    }
+
     private getData(req: express.Request, res: express.Response, next: express.NextFunction) {
         const value = <string> req.headers.authorization;
         if (value.startsWith('Bearer: ')) {
             const token = value.substr(8);
             console.log(token);
-            jwt.verify(token, this._publicKey, (err, decoded) => {
-                console.log(decoded);
+            jwt.verify(token, this._publicKey, (err, decoded: any) => {
+                try {
+                    if (err) {
+                        throw err;
+                    }
+                    if (decoded.name && decoded.name === 'maxi') {
+                        res.send('Ok');
+                    } else {
+                        throw new Error('Invalid token object');
+                    }
+                } catch (err) {
+                    console.log(err);
+                    res.status(401).send('Error');
+                }
             });
         }
-
-
         res.status(500).send('Not implemented');
-        }
-    }
-
-    private getLogin(req: express.Request, res: express.Response, next: express.NextFunction) {
-        if (req.body) {
-            console.log(req.body);
-        }
-        if (req.body.name === 'Maxi' && req.body.passwort === 'geheim') {
-            const token = jwt.sign({name: 'maxi'}, this._privateKey, {expiresIn: '10min', algorithm: 'RS256'});
-            console.log(token);
-            res.json({token: token})
-            // res.send('Hallo ' + req.body.name);
-        }
-        next();
     }
 
 }

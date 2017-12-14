@@ -1,0 +1,16 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+
+        "**/e2e": true,
+        "**/node_modules": true,
+        "**/.vscode": true,
+        "**/karma.conf.js": true,
+        "**/protractor.conf.js": true,
+    }
+}
+
