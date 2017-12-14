@@ -39,6 +39,26 @@ if(decoded.name && decoded.name === 'maxi') {
 - **_Angular Command Line Interface_**
     - verwenden wir, bzw haben wir installiert (sudo npm install -g @angular/cli --unsafe-perm)
     - ng new <Projektname> --> Neues Projekt erstellen
-    
+
+```javascript
+{
+   "files.exclude": {
+
+   "**/e2e": true,
+   "**/node_modules": true,
+   "**/karma.conf.js": true,
+   "**/tscondig.js": true,
+   "**/tslint.json": true,
+   "**/package.json": true,
+   "**/package-lock.json": true,
+   "**/.angular-cli.json":true,
+   "**/.gitignore": true,
+   "**/.editorconfig": true
+   }
+}
+```
+- ng serve = "zusammenbauen"
+- http://localhost:4200/ 
+
 
 
