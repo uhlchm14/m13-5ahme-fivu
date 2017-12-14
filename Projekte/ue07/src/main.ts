@@ -8,7 +8,7 @@ import * as path from 'path';
 
 
 class Main {
-    private _server: express.Express
+    private _server: express.Express;
     private _privateKey: Buffer;
     private _publicKey: Buffer;
 
@@ -29,9 +29,12 @@ class Main {
             // res.render('index.pug');
             next();
         });
+         // Schicht 2
         this._server.post('/login', (req, res, next) => this.getLogin(req, res, next));
-        this._server.use(express.static('public'));
+        // Schicht 3
         this._server.post('/data', (req, res, next) => this.getData(req, res, next));
+            // Schicht 4
+        this._server.use(express.static('public'));
     }
 
     public startServer(port: number) {
@@ -44,7 +47,7 @@ class Main {
             console.log(req.body);
         } 
         if (req.body.name === 'Dominik' && req.body.password === 'geheim') {
-            const token = jwt.sign({name: 'Dominik'}, this._privateKey, { expiresIn: '10min', algorithm: 'RS256'});
+            const token = jwt.sign({name: 'Dominik'}, this._privateKey, { expiresIn: '2h', algorithm: 'RS256'});
             console.log(token);
             res.json({ token: token});
             res.send('OK (' + req.body.name + ')');
@@ -53,15 +56,30 @@ class Main {
         }
     }
 
-    private getData ( req: express.Request, res: express.Response, next: express.NextFunction)
-    {
-            const token = req.headers.authorization;
-            if (token.startWith('Bearer: ')) {
-            const token = value.substr(8);
-            console.log(token);
-            const data = jwt.verify(token, this._publicKey, )
-            }
-            res.status(500).send('Not implemented')
+    private getData ( req: express.Request, res: express.Response, next: express.NextFunction) {
+            const value = <string> req.headers.authorization;
+            if (value.startsWith('Bearer')) {
+                const token = value.substr(8);
+                console.log(token);
+                const data = jwt.verify(token, this._publicKey, (err, decoded: any) => {
+                    try {
+                        if (err) {
+                            throw err;
+                        }
+                        if (decoded.name && decoded.name === 'Dominik') {
+                            console.log(decoded);
+                            const issuedAt = new Date (decoded.iat * 1000);
+                            console.log(issuedAt.toLocaleString);
+                            res.send('Ok');
+                        } else {
+                            throw new Error ('invalid token object');
+                        }
+                    } catch (err) {
+                        console.log(err);
+                        res.status(401).send('Error');
+                    }
+            });
+        }
     }
 }
 

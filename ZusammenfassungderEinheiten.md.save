@@ -40,7 +40,7 @@ Einleitung in das Schuljahr:
 
 - Wiederholung von Einheit 4
 - Besprechung von Interface
-https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue03- Exceptions (Errors) setzen / Überprüfung im Constructor durchführen
+- Exceptions (Errors) setzen / Überprüfung im Constructor durchführen
 - Datei "Data" schreiben um Daten abzuspeichern
 - Serverseitige Programmierung abecken
 - Server erstellen
@@ -61,7 +61,7 @@ HTML, CSS, Javascript
 HTML: Erzeugung der Struktur der Seite
 CSS: wie die Webseite wirklich aussieht (aussehen)
 Javascript: ist eine Möglichkeit programme am Client vorzunehmen (dynamische Veränderung)
-https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue03
+
 Begründung: Grafiker kann meist nicht programmieren und umgekehrt. 
 
 Selektoren -> Fachbegriffe für Elemente in der CSS-Datei
@@ -205,71 +205,41 @@ Fortsetzung in der nächsten Einheit!
 - Wichteln
 - Wiederholung Cookies, 
 
-- Theoriemitschrift ist aus unerklärlichen Gründen verschwunden??????
+- JSON_Webtoken (Kryptografische Kommunikation)
 
-JSON-Web-Token
+Client macht eine Anfrage, Server erstellt einen neuen Token signieren -> mit öffentlichen Schlüssel
+Token wird versendet -> Wenn Token wieder mitgesendet wird wird eine verifikation durchgeführt -> überprüft ob es der richtige User ist -> Bei einmaligen Aufruf der Seite kaum nachverfolgbar
 
-Speichert nicht jedes mal die Daten auf den Server
-Nach einen bestimmten Zeitraum wird erneut überprüft ob der jeweilige User noch der richtige ist. 
-#### Wir sind Knapp am Ziel!
+Login bei Cookies->
 
-Nächste Einheit:
+Request vom Client zum Server
+Response kommt mit einer Login-Seite
+POST mit den Login-Daten wird zurückgeschickt.
+Nach korrekten Login vergibt Server Cookie 
+Server überprüft mit der Session-ID ob es eine aktuelle Sitzung ist.
+Durch Logout wird die ID ungültig geschrieben und es kann nicht mehr darauf zugeriffen werden
+Nach dem Logout ist der alte Cookie nutzlos
 
-### Einheit 12: 14.12.2017
-
-Fortsetzung Web-Token
-
-Web-Token:
-
-- Ein Stück wird zwischen Server und Client gesendet -> signiert
-- Bei signieren muss der Private Schlüssel verwendet werden
-- Bei Verschlüsselung umgekehrt
-- Übertragung vom Web-Token: Headerattribut: Bearer "Token"
-- z.B.: Authentifizierung
-
-Fertigstellung ue07
-
-#### Client Programmierung
-
-1) selbst Javascript programmieren
-2) Javascript-Libaries verwenden
-3) Java-Script Frame Work -> an Vorgabe muss sich gehalten werden
-4) Angular -> von Google betrieben
-
-
-Angular:
-
-Wenn änderung zur Vorversion -> nicht alles kompatibel zu älteren Versionen
-Angular kompliziert!
-Tool was es vereinfacht mit Angular zu arbeiten : **Angular Command Line Interface**
-
-Angular Projekt erstellen: 
-```
-ng new <projektname>
-```
-
-ng serve lässt das Program laufen
-
-Wir benötigen folgende Dateien zum Bearbeiten:
-- app.components.html
-- app.components.
-
-- ue08 angelegt
-
-Fortsetzung nächste Einheit 2018 :-)
-
-
-Einheit 14: xx.xx.xxxx
+Neue Webseiten arbeiten alle mit Web-Token:
+Es muss nicht die ganze Zeit am Server überprüft wird ob es der richtige Cookie ist.
+Bei Webtoken wird nach einer gewissen Zeit erneut überprüft ob es der jeweilige Nutzer ist. 
 
 
 
 
 
-Einzelne Einheiten:
+
+
+
+
+Einzelne Übungen:
 
 - [ue02](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue02)
 - [ue03](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue03)
-- [ue04](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue04)
-- [ue05](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue05)
-- [ue06](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue06)
-- [ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue07)
+
+- [ue04]
+- [ue05]
+- [ue06]
+- [ue07]
+- 
+
