@@ -56,13 +56,101 @@ Besprechen der letzten Dateien des Templates für ue03
 - Interface: legt fest welche Daten übergeben werden müsssen/können
 
 ### 6. Einheit
-**Datum:** 12.10.2017
+**Datum:** 12.10.2017  
+**Dazugehörige Übung(en):** ![ue04](projects/ue04)  
+**Inhalt:**  
+
+1. Interface
+- Um ein Objekt zu erstellen bei dem nur bestimmt Strings zugelassen sind, muss man statt dem Datentyp `String` die Strings, die zugelassen sein sollen, angeben. Dadurch werden dann nur diese Strings akzeptiert.
+
+2. Debuggen
+- Breakpoint: Mit einem Breakpoint kann man das Programm an einer beliebigen Stelle stoppen. So können alle Variablen und deren Inhalte zu dieser Programmstelle überprüft werden. Das ist sehr hilfreich bei der Fehlersuche.
+- `debugger;`: Dieser Befehl macht das gleiche wie ein Breakpoint. Jedoch funktioniert er nicht so zuverlässig und soll deswegen nicht verwendet werden.
 
 ### 7. Einheit
-**Datum:** 19.10.2017
+**Datum:** 19.10.2017  
+**Dazugehörige Übung(en):** ![ue05](projects/ue05)  
+**Inhalt:**  
+
+1. Begriffe
+- HTTP (Hypertext Transfer Protocol): Programmiersprache
+- TCP/IP (Transmission Control Protocol / Internet Protocol): Übertragungsprotokoll
+- HTML (Hypertext Markup Language): Codierung
+- TLS (Transport Layer Security): Verschlüsselungsprotokoll
+
+2. Web-Server
+- Appache
+- Java EE Glassfish
+- Wildfly
+- Node.js express
+
+3. Web-Server programmieren
+- Zuerst muss mit  dem Befehln `npm install --save express @types/express` das Datenpaket für den Node.js-Express-Server installiert werden.
+- Weiters muss der Express-Server mit dem Befehl `import * as express from 'express';` in das Programm importiert werden.
+- Mit folgendem Quellcode kann ein Server unter einem bestimmten Port erstellt werden:
+```typescript
+    const server = express();
+    server.use(express.static('public'));  
+    server.listen(4711);  
+```
+- Dieser Web-Server kann dann im Browser mit dieser URL `http://localhost:4711/index.html` aufgerufen werden.
+- Mit der Debugger-Konsole des Browsers, welche mit F12 geöffnet wird, kann der genaue Datenaustausch zwischen Server und Client nachverfolgt werden. 
+- 'HTTP GET <Ressource>': Anfrage des Clients an den Server um eine bestimmte Ressource zu bekommen
+
+4. CSS (Cascading Style Sheets)
+- Wird dazu verwendet um das Aussehen einer Website zu verändern. Hierbei können Eltemente die gleich auschauen sollen über eine Klasse zusammengefasst werden. Wenn einzelne Elemente anders ausschauen sollen können diese über die ID angesprochen werden.
 
 ### 8. Einheit
-**Datum:** 09.11.2017
+**Datum:** 09.11.2017  
+**Dazugehörige Übung(en):** ![ue05](projects/ue05)  
+**Inhalt:**  
+
+1. Aufbau einer Website
+- HTML: Struktur 
+- CSS: Aussehen
+- JavaScript: dynamische Veränderungen
+
+2. Pug
+- Pug wird zum Render von einer Website verwendet. Dafür muss folgender Befehl `server.set('view engine', 'pug');` im Programm aufgerufen werden.
+- `test.pug` in neuem Unterorder `views` anlegen
+ ```pug
+      doctype html
+      html(lang="de")
+          head
+              title="I bims 1 pug"
+              meta(charset="UTF-8")
+              link(rel="stylesheet" href="myStyle.css")
+          body
+              h1 Seite mit pug
+              p 1 Text
+  ```
+  3. Programmieren einer Testseite
+  - Dies Teste Seite ist unter dem URL `http://localhost:4711/test` erreichbar.
+  - Ein Counter im Programm zählt die Anzahl der Aufrufe mit welche dann auf der Seite angezeigt werden.
+  ```typescript
+  let counter = 1;
+
+server.get('/test', (req, res, next) => {
+    let html = '';
+    html += '<!DOCTYPE html>';
+    html += '<html>';
+    html += '<head>';
+    html += '<title>Meine TESThomepage</title>';
+    html += '<link rel = "stylesheet" href = mystyle.css /> ';
+    html += '</head>';
+    html += '<body>';
+    html += '<h1>Meine TESThomepage</h1>';
+    html += '<h1>' + counter++ + '. Aufruf</h1>';
+    html += '<p>Das ist eine Testtestseite!</p>';
+    html += '<p>Das bimst der zweite Absatz vong der Webseite!</p>';
+    html += '<p id = "absatz3">Das bimst der dritte Absatz vong der Webseite!</p>';
+    html += '<p class = "lesbareAbsätze">Das bimst der vierte Absatz vong der Webseite!</p>';
+    html += '</body>';
+    html += '</html>';
+    
+    res.send(html);
+});
+  ```
 
 ### 9. Einheit
 **Datum:** 16.11.2017  
@@ -128,4 +216,137 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 <div class="container">
 </div>
 ```
+### 10. Einheit
+**Datum:** 23.11.2017  
+**Dazugehörige Übung(en):** ![ue06](projects/ue06)  
+**Inhalt**:   
+
+1. Fehlerbehebung
+- In der voherigen Einheit hatten wir das Problem, dass die Eingabefelder beim Laden der Website bereits beschrieben waren. Der Fehler war das wir das Attribut `value` verwendet haben. Den Fehler haben wir behoben indem wir `value` durch `name` ersetzt haben.
+- Anschließend haben wir dies mit dem Debugger im Browser überprüft.
+
+2. Sicherheitslücke bei HTTP
+- Bei HTTP werden Daten unverschlüsselt übertragen. Dieses Problem kann einfach gelöst werden indem das Protokoll HTTPs verwendet wird.
+
+3. Body-Parser
+- Der Body-Parser verarbeitet die Anfrage des Clients. Dabei wird Programmierer viel Arbeit erspart. Durch denn Body-Parser kann einfach über `req.body` auf die einzelnen Atrribute zugegriffen werden.
+
+4. Zusätzliche Schicht einfügen
+- Diese Schicht schafft die Möglichkeit einen neuen User anzulegen und zu speichern.
+- Daten können mit `server.use(bodyParser.urlencoded());` aus dem Body ausgelesen werden.
+- Die Speicherung des Users wurde zu Beginn noch nicht implementiert. Zu Testzwecken wurden dem Client eine Nachricht übermittelt ob der Name und das Passwort richtig eingegeben wurden. Name und Passwort sind im Quelltext festgelegt.
+```typescript
+  // 2. Schicht
+  server.post('/saveuser', (req, res, next) => {
+  if (req.body)
+  {
+      console.log(req.body);
+  }
+
+  if (req.body.name === 'maxi' && req.body.password === 'geheim')
+  {
+      res.setHeader('Set-Cookie', cookie.serialize('name', req.body.name, {
+          httpOnly: true,
+          maxAge: 60 * 60 * 24
+      }));
+      res.send('Is OK');
+  }
+  else
+  {
+      res.status(401).send('Is net OK');
+  }
+});
+``` 
+
+5. Cookies
+- Cookies bieten die Möglichkeit Daten Clientseitig zu speichern.
+- Im oberen Quelltext kann man die Verwendung eines Cookies sehen.
+- Ein Cookie sollte immer eine begrenzte "Lebensdauer" haben und nach einiger Zeit gelöscht werden. Das kann mit `maxAge: 60 * 60 * 24` festgelegt werden. In diesem Fall wird das Cookie nach einem Tag gelöscht.
+
+
+### 11. Einheit
+**Datum:** 30.11.2017  
+**Dazugehörige Übung(en):** ![ue06](projects/ue06) ![ue07](projects/ue07)  
+**Inhalt**:   
+
+1. Cookie-Parser
+- Der Cookie-Parser wird zum Lesen von Cookies verwendet, welche vom Client bei einer Anfrage mitgesendet werden.
+  ```typescript
+    server.use(cookieParser());
+
+    // 1. Schicht
+    server.get('/', (req, res, next) => {
+      console.log(req.cookies);
+      if (req.cookies && req.cookies.name === 'maxi')
+      {
+        console.log('Authentifizierung erfolgreich');
+      }
+      next();
+    });
+  ```
+  
+2. JSON Web-Token
+- Das Token ist ähnlich wie das Cookie. Mit dem wichtigen Unterschied, dass das Token signiert wird (öffentlicher und privater Schlüssel)
+- Das Token wird zuerst vom Server an den Client gesendet. Der Client schickt es bei der nächsten Anfrage an zurück zum Server. Der Server überprüft es anschließend.
+- Das Token hat gleich wie das Cookie eine limitierte Gültigkeit
+- Ein weiterer Unterschied ist, dass das Token nicht immer mitgesendet wird, weil es nicht an die URL gebunden ist
+
+3. Beginn con ue07
+- Die ![ue06](projects/ue06) dient als Grundlage für die ![ue07](projects/ue07). Dei Dateien `index.html`, `myStyle.css` und `main.ts` wurden abgeändert.
+
+4. Schlüsselpaar erzeugen
+- Unterverzeichnis `keys` in der ue07 anlegen
+- Anschließend in diesem Verzeichnis die Git Bash Konsole öffnen und mit `openssl genrsa -out keys/server-private.pem` den privaten und mit `openssl rsa -in keys/server-private.pem -pubout -out keys/server-public.pem` den öffentlichen Schlüssel erzeugen. 
+- Einlesen der Schlüssel in der `main.ts`
+  ```typescript
+    class Main
+    {
+      private _privateKey: Buffer;
+      private _publicKey: Buffer;
+    
+      constructor ()
+      {
+        this._publicKey = fs.readFileSync(path.join(__dirname, '..', 'keys/server-public.pem'));
+        this._privateKey = fs.readFileSync(path.join(__dirname, '..', 'keys/server-private.pem'));
+
+        console.log('Schlüssel erfolgreich eingelesen');
+      }
+    }
+  ```
+
+### 12. Einheit
+**Datum:** 07.12.2017  
+**Dazugehörige Übung(en):** ![ue07](projects/ue07)  
+**Inhalt**:   
+
+1. Abänderung von `main.ts` 
+- Die Behandlung der Schichten wurde in der Konstruktor verlegt
+- Für das Starten des Servers, das Senden einer Response mit Token und das Lesen einr Request mit Token wurde neue Funktionen in der Klasse `Main` erstellt.
+
+2. Erzeugen und Senden
+  ```typescript
+    if (req.body.name === 'I bims' && req.body.password === '')
+    {
+      const token = jwt.sign({name: 'I bims'}, this._privateKey, {expiresIn: '5min', algorithm: 'RS256'});
+      console.log(token);
+      res.json({token: token});
+    }
+  ```
+  
+  3. Lesen 
+  ```typescript
+    const value = <string>req.headers.authorization;
+
+    if (value.startsWith('Bearer: '))
+    {
+      const token = value.substr(8);
+      console.log(token);
+      jwt.verify(token, this._privateKey, (err, decoded) => {
+          console.log(decoded);
+      });
+    }
+  ```
+  4. ARC
+  - Um das Programm zu testen haben wir im Chrome den `Advanced REST Client` installiert. Damit kann man im Browser einen POST senden. 
+  
 
