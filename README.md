@@ -349,3 +349,5 @@ Angular:
    * Andere Entwicklungen: PHP, ASP
    * mit ng new wird eine neue Applikation angelegt
    * mit ng serve wird der Server gestartet
+   * Anwendung besteht aus einer Componente
+   * In der Componente sind Zusatzinformationen die aufgerufen werden können
