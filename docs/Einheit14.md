@@ -5,6 +5,7 @@
 ## Übersicht: 
 
 1. Wiederholung Schuljahr 2017 FIVU
+2. Fortsetzung mit Angular
 
 ### 1. Wiederholung Schuljahr 2017 FIVU
 
@@ -25,3 +26,16 @@
 
 - Angular:
      - Angular ist ein "Ökosystem", sowie Android
+
+### 2. Fortsetzung mit Angular
+- Angular Applikation:
+    - Besteht aus Komponente
+        - Komponente besteht aus: 
+	```
+	@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+```
+         
