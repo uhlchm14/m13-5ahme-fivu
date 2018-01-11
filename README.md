@@ -317,3 +317,35 @@ Angular Commond Line Interface:
    * Angular installieren: npm install -g @angular/cli
    * Angular Projekt erstellen: ng new ue08
    * mit ng server starten
+
+### Einheit 14: 11.01.2018
+Wiederholung der letzten Einheiten:
+   * Javascript (in Client Seitige Anwendung)
+     * Probleme mit der Fehlerbehandlung, da es keine Datentypen gibt
+   * Typescript (ähnlich zu Java)
+     * Node.js um Programme in Typescript umzuwandeln
+     * Web-Server (Node.js https + express Server)
+     * Bei TCP/IP Protokoll, dort müssen drei Packete ausgetauscht werden (syn, syn ack, syn)
+     * Web-Server muss das HTTP-Protokoll erfüllen
+     * HTTP Request besteht aus Head (Daten für Adresse, Sprache, Codierung, Token, Cookie) und Body Bereich
+     
+Node Package Manager:
+  * npm 
+  * Zum Installieren von Zusatzpackete
+  
+Cookie: 
+   * Daten Clientseitig speichern
+   * Werden im Header mitgesendet
+   * Werden zb: bei Anmeldungen verwendet
+   
+Web-Token:
+   * Informationen werden Signiert
+
+Ablauf bei Cookie oder Web-Token:
+   * Client stellt Anfrage an Server, Anmeldeseite wird zurück geliefert, dann wird POST Request im Body (ID, Passwort) erzeugt. Server überprüft die Anmeldedaten, dann sendet der Server eine Session ID (Cookie oder Web-Token) zurück. 
+
+Angular: 
+   * Client seitiges Frame Work
+   * Andere Entwicklungen: PHP, ASP
+   * mit ng new wird eine neue Applikation angelegt
+   * mit ng serve wird der Server gestartet
