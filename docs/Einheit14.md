@@ -31,11 +31,24 @@
 - Angular Applikation:
     - Besteht aus Komponente
         - Komponente besteht aus: 
-	```
+	```javascript
 	@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-```
+  	selector: 'app-root',
+  	templateUrl: './app.component.html',
+  	styleUrls: ['./app.component.css']
+	})	
+	```
+        - Selector-Name
+	- Urls von Template und Style
+
+- Erste Funktion:
+	```javascript
+	public ngOnInit () { 
+   	console.log('ngOnInit');
+    	setTimeout ( () => {
+      	this.title = 'Hallllooooo';
+    	}, 5000);
+	```
+	- Timeout = Verzögerung, 5000 ms
+	- Danach wird Titel gesetzt (Halllllooooo)
          
