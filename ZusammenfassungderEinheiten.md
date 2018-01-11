@@ -259,10 +259,52 @@ Wir benötigen folgende Dateien zum Bearbeiten:
 Fortsetzung nächste Einheit 2018 :-)
 
 
-Einheit 14: xx.xx.xxxx
+Einheit 14: 11.01.2018
 
+- Wiederholung Jahr 2017
 
+- JavaScript Einarbeitung -> Client Seitig sehr stark verbreitet
+- TypeScript Einarbeitung -> Wechsel zu TypeScript weil es Java ähnlich wird
+  Typisierung wird verwendet -> ohne Typisierung -> man kann machen was man will 
+  Fehler anfällig -> Compiler braucht Typen um auf Fehler daraufhin zu weisen
+  -> weiß selber nicht was eine Variable ist
+- Seit es Angular gibt verwenden viel mehr Leute Typescript
+- Serverseitige Programmierung -> Web-Server
+  Verwendung über die Technologie Node.js -> Serverseitige Platform um Javascript Programme ausführen zu können
+  Node.js installiert -> Aus Typescript quelltext javascript quelltext und dann anwenderseite
+  -> Web-Server Erstellung -> Server selbst ist in Node.js http + Modul Express (Express ist eine Erweiterung)
+  -> Web-Server muss eine möglichkeit einbinden dass man mit ihm eine TCP/IP-Verbindung aufbauen kann
+  -> Technisch nötig um eine TCP/IP Adresse zu erstellen -> SYNC, SYN AG, SYN Pakete austauschen 
+  Web-Server -> Anfragen vom Client richtig zu formulieren
+  -> Muss http Protokoll einhalten -> 
+  -> Request besthet aus einem Header, und bodybereich; Im Header steht die gewünschte Ressource oder Codierung, Sprache, Web-Token, Cookies,... Nur Text
+  -> Frage Anwort Frage Antwort, usw.
+ 
 
+  -> Next Step: Cookies -> Daten Clientseitig zu speichern die dann später 
+  -> Meistens in Cookies -> Session-Id
+  -> Muss immer und überall mitgesendet werden
+
+- WebToken -> Daten werden signiert versendet -> Client entscheidet selber wann er sie verwenden will und wann nicht. 
+  -> Anmeldeverfahren -> Anfrage wird geschickt -> man bekommt Anmeldeseite
+  -> Seite arbeitet mit dem HTML-Protokoll -> HTML-Tag: <Form> -> Inputfelder, Button, kann mit Button einen entsprechenden Request erzeugen
+  -> HTTPS Server verschlüsselt Passwort -> Passwortfishing nicht möglich
+  -> Server bekommt Anmeldedaten -> Muss überprüfen ob der Passwort-Hash stimmt
+  -> Wenn Passowrt stimmt -> Einen Dauerhafte Arbeitssession erstellen durch Cookie oder Web-Token
+ - Angular ist ein Ökosystem -> erst ca. 1 Jahr alt -> seit Angular 2 neuer Durchbruch -> Aktuell Angular 6
+  -> unterscheidet sich von PHP, ASP, JavaScriptFrameworks durch 
+  -> Sehr Kompliziert -> mit Tools vereinfachbar
+- Node package Manager (npm) dient dazu zum installieren von Zusatzpaketen
+  -> Jeder kann eigene Pakete und Module installieren -> Downloadrate beachten! 
+  -> Im Ordner Node Package 
+
+**Nun Fortsetzung: (8:58)**
+
+####Schwr politische Diskussionen!
+
+Fortsetzung (9:24)
+
+Zeit
 
 
 Einzelne Einheiten:
@@ -273,3 +315,4 @@ Einzelne Einheiten:
 - [ue05](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue05)
 - [ue06](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue06)
 - [ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue07)
+- [ue08](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue08)
