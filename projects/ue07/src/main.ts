@@ -29,7 +29,7 @@ class Main
         });
 
         // 2. Schicht
-        this._server.post('/login', (req, res, next) => this.getLogin(req, res, next));
+        this._server.post('/login', (req, res, next) => this.postLogin(req, res, next));
 
         // 3. Schicht
         this._server.get('/data', (req, res, next) => this.getData(req, res, next));
@@ -44,7 +44,7 @@ class Main
         console.log('1 Server läuft (http://localhost:4711)');
     }
 
-    private getLogin(req: express.Request, res: express.Response, next: express.NextFunction)
+    private postLogin(req: express.Request, res: express.Response, next: express.NextFunction)
     {
         if (req.body)
         {
@@ -53,7 +53,7 @@ class Main
 
         if (req.body.name === 'I bims' && req.body.password === '')
         {
-            const token = jwt.sign({name: 'I bims'}, this._privateKey, {expiresIn: '5min', algorithm: 'RS256'});
+            const token = jwt.sign({name: 'I bims'}, this._privateKey, {expiresIn: '30min', algorithm: 'RS256'});
             console.log(token);
             res.json({token: token});
         }
@@ -71,8 +71,30 @@ class Main
         {
             const token = value.substr(8);
             console.log(token);
-            jwt.verify(token, this._privateKey, (err, decoded) => {
-                console.log(decoded);
+            jwt.verify(token, this._publicKey, (err, decoded: any) => {
+                try
+                {
+                    if (err)
+                    {
+                        throw err;
+                    }
+                    if (decoded.name && decoded.name === 'I bims')
+                    {
+                        console.log(decoded);
+                        const issuedAt = new Date(decoded.iat * 1000);
+                        console.log(issuedAt.toLocaleString());
+                        res.send('Is OK');
+                    }
+                    else
+                    {
+                        throw new Error('invalid token object');
+                    }
+                }
+                catch (err)
+                {
+                    console.log(err);
+                    res.status(401).send('Error');
+                }
             });
         }
         res.status(500).send('Not implemented');

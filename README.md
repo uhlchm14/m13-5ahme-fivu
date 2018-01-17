@@ -17,6 +17,7 @@
   - Genauere Betrachtung der Programmiersprachen für die serverseitige Programmierung
 3. Installation von Node.js und Visual Studio Code
   
+*****
   
 ### 2. Einheit  
 **Datum:** 21.09.2017  
@@ -29,6 +30,7 @@
   - Erstellung eines Projekts
   - Umgang mit Node Package Manager
   
+*****
   
 ### 3. Einheit
 **Datum:** 28.09.2017  
@@ -42,6 +44,7 @@
   - Unterhaltung über die JavaScript Target Version
   - Download und Besprechung der ersten Dateien des Templates für ue03
   
+*****
   
 ### 4. Einheit  
 **Datum:** 04.10.2017  
@@ -59,6 +62,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 5. launch.json
   - Eigens parametrisierte Konfiguraionen können für den Debugger erstellt werden.
   
+*****
   
 ### 5. Einheit
 **Datum:** 05.10.2017  
@@ -82,6 +86,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 7. Interface
   - Durch ein Interface kann festgelegt werden, welche Datenelemente bei der Erstellung eines Objektes einer Klasse übergeben werden müssen und/oder können.
   
+*****
   
 ### 6. Einheit
 **Datum:** 12.10.2017  
@@ -95,6 +100,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
   - `debugger;`
     - Dieser Inline-Befehl bewirkt das Gleiche wie der Breakpoint, jedoch funktioniert er zuverlässiger.
   
+*****
   
 ### 7. Einheit
 **Datum:** 19.10.2017  
@@ -135,6 +141,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 5. CSS (Cascading Style Sheets)
   - Durch die Verwendung von Style Sheets kann das Aussehen einer HTML-Seite auf einfache Art und Weise verändert werden. Über Klassen können Elemente zusammengefasst werden, die das selbe Aussehen haben soll. Soll nur ein Element anders aussehen, kann man dies über die ID des Elements realisieren.
   
+*****
 
 ### 8. Einheit
 **Datum:** 09.11.2017  
@@ -198,6 +205,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
       });
   ```
   
+*****
 
 ### 9. Einheit
 **Datum:** 16.11.2017  
@@ -253,6 +261,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 
     - Alle weiteren Elemente können nach eigenem Ermessen im **body** eingefügt und, wenn nötig, noch für die eigene Anwendung abgeändert werden.
   
+*****
   
 ### 10. Einheit
 **Datum:** 23.11.2017  
@@ -342,8 +351,9 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 
   - Setzt man das Attribut `httpOnly` auf `true` kann verhindert werden, dass Scripte das Cookie lesen können. Standardmäßig ist `httpOnly` `false`.
   - Über das Attribut `maxAge` kann festgelegt werden, wie lange das Cookie gültig ist. Im Fall von `maxAge: 60 * 60 * 24` ist es ein Tag.
-
-
+  
+*****
+  
 ### 11. Einheit
 **Datum:** 30.11.2017  
 **Dazugehörige Übung(en):** ![ue06](projects/ue06), ![ue07](projects/ue07)  
@@ -409,6 +419,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
     }
   ```
   
+*****
 
 ### 12. Einheit
 **Datum:** 07.12.2017  
@@ -450,3 +461,149 @@ Download und Besprechung der letzten Dateien des Templates für ue03
   
 5. ARC
   - Um die Funktion des Programms zu testen, wurde unter Chrome der **Advanced REST Client** installiert. Damit kann im Browser ein **POST** gesendet werden.
+  
+*****
+
+### 13. Einheit
+**Datum:** 14.12.2017  
+**Dazugehörige Übung(en):** ![ue07](projects/ue07), ![ue08](projects/ue08)  
+**Inhalt:**  
+1. Wiederholung Web-Token
+  - ist signiert
+  - hat ein Ablaufdatum
+  - wird nicht standardmäßig mitgesendet
+
+2. Gültigkeit des Tokens prüfen
+  
+  ```typescript
+    if (decoded.name && decoded.name === 'I bims')
+    {
+        console.log(decoded);
+        const issuedAt = new Date(decoded.iat * 1000);
+        console.log(issuedAt.toLocaleString());
+        res.send('Is OK');
+    }
+    else
+    {
+        throw new Error('invalid token object');
+    }
+  ```
+
+3. 3 Möglichkeiten für eine clientseitige Änderung
+  - JavaScript selbst schreiben und einbingen.
+  - JavaScript-Bibliotheken verwenden.
+  - JavaScript-Frameworks verwenden.
+    - z.B.: Angular
+  
+4. Angular
+  - Installation
+    - `npm install -g @angular/cli`
+  - verwendete Version 1.6.1
+  - Rückwärtskompatibilität nicht garantiert
+  - von Google gepusht
+
+5. Angular Command Line Interface (angular-cli)
+  - Erstellung eines Projekts
+    - `ng new <Projektname>`
+  - starten des Projekts bzw. Servers
+    - `ng serve`
+  
+*****
+
+### 14. Einheit
+**Datum:** 11.01.2018  
+**Dazugehörige Übung(en):** ![ue08](projects/ue08)  
+**Inhalt:**  
+1. Wiederholung des bisher Gelernten
+  - JavaScript, TypeScript
+  - Node.js
+  - Web-Server
+  - HTTP, HTTPS, HTML
+  - Cookies
+  - Web-Token
+  - Angular
+
+2. Angular-Applikation
+  - besteht aus Komponenten
+
+  ```typescript
+    @Component({
+      selector: 'app-root',
+      templateUrl: './app.component.html',
+      styleUrls: ['./app.component.css']
+    })
+  ```
+  
+3. HTML
+  - Verwendung von Variablen (Variable muss `public` sein)
+    
+  ```html
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  ```
+
+4. Titel nach bestimmter Zeit ändern
+  
+  ```typescript
+  public ngOnInit ()
+  {
+    setTimeout( () => {
+      this.title = '... to slow';
+    }, 5000);
+  }
+  ```
+  
+5. Anzeige der aktuellen Zeit
+  - HTML
+  
+  ```html
+    <p>{{ time }}</p>
+  ```
+
+  - TypeScript
+    - Variablen
+    
+    ```typescript
+      public title = 'ue08';
+      public time: string;
+      private _timer: number;
+    ```
+
+    - Timer updaten
+
+    ```typescript
+    private updateTime ()
+    {
+      const now = new Date();
+      this.time = now.toLocaleTimeString();
+    }
+    ```
+
+    - Intervall für Timer-Update setzen (100ms)
+
+    ```typescript
+    public ngOnInit ()
+    {
+      setTimeout( () => {
+        this.title = '... to slow';
+      }, 5000);
+
+      this.updateTime();
+      this._timer = window.setInterval( () => this.updateTime(), 100);
+    }
+    ```
+
+    - Bei Schließung den Timer wieder beenden
+
+    ```typescript
+    public ngOnDestroy ()
+    {
+      if(this._timer !== undefined)
+      {
+        clearInterval(this._timer);
+        this._timer = undefined;
+      }
+    }
+    ```
+  
