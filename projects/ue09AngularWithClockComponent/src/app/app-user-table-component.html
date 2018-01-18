@@ -1,0 +1,21 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nummer</th>
+        <th>Nachname</th>
+        <th>Vorname</th>
+        <th>Gewicht</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let u of users; let i=index" (click)="onUserClick(u)" style="cursor:pointer"> 
+        <td>{{ u.number }}</td>
+        <td>{{ u.surname }}</td>
+        <td>{{ u.firstname }}</td>
+        <td>{{ u.weight }}</td>
+        <td>{{i+1}}</td>
+      </tr>
+    </tbody>
+</table>
