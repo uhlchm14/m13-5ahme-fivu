@@ -1,0 +1,18 @@
+{
+	"files.exclude": {
+		"**/e2e": true,
+		"**/node_Modules": true,
+		"**/.vscode": true,
+		"**/karma.conf.js": true,
+		"**/protractor.conf.json": true,
+		"**/package.json": true,
+		"**/package-log.json": true,
+		"**/tsconfig.js": true,
+		"**/tslint.json": true,
+		"**/tsconfig.json": true,
+		"**/.angular-cli.json": true,
+		"**/.gitignore": true,
+		"**/.editorconfig": true
+	}
+}
+

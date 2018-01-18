@@ -300,11 +300,40 @@ Einheit 14: 11.01.2018
 
 **Nun Fortsetzung: (8:58)**
 
-####Schwr politische Diskussionen!
+####Schwere politische Diskussionen!
 
 Fortsetzung (9:24)
 
 Zeit
+
+## Einheit 15: 18.01.2017
+
+- Wiederholung von letzter Einheit (Angular)
+- ng new erstellt neues Projekt
+- ng serve erzeugt Projekt -> nur fürs Testen geeignet
+
+Arbeitsweise von Angular Uebersicht:
+
+![Übersicht Angular(/home/schueler/work/Riegelnegg/FIV/m13-5ahme-fivu/Fotos/AngularUebersicht.png)
+
+
+- Erstellung ue09
+- ngif -> erst wenn das andere Aktiviert wird, wir die andere aufgerufen
+
+
+Bootstrap einfügen:
+
+ng bootstrap
+
+Installieren!!:
+
+npm install --save bootstrap@4.0.0-alpha.6
+
+npm install --save @ng-bootstrap/ng-bootstrap
+
+Service wird injiziert um Kompunente darfauf zugreifen zu können
+
+Fortsetzung fertigstellung
 
 
 Einzelne Einheiten:
@@ -316,3 +345,4 @@ Einzelne Einheiten:
 - [ue06](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue06)
 - [ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue07)
 - [ue08](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue08)
+- [Angular Übersicht](https://angular.io/guide/template-sy
