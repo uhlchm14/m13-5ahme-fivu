@@ -17,7 +17,7 @@
 
 ### 2. Einheit  
 **Datum:** 21.09.2017  
-**Dazugehörige Übung(en):** ![ue01](projects/ue01)  
+**Dazugehörige Übung(en):** [ue01](projects/ue01)  
 **Inhalt:**  
 1. Einstieg in die Programmiersprache Javascript
 2. Anlegen eines neuen Projektes mit Node.js
@@ -30,7 +30,7 @@
 
 ### 4. Einheit
 **Datum:** 04.10.2017  
-**Dazugehörige Übung(en):** ![ue03](projects/ue03)  
+**Dazugehörige Übung(en):** [ue03](projects/ue03)  
 **Inhalt:**  
 Besprechen der letzten Dateien des Templates für ue03
 1. Einstellungen in tsconfig.json fpr das Programm treffen
@@ -41,7 +41,7 @@ Besprechen der letzten Dateien des Templates für ue03
 
 ### 5. Einheit
 **Datum:** 05.10.2017  
-**Dazugehörige Übung(en):** ![ue03](projects/ue03)  ![ue04](projects/ue04)  
+**Dazugehörige Übung(en):** [ue03](projects/ue03), [ue04](projects/ue04)  
 **Inhalt:**  
 1. In dieser Einheit wurden neue Methoden für Javascript gelernt
 - import * as fs from 'fs'; fs ... Filesystem, zum Lesen und schreiben von Dateien
@@ -57,7 +57,7 @@ Besprechen der letzten Dateien des Templates für ue03
 
 ### 6. Einheit
 **Datum:** 12.10.2017  
-**Dazugehörige Übung(en):** ![ue04](projects/ue04)  
+**Dazugehörige Übung(en):** [ue04](projects/ue04)  
 **Inhalt:**  
 
 1. Interface
@@ -69,7 +69,7 @@ Besprechen der letzten Dateien des Templates für ue03
 
 ### 7. Einheit
 **Datum:** 19.10.2017  
-**Dazugehörige Übung(en):** ![ue05](projects/ue05)  
+**Dazugehörige Übung(en):** [ue05](projects/ue05)  
 **Inhalt:**  
 
 1. Begriffe
@@ -102,7 +102,7 @@ Besprechen der letzten Dateien des Templates für ue03
 
 ### 8. Einheit
 **Datum:** 09.11.2017  
-**Dazugehörige Übung(en):** ![ue05](projects/ue05)  
+**Dazugehörige Übung(en):** [ue05](projects/ue05)  
 **Inhalt:**  
 
 1. Aufbau einer Website
@@ -154,7 +154,7 @@ server.get('/test', (req, res, next) => {
 
 ### 9. Einheit
 **Datum:** 16.11.2017  
-**Dazugehörige Übung(en):** ![ue05](projects/ue05) ![ue06](projects/ue06)  
+**Dazugehörige Übung(en):** [ue05](projects/ue05), [ue06](projects/ue06)  
 **Inhalt**:   
 #### Dynamische Website  
   Bei einer dynamischen Website kann der Inhalt und das Aussehen vom Server verändert werden.  
@@ -218,7 +218,7 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 ```
 ### 10. Einheit
 **Datum:** 23.11.2017  
-**Dazugehörige Übung(en):** ![ue06](projects/ue06)  
+**Dazugehörige Übung(en):** [ue06](projects/ue06)  
 **Inhalt**:   
 
 1. Fehlerbehebung
@@ -266,7 +266,7 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 
 ### 11. Einheit
 **Datum:** 30.11.2017  
-**Dazugehörige Übung(en):** ![ue06](projects/ue06) ![ue07](projects/ue07)  
+**Dazugehörige Übung(en):** [ue06](projects/ue06), [ue07](projects/ue07)  
 **Inhalt**:   
 
 1. Cookie-Parser
@@ -316,7 +316,7 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 
 ### 12. Einheit
 **Datum:** 07.12.2017  
-**Dazugehörige Übung(en):** ![ue07](projects/ue07)  
+**Dazugehörige Übung(en):** [ue07](projects/ue07)  
 **Inhalt**:   
 
 1. Abänderung von `main.ts` 
@@ -348,5 +348,43 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
   ```
   4. ARC
   - Um das Programm zu testen haben wir im Chrome den `Advanced REST Client` installiert. Damit kann man im Browser einen POST senden. 
-  
 
+### 13. Einheit
+**Datum:** 11.01.2018  
+**Dazugehörige Übung(en):** [ue08](projects/ue08)  
+**Inhalt**:   
+
+1. Wiederholung
+- JavaScript -> Typescript
+  - Typisierung
+- Serverseitige Programmierung
+  - npm (node package manager)
+  - Node.js: JavaScript Engine
+  - Web-Server (Node.js express)
+    - Verbindung zum Client zur Vergügung stellen
+    - Request, Response
+      - Header, Body
+  - HTTP Protokoll
+  - Cookies, JSON Web-Token
+
+2. Angular
+- clientseitig
+- Javascript Framework um größere Systeme leicht zu realisieren
+- Alternativen: PHP, ASP
+- Angular Projekt erzeugen mit Angular CLI (common line interface)
+  - ng new \<name> ... starten
+  - ng serve ... starten
+
+3. Fortsetzen von ue08
+  - Es wurde ein Timer erstellt und dann ausgegeben
+
+### 14. Einheit
+**Datum:** 18.01.2018  
+**Dazugehörige Übung(en):** [ue08](projects/ue08)  
+**Inhalt**:   
+
+1. Angular
+  - app.component.css: Design
+  - app.component.html: Aufbau
+  - app.component.ts: Programm
+  - app.modules.ts: Startablauf
