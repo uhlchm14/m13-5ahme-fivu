@@ -1,0 +1,15 @@
+{
+    "files.exclude":{
+        "**/e2e": true,
+        "**node_modules": true,
+        "**/karma.conf.js": true,
+        "**/protractor.conf.js": true,
+        "**/tsconfig.json": true,
+        "**/tslint.json": true,
+        "**/package.json": true,
+        "**/package-lock.json": true,
+        "**/.angular-cli.json": true,
+        "**/.gitignore": true,
+        "**/.editorconfig": true
+    }
+}

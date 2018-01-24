@@ -607,3 +607,122 @@ Download und Besprechung der letzten Dateien des Templates für ue03
     }
     ```
   
+*****
+
+### 15. Einheit
+**Datum:** 18.01.2018  
+**Dazugehörige Übung(en):** ![ue09](projects/ue09)  
+**Inhalt:**  
+1. Erstellen von `ue09`
+  - `ng new ue09`
+
+2. Realisierung der Uhr aus `ue08` als eigene Componente
+  - Datei `app-clock.component.ts` erstellen
+  - Inhalt der Klasse `AppClockComponent` aus ue08 kopieren
+  - Selector und Template anpassen
+
+  ```typescript
+      @Component({
+      selector: 'app-clock',
+      template: `<p>{{ time }}</p>`
+      })
+      export class AppClockComponent implements OnInit, OnDestroy
+      {
+        //code is missing
+      }
+  ```
+
+3. Uhr mithilfe des Selectors in `app.component.html` in die Website einfügen
+  
+  ```html
+    <app-clock (click)="onClick($event)" style="cursor:pointer"></app-clock>
+  ```
+
+4. Implementierung der `onClick()`-Methode in `app.component.ts`
+
+  ```typescript
+    public isClock2Visible: boolean;
+
+    public onClick(event: any)
+    {
+      console.log('A Pfosten hot die Uhr auklickt. ' + event);
+
+      this.isClock2Visible = true;
+    }
+  ```
+
+5. Bei Klick auf die Uhr eine weiter Uhr einfügen
+
+  ```html
+    <app-clock *ngIf="isClock2Visible"></app-clock>
+  ```
+  
+6. Besprechung des Zusammenhangs zwischen Template, Component und Service
+
+![Angular 2 Architecture](docs/angular2architecture.png)
+
+7. Interface `user.ts` erstellen
+  
+  ```typescript
+    export interface IUser
+    {
+      firstname: string;
+      surname: string;
+      class: string;
+    }
+  ```
+
+8. Service `user.service.ts` erstellen
+  
+  ```typescript
+    @Injectable()
+    export class UserService
+    {
+        public users: IUser [] = [];
+    
+          constructor()
+          {
+            this.users.push({firstname: 'Florian', surname: 'Harrer', class: '5AHME'});
+            // missing users
+          }
+
+        public getUsers (): IUser []
+        {
+            return this.users;
+        }
+    }
+  ```
+
+9. Installation von Bootstrap
+  - `npm install --save @ng-bootstrap/ng-bootstrap`
+  - `npm install --save bootstrap@4.0.0-alpha.6`
+
+10. Tabelle in `app-user-table.component.html` einfügen
+  
+  ```html
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Vorname</th>
+          <th>Nachname</th>
+          <th>Klasse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of users; let i=index" (click)="onUserClick(u)" style="cursor:pointer">
+          <td>{{ i+1 }}</td>
+          <td>{{u.firstname}}</td>
+          <td>{{u.surname}}</td>
+          <td>{{u.class}}</td>
+        </tr>
+      </tbody>
+    </table>
+  ```
+
+  - Durch `*ngFor` werden alle Datensätze in die Tabelle eingetragen
+
+11. `app.modules.ts`
+  - Damit die Uhr- und Tabllen-Componente verwendet werden können, müssen beide in `app.modules.ts` eingetragen werden.
+  - Darüber hinaus muss auch der Service in `app.modules.ts` eingetragen werden.
+  
