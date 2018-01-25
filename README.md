@@ -370,29 +370,29 @@ Angular:
  * Weiterprogrammieren des Programmes
    * in user.service ein Promise einbauen 
    ``` Javascript
-   public async getUsers(): Promise<IUser []> {
+    public async getUsers(): Promise<IUser []> {
         return this.users;
     }
     ```
     * dadurch müssen wir in app-user-component auch etwas ändern.  OnInit einfügen und eine neue Methode erstellen
     ```Javascript
-     public async ngOnInit() {
+    public async ngOnInit() {
     try {
       this.users = await this.userService.getUsers();
     } catch(err)
     {
       console.log(err);
     }
-  }
-  ```
+   }
+   ```
  * Nun soll eine Ausgabe am Bildschirm erstellt werden, wenn das Feld von den Users leer ist. 
    * Abfrage in der app-user-table.component.html
    ```Javascript
    <p *ngIf="users === undefined">
-  Keine Benutzerdaten verfügbar.
-</p>
-<table *ngIf="users !== undefined" class="table table-hover table-sm">
-  ```
+   Keine Benutzerdaten verfügbar.
+   </p>
+   <table *ngIf="users !== undefined" class="table table-hover table-sm">
+   ```
  * Nächster Schritt: Wenn Fehler auftritt beim Laden der users, soll eine andere Fehlermeldung ausgegeben werden, als wenn die users noch geladen werden. 
    * Dazu neue Variable userErr anlegen und userErr den err zuweisen
    
