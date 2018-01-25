@@ -392,17 +392,20 @@ Angular:
   Keine Benutzerdaten verfügbar.
 </p>
 <table *ngIf="users !== undefined" class="table table-hover table-sm">
-   ```
+  ```
  * Nächster Schritt: Wenn Fehler auftritt beim Laden der users, soll eine andere Fehlermeldung ausgegeben werden, als wenn die users noch geladen werden. 
    * Dazu neue Variable userErr anlegen und userErr den err zuweisen
-   ```Javascript
+   
+ ```Javascript
    <p *ngIf="users === undefined && userErr === undefined">
   Benutzerdaten werden geladen.
-</p>
-<p *ngIf="userErr !== undefined">
+  </p>
+  <p *ngIf="userErr !== undefined">
   Fehler beim Laden der Benutzerdaten: {{userErr.message}}
-</p>
-<table *ngIf="users !== undefined" class="table table-hover table-sm">
-  ```
+  </p>
+  <table *ngIf="users !== undefined" class="table table-hover table-sm">
+ ```
+ 
+ * Nächste Aufgabe: einen Progress Bar einfügen
    
  
