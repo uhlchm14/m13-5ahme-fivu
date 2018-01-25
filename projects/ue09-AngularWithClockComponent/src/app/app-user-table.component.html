@@ -1,4 +1,18 @@
-<table class="table table-hover">
+<div *ngIf="users === undefined">
+<p *ngIf="userErr === undefined" class="alert alert-info">
+  <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"><i></i>
+</ngb-progressbar>
+    Benutzer werden geladen!
+</p>
+<!--<p *ngIf="users === undefined && userErr === undefined" class="alert alert-info">
+    Benutzerdaten werden geladen!  
+</p> -->
+<p *ngIf="userErr !== undefined" class="alert alert-error">
+    Fehler beim Laden der Benutzerdaen: {{userErr.message}}
+</p>
+</div>
+
+<table *ngIf="users !== undefined" class="table table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>

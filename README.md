@@ -405,12 +405,33 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
   - Tabelle erstellen und füllen
 
   - Service verwenden um zwischen den Komponenten Daten auszutauschen
+    - ng generate service
 
-  - Bild https://angular.io/generated/images/guide/architecture/overview2.png
+  ![Service](https://angular.io/generated/images/guide/architecture/overview2.png)
 
 ### 15. Einheit
 **Datum:** 25.01.2018  
 **Dazugehörige Übung(en):** [ue09](projects/ue09)  
 **Inhalt**:   
 
-1. 
+1. Angular
+ - Programm darauf vorbereiten Daten vom Server zu bekommen
+ - Progressbar einfügen
+ - Errors abfangen
+ 
+
+2. HTTPS
+  - TLS (Transport Layer Secure) = SSL (Secure Socket Layer)
+  - symentrische Verfahren: AES
+    - nur ein Schlüssel zum Ver- und Entschlüsseln
+    - Vorteil: sehr effizient
+    - Nachteil: Schlüsselaustauschproblem -> Schlüssel über Netzwerk austauschen ist riskant
+  - asymetrisches Verfahren: RSA
+    - Schlüsselpaar: öffentlich und privat
+    - Nachteil: bei großen Datenmengen extrem langsam
+  - bei TSL werden beide systeme kombiniert
+    - asymetrisches System wird zum Austausch des Schlüssels des symetrischen Verfahrens verwendet
+  - X.509 Zertifikat
+    - öffentlicher Schlüssel des Inhabers (subject)
+    - signiert von einem vertrauenswürdigen Austeller (issuer)
+
