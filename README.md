@@ -11,7 +11,7 @@
 * Grundlagen von Javascript
   * Wie werden Programme erstellt, gestartet?
   * Globale, lokale Installation
-  * Besprechung der unterschiedlichen Datentypen
+  * Besprechung der unterschiedlichen Datentypen ((boolean, string, number, object, undefined, null) und Variablendekalrationen (let, const, var)
 
 * Erstellen eines einfachen Programmes
   * Konsolen ausgaben erstellen, spielereien mit Datentypen
@@ -32,7 +32,7 @@
 * template von LMS fertig in neues Programm eingefügt
 * .vscode Ordner erstellt
   * setting.json einfügen (was wird sichtbar gemacht und was nicht)
-  * tasks.json einfügen ()
+  * tasks.json einfügen (eigene Tasks wie clean, build können eingestellt werden)
   * launch.json einfügen (Debuggereinstellungen)
  
 * in ue03 Ordner eingefügt:
@@ -50,6 +50,8 @@
 * Es gibt in Typescript eigene setter und getter Methoden
   * Achtung! Es kann hierbei zu Namenskollosionen kommen, daher immer Variablennamen mit einem _ beginnen.
   * zB: private _model: string;
+
+* Arrays in Typescript können durch push hinzugefügt werden.
  
 * Lesen und Schreiben von Dateien
   * Dazu muss man import **as fs from 'fs';** importieren.
@@ -60,7 +62,10 @@
 * Tastenkombination hinzufügen
   * Datei -> Einstellungen -> Tastenkombinationen -> keybindings.json -> Quellcode von FIVU template kopieren und dort einfügen. 
   * strg + alt + b = build
-
+* JSON 
+  * Möchte man einen String im JSON-Format speichern, geht dies mit JSON.stringify(), die Gegenoperation dazu ist JSON.parse().
+* Interface 
+  * Ein Interface sagt aus, welche Datenelemente bei einer Erstellung eines Objekts einer Klasse übergeben werden müssen/könenn .
 * Neue Übung erstellen (ue04)
   * alte Übung kopieren (ue03) und in ue04 einfügen
   * main.ts löschen und dann eine neue Classe erstellen (Car.ts).
@@ -87,7 +92,7 @@
    * Web-Server kommuniziert mit Client
    * kommunizieren mit http (Sprache der beiden)
    * html ist eine Codierungsform
-   * TCP/IP stellt sicher das die Daten sicher zwischen 2 Geräten ausgetauscht werden
+   * TCP/IP (Übertragungsprotokoll) stellt sicher das die Daten sicher zwischen 2 Geräten ausgetauscht werden
    * TLS: Verschlüsselte Form der Datenübertragung bei https
    * innerhalb eines Subnetz wird Wlan / Ethernet verwendet, außerhalb werden die Daten via TCP/IP übertragen
    * http get kommando: Ressource wird angegeben, die zurück gesendet werden soll
@@ -162,6 +167,7 @@ html(lang="de")
 });
 ```
 * Bootstrap 
+  * freies CSS Framework
   * Responsive Breakpoints: Damit die Größe auf den Endgeräten angepasst wird.
   * Z-index: Die Elemente können eine gewisse Höhe zugeordnet werden.
   * DOM (Domain Object Model): Das was im Browser als Object gesehen wird. 
@@ -363,6 +369,7 @@ Angular:
   ``` Javascript
   <app-clock (click)="onClick($event)" style = "cursor: pointer"></app-clock>
   ```
+  
 ### Einheit 16: 25.01.2018
  
  Angular bestehn aus Kompenenten.  
@@ -393,6 +400,7 @@ Angular:
    </p>
    <table *ngIf="users !== undefined" class="table table-hover table-sm">
    ```
+   * Mit Hilfe von ngIf werden Elemente je nach Situation angezeigt 
  * Nächster Schritt: Wenn Fehler auftritt beim Laden der users, soll eine andere Fehlermeldung ausgegeben werden, als wenn die users noch geladen werden. 
    * Dazu neue Variable userErr anlegen und userErr den err zuweisen
    
