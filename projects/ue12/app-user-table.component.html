@@ -1,0 +1,38 @@
+<div *ngIf= "users === undefinded">
+    <p *ngIf="userErr === undefinded"></p>
+        <ngb-progressbar 
+        type="success" 
+        [value]="100" 
+        [striped]="true"
+        [animated]="true">
+        </ngb-progressbar>
+        Benutzerdaten werden geladen
+    </p>
+
+</div>
+<p *ngIf="users === undefinded && userErr === undefinded">
+    Benutzerdaten werden geladen.
+</p>
+
+<p *ngIf="userErr !== undefined">
+    Fehler beim Laden - Depp!: {{userErr.message}}
+</p>
+
+<table *ngIf="users !== undefined" class="table table-hover table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nachname</th>
+            <th scope="col">Vorname</th>
+            <th scope="col">Klasse</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users; let i=index" (click)="onUserClick(u)" style="cursor: pointer">
+            <td>{{i+1}}</td>
+            <td>{{u.surname}}</td>
+            <td>{{u.firstname}}</td>
+            <td>{{u.classname}}</td>
+        </tr>
+    </tbody>
+</table>
