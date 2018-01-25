@@ -348,6 +348,61 @@ Angular:
    * Client seitiges Frame Work
    * Andere Entwicklungen: PHP, ASP
    * mit ng new wird eine neue Applikation angelegt
-   * mit ng serve wird der Server gestartet
-   * Anwendung besteht aus einer Componente
+   * mit ng serve wird der Server gestartet (jedoch nur Lokal verfügbar)
+   * Anwendung besteht aus Componenten
    * In der Componente sind Zusatzinformationen die aufgerufen werden können
+   
+### Einheit 15: 18.01.2018
+  * erstellen von ue09
+    * ng new ue09
+  * Realisierung der Uhr aus ue08 als eigene Componente
+  * Datei app-clock.component.ts erstellen
+  * Inhalt der Klasse AppClockComponent aus ue08 kopieren
+  * Selector und Template anpassen
+  * Uhr mithilfe des Selectors in app.component.html in die Website einfügen
+  ``` Javascript
+  <app-clock (click)="onClick($event)" style = "cursor: pointer"></app-clock>
+  ```
+### Einheit 16: 25.01.2018
+ 
+ Angular bestehn aus Kompenenten.  
+ Ein Service ist ein Stück Code, sozusagen eine globale Klasse. -> kann man wieder in Komponenten zusammenpacken. Bei Services schreibt   man statt @Component, @Injectable().  
+ * Weiterprogrammieren des Programmes
+   * in user.service ein Promise einbauen 
+   ``` Javascript
+   public async getUsers(): Promise<IUser []> {
+        return this.users;
+    }
+    ```
+    * dadurch müssen wir in app-user-component auch etwas ändern.  OnInit einfügen und eine neue Methode erstellen
+    ```Javascript
+     public async ngOnInit() {
+    try {
+      this.users = await this.userService.getUsers();
+    } catch(err)
+    {
+      console.log(err);
+    }
+  }
+  ```
+ * Nun soll eine Ausgabe am Bildschirm erstellt werden, wenn das Feld von den Users leer ist. 
+   * Abfrage in der app-user-table.component.html
+   ```Javascript
+   <p *ngIf="users === undefined">
+  Keine Benutzerdaten verfügbar.
+</p>
+<table *ngIf="users !== undefined" class="table table-hover table-sm">
+   ```
+ * Nächster Schritt: Wenn Fehler auftritt beim Laden der users, soll eine andere Fehlermeldung ausgegeben werden, als wenn die users noch geladen werden. 
+   * Dazu neue Variable userErr anlegen und userErr den err zuweisen
+   ```Javascript
+   <p *ngIf="users === undefined && userErr === undefined">
+  Benutzerdaten werden geladen.
+</p>
+<p *ngIf="userErr !== undefined">
+  Fehler beim Laden der Benutzerdaten: {{userErr.message}}
+</p>
+<table *ngIf="users !== undefined" class="table table-hover table-sm">
+  ```
+   
+ 
