@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { UserService } from './user.service';
@@ -15,6 +16,7 @@ import { AppUserTableComponent } from './app-user-table.component';
     AppUserTableComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule
   ],
   providers: [UserService],

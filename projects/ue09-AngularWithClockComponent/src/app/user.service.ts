@@ -15,8 +15,13 @@ export class UserService {
     this.users.push({ surname: 'Pichler', firstname: 'Dominik', classname: '5AHME' });
   }
 
-  public getUsers(): IUser[] {
-    return this.users;
+  public async getUsers(): Promise<IUser[]> {
+    return new Promise<IUser[]>((resolve, reject) => {
+      setTimeout(() => {
+        // reject(new Error('users not available'));
+        resolve(this.users);
+      }, 2000);
+    });
   }
 
 }
