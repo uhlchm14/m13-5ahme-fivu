@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <app-clock (click)="onClick($event)" style="cursor:pointer;"></app-clock>
+  <h2>
+    Unterüberschrift
+  </h2>
+  <app-clock *ngIf="isClock2Visible"></app-clock>
+  <app-user-table>s</app-user-table>
+</div>
+
+

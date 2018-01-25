@@ -241,4 +241,44 @@ server.post('/saveuser', (req, res, next) => {
 
 ## 11.Einheit 30.11.2017 (Donnerstag)
 
+* Wiederholung der letzten Einheit.
+* Cookie:
+  * Speicherung von Daten im Client.
+  * Verfalls Datum.
+  * gebunden an die URL -> werden nach der Url gesucht.
+  * Wenn die URL aufgerufen wird, so wird automatisch die Cookie Information mitgesendet.
+* Nachteil -> Die Privatsphäre wird nicht beachtet. Man bekommt z.B immer die Werbung die man gerade besucht hat. 
+* Web-Token
+  * JSON-Webtoken -> Daten die ich mitgeben kann.
+  * werden signiert
+  * nicht verschüsselt
+* neues Projekt für Token erstellt.
+* Erzeugung eines Schlüsselpaares mit openssl
+* Buffer = byte[] in java
 
+## 12.Einheit 07.12.2017 (Donnerstag)
+
+* Wiederholung der letzten Einheit.
+* Cookie-Verfahren:
+  * weiter Vorteil: Client sendet reg GET an server -> server req login -> Client POST login Daten -> Server set Cookie -> Client +Cookie neue 	Session -> Client: logout Session wird beendet -> mit altem Cookie kann nicht mehr weitergearbeitet werden, da Session geschlossen ist.
+
+* Token:
+  * Client schickt eine Anfrage an den Server.
+  * Server sendet erzeugten Token, signiert ihn mit public Key und schickt ihn zurück
+  * Kryptografischesverfahren (verschlüsselt)
+
+## 13.Einheit 14.12.2017 (Donnerstag)
+
+* Schreiben auf einen Client:
+  * selbst Javascript Prog.
+  * Js-Libraries (jquery)
+  * Js Framework
+* Alte Version Angular Js
+* Neue Version Angular 1,2,3,4,5,6 -> Angularframework(von Google)
+* 
+
+## 14.Einheit 11.01.2018 (Donnerstag)
+
+## 15.Einheit 18.01.2018 (Donnerstag)
+
+## 16.Einheit 25.01.2018 (Donnerstag)
