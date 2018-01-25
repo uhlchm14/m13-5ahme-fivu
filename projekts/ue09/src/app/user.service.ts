@@ -3,6 +3,7 @@ import {IUser} from './models/user';
 
 @Injectable()
 export class UserService {
+  private users: IUser [] = [];
 
   constructor() { 
     this.users.push({ surname: 'Freyler', firstname: 'Lukas', classname: '5AHME'});
@@ -11,9 +12,16 @@ export class UserService {
 
   }
 
-  public getUsers (): IUser [] {
-    return this.users;
-
+  public async getUsers (): Promise<IUser []> {
+   //return this.users;
+   return new Promise<IUser []>( (resolve, reject) => {
+    window.setTimeout( () => {
+     // reject( new Error('users not available'));
+     resolve(this.users);
+     }, 2000);
+   });
+  
+    
   }
 
 }

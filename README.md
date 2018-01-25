@@ -208,6 +208,7 @@ html(lang="de")
 
 * Weiterführen der test.pug Datei.
 * Neue Übung -> Bootstrap
+* [Übung 6](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue06)
 
 ## 10.Einheit 23.11.2017 (Donnerstag)
 
@@ -239,6 +240,7 @@ server.post('/saveuser', (req, res, next) => {
 
 ```
 
+
 ## 11.Einheit 30.11.2017 (Donnerstag)
 
 * Wiederholung der letzten Einheit.
@@ -255,6 +257,8 @@ server.post('/saveuser', (req, res, next) => {
 * neues Projekt für Token erstellt.
 * Erzeugung eines Schlüsselpaares mit openssl
 * Buffer = byte[] in java
+
+
 
 ## 12.Einheit 07.12.2017 (Donnerstag)
 
@@ -275,10 +279,11 @@ server.post('/saveuser', (req, res, next) => {
   * Js Framework
 * Alte Version Angular Js
 * Neue Version Angular 1,2,3,4,5,6 -> Angularframework(von Google)
-* 
+
 
 ## 14.Einheit 11.01.2018 (Donnerstag)
 
 ## 15.Einheit 18.01.2018 (Donnerstag)
-
+* [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
 ## 16.Einheit 25.01.2018 (Donnerstag)
+* [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
