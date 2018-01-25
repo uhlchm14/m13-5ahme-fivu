@@ -13,3 +13,6 @@
 | 9 | 23.11.2017 | [ue06](projects/ue06/src/main.ts) |
 | 10 | 30.11.2017 | [ue06](projects/ue06/src/main.ts) & [ue07](projects/ue07/src/main.ts)|
 | 11 | 07.12.2017 | [ue07](projects/ue07/src/main.ts)|
+| 12 | 14.12.2017 | [ue07](projects/ue07/src/main.ts) & [ue08](projects/ue08/src/main.ts)|
+| 13 | 11.01.2018 | [ue08](projects/ue08/src/main.ts)|
+| 14 | 18.01.2018 | [ue08](projects/ue08/src/main.ts)|
