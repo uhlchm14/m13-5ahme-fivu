@@ -120,6 +120,16 @@ Abwesend
 * Variablen aus TypeScript File in HTML anzeigen mithilfe von Interpolation: {{variable}}
 * Verwendung vom Datentyp Date für anzeigen von Zeit
 
+## Einheit 15: 18.1.18
+* mehrere Komponenten in app.component zusammenführen
+* Services
+--> Abwesend aufgrund Stellung!
+
+## Einheit 16: 25.1.18
+* Verwendung von async Methoden und Promises um Serverlatenz zu simulieren und für Datenerhalt von Server vorzubereiten
+* Arbeiten mit *ngIf, um verschiedene DOM Elemente, je nach Situation, anzeigen zu lassen.
+* Progressbar mit ng-bootstrap, um Einlesevorgang zu visualisieren
+* Angular Projekt: [Übung 9]
 
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
@@ -142,3 +152,4 @@ Abwesend
 [Übung 7]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
 [ue07]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
 [Übung 8]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08
+[Übung 9]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08

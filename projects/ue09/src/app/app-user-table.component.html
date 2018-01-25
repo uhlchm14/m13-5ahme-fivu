@@ -1,0 +1,28 @@
+<div *ngIf="userErr === undefined">
+    <div *ngIf="users === undefined">
+        <p>
+            <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true" height="30px">
+                <span style="color: black">Benutzerdaten werden geladen...</span>
+            </ngb-progressbar>
+        </p>
+    </div>
+</div>
+<p *ngIf="userErr !== undefined" class="alert alert-danger">Fehler beim Laden der Benutzerdaten: {{userErr.message}}</p>
+<table *ngIf="users !== undefined" class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nachname</th>
+            <th>Vorname</th>
+            <th>Klasse</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users; let i = index" (click)="onUserClick(u)" style="cursor:pointers">
+            <td>{{i+1}}</td>
+            <td>{{u.surname}}</td>
+            <td>{{u.firstname}}</td>
+            <td>{{u.classname}}</td>
+        </tr>
+    </tbody>
+</table>
