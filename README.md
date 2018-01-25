@@ -366,10 +366,56 @@ Angular:
   * Inhalt der Klasse AppClockComponent aus ue08 kopieren
   * Selector und Template anpassen
   * Uhr mithilfe des Selectors in app.component.html in die Website einfügen
-  ``` Javascript
+  ``` Typescript
   <app-clock (click)="onClick($event)" style = "cursor: pointer"></app-clock>
   ```
+  * implementierung der onClick()-Methode in app.component.ts
+  ```Typescript
+  public isClock2Visible: boolean;
+
+  public onClick(event: any)
+  {
+    console.log('Uhr wurde angeklickt! ' + event);
+
+    this.isClock2Visible = true;
+  }
+  ```
+  * Bei Klick auf die Uhr eine weiter Uhr einfügen
+  ```Typescript
+  <app-clock *ngIf="isClock2Visible"></app-clock>
+  ```
+  * Interface user.ts erstellen
+  ```Typescript
+  export interface IUser
+  {
+    firstname: string;
+    surname: string;
+    class: string;
+  }
+  ```
+  * Service user.service.ts erstellen
+  ```Typescript
+  @Injectable()
+  export class UserService
+  {
+      public users: IUser [] = [];
   
+        constructor()
+        {
+          this.users.push({firstname: 'Florian', surname: 'Harrer', class: '5AHME'});
+          this.users.push({firstname: 'Florian', surname: 'Greistorfer', class: '5AHME'});
+          this.users.push({firstname: 'Mario', surname: 'Ritter', class: '5AHME'});
+        }
+
+      public getUsers (): IUser []
+      {
+          return this.users;
+      }
+  }
+  ```
+  * Damit die Uhr- und Tabellen-Componente verwendet werden können, müssen beide in app.modules.ts eingetragen werden.
+Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
+
 ### Einheit 16: 25.01.2018
  
  Angular bestehn aus Kompenenten.  
