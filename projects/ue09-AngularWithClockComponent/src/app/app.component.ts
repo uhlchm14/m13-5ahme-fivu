@@ -12,9 +12,7 @@ export class AppComponent {
   public users: IUser [] = [];
 
   constructor () {
-    this.users.push({surname: 'Freyler', firstname: 'Lukas', classname: '5AHME'});
-    this.users.push({surname: 'Freyler', firstname: 'Paul', classname: '2AHME'});
-    this.users.push({surname: 'Mörth', firstname: 'Markus', classname: '5AHME'});
+
   }
 
   public onClick(event: any) {
