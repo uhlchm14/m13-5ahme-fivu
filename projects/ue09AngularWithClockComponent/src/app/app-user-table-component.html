@@ -1,4 +1,14 @@
-<table class="table table-hover">
+<div *ngIf="users === undefined">
+<p *ngIf="userErr === undefined"> <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar></p>
+<p>
+  Benutzerdaten werden geladen
+</p>
+<P *ngIf="userErr!== undefined">
+    Fehler beim Laden der Benutzerdaten: {{userErr.message}}
+</P>
+</div>
+
+<table *ngIf="users !== undefined" class="table table-hover">
     <thead>
       <tr>
         <th>Nummer</th>
