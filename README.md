@@ -407,5 +407,31 @@ Angular:
  ```
  
  * Nächste Aufgabe: einen Progress Bar einfügen
-   
- 
+   * von bootstrap importieren: 
+   ```Javascript
+   import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+   ```
+   * und dann noch unter imports eintragen:
+   ```Javascript
+   imports: [
+    BrowserModule,  NgbModule.forRoot()
+   ],
+   ```
+   * Unter html:
+   ```Javascript
+   <div *ngIf="users === undefined">
+   <p *ngIf="userErr === undefined"><ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+    Benutzerdaten werden geladen.
+   </p>
+   <p *ngIf="userErr !== undefined">
+    Fehler beim Laden der Benutzerdaten: {{userErr.message}}
+   </p>
+   </div>
+   ```
+ * HTTP 
+   * Secure: TLS (Transport Layer Security)
+   * TLS ist Hybrides Verfahren -> Mischung asymmetrisches und symmetrischen Verfahrens
+   * Symmetrisches Verfahren: Man benötigt nur einen Schlüssel, mit dem man ver- und entschlüsseln kann. Problem, dass der Schlüssel abgefangen werden kann. 
+   * Asymmetrisches Verfahren: RSA-Verfahren. Man hat ein Schlüsselpaar, einen öffentlichen und einen privaten Schlüssel. Jedoch ist es sehr langsam bei großen Daten. 
+   * Bei TLS wird beides kombiniert 
+   * X509 Zertifikat: Öffentlicher Schlüssel des Inhabers -> muss Signiert von einem vertrauenswürdigen Aussteller sein. 
