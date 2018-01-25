@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-Angular bietet die Möglichkeit, _public_ Variablen aus dem TypeScript File im HTML anzeigen zu lassen. Das gelingt mithilfe der sogenannten Interpolation mit folgender Syntax: {{variable}}.
+Angular bietet die Möglichkeit, _public_ Variablen aus dem TypeScript File im HTML anzeigen zu lassen. Das gelingt mithilfe der sogenannten [Interpolation] mit folgender Syntax: {{variable}}.
 
 Beispiel:
 
@@ -89,7 +89,7 @@ private updateTime() {
 }
 ```
 
-Wenn die Komponente erstellt wird, wird der sogenannte _OnInit_ _Lifecyclehook_ aufgerugen. Da wir die Zeit von Anfang an dastellen wollen, schreiben wir die Methode `ngOnInit()`, in der alle zu Beginn nötigen Sachen aufgerufen werden.
+Wenn die Komponente erstellt wird, wird der sogenannte _[OnInit]_ _[Lifecyclehook]_ aufgerugen. Da wir die Zeit von Anfang an dastellen wollen, schreiben wir die Methode `ngOnInit()`, in der alle zu Beginn nötigen Sachen aufgerufen werden.
 
 ```javascript
 public ngOnInit() {
@@ -106,7 +106,7 @@ public ngOnInit() {
 ```
 
 Für das ständige Aktualisieren der Uhrzeit setzen wir ein Interval, das die `updateTime()` Methode alle 100ms aufruft.  
-Solange wir uns in der Komponente befinden ist das Interval aktiv, möchten wir nicht unnötig Ressourcen dadurch verbrauchen. Dafür gibt es den _NgOnDestroy_ _Lifecyclehook_, welcher beim zerstören der Komponente aufgerugen wird. Darin "clearen" wir das Interval:
+Solange wir uns in der Komponente befinden ist das Interval aktiv, möchten wir nicht unnötig Ressourcen dadurch verbrauchen. Dafür gibt es den _[NgOnDestroy]_ _Lifecyclehook_, welcher beim zerstören der Komponente aufgerugen wird. Darin "clearen" wir das Interval:
 
 ```javascript
 public ngOnDestroy() {
@@ -127,4 +127,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
 Danach war die Einheit zu Ende.
 
+[Interpolation]: https://angular.io/guide/displaying-data#showing-component-properties-with-interpolation
 [UE08]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08
+[OnInit]: https://angular.io/guide/lifecycle-hooks#oninit
+[Lifecyclehook]: https://angular.io/guide/lifecycle-hooks#lifecycle-hooks
+[NgOnDestroy]: https://angular.io/guide/lifecycle-hooks#ondestroy
