@@ -380,11 +380,37 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 
 ### 14. Einheit
 **Datum:** 18.01.2018  
-**Dazugehörige Übung(en):** [ue08](projects/ue08)  
+**Dazugehörige Übung(en):** [ue08](projects/ue08), [ue09](projects/ue09)   
 **Inhalt**:   
 
 1. Angular
-  - app.component.css: Design
-  - app.component.html: Aufbau
-  - app.component.ts: Programm
-  - app.modules.ts: Startablauf
+  - Anguar besteht aus Komponenten (=Quellcode)
+    - app.component.css: Design
+    - app.component.html: Aufbau
+    - app.component.ts: Programm
+    - app.modules.ts: Startablauf
+  - Komponente erstellen mit: ng generate component \<name> (oder händisch mit Rechtsklick und neue Datei)
+  - window steht für den DOM (Domain Object Model)
+  ```typescript
+    this._timer = window.setInterval ( () => this.updateTime(), 100);
+  ``` 
+  - Komponent auf der Website klickbar machen und Mauszeiger verändern
+   ```html
+    <app-clock (click)="onClick()" style="cursor:pointer"></app-clock>
+  ``` 
+  - Uhr ein-/ausblenden
+    ```html
+    <app-clock *ngIf="isClock2Visible"></app-clock>
+    ```
+  - Tabelle erstellen und füllen
+
+  - Service verwenden um zwischen den Komponenten Daten auszutauschen
+
+  - Bild https://angular.io/generated/images/guide/architecture/overview2.png
+
+### 15. Einheit
+**Datum:** 25.01.2018  
+**Dazugehörige Übung(en):** [ue09](projects/ue09)  
+**Inhalt**:   
+
+1. 
