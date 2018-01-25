@@ -7,6 +7,7 @@
 1. Angular
 2. Fortsetzen beim Programm
 3. Progress-Bar
+4. Vorbereitung https Server
 
 
 ### 1. Angular
@@ -30,3 +31,15 @@ Ich habe aber leider nicht den kompletten Überblick über das neue Programm und
       - dazu: _import {NgbModule} from '@ng-bootstrap/ng-bootstrap';_
       - in imports: _NgbModule.forRoot()_
 -    _[animated]="true">_ in der html-Datei, damit die Progress-bar animiert wird.
+
+### 4. Vorbereitung https Server
+-    das "S" bei https steht für secure, ist eine sichere Übertragung
+-    Welchen Namen hat das System, welches für die Verschlüsselung verwendet wird? - TLS - Transport Layer Security
+-    Man braucht für Verschlüsselung: ein Verfahren, bei TLS = hybrides Verfahren (Mischung aus symmetrischen und asymmetrischen Verfahren)
+-    symmetrisches Verfahren: man braucht nur einen Schlüssel zum Verschlüsseln und Entschlüsseln, ist sehr effizient.
+-    Schlüsselaustauschproblem: Austauschproblem, daher in Kombination ein zweites Verfahren - Asymmetrisches
+-    Asymmetrisches Verfahren: Besitzt Schlüsselpaar, öffentlichen und privaten Schlüssel, kein Austauschproblem mehr- mit dem öffentlichen Schlüssel verschlüsseln, mit dem privaten Schlüssel entschlüsseln
+-    Asymmetrisches Verfahren Nachteil: sehr langsam, vor allem bei großen Datenmengen
+-    Vorteil TLS: Kombination aus beiden Verfahren macht es wertvoll
+-    Das ganze läuft über X.509 Zertifikat= öffentliche Schlüssel des Inhabers (Subject).
+      - Muss signiert sein, von einem vertrauenswürdigen Aussteller (Issuer).
