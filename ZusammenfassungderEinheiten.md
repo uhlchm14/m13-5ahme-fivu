@@ -300,13 +300,13 @@ Einheit 14: 11.01.2018
 
 **Nun Fortsetzung: (8:58)**
 
-####Schwere politische Diskussionen!
+#### Schwere politische Diskussionen!
 
 Fortsetzung (9:24)
 
 Zeit
 
-## Einheit 15: 18.01.2017
+## Einheit 15: 18.01.2018
 
 - Wiederholung von letzter Einheit (Angular)
 - ng new erstellt neues Projekt
@@ -335,6 +335,56 @@ Service wird injiziert um Kompunente darfauf zugreifen zu können
 
 Fortsetzung fertigstellung
 
+## Einheit 16: 25.01.2018:
+
+- Abwesenheitskontrolle
+- Mündliche Prüfung Korosec
+- Angular abschließen -> war nur überblick
+- 2 Weitere Themen: Angular auf Server starten, HTTPS server erstellen
+- 2 Semester: Kleines Selbstständiges System auf Raspberry
+
+- Bei Angular schreibt man Komponenten.
+Wenn Bestehende HTML Pakete nicht ausreichend -> neue Arten hinzufügen
+Klassischen Input-Feld -> bisschen Code.
+Globale Klassen /(Injector) gibt Daten an Komponente weiter. 
+Angular kann mit vielen Modulen aufgebaut werden.
+Angular legt keine Dateien an
+
+Wenn variable werte bekommt, wiird automatisch das Domain-Object-Model angelegt und ist danach verfügbar
+
+- Fertigstellung ue09
+
+
+HTTPS:
+
+System: Verschlüsselungssystem: TLS (Transport Layer Security)
+				Früher -> SSL (Secure Socket Layer)
+
+Benötigt für Verschlüsselung: Verschlüsselungsverfahren
+Vermischung zwischen symetrischen und asymetrischen Verfahrens.
+
+Symetrisches Verfahren: Bsp:(AES) -> nur ein Schlüssel benötigt, der verschlüsselt und entschlüsselt -> einfach
+			Schlüsselaustausch-Problem: Schlüssel kann nur über Netzwerk gesendet werden
+			-> Kann abgefangen werden
+
+Asymetrisches Verfahren: Bsp:(RSA) -> Schlüsselpaar vorhanden (öffentlich, privaten Schlüssel)
+			Entschlüsseln kann nur der der den provaten Schlüssel hat
+			Verschlüsseln kann sowohl der private als auch öffentliche Schlüssel verwenden
+			Nachteil: Langsam bei großen Datenmengen
+
+Bei HTTPS: vermischung beider um noch schneller werden
+
+Läuft über X.509 Zertifikate:
+
+Öffentliche Schlüssel des Zertifikatsinhabers.
+Es muss signiert sein von einem vertrauenswürdigen Aussteller des Zertifikats ( Issuer)
+
+Nächste Einheit: Schlüssel und Zertifikat erstellen
+
+
+## Einheit 17: 1.2.2018
+
+
 
 Einzelne Einheiten:
 
@@ -345,4 +395,5 @@ Einzelne Einheiten:
 - [ue06](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue06)
 - [ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue07)
 - [ue08](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue08)
-- [Angular Übersicht](https://angular.io/guide/template-sy
+- [Angular Übersicht](https://angular.io/guide/template-syntax)
+- [ue09](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue09AngularWithClockComponent)

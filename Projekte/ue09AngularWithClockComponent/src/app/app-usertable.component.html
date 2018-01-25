@@ -1,4 +1,10 @@
-<table class="table table-hover table-sm table-inverse">
+<p *ngIf="users === undefinded">
+  Keine Benutzerdaten verfügbar
+  </p>
+<p *ngIf="userErr !== undefinded">
+  Fehler beim Laden der Benutzerdaten: {{userErr.message}}
+</p>
+  <table *ngIf="users !== undefined" class="table table-hover table-sm table-inverse">
     <thead>
       <tr>
         <th>#</th>

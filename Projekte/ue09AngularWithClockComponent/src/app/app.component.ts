@@ -12,7 +12,6 @@ export class AppComponent {
   public users: IUser [] = [];
 
   constructor() {
-    
   }
 
 
