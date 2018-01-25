@@ -17,13 +17,13 @@ Um das DOM zu manipulieren gibt es die Möglichkeit...
   + ... JavaScript Frameworks...  
 ... zu nutzen.
 * TypeScript  
-Mit __TypeScript__, einer Weiterentwicklung von JavaScript der Firma Microsoft, ist es möglich das DOM auch mit einem objektorientierten Ansatz zu manipulieren. TypeScript bietet nämlich im Gegensatz zu Java die Möglichkeit auf _Typisierung_.
+Mit __TypeScript__, einer Weiterentwicklung von JavaScript der Firma Microsoft, ist es möglich das DOM auch mit einem objektorientierten Ansatz zu manipulieren. TypeScript bietet im Gegensatz zu Java jedoch die Möglichkeit auf _Typisierung_.
 Im Kern ist es allerdings immer noch JavaScript, TypeScript wird nämlich beim bauen in JavaScript _transpiliert_.
 * Serverseitige Programmierung mit NodeJS (HTTP + Express)  
 __NodeJS__ ist ein serverseitiges Programm, das es erlaubt JavaScript auszuführen. Es verwendet _NodeJS Module_ umd Funktionen zu erhalten, beispielsweise bekommen wir über das _Express Modul_ die Möglichkeit einen Server zu erstellen und durch das _HTTP Modul_ können wir das HTTP zum Austausch zwischen Client und Server verwenden.  
-Durch NodeJS ist es möglich Client sowie Serverseitig JavaSyript (TypeScript als Modul) zur Programmierung zu verwenden. Eine andere häufig serverseitige Sprach ist beispielsweise _PHP_.
-Theoretisch kann jeder Node Module veröffentlichen, daher gilt das Prinzip "Immer mit Vorsciht genießen".  
-Die lokalen Module werden im _node_modules_ Verzeichnis im Projekt, die lokalen im gleichnamigen Verzeichnis in den Userfiles gespeichert.
+Durch NodeJS ist es möglich Client sowie Serverseitig JavaSyript (TypeScript als Modul) zur Programmierung zu verwenden. Eine andere, häufig verwendete, serverseitige Sprach ist beispielsweise _PHP_.
+Theoretisch kann jeder Node Module veröffentlichen, daher gilt das Prinzip "Immer mit Vorsicht genießen".  
+Die lokalen Module werden im _node_modules_ Verzeichnis im Projekt, die lokalen im gleichnamigen Verzeichnis in den Userfiles, gespeichert.
 * Kommunikation Client & Server mit TCP/IP über HTTP  
 Zum Austausch zwischen Server und Client wird das __HTTP__ verwendet. Um die Datenpakete zu transportieren wird __TCP/IP__ verwendet.
 * Cookies  
@@ -39,8 +39,8 @@ Für das Anlegen neuer Projekte verwendet man typischerweise _Angular CLI (Comma
 
 ## Angular
 Die Projektarchitektur von Angular beruht auf __Komponenten__. Eine Komponente bestehent (von oben nach unten) aus Importen, Zusatzinformation (Selector, HTML-File, optional: CSS-File), Klassenname und Code.  
-  + _Importe_ dienen dazu, Zusatzbibliotheken, Klassen und Funktionen zur Verwendung der Komponente hinzuzufügen.
-  + Der _Selector_ hat in Angular den Zweck, einer Komponente einen "Namen" zu geben, mit dem diese dann im HTML Teil einer anderen Komponente eingebunden werden Tag. Die Einbindung erfolgt wie gewohnt mit _HTML-Tags_. Beispiel: <selector></selector>
+  + _Importe_ dienen dazu, Zusatzbibliotheken, Klassen und Funktionen zur Verwendung in der Komponente hinzuzufügen.
+  + Der _Selector_ hat in Angular den Zweck, einer Komponente einen "Namen" zu geben, mit dem diese dann im HTML Teil einer anderen Komponente eingebunden werden können. Die Einbindung erfolgt wie gewohnt mit _HTML-Tags_. Beispiel: <selector></selector>
   + Da eine Komponente aus _3 Teilen_, TypeScript File, HTML File und CSS File, bestehen kann, wird in den Komponenteninformationen definiert, welche Files zu dieser Komponente gehören.
   + Der _Klassenname_ definiert den Namen der Komponente.
   + Im _Code_ folgt die Programmlogik.  
@@ -80,7 +80,7 @@ Beispiel:
 Das probieren wir dann auch in unserer [UE08] aus.  
 
 Außerdem wollen wir die aktuelle Uhrzeit anzeigen, dafür verwenden wir den TypeScript Datentyp _Date_: `const now = new Date();`
-Die Zeit soll außerdem immer wieder aktualisiert werden und auch das richtige Format haben, daür schreiben wir die folgende Methode:
+Die Zeit soll außerdem immer wieder aktualisiert werden und auch das richtige Format haben, dafür schreiben wir die folgende Methode:
 
 ```javascript
 private updateTime() {
@@ -89,7 +89,7 @@ private updateTime() {
 }
 ```
 
-Wenn die Komponente erstellt wird, wird der sogenannte _[OnInit]_ _[Lifecyclehook]_ aufgerugen. Da wir die Zeit von Anfang an dastellen wollen, schreiben wir die Methode `ngOnInit()`, in der alle zu Beginn nötigen Sachen aufgerufen werden.
+Wenn die Komponente erstellt wird, wird der sogenannte _[OnInit]_ _[Lifecyclehook]_ aufgerufen. Da wir die Zeit von Anfang an darstellen wollen, schreiben wir die Methode `ngOnInit()`, in der alle zu Beginn nötigen Sachen aufgerufen werden.
 
 ```javascript
 public ngOnInit() {
@@ -106,7 +106,7 @@ public ngOnInit() {
 ```
 
 Für das ständige Aktualisieren der Uhrzeit setzen wir ein Interval, das die `updateTime()` Methode alle 100ms aufruft.  
-Solange wir uns in der Komponente befinden ist das Interval aktiv, möchten wir nicht unnötig Ressourcen dadurch verbrauchen. Dafür gibt es den _[NgOnDestroy]_ _Lifecyclehook_, welcher beim zerstören der Komponente aufgerugen wird. Darin "clearen" wir das Interval:
+Solange wir uns in der Komponente befinden ist das Interval aktiv, sobald wir allerdings von der Komponente wegnavigieren, möchten wir nicht unnötig Ressourcen dadurch verbrauchen. Dafür gibt es den _[NgOnDestroy]_ _Lifecyclehook_, welcher beim Zerstören der Komponente aufgerufen wird. Darin "clearen" wir das Interval:
 
 ```javascript
 public ngOnDestroy() {
@@ -116,7 +116,7 @@ public ngOnDestroy() {
     }
 }
 ```
-Der Lifycyclehook muss außerdem importiert sowie implementiert werden: 
+Der Lifycyclehook muss außerdem importiert, sowie implementiert werden: 
 
 ```javascript
 import { Component, OnInit, OnDestroy } from '@angular/core';
