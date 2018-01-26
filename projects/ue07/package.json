@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.8",
-    "@types/express": "^4.0.37",
+    "@types/express": "^4.0.39",
     "@types/jsonwebtoken": "^7.2.3",
     "@types/node": "^8.0.31",
     "@types/pug": "^2.0.4",
@@ -37,6 +37,6 @@
     "merge-stream": "^1.0.1",
     "run-sequence": "^2.2.0",
     "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.6.2"
   }
 }

@@ -1,0 +1,33 @@
+<div *ngIf="users === undefined">
+
+  <p *ngIf="userErr === undefined">
+    <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar> <!--Kein offizielles Tag/ Wir müssen das jetzt in app.modules einbinden-->
+    Benutzerdaten werden geladen.
+  </p>
+
+  <p *ngIf="userErr !== undefined">
+      Fehler beim Laden der Benutzerdaten: {{user.Err.message}}
+    </p> 
+
+</div>
+
+
+<table *ngIf="users !== undefined" class="table">   <!--Abfrage ob es ein Array ist-->
+    <thead>
+          <tr>
+            <th>#</th>
+            <th>Nachname</th>
+            <th>Vorname</th>
+            <th>Klasse</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let u of users; let i=index" (click) ="onUserClick(u)" style= "cursor: pointer;">
+            <td>{{i+1}}</td>
+            <td>{{u.surname}}</td>
+            <td>{{u.firstname}}</td>
+            <td>{{u.classname}}</td>
+          </tr>
+            
+    </tbody>
+</table>

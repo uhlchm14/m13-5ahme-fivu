@@ -1,0 +1,13 @@
+<div class="container" style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <app-clock (click)="onClick($even)" style= "cursor: pointer;"></app-clock>
+
+  <h2>
+    Hallo
+  </h2>
+  <app-clock *ngIf="isClock2Visible"></app-clock>
+  <app-user-table></app-user-table>
+</div>
+
