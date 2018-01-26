@@ -131,6 +131,19 @@ Abwesend
 * Progressbar mit ng-bootstrap, um Einlesevorgang zu visualisieren
 * Angular Projekt: [Übung 9]
 
+## Einheit 17: 26.1.18
+* Besprechung hybrides Verschlüsselungssystem
+  + Kombination aus symmetrischem und asymmetrischem Verfahren
+  + Symmetrischer Schlüssel asymmetrisch verschlüsselt
+  + Informationsaustausch dann über symmetrisches Verfahren
+* Besprechung Zertifikate
+  + Zertifikate = öffentlicher Schlüssel
+* Erstellen eines selbstsignierten Zertifikats
+  1. Keypair erstellen
+  2. Request erstellen
+  3. Zertifikat erstellen
+* Erstellen eines Zertifikats für einen Server
+* Ordner: [Übung 10]
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
@@ -152,4 +165,5 @@ Abwesend
 [Übung 7]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
 [ue07]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue07
 [Übung 8]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08
-[Übung 9]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08
+[Übung 9]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue09
+[Übung 10]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue10_certificates

@@ -1,0 +1,2 @@
+V	280124102751Z		9A3C89CF4D6CA96A	unknown	/CN=Anton Autorisierer
+V	280124103740Z		9A3C89CF4D6CA96B	unknown	/CN=sabine-server
