@@ -382,7 +382,120 @@ Es muss signiert sein von einem vertrauenswürdigen Aussteller des Zertifikats (
 Nächste Einheit: Schlüssel und Zertifikat erstellen
 
 
+## Einheit 16.5: 
+
+1.) Symettrischer Schlüssel wird erzeugt 
+ -> darf icht versendet werden (könnte abgefangen werden)
+2.) SysS asymetrisch Verschlüsseln mit öffentlichen Schlüssel
+3.) Verschlüsselte symetrischer Schlüssel versenden
+4.) Verschlüsselter Schlüssel mit privaten Schlüssel in symetrischen Schlüssel umwandeln
+5.) Daten mit symetrischen Verfahren verschlüsselt austauschen
+
+Zertifikate:
+X509-Zertifikat
+
+
+öffentlicher Schlüssel des Inhabers des Zertifikats
+
+Zwei Kommunikaationspartner wollen verbindung aufbauen. 
+Hacker fängt Daten ab.
+User schickt öffentlichen Schlüssel zurück
+
+Hacker kann Daten entschlüsseln und anschließend verschlüsseln, 
+
+-> Deshalb sollten Schlüssel signiert werden durch einer vertrauenswürdiger Authorisirungsstelle
+
+Fall: Signatur ebenfalls gehackt.
+
+Ich überprüfe alles und die Schlüssel passen.
+Sowohl Schlüssel und Zertifikat gehackt.
+-> nicht überprüfbar
+
+anfälligkeit minimieren -> Zertifikate aktualisieren!
+
+- Anschauen von einem Zertifikat
+
+	-> Entnehmbar: Ausgestellt für, Ausgestellt von (signiert Schlüssel),
+	Gültigkeitsdauer, 
+
+Wenn als Server aktiv, ich muss Client ein
+
+OpenSSL
+
+Normal wird eine zertifikatskette beobachtet
+
+Paket A von Benutzer signiert 
+Zur überprüfung brauche ich das Zertifikat von Benutzer B
+
+Dieser muss das zertifikat von C haben.
+
+Irgendwer hat dann ein selbstsigniertes zertifikat haben, müssen im System eingetragen sein 
+
+selbstsigniertes Zertifikat erstellen
+Dannach echtes Serverzertifikat erstellen
+
+
+Ablauf:
+
+Schlüsselpaar erstellen:
+
+Eingabe: openssl genrsa
+
+Danach in zertifikat schreiben: openssl genrsa -out ca.pem
+
+In ca.pem befindet sich der private Schlüssel
+
+head ca.pem -> Zeigt die ersten paar Zeilen einer Datei
+
+openssl rsa -in ca.pem -pubout -out ca_pub.pem
+
+
+
+CSR Certificate Sign Request
+
+Ca möchte sich selbst signieren darum braucht es einen Request
+
+openssl req -new -subj '/CN=DA riedom13' -key ca.pem -out ca.csr
+
+openssl req -in ca.csr -noout -text
+
+Da steht alles drinnen was der der ein Zertifikat erstellen möchte, benötigt
+
+-cp /etc/ssl/openssl.cnf ./ (ins aktuelle Verzeichniss verschieben)
+
+
+Datenbank erstellen:
+
+mkdir -p demoCA/newcerts (neuen Datenbankordner erstellen)
+touch demoCA/index.txt (Datenbank erstellen)
+
+Neue selbstsignierte CA erstellen:
+
+openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr
+
+
+Wurzel eine Zertifikatskette: selbstsigniertes Zertifikat
+
+Schlüsselpaar für Server
+
+openssl genrsa -out server-riedom13.pem
+
+openssl rsa -in server-riedom13.pem -pubout -out server-riedom13_pub.pem
+
+openssl req -new -subj '/CN=Server-riedom13' -key server-riedom13.pem -out server-riedom13.csr
+
+
+Mit welchen Zertifikat wird die signierung durchgeführt?:
+
+openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-riedom13.csr -out server-riedom13.crt
+
+
+
+Fortsetzung nächste Einheit:
+
+
 ## Einheit 17: 1.2.2018
+
 
 
 
