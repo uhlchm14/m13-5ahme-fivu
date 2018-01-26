@@ -32,12 +32,21 @@
       - in der Datei die erstellt wird steht dann der öffentliche Schlüssel
       - Nun hat der, der das Zertifikat erzeugen soll, alle Daten!
 
--   Echtes Zertifikat erzeugen, welches ein Server verwenden könnte:
+-   **Echtes Zertifikat erzeugen, welches ein Server verwenden könnte:**
       - 1) Konfigurationsdatei kopieren: cp /etc/ssl/openssl.cnf ./
       - policy_match auf policy_anything ändern (akzeptiert dann sogut wie alles im zertifikat)
       - 2) Als Zertifikatsausgangsstelle (welche wir jetzt sind) ist eine Datenbank zu erzeugen:
       - Ordner erzeugen, mit vorgegebenen Namen (demoCA/newcerts)
       - 3) danach Behfel (zum Datei anlegen): touch demoCA/index.txt  -> Der Server ist jetzt fertig.
-      - 
+      - 4) Befehl zum Erzeugen von Zertifikat: openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt       -keyfile ca.pem -selfsign -infiles ca.csr
+      - 5) ca.crt = Wurzel des Zertifikates
+
+-  ** Server erstellen, nach dem gleichen Schema**
+      - 1) openssl genrsa -out server-ornstm13.pem
+      - 2) openssl rsa -in server-ornstm13.pem -pubout -out server-ornstm13_pub.pem
+      - 3) openssl req -new -subj '/CN=sever-ornstm13' -key server-ornstm13.pem -out server-ornstm13.csr
+      - 4) openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-ornstm13.csr -out server-ornstm13.crt
+
+      
       
       
