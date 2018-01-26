@@ -14,4 +14,4 @@ Einheit:
 12. [14.12.2017](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.12.14.md) [ue07](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue07) [ue08](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue08)
 13. [11.01.2018](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/18.01.11.md) [ue08](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue08)
 14. [18.01.2018](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/18.01.18.md) [ue08](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue08)
-15. [25.01.2018](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/18.01.18.md) [ue09](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue09AngularWithClockComponent)
+15. [25.01.2018](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/18.01.25.md) [ue09](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/ritmam13/projects/ue09AngularWithClockComponent)
