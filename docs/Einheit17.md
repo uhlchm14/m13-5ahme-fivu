@@ -15,3 +15,6 @@
 -   verschlüsselten symmetrischen Schlüssel mit privaten Schlüssel entschlüsseln.
 -   Daten mit symmetrischen Schlüssel(verfahren) austauschen.
 
+-   X.509 Zertifikat:
+      - Immer darauf achten, dass die Liste der Aussteller aktuell ist. Ansosnten kann der Schlüssel gefälscht werden und man hat          keine Möglichkeit, sich davor zu schützen.
+-    
