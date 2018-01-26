@@ -1,0 +1,26 @@
+openssl  req -new - subj '/CN=CA harflm13' -key ca.pem -out ca.csr
+openssl req -new - subj '/CN=CA harflm13' -key ca.pem -out ca.csr
+less ~/.bash_history
+openssl req -new -subj '/CN=CA harflm13' -key ca.pem -out ca.csr
+cp /etc/ssl/openssl.cnf ./
+nano openss.cnf
+nano openssl.cnf
+cp /etc/ssl/openssl.cnf ./
+mkdir -p demoCA/newcerts
+touch demoCA/index.txt
+openssl ca -cnofig openssl.cnf -create_serial -batch -extensions v3_ca
+openssl ca -cnofig openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr
+openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr
+ll demoCA/
+ll demoCA/newcerts/
+ll
+nano openssl.cnf 
+cat openssl.cnf | grep policy
+openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr
+ll demoCA/
+openssl genrsa -out server-harflm13.pem
+openssl rsa -in server-harflm13.pem -pubout -out server-harflm13_pub.pem
+openssl req -new - subj '/CN=server-harflm13' -key server-harflm13.pem -out server-harflm13.csr
+openssl req -new -subj '/CN=server-harflm13' -key server-harflm13.pem -out server-harflm13.csr
+openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-harflm13.csr -out server-harflm13.crt
+

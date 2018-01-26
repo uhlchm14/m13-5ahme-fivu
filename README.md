@@ -429,9 +429,50 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
   - asymetrisches Verfahren: RSA
     - Schlüsselpaar: öffentlich und privat
     - Nachteil: bei großen Datenmengen extrem langsam
-  - bei TSL werden beide systeme kombiniert
+  - bei TLS werden beide systeme kombiniert (hybrides Verfahren/System)
     - asymetrisches System wird zum Austausch des Schlüssels des symetrischen Verfahrens verwendet
   - X.509 Zertifikat
     - öffentlicher Schlüssel des Inhabers (subject)
-    - signiert von einem vertrauenswürdigen Austeller (issuer)
+    - signiert von einem vertrauenswürdigen Austeller (Authorisierungsstelle = issuer)
+
+### 16. Einheit
+**Datum:** 26.01.2018  
+**Dazugehörige Übung(en):**  
+**Inhalt**:  
+
+1. Fortsetzung von HTTPS
+  - Ablauf TLS
+    - sym Schlüssel erzeugen
+    - sym Schlüssel asynchron verschlüsseln mit öffentlichem Schlüssel
+    - verschlüsselten sym Schlüssel versenden
+    - verschl. sym Schlüssel mit privatem Schlüssel entschlüsseln
+    - Daten mit symetischem Schlüssel (Verfahren) austauschen
+  - X509 Zertifikat
+    - öffentlicher Schlüssel muss singniert werden -> damit festellbar ist, dass es sich wirklich um den öffentlichen Schlüssel dieser Person handelt
+    - Es könnte ein falscher öffentlicher Schlüssel sein und so könnte sich eine dritte Person in den Datenaustausch rein "hacken" (= man in the middel attach)
+    - zum Schutz vor gefakten Zertifikaten immer die Zertifikate (Authorisierungsstellen) aktualisieren. 
+  - Zertifikat erstellen: `OpenSSL` 
+  - Zertifikatskette: A wird von B signiert, B wird von C singiert, C wird von D signiert, D singiert sich selbst (seblstsigniertes Zertifikat)
+    - selbstsignierte Zertifikate sind im System als vertrauenwürdig eingetragen 
+
+2. Schlüsselpaar erzeugen
+  - "Zertifikatsstelle" 
+    - privater Schlüssel: `openssl genrsa -out ca.pem`
+    - öffentlicher Schlüssel: `openssl rsa -in ca.pem -out ca_pub.pem` 
+  - CSR (Cirtificate Sign Request) 
+    - `openssl req -new - subj '/CN=CA harflm13' -key ca.pem -out ca.csr`
+  - Datei kopieren
+    - `cp /etc/ssl/openssl.cnf ./`
+    - und ändern: `nano openssl.cnf`
+      - von `policy_match` auf `policy_anything`
+      
+3. Datenbank erstellen
+  - `mkdir -p demoCA/newcerts`
+  - `touch demoCA/index.txt`
+
+4. Zertifikat erstellen
+  - `openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr`
+
+
+
 
