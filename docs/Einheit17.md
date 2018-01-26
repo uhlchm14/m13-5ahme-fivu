@@ -47,6 +47,7 @@
       - 3) openssl req -new -subj '/CN=sever-ornstm13' -key server-ornstm13.pem -out server-ornstm13.csr
       - 4) openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-ornstm13.csr -out server-ornstm13.crt
 
+- Wenn man Terminal-History durchsehen möchte: Befehl: less ~/.bash_history
       
       
       
