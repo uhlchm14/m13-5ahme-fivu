@@ -33,4 +33,11 @@
       - Nun hat der, der das Zertifikat erzeugen soll, alle Daten!
 
 -   Echtes Zertifikat erzeugen, welches ein Server verwenden könnte:
-
+      - 1) Konfigurationsdatei kopieren: cp /etc/ssl/openssl.cnf ./
+      - policy_match auf policy_anything ändern (akzeptiert dann sogut wie alles im zertifikat)
+      - 2) Als Zertifikatsausgangsstelle (welche wir jetzt sind) ist eine Datenbank zu erzeugen:
+      - Ordner erzeugen, mit vorgegebenen Namen (demoCA/newcerts)
+      - 3) danach Behfel (zum Datei anlegen): touch demoCA/index.txt  -> Der Server ist jetzt fertig.
+      - 
+      
+      
