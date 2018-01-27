@@ -1,4 +1,14 @@
-<table class="table table-hover">
+<div *ngIf="users === undefined">
+    <p *ngIf="userErr === undefined" class="alert alert-info" (click)="onLoadClick($event)">
+        <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+        I lod grod die Daten.
+    </p>
+    <p *ngIf="userErr !== undefined" class="alert alert-danger" (click)="onErrorClick($event)">
+        Fehler is do: {{ userErr.message }}
+    </p>
+</div>
+
+<table *ngIf="users !== undefined" class="table table-hover">
   <thead class="thead-dark">
     <tr>
       <th>#</th>

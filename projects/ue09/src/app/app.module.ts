@@ -5,6 +5,7 @@ import { UserService } from './user.service';
 import { AppComponent } from './app.component';
 import { AppClockComponent } from './app-clock.component';
 import { AppUserTableComponent } from './app-user-table.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { AppUserTableComponent } from './app-user-table.component';
     AppUserTableComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, NgbModule.forRoot()
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

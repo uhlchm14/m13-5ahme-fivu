@@ -237,7 +237,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
     pugRenderingEngine.locals.pretty = true;
   ```
   
-3. Bootstrap
+3. [Bootstrap](https://getbootstrap.com/)
   - freies CSS-Framework
   - Von Twitter entwickelt.
   - Eine Bibliothek, die Grundelemente für die grafische Gestaltung einer Website enthält.
@@ -495,7 +495,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
   - JavaScript-Frameworks verwenden.
     - z.B.: Angular
   
-4. Angular
+4. [Angular](https://angular.io/)
   - Installation
     - `npm install -g @angular/cli`
   - verwendete Version 1.6.1
@@ -660,6 +660,7 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 6. Besprechung des Zusammenhangs zwischen Template, Component und Service
 
 ![Angular 2 Architecture](docs/angular2architecture.png)
+[Angular 2 Architecture](https://v2.angular.io/docs/ts/latest/guide/architecture.html)
 
 7. Interface `user.ts` erstellen
   
@@ -725,4 +726,125 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 11. `app.modules.ts`
   - Damit die Uhr- und Tabllen-Componente verwendet werden können, müssen beide in `app.modules.ts` eingetragen werden.
   - Darüber hinaus muss auch der Service in `app.modules.ts` eingetragen werden.
+  
+*****
+
+### 16. Einheit
+**Datum:** 25.01.2018  
+**Dazugehörige Übung(en):** ![ue09](projects/ue09)  
+**Inhalt:**  
+1. asynch Methoden
+  - Die Methode `getUsers()` unseres Services liefert nun kein `IUser []` als Rückgabewert, sondern ein `Promise<IUser []>`.
+  - Die Methode liefert des Rückgabewert erst nach einem Timeout von 2000ms zurück, um einen großen Datenaustausch zu simulieren. Deshalb ist die Methode `asynch`.
+
+  ```typescript
+    public async getUsers (): Promise<IUser []>
+    {
+        return new Promise<IUser []>( (resolve, reject) => {
+          setTimeout( () => {
+            // reject(new Error('Kane User'));
+            resolve(this.users);
+          }, 2000);
+        });
+    }
+  ```
+
+2. await
+  - Da die Methode `getUsers()` des Services nun `asynch` ist, wird in der Methode `ngOnInit()` der Komponente das Keyword `await` benötigt.
+
+  ```typescript
+    public async ngOnInit ()
+    {
+      try
+      {
+        this.users = await this.userService.getUsers();
+      }
+      catch (err)
+      {
+        console.log(err);
+        this.userErr = err;
+      }
+    }
+  ```
+
+3. Status am Client anzeigen
+  - Mithilfe von `*ngIf` wird dem Client der aktuelle Stand der Datenübertragung angezeigt. Während der Übertragung (entspricht dem 2000ms Timeout) wird dem Benutzer angezeigt, dass die Übertragung läuft. Ist die Datenübertragung beendet, wird dem Benutzer entweder die Tabelle mit dem Daten angezeigt, oder eine Fehlermeldung erscheint, wenn vom Service keine Daten, sondern ein Error übergeben wird.
+
+  ```html
+    <div *ngIf="users === undefined">
+        <p *ngIf="userErr === undefined" class="alert alert-info" (click)="onLoadClick($event)">
+            <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+            I lod grod die Daten.
+        </p>
+        <p *ngIf="userErr !== undefined" class="alert alert-danger" (click)="onErrorClick($event)">
+            Fehler is do: {{ userErr.message }}
+        </p>
+    </div>
+  ```
+
+4. Progressbar einfügen
+  - Während die Übertragung läuft, soll zusätzlich zu dem Text noch eine Progressbar angezeigt werden.
+
+  ```html
+    <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+  ```
+
+*****
+
+### 17. Einheit
+**Datum:** 26.01.2018  
+**Dazugehörige Übung(en):** ![x509](projects/x509)  
+**Inhalt:**  
+1. hybrides Verschlüsselungssystem
+  - Kombination aus asymetrischem und symetrischem Verfahren
+    - symetrisches Verfahren
+      - Ein Schlüssel wird zum Ver- und Entschlüsseln verwendet.
+      - sehr schnell
+      - Schlüsselübertragung ist ein Problem.
+    - asymetrisches Verfahren
+      - Schlüsselpaar wird erzeugt (öffentlich und privat).
+      - Der öfftenliche Schlüssel wird zum Verschlüsseln und der private zum Entschlüsseln verwendet.
+      - langsamer als das symetrische Verfahren
+      - Kein Schlüsselübertragungsproblem, da der öffentliche Schlüssel jedem bekannt sein darf.
+  - Vorgangsweise
+    - Symetrischen Schlüssel erzeugen.
+    - Symetrischen Schlüssel asymetrisch Verschlüsseln (mit dem öffentlichen Schlüssel des Kommunikationspartners).
+    - Übertragung
+    - Symetrischen Schlüssel asymetrisch Entschlüsseln (mit dem eigenen privaten Schlüssel).
+    - Symetrischen Schlüssel für die restliche Kommunikation verwenden.
+  
+2. Zertifikat
+  - Ein hybrides Verschlüsselungsystem funktioniert nur dann, wenn der erhaltene öffentliche Schlüssel tatsächlich dem gewünschen Kommunikationspartner gehört. Ein Zertifikat ist ein öffentlicher Schlüssel, der von einem Zertifikatsaussteller mit dessen privatem Schlüssel signiert wurde. Damit bestätig der Zertifikatsaussteller, dass der öffentliche Schlüssel tatsächlich einer bestimmten Person gehört. Ob dieses Zertifikat gültig ist oder nicht, hängt davon ab, ob der Zertifikatsausteller im eigenen System als vertrauenswürdig vorgemerkt ist oder nicht.
+
+3. Zertifikatskette
+  - Beispiel: A hat ein Zertifikat, das von B signiert wurde. Das Zertifikat von B wurde von C signiert. Das Zertifikat von C wurde wiederum von D signiert. Das Zertifikat von D wurde von D selbst signiert.
+  - Am Ende einer jeden Zertifikatskette muss irgendwann ein selbstsigniertes Zertifikat stehen, da es sonst nie enden würde. Der Aussteller dieses selbstsignierten Zertifikats muss in System als vertrauenswürdig hinterlegt sein, sonst ist die gesamte Zertifikatskette nutzlos.
+
+4. Übung x509
+  - Zertifikatsaussteller
+    - privaten Schlüssel erzeugen
+      - `openssl genrsa -out ca.pem`
+    - öffentlichen Schlüssel aus dem privaten erzeugen
+      - `openssl rsa -in ca.pem -pubout -out ca_pub-pem`
+    - CSR (Certificate Sign Request)
+      - `openssl req -new -subj '/CN=CA poefam13' -key ca.pem -out ca.csr`
+    - Config-Datei als dem OpenSSL-Verzeichnis in das aktuelle Verzeichnis kopieren
+      - `cp /etc/ssl/openssl.cnf ./`
+    - In der Config-Datei `policy_match` zu `policy_anything` ändern.
+      - `nano openssl.cnf`
+    - Unterverzeichnis erstellen
+      - `mkdir -p demoCA/newcerts`
+    - Datei `index.txt` erstellen
+      - `touch demoCA/index.txt`
+    - Zertifikat erstellen
+      - `openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr`
+  - Server
+    - privaten Schlüssel erzeugen
+      - `openssl genrsa -out server-poefam13.pem`
+    - öffentlichen Schlüssel aus dem privaten erzeugen
+      - `openssl rsa -in server-poefam13.pem -pubout -out server-poefam13_pub-pem`
+    - CSR (Certificate Sign Request)
+      - `openssl req -new -subj '/CN=server-poefam13' -key server-poefam13.pem -out server-poefam13.csr`
+    - Zertifikat erstellen
+      - `openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-poefam13.csr -out server-poefam13.crt`
   

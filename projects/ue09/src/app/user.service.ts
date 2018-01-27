@@ -21,8 +21,13 @@ export class UserService
         this.users.push({firstname: 'Fabio', surname: 'Pölzl', class: '5AHME'});
       }
 
-    public getUsers (): IUser []
+    public async getUsers (): Promise<IUser []>
     {
-        return this.users;
+        return new Promise<IUser []>( (resolve, reject) => {
+          setTimeout( () => {
+            // reject(new Error('Kane User'));
+            resolve(this.users);
+          }, 2000);
+        });
     }
 }

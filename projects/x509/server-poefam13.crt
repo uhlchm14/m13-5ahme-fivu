@@ -1,0 +1,79 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 12547879226242080709 (0xae2305acbca99fc5)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=CA poefam13
+        Validity
+            Not Before: Jan 26 10:37:56 2018 GMT
+            Not After : Jan 26 10:37:56 2019 GMT
+        Subject: CN=server-poefam13
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c9:3f:5c:37:27:19:7a:a8:ac:ec:f1:fa:6b:00:
+                    4b:5e:fe:e1:99:0b:d1:fb:de:1e:ea:52:ac:8c:a2:
+                    85:45:b5:e9:75:1f:a5:8c:52:82:0a:e2:2c:33:28:
+                    54:11:74:46:5e:03:9c:50:f2:aa:e3:67:73:bf:1d:
+                    00:a4:02:24:82:8b:9a:6f:20:1f:ce:46:99:63:e2:
+                    36:ad:4f:ca:08:33:81:82:e4:ad:df:10:f4:14:88:
+                    5e:ba:6a:8e:f0:da:92:3a:5a:7e:ba:de:bf:cf:95:
+                    c8:6d:26:45:23:7a:67:7d:23:ff:57:c3:5e:43:4c:
+                    5e:16:6b:df:fb:61:af:5c:45:d9:98:0f:02:61:f9:
+                    ea:42:fd:e8:fa:c9:09:67:4f:e9:59:62:78:64:dd:
+                    f3:85:cc:53:bc:1a:86:44:17:7e:4b:fe:50:22:fd:
+                    6f:e0:74:94:c6:08:1b:25:e3:61:44:95:31:c0:ac:
+                    48:5b:8f:0d:07:b9:c2:de:71:6c:7c:d8:25:23:fe:
+                    15:c0:c6:88:6d:5d:4f:92:49:4b:66:a6:25:56:46:
+                    92:0a:f5:ae:c4:fb:0e:1f:3d:87:75:70:98:39:2f:
+                    56:52:ff:c3:8a:c2:30:e4:d2:1c:8e:18:df:bd:93:
+                    53:ef:0a:d2:1c:35:b3:14:6d:10:fb:af:0e:52:a1:
+                    22:d9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                B9:03:91:23:A8:A9:B6:6A:10:2A:DD:E3:26:68:7D:2D:B9:CD:AC:3E
+            X509v3 Authority Key Identifier: 
+                keyid:F9:C2:DB:21:9B:B5:39:D7:4A:74:13:14:4D:6C:2C:BE:D0:3C:84:1A
+
+    Signature Algorithm: sha256WithRSAEncryption
+         07:fc:7e:5d:aa:f4:ed:de:ef:88:04:26:ea:38:56:50:54:47:
+         45:c8:fb:4e:09:6e:07:63:d3:af:64:e0:2c:91:77:22:d1:bd:
+         f3:33:b6:c6:81:30:35:1c:ac:57:d5:56:61:18:3e:e3:62:81:
+         07:4e:cf:d5:ed:89:52:15:87:0b:cc:09:40:82:16:62:8b:e6:
+         0a:fc:29:e9:9f:3c:a6:3e:f5:3d:34:36:05:19:da:c5:5c:cd:
+         53:22:85:f0:8b:53:96:34:e7:bc:a1:2d:f0:e3:d4:3c:6d:7d:
+         cd:7d:7a:d0:86:c1:67:45:3c:5c:1a:7d:2b:b3:73:a0:19:64:
+         53:97:d3:a9:6f:c0:e1:fe:02:55:23:1a:9f:c0:9d:4e:83:a1:
+         0b:c3:27:9e:52:db:08:a2:de:de:79:b2:b4:92:55:f2:15:fd:
+         5d:28:03:bc:0a:64:22:d8:f0:71:44:a8:a7:e4:68:0a:61:e4:
+         6e:99:e2:dd:cf:38:15:66:03:9b:64:2b:a9:fc:f6:d9:4c:63:
+         bd:b0:c5:54:7b:5e:95:78:37:87:06:44:7d:b0:8c:ce:e1:08:
+         c7:06:91:fd:5d:ca:5e:97:77:6a:e4:e8:d6:a1:6c:16:f0:1c:
+         4c:f1:39:69:6f:b2:2c:49:6c:a5:11:ce:0d:21:27:fa:37:e2:
+         eb:3c:6a:87
+-----BEGIN CERTIFICATE-----
+MIIDLjCCAhagAwIBAgIJAK4jBay8qZ/FMA0GCSqGSIb3DQEBCwUAMBYxFDASBgNV
+BAMMC0NBIHBvZWZhbTEzMB4XDTE4MDEyNjEwMzc1NloXDTE5MDEyNjEwMzc1Nlow
+GjEYMBYGA1UEAwwPc2VydmVyLXBvZWZhbTEzMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAyT9cNycZeqis7PH6awBLXv7hmQvR+94e6lKsjKKFRbXpdR+l
+jFKCCuIsMyhUEXRGXgOcUPKq42dzvx0ApAIkgouabyAfzkaZY+I2rU/KCDOBguSt
+3xD0FIheumqO8NqSOlp+ut6/z5XIbSZFI3pnfSP/V8NeQ0xeFmvf+2GvXEXZmA8C
+YfnqQv3o+skJZ0/pWWJ4ZN3zhcxTvBqGRBd+S/5QIv1v4HSUxggbJeNhRJUxwKxI
+W48NB7nC3nFsfNglI/4VwMaIbV1PkklLZqYlVkaSCvWuxPsOHz2HdXCYOS9WUv/D
+isIw5NIcjhjfvZNT7wrSHDWzFG0Q+68OUqEi2QIDAQABo3sweTAJBgNVHRMEAjAA
+MCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAd
+BgNVHQ4EFgQUuQORI6iptmoQKt3jJmh9LbnNrD4wHwYDVR0jBBgwFoAU+cLbIZu1
+OddKdBMUTWwsvtA8hBowDQYJKoZIhvcNAQELBQADggEBAAf8fl2q9O3e74gEJuo4
+VlBUR0XI+04Jbgdj069k4CyRdyLRvfMztsaBMDUcrFfVVmEYPuNigQdOz9XtiVIV
+hwvMCUCCFmKL5gr8KemfPKY+9T00NgUZ2sVczVMihfCLU5Y057yhLfDj1Dxtfc19
+etCGwWdFPFwafSuzc6AZZFOX06lvwOH+AlUjGp/AnU6DoQvDJ55S2wii3t55srSS
+VfIV/V0oA7wKZCLY8HFEqKfkaAph5G6Z4t3POBVmA5tkK6n89tlMY72wxVR7XpV4
+N4cGRH2wjM7hCMcGkf1dyl6Xd2rk6NahbBbwHEzxOWlvsixJbKURzg0hJ/o34us8
+aoc=
+-----END CERTIFICATE-----
