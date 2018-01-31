@@ -4,7 +4,7 @@
   * Angular Project von Server aus starten
   * Programm auf einem Embedded System realisieren (z.B. Raspberry Pi)
 ## Programm:
-
+* Service:
 Komponenten sollten Daten nicht direkt abrufen oder speichern. Sie sollten sich darauf konzentrieren, Daten darzustellen und den Datenzugriff auf
 einen Dienst zu delegieren.
 In unserem Fall haben wir einen UserService erstellt. 
