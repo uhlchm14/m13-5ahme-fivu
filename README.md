@@ -178,7 +178,7 @@ und
 
 - Wiederholung des Stoffes vor den Weihnachten
 - Angular
--- Aufbau von Angular (Componenten(CSS,TS,HTML))
++ Aufbau von Angular (Componenten(CSS,TS,HTML))
 - Interpolation
 
 ### Einheit 15:
@@ -209,7 +209,7 @@ und
 #### Inhalte der Stunde
 
 - Beginn mit HTTPS
--- S = TLS (alt SSL)
++ S = TLS (alt SSL)
 - Hybriede Verschlüsselung (kombination aus symetrisch und asymetrisch)
 - Beginn eigenes Zertifikat zu erstellen mit OpenSSL
 
