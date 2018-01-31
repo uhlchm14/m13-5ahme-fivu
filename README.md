@@ -15,6 +15,12 @@
 - Einheit 9
 - Einheit 10
 - Einheit 11
+- Einheit 12
+- Einheit 13
+- Einheit 14
+- Einheit 15
+- Einheit 16
+- Einheit 17
 
 ### Einheit 1:
 #### Inhalt der Stunde 
@@ -165,6 +171,47 @@ und
 - beginn mit Angular
 - Erklärung in wo wir arbeiten
 - Erste veränderungen in der HTML
+
+### Einheit 14:
+
+#### Inhalte der Stunde
+
+- Wiederholung des Stoffes vor den Weihnachten
+- Angular
+-- Aufbau von Angular (Componenten(CSS,TS,HTML))
+- Interpolation
+
+### Einheit 15:
+
+[ue09](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue09)
+
+#### Inhalte der Stunde
+
+- ng Bootstrap installiert
+- HTML Tablle anlegen mit Bootstrap
+- Tabelle befüllen
+- ngIF und ngFOR
+
+
+### Einheit 16:
+
+[ue09](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/ue09)
+
+#### Inhalte der Stunde
+
+- Ladebalken einbinden
+- Async und Promisses wenn Tabelle länger zum befüllen braucht
+
+### Einheit 17:
+
+[x509](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/frelum13/projects/x509)
+
+#### Inhalte der Stunde
+
+- Beginn mit HTTPS
+-- S = TLS (alt SSL)
+- Hybriede Verschlüsselung (kombination aus symetrisch und asymetrisch)
+- Beginn eigenes Zertifikat zu erstellen mit OpenSSL
 
 
 
