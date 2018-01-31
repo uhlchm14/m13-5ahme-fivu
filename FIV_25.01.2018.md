@@ -89,7 +89,7 @@ export class AppUserTableComponent implements OnInit {
     this.userService = userService;
   }
 
-  public async ngOnInit () {                        Variante 2
+  public async ngOnInit () {                       // Variante 2
     try {                                                     // Try Catch ist für das Erkennen von Fehlern
       this.users = await this.userService.getUsers();
     } catch (err) {
@@ -102,5 +102,42 @@ export class AppUserTableComponent implements OnInit {
     console.log(u);
   }
 }
+```
 
+* app.usertable.component.html ändern
+ * Funktionen des Codes werden im unten stehenden Code als Kommentare beschrieben.
+```html
+<div *ngIf="users === undefined"> 
+
+  <p *ngIf="userErr === undefined">
+    <ngb-progressbar type="success" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar> <!--Kein offizielles Tag/ Wir müssen das jetzt in app.modules einbinden--> <!--Progressbar einbinden-->
+    Benutzerdaten werden geladen.
+  </p>
+
+  <p *ngIf="userErr !== undefined">
+      Fehler beim Laden der Benutzerdaten: {{user.Err.message}}
+    </p> 
+
+</div>
+
+
+<table *ngIf="users !== undefined" class="table">   <!--Abfrage ob es ein Array ist-->
+    <thead>
+          <tr>
+            <th>#</th>
+            <th>Nachname</th>
+            <th>Vorname</th>
+            <th>Klasse</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let u of users; let i=index" (click) ="onUserClick(u)" style= "cursor: pointer;"> <!--Aussehen des Cursors ändern-->
+            <td>{{i+1}}</td>
+            <td>{{u.surname}}</td>
+            <td>{{u.firstname}}</td>
+            <td>{{u.classname}}</td>
+          </tr>
+            
+    </tbody>
+</table>
 ```
