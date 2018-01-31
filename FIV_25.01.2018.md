@@ -3,7 +3,7 @@
 * Zu Beginn dieser Einheit haben wir unser Vorhaben für die nächsten Einheiten besprochen.
   * Angular Project von Server aus starten
   * Programm auf einem Embedded System realisieren (z.B. Raspberry Pi)
-## Service erstellen
+## Programm:
 
 Komponenten sollten Daten nicht direkt abrufen oder speichern. Sie sollten sich darauf konzentrieren, Daten darzustellen und den Datenzugriff auf
 einen Dienst zu delegieren.
@@ -141,3 +141,50 @@ export class AppUserTableComponent implements OnInit {
     </tbody>
 </table>
 ```
+
+* app.module.ts konfigurieren
+ * Da es sich bei dem von uns verwendeten Progressbar nicht um ein offizielles Tag (externes Angular Modul) handelt müssen wir es in app.module.ts einbinden:
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';     // 1. Änderung
+
+
+import { UserService } from './user.service';
+import { AppComponent } from './app.component';
+import { AppClockComponent } from './app-clock.component';
+import { AppUserTableComponent} from './app.usertable.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent, AppClockComponent, AppUserTableComponent
+  ],
+  imports: [
+    BrowserModule, NgbModule.forRoot()    // 2. Änderung
+  ],
+  providers: [UserService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+## Theorie HTTPS/ Verschlüsselung
+* Für die Verschlüsselung wird TLS(Transport Layer Security) verwendet. (Früher hat es SSL(Secure Sockets Layer) geheißen)
+* Was braucht man zum verschlüsseln?
+  * Ein Verschlüsselungsverfahren (bei TSL ein Hybrides Verfahren)
+    * Symmetrische Verschlüsselung:
+      * Man Braucht nur einen Schlüssel (schnell und effizient)
+      * Schlüsselaustauschproblem (Kann abgefangen werden)
+    * Asymmetrisches Verfahren:
+      * Schlüsselpaar bestehend aus öffentlichen und privaten Schlüssel (zum signieren)
+      * Nachteil: vor allem bei großen Datenmengen ist es langsamer → ineffizient
+    * Hybrides Verfahren:
+      1. Symmetrischer Schlüssel wird erzeugt
+      2. Symmetrischer Schlüssel wird asymmetrisch mit dem öffentlichen Schlüssel verschlüsselt.
+      3. Verschlüsselter Symmetrischer Schlüssel wird versendet.
+      4. Verschlüsselter Symmetrischer Schlüssel wird mit dem privaten Schlüssel entschlüsselt.
+      5. Daten mit symmetrischen verfahren verschlüsselt austauschen/ Asymmetrisches Verfahren wird zum verschlüsseln des öffentlichen Schlüssels verwendet. 
+    * X509 Zertifikat:
+      * Der öffentliche Schlüssel des Zertifikatsinhabers(subject) muss von einer vertrauenswürdigen Authorisierungsstelle signiert werden. (=Zertifikat)
+      * Damit das System die Zertifikate überprüfen kann sollte man immer wieder Updates machen.
