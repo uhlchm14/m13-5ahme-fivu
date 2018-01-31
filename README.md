@@ -489,3 +489,56 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
    * Asymmetrisches Verfahren: RSA-Verfahren. Man hat ein Schlüsselpaar, einen öffentlichen und einen privaten Schlüssel. Jedoch ist es sehr langsam bei großen Daten. 
    * Bei TLS wird beides kombiniert 
    * X509 Zertifikat: Öffentlicher Schlüssel des Inhabers -> muss Signiert von einem vertrauenswürdigen Aussteller sein. 
+
+### Einheit 17: 26.01.2018
+
+ * **HTTPS:** 
+   * Arbeitet über das HTTP Protokoll, S steht für Secure
+   * Verschlüsselverfahren: TLS ist ein hybrides Verfahren (aus symmetrischem (ein Schlüssel) und asymmetrischen Schlüssel (Schlüsselpaar))
+   * symetrisches Verfahren
+     * Ein Schlüssel wird zum Ver- und Entschlüsseln verwendet.
+     * sehr schnell
+     * Schlüsselübertragung ist ein Problem.
+   * asymmetrisches Verfahren
+     * Schlüsselpaar wird erzeugt (öffentlich und privat).
+     * Der öfftenliche Schlüssel wird zum Verschlüsseln und der private zum Entschlüsseln verwendet.
+     * Kein Schlüsselübertragungsproblem, da der öffentliche Schlüssel jedem bekannt sein darf.
+   * -Asymmetrische verschlüsselt den symmetrischen Schlüssel und wird versendet. Da symmetrische sehr schnell und effizient ist.
+   * Vorgangsweise:
+     * 1) Symmetrischen Schlüssel erstellen
+     * 2) Symmetrischen Schlüssel mit asymmetrischen Schlüssel verschlüsseln (mit öffentlichen Schlüssel)
+     * 3) VSS versenden
+     * 4) Symetrischen Schlüssel asymetrisch Entschlüsseln (mit dem eigenen privaten Schlüssel)
+     * 5) Daten mit symmetrischen Schlüssel verschlüsselt austauschen
+ * **X509 Zertifikat:**
+   * Ein Zertifikat ist ein öffentlicher Schlüssel, der von einem Zertifikatsaussteller mit dessen privatem Schlüssel signiert wurde. Damit bestätig der Zertifikatsaussteller, dass der öffentliche Schlüssel tatsächlich einer bestimmten Person gehört.
+   * -Öffentlicher Schlüssel des Inhabers
+   * -Öffentlicher Schlüssel muss von einer vertrauenswürdigen Authorisierungsstelle signiert werden. 
+   * Zertifikat erstellen: mit OpenSSL
+   * Normaler Ablauf: A hat ein Zertifikat von B. B hat ein selbstzertifiziertes Zertifikat und ist Vertrauenswürdig (muss eine Vertrauenswürdige Stelle sein).
+   * Zertifikat selbst erstellen:
+     * privaten Schlüssel erzeugen
+        * openssl genrsa -out ca.pem
+     * öffentlichen Schlüssel aus dem privaten erzeugen
+        * openssl rsa -in ca.pem -pubout -out ca_pub-pem
+     * Certificate Sign Request
+        * openssl req -new -subj '/CN=CA finmam13' -key ca.pem -out ca.csr
+     * Config-Datei in das aktuelle Verzeichnis kopieren
+        * cp /etc/ssl/openssl.cnf ./
+     * In der Config-Datei policy_match zu policy_anything ändern.
+        * nano openssl.cnf
+     * Unterverzeichnis erstellen
+        * mkdir -p demoCA/newcerts
+     * Datei index.txt erstellen
+        * touch demoCA/index.txt
+     * Zertifikat erstellen
+        * openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr
+   * Server:
+     * Privaten Schlüssel erzeugen
+       * openssl genrsa -out server-finmam13.pem
+     * Öffentlichen Schlüssel aus dem privaten erzeugen
+       * openssl rsa -in server-finmam13.pem -pubout -out server-finmam13_pub-pem
+     * Certificate Sign Request
+       * openssl req -new -subj '/CN=server-finmam13' -key server-finmam13.pem -out server-finmam13.csr
+     * Zertifikat erstellen
+       * openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-finmam13.csr -out server-finmam13.crt
