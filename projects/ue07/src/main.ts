@@ -11,8 +11,7 @@ class Main {
     private _privateKey: Buffer;
     private _publicKey: Buffer;
 
-    constructor ()
-    {
+    constructor () {
         const pubFileName = path.join(__dirname, '..', 'keys/server-public.pem');
         const privFileName = path.join(__dirname, '..', 'keys/server-private.pem');
         console.log('  reading public key from ' + pubFileName);
@@ -42,8 +41,21 @@ class Main {
         if (value.startsWith('Bearer: ')) {
             const token = value.substr(8);
             console.log(token);
-            const data = jwt.verify(token, this._publicKey, (err, decode) => {
-                console.log(decode);
+            const data = jwt.verify(token, this._publicKey, (err, decode: any) => {
+                try {
+                    if (err) {
+                        throw err;
+                    }
+                    if (decode.name && decode.name === 'maxi') {
+                        const issuedAt = new Date(decode.iat * 1000);
+                        console.log(issuedAt.toLocaleDateString());
+                        res.send('OK');
+                    } else {
+                        throw new Error('invalid token objeckt');
+                    }
+                } catch (err) {
+                    res.status(401).send('ERROR');
+                }
             });
         }
     }
@@ -54,7 +66,7 @@ class Main {
             console.log(req.body);
         }
         if (req.body.name === 'maxi' && req.body.password === 'geheim') {
-            const token = jwt.sign({name: 'maxi'} , this._privateKey, {expiresIn: '10min', algorithm: 'RS256'});
+            const token = jwt.sign({name: 'maxi'} , this._privateKey, {expiresIn: '2h', algorithm: 'RS256'});
             console.log(token);
             res.json({token: token});
         }
