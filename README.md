@@ -37,7 +37,7 @@ Von Florian Greistorfer: _Link_
 Von Marian Korosec: [Wiederholung und Angular](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kormam13/docs/Stundenzusammenfassung_11012018.md)
 
 ## Einheit 13, 18.01.2018
-Von Fabian Kager: [Wiederholung und Angular](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kagfam13/docs/Zusammenfassung180118.md)
+Von Fabian Kager: [Komponenten und Services in Angular](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/kagfam13/docs/Zusammenfassung180118.md)
 
 ## Einheit 14, 25.01.2018
 Von Markus Mörth: [Service und Verschlüsselung](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/moemam13/FIV_25.01.2018.md)
