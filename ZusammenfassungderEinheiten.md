@@ -491,10 +491,78 @@ openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-ri
 
 
 
+
+Schnell Zusammenfassung:
+
+- Zertifikatsaussteller
+    - privaten Schlüssel erzeugen
+      - `openssl genrsa -out ca.pem`
+    - öffentlichen Schlüssel aus dem Privaten erzeugen
+      - `openssl rsa -in ca.pem -pubout -out ca_pub-pem`
+    - CSR (Certificate Sign Request)
+      - `openssl req -new -subj '/CN=CA riedom13' -key ca.pem -out ca.csr`
+    - Config-Datei als dem OpenSSL-Verzeichnis in das aktuelle Verzeichnis kopieren
+      - `cp /etc/ssl/openssl.cnf ./`
+    - In der Config-Datei `policy_match` zu `policy_anything` ändern.
+      - `nano openssl.cnf`
+    - Unterverzeichnis erstellen
+      - `mkdir -p demoCA/newcerts`
+    - Datei `index.txt` erstellen
+      - `touch demoCA/index.txt`
+    - Zertifikat erstellen
+      - `openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr`
+  - Server
+    - privaten Schlüssel erzeugen
+      - `openssl genrsa -out server-poefam13.pem`
+    - öffentlichen Schlüssel aus dem privaten erzeugen
+      - `openssl rsa -in server-riedom13.pem -pubout -out server-riedom13_pub-pem`
+    - CSR (Certificate Sign Request)
+      - `openssl req -new -subj '/CN=server-riedom13' -key server-riedom13.pem -out server-riedom13.csr`
+    - Zertifikat erstellen
+      - `openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-riedom13.csr -out server-riedom13.crt`
+
 Fortsetzung nächste Einheit:
 
 
 ## Einheit 17: 1.2.2018
+
+- Abwesenheitskontrolle
+- HTTPS-Server
+
+HTTPS-Server
+
+Arbeitet ganz normal mit OSI-Modell
+
+S -> Steht für Secure (TLS-Verfahren)
+Protokolle für Internetzugriff: HTTP -> TLS -> TCP -> IP -> Ethernet
+
+Hybrides Verfahren:
+Mischverfahren aus symetrischen Verfahren und asymetrischen Verfahren
+
+-> Schlüsselaustauschproblem -> Für Schlüsselaustausch wird asymetrisches Verfahren verwendet.
+-> private Schlüssel verbleibt bei Schlüsselerzeuger, 
+
+Öffentliche Schlüssel muss überprüfbar sein.
+
+Zertifikatsaustausch zwischen einer Bankseite.
+
+Zertifikat muss von einer seriösen Stelle signiert sein. 
+
+HTTPS-Server zu Verfügung stellen wollen:
+
+Wir brauchen ein Zertifikat.
+
+Ein selbsterstelltes Zertifikat muss vertrauenswürdig gemacht werden -> Manueller Schritt im Browser
+
+Der Server entschlüsselt mit dem Privaten Schlüssel, versendet wird wieder mit öffentlichen Schlüssel
+
+
+
+Aufgabe: 
+
+HTTPS-Server in Betrieb nehmen
+
+
 
 
 
