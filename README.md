@@ -239,7 +239,7 @@ server.post('/saveuser', (req, res, next) => {
  });
 
 ```
-
+* [Übung 6](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue06)
 
 ## 11.Einheit 30.11.2017 (Donnerstag)
 
@@ -277,7 +277,9 @@ server.post('/saveuser', (req, res, next) => {
   * selbst Javascript Prog.
   * Js-Libraries (jquery)
   * Js Framework
-* Alte Version Angular Js
+* Alte Version Angular Js	5
+ 	Note HK	31.10.2017 09:15	100,00		0,00	0,00	
+ 	NO (25 %)	100,00		81,25	81,25	2
 * Neue Version Angular 1,2,3,4,5,6 -> Angularframework(von Google)
 
 
@@ -288,8 +290,43 @@ server.post('/saveuser', (req, res, next) => {
 * Einbinden von variablen in HTML.
 
 ## 15.Einheit 18.01.2018 (Donnerstag)
-* [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
-## 16.Einheit 25.01.2018 (Donnerstag)
+
+
+
 * [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
 
-## 17.Einheit 01.02.2018 (Donnerstag)
+## 16.Einheit 25.01.2018 (Donnerstag)
+
+* [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
+
+## 17.Einheit 29.01.2018 (Mittwoch)
+
+* Besprechen von TLS
+ * Ist ein hyprides Verschlüsselungsverfahren
+ * Erzeugen von SS -> Verschlüsseln mit public Key = VSS
+ * VSS versenden
+ * VSS öffnen mit privaten Key
+ * Danach hat man wieder den SS
+
+Vorteil: von symetrischen Schlüssel = Verarbeitet große Datenmengen schneller in "einzelnen Paketen"
+Nachteil: Schlüsselaustauschproblem
+
+Vorteil: asymetrischer Schlüssel = erhöhte Sicherheit wegen privaten und öffenlichen Key
+Nachteil: langsame Verarbeitung.
+
+* [Übung 10](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue10)
+
+## 18.Einheit 01.02.2018 (Donnerstag)
+
+* Arbeitsauftrag Realisierung von HTTPS-Server
+  * im OSI-Schichtenmodell
+  * HTTP
+  * TSL
+  * TCP
+  * IP
+  * Ethernet
+* Nach der Besprechung selbständige Arbeit am Server
+
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+
+

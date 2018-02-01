@@ -25,8 +25,8 @@ const server = express();
 
 // your express configuration here
 
-var httpServer = http.createServer(server);
-var httpsServer = https.createServer(credentials, server);
+const httpServer = http.createServer(server);
+const httpsServer = https.createServer(credentials, server);
 
 
 
