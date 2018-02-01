@@ -45,11 +45,45 @@ import { AppUserTableComponent} from './app-user-table.component';
 })
 export class AppModule { }
 ```
+
+In der Datei `app-clock.component.ts` muss nun wieder die Uhr umgesetzt werden. 
+```js
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
+@Component({
+  selector: 'app-clock',
+  template: `<p>{{time}}</p>`
+})
+export class AppClockComponent implements OnInit, OnDestroy {
+  public time: string;
+  private _timer;
+
+  constructor () {
+  }
+
+  public ngOnInit () {
+    console.log('AppClockComponent: ngOnInit');
+    this.updateTime();
+    this._timer = setInterval( () => this.updateTime(), 100 );
+  }
+
+  public ngOnDestroy () {
+    if (this._timer !== undefined) {
+      clearInterval(this._timer);
+      this._timer = undefined;
+    }
+  }
+
+  private updateTime() {
+    const now = new Date();
+    this.time = now.toLocaleTimeString();
+    }
+}
+```
+
+Diese Komponente kann nun beliebig oft verwendet werden, muss nur das ` <app-clock>` tag verwendet werden.
+
 // TODO
-
-lifecycle
-
-einbindung <app-clock> in html
 
 implementiernug onClick um eine Konsolenausgabe zu erstellen wenn auf die Uhr geklickt wird
 verändern des Mauszeigers wenn auf Uhr
