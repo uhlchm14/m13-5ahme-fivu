@@ -282,8 +282,14 @@ server.post('/saveuser', (req, res, next) => {
 
 
 ## 14.Einheit 11.01.2018 (Donnerstag)
+* Erste Übung im neuen Jahr -> Gesamt Wiederholung des vorherigen Jahres
+  * Javascript, Typescript, Cookies, Token etc...
+* Beispiel das der Titel sich nach einer gewissne Zeit ändert.
+* Einbinden von variablen in HTML.
 
 ## 15.Einheit 18.01.2018 (Donnerstag)
 * [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
 ## 16.Einheit 25.01.2018 (Donnerstag)
 * [Übung 9](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue09)
+
+## 17.Einheit 01.02.2018 (Donnerstag)
