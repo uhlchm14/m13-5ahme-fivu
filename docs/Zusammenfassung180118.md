@@ -11,7 +11,7 @@ Angular:
     * ng new
 * besteht aus Komponenten
 
-![Angular](/angular.png)
+![Angular](angular.png)
 
 ## Neues Projekt
 Mit `ng new ue09` erstellten wir ein neues Angular Projekt.
