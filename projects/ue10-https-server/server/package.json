@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "gulp cleanAndBuild",
+    "start": "node dist/main.js",
+    "poststart": "sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080 && sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 443 -j REDIRECT --to-port 8443"
+  },
+  "author": "Florian Greistorfer",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "debug": "^3.1.0",
+    "debug-sx": "^0.1.7",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "@types/debug": "0.0.30",
+    "@types/express": "^4.11.0",
+    "@types/node": "^9.4.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^3.2.4",
+    "gulp-using": "^0.1.1",
+    "merge-stream": "^1.0.1",
+    "run-sequence": "^2.2.1",
+    "typescript": "^2.7.1"
+  }
+}
