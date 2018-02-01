@@ -542,3 +542,13 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
        * openssl req -new -subj '/CN=server-finmam13' -key server-finmam13.pem -out server-finmam13.csr
      * Zertifikat erstellen
        * openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-finmam13.csr -out server-finmam13.crt
+### Einheit 18: 01.02.2018
+
+ * Wiederholung der letzten Einheit
+   * HTTPS
+     * Arbeitet über HTTP Protokoll (Osi Schichtenmodel)
+     * S = Secure über das TLS Verschlüsselungssystem
+     * TLS = hybrides Verfahren (symmetrisches und asymmetrisches Verfahren)
+   * Zertifikat = öffentliche Schlüssel des Inhabers (subject)
+   * Überprüfung: Zertifikat muss von einer vertrauenswürdigen Stelle signiert werden
+ * HTTPS Server in betrieb nehmen
