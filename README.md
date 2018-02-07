@@ -41,3 +41,6 @@ Von Fabian Kager: [Komponenten und Services in Angular](https://github.com/HTLMe
 
 ## Einheit 14, 25.01.2018
 Von Markus Mörth: [Service und Verschlüsselung](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/moemam13/FIV_25.01.2018.md)
+
+## Einheit 16, 01.02.2018
+Von Lukas Freyler: [HTTPS-Server in Typescript]()
