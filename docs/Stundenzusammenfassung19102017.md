@@ -22,7 +22,7 @@ Zur verschlüsselten Übertragung zwischen den Subnetzen kann https oder TLS (Tr
 ### 2. Webserver erstellen
 
 Es gibt viele Webserver-Programme, wie z.B. Apache, nginx, JavaEE,...
-Wir verwenden 'express' von Node.js
+Wir verwenden 'express', ein Node.js-Framework.
 
 Zur Einbindung des Packets unter Visual Studio Code, wird folgender Befehl verwendet werden: 'npm install --save express @types/esxpress'
 
