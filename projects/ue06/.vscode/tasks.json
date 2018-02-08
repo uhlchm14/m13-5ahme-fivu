@@ -4,13 +4,13 @@
     {
       "taskName": "build",
       "command": "gulp",
-      "isShellCommand": true,
+      // "isShellCommand": true,
       "args": [
         "--gulpfile",
-        "gulpfile.js",
+        "server/gulpfile.js",
         "build"
       ],
-      "isBuildCommand": true,
+      // "isBuildCommand": true,
       "showOutput": "silent",
       "problemMatcher": [
         {
@@ -40,7 +40,7 @@
         "clean"
       ],
       "isBuildCommand": true,
-      "showOutput": "silent"
+      "showOutput": "silent
     },
     {
       "taskName": "cleanAndBuild",
@@ -48,11 +48,11 @@
       "isShellCommand": true,
       "args": [
         "--gulpfile",
-        "gulpfile.js",
+        "server/gulpfile.js",
         "cleanAndBuild"
       ],
-      "isBuildCommand": true,
-      "showOutput": "silent",
+      // "isBuildCommand": true,
+      // "showOutput": "silent",
       "problemMatcher": [
         "$tsc-watch"
       ]
