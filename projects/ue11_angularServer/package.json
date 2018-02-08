@@ -1,0 +1,15 @@
+{
+  "name": "ue11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "cd ng2 && ng build --prod",
+    "start": "cd server && gulp cleanAndBuild",
+    "poststart": "node server/dist/main.js"
+  },
+  "author": "Florian Greistorfer",
+  "license": "ISC",
+  "private": true
+}
