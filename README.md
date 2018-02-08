@@ -552,3 +552,11 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
    * Zertifikat = öffentliche Schlüssel des Inhabers (subject)
    * Überprüfung: Zertifikat muss von einer vertrauenswürdigen Stelle signiert werden
  * HTTPS Server in betrieb nehmen
+ 
+#### Einheit 19: 08.02.2018
+ TLS = Transport Layered System
+ ECDHE = Elliptic-curve Diffie–Hellman 
+   * Schlüsselaustausch Verfahren
+ AES-128 = Symmetrische Verschlüsselung nach AES Verfahren mit 128 Bit (nicht sicher)
+ GCM = Betriebsmodus (Verwürfelung der Daten) bei symmetrischer Verschlüsselung
+ SHA-256 = Hash-Verfahren
