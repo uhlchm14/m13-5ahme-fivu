@@ -29,7 +29,6 @@ class Main {
         console.log('Server gestartet (http://localhost:8443)');
     }
 }
-
 const main = new Main();
 main.startHTTPServer(8080);
 main.startHTTPSServer(8443);
