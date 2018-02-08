@@ -1,5 +1,5 @@
 {
-  "name": "ue06",
+  "name": "server",
   "version": "1.0.0",
   "description": "Project Template for Node.js/Typescript FIVU 5AHME",
   "main": "dist/main.js",
