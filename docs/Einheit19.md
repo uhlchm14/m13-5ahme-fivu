@@ -21,4 +21,4 @@
 -    Könnte 2 Projekte machen und diese miteinander verknüpfen
 -    Wir machen 1 Projekt mit Unterverzeichnisse --> ue11 mit Server und ngxClient
        - Nachteil: 2 x Node Modules
-
+-    Verändern von package.json, launch.json, tasks.json
