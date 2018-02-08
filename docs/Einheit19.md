@@ -1,1 +1,15 @@
+**Verfasser:** Stefan Ornik   
+**Lehrer:** Steiner   
+**Datum der Einheit:** 08.02.2018
+   
+## Übersicht: 
+1. Verschlüsselung von https
 
+### 1. Verschlüsselung von https
+-    Erfolgt mit TLS_ECDME_RSA_AES_128 GCM SMA256
+-    **TLS:** Transport Layer Security, hybrides Verfahren, Mischung aus symmetrisches (z.B AES) und asymmetrisches (z.B RSA) verfahren
+-    **ECDME:** Schlüsselaustauschverfahren, für asymmetrische
+-    **RSA:** Nicht ganz sicher, auch für asymmetrisches Schlüsselaustauschverfahren
+-    **AES_128:** Symmetrische Verschlüsselung nach dem ASE-Verfahren mit 128 Bits, 128 Bits geht so- nicht wirklich starke Verschlüsselung
+-    **GCM**: Betriebsmodus bei symmetrischer Verschlüsselung, Verwürfelung von Datenblöcke
+-    **SMA256**: Hash-Verfahren, zum Überprüfen der Signaturen, usw....
