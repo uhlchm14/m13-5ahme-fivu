@@ -453,7 +453,7 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
     - zum Schutz vor gefakten Zertifikaten immer die Zertifikate (Authorisierungsstellen) aktualisieren. 
   - Zertifikat erstellen: `OpenSSL` 
   - Zertifikatskette: A wird von B signiert, B wird von C singiert, C wird von D signiert, D singiert sich selbst (seblstsigniertes Zertifikat)
-    - selbstsignierte Zertifikate sind im System als vertrauenwürdig eingetragen 
+    - selbstsignierte Zertifikate von Zertifizierungsstellen sind im System als vertrauenwürdig eingetragen 
 
 2. Schlüsselpaar erzeugen
   - "Zertifikatsstelle" 
@@ -473,6 +473,16 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 4. Zertifikat erstellen
   - `openssl ca -config openssl.cnf -create_serial -batch -extensions v3_ca -out ca.crt -keyfile ca.pem -selfsign -infiles ca.csr`
 
+### 17. Einheit
+**Datum:** 01.02.2018  
+**Dazugehörige Übung(en):**  [ue010](projects/ue10-https-server)  
+**Inhalt**:  
 
+1. Implementieren eines HTTPS-Servers
+
+### 18. Einheit
+**Datum:** 08.02.2018  
+**Dazugehörige Übung(en):**  
+**Inhalt**:  
 
 
