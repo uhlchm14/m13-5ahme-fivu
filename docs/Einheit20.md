@@ -72,7 +72,7 @@ this._express.get('/*', (req,res,next) => this.handleGetAll(req,res,next));
 ```
     this._express.use(
             (err: any, req: express.Request ,res: express.Response ,next: express.NextFunction) => this.handleError(err,req,res,next));
-            ```
+```
  - danach die Funktion dazu:
 ```
   private handleError(err: any, req: express.Request, res: express.Response, next: express.NextFunction)
