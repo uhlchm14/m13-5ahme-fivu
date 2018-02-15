@@ -566,10 +566,13 @@ Selbstständig.
 
 Kontrolle nächste Einheit:
 
-##Einheit 18: 08.02.2017
+##Einheit 18: 08.02.2018
 
+KRANK
 
+##Einheit 19: 15.02.2018
 
+- Termine für das restliche Schuljahr
 
 Einzelne Einheiten:
 
