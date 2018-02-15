@@ -4,10 +4,13 @@
   "description": "",
   "main": "server/dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "cd ng2 && ng build --prod",
-    "start": "cd server && gulp cleanAndBuild",
-    "poststart": "node server/dist/main.js"
+    "clean": "cd server; rm -rf dist; cd ../ng2; rm -rf dist",
+    "build": "npm run builds; npm run buildc",
+    "builds": "cd server; gulp build",
+    "buildc": "cd ng2; ng build --prod --output-hashing none",
+    "prestart": "npm run build",
+    "start": "node server/dist/main.js",
+    "install": "cd server; npm i; cd ../ng2; npm i"
   },
   "author": "Florian Greistorfer",
   "license": "ISC",
