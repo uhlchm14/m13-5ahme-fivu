@@ -1,3 +1,21 @@
+// Place your settings in this file to overwrite default and user settings.
 {
-	"**/node_modules": true
+  "files.exclude": {
+    "**/.vscode": true,
+    "**/node_modules/": true,
+    "**/.gitkeep": true,
+    "**/.gitignore": true,
+    "**/dist": true,
+    "**/package.json": true,
+    "**/package-lock.json": true,
+    "**/gulpfile.js": true,
+    "**/tsconfig.json": true,
+    "**/tslint.json": true,
+    "**/.angular-cli.json": true,
+    "**/.editorconfig": true,
+    "**/karma.conf.js": true,
+    "**/protractor.conf.js": true,
+    "**/e2e": true
+  }
 }
+

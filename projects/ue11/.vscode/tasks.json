@@ -4,14 +4,14 @@
     {
       "taskName": "build",
       "command": "gulp",
-      "isShellCommand": true,
+      // "isShellCommand": true,
       "args": [
         "--gulpfile",
-        "gulpfile.js",
+        "server/gulpfile.js",
         "build"
       ],
-      "isBuildCommand": true,
-      "showOutput": "silent",
+      // "isBuildCommand": true,
+      // "showOutput": "silent",
       "problemMatcher": [
         {
           "owner": "gulp-typescript",
@@ -33,26 +33,26 @@
     {
       "taskName": "clean",
       "command": "gulp",
-      "isShellCommand": true,
+      // "isShellCommand": true,
+      // "isBuildCommand": true,
+      // "showOutput": "silent",
       "args": [
         "--gulpfile",
-        "gulpfile.js",
+        "server/gulpfile.js",
         "clean"
-      ],
-      "isBuildCommand": true,
-      "showOutput": "silent"
+      ]
     },
     {
       "taskName": "cleanAndBuild",
       "command": "gulp",
-      "isShellCommand": true,
+      // "isShellCommand": true,
       "args": [
         "--gulpfile",
-        "gulpfile.js",
+        "server/gulpfile.js",
         "cleanAndBuild"
       ],
-      "isBuildCommand": true,
-      "showOutput": "silent",
+      // "isBuildCommand": true,
+      // "showOutput": "silent",
       "problemMatcher": [
         "$tsc-watch"
       ]
