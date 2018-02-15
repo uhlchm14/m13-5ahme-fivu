@@ -340,3 +340,7 @@ Nachteil: langsame Verarbeitung.
 
 ## 20.Einheit 15.02.2018 (Donnerstag)
 
+ng serve -> angular starten.
+
+ng build -> baut eine angular zusammen -> dist Bundles
+
