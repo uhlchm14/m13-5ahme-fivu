@@ -44,3 +44,9 @@ Von Markus Mörth: [Service und Verschlüsselung](https://github.com/HTLMechatro
 
 ## Einheit 16, 01.02.2018
 Von Lukas Freyler: [HTTPS-Server in Typescript](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/frelum13/HTTPS-Server.md)
+
+## Einheit 17, 18.02.2018
+Von Florian Greistorfer: 
+
+## Einheit 18, 15.02.2018
+Von Stefan Ornik: [Server, Konfigurationsdatei, Error-Handling](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit20.md)
