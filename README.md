@@ -325,7 +325,7 @@ Nachteil: langsame Verarbeitung.
   * Ethernet
 * Nach der Besprechung selbständige Arbeit am Server
 
-* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue10)
 
 ## 19.Einheit 08.02.2018 (Donnerstag)
 
@@ -336,7 +336,7 @@ Nachteil: langsame Verarbeitung.
 * GCM -> Betriebsmodus bei sym. Verfahren -> die verschlüsselten Blöcke vermischen.
 * SHA 256 -> Hashverfahren
 
-* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue10)
 
 ## 20.Einheit 15.02.2018 (Donnerstag)
 
@@ -344,3 +344,4 @@ ng serve -> angular starten.
 
 ng build -> baut eine angular zusammen -> dist Bundles
 
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
