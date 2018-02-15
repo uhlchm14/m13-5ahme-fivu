@@ -69,19 +69,19 @@ this._express.get('/*', (req,res,next) => this.handleGetAll(req,res,next));
   braucht nicht in jeder get ... methode um errors kümmern, wirft sie immer weiter bis zum error handler
   
   - Error handler (zuerst aufrufen):
-  ```
+```
     this._express.use(
             (err: any, req: express.Request ,res: express.Response ,next: express.NextFunction) => this.handleError(err,req,res,next));
             ```
  - danach die Funktion dazu:
- ```
+```
   private handleError(err: any, req: express.Request, res: express.Response, next: express.NextFunction)
     {
             res.status(500).send('Internal Error');
     }
- ```
+```
  - Für eine zeitliche Verzögerung sorgt:
- ```
+```
  async function startup () {
     const main = new Main();
     await main.start();
