@@ -43,12 +43,12 @@ class Main {
 
 const main = new Main();
 ```
-- "Next step": bezüglich Server,wenn er Anfrage bekommt: Egal was es ist, wenn der get beginnt mit irgendwas, wird die funktion req,res,next aufgerufen
+Als nächstes wird die Server-Anfrage behandelt: egal welche Anfrage er bekommt, wenn der get mit irgendwas beginnt, wird die funktion "req,res,next" aufgerufen.
 
 ```
 this._express.get('/*', (req,res,next) => this.handleGetAll(req,res,next));
 ```
-- Dazugehörige Funktion:
+- Die dazugehörige Funktion lautet:
 ```
   private handleGetAll (req: express.Request, res: express.Response, next: express.NextFunction)
     {
@@ -65,10 +65,10 @@ this._express.get('/*', (req,res,next) => this.handleGetAll(req,res,next));
         
     }
  ```
- - try / catch:  sollte ein Fehler auftreten - next Error - landet beim Error handler und wird behandelt
-  braucht nicht in jeder get ... methode um errors kümmern, wirft sie immer weiter bis zum error handler
+ - Das **try / catch** hat folgenden Zweck:  sollte ein Fehler auftreten - landet man beim Error handler und der Error wird behandelt.
+ - Vorteil: braucht nicht in jeder "get" usw.. -Methode um Errors kümmern, man wirft sie immer weiter bis zum error handler
   
-  - Error handler (zuerst aufrufen):
+ - Error handler (zuerst aufrufen):
 ```
     this._express.use(
             (err: any, req: express.Request ,res: express.Response ,next: express.NextFunction) => this.handleError(err,req,res,next));
@@ -93,7 +93,7 @@ startup().catch((err) => {
 ```
  
 ### 3. config.json
-- Anlegen der Datei config.json (hinzufügen von Konfigurationsdateien)
+- Anlegen der Datei config.json (Zweck: hinzufügen von Konfigurationsdateien, ist üblich, Vereinfachung):
 ```
 {
     "server": {
@@ -102,9 +102,9 @@ startup().catch((err) => {
 }
 ```
 ### 4. Weiterarbeiten beim Server
-- nconf ist ein Modul, um Konfigurationsdateien einzulesen.
-- Dafür brauchen wird es, zum Verknüpfen mit config.json
-- installieren der packages:
+- _nconf_ ist ein Modul, um Konfigurationsdateien einzulesen.
+- Dafür brauchen wir es auch, als Verknüpfung mit config.json.
+- Installieren der Packages:
 ```
 npm install --save nconf
 ```
@@ -113,16 +113,16 @@ und
 npm install --save-dev @types/nconf
 ```
 
-- importieren von:
+- Importieren von:
 ```
 import * as nconf from 'nconf';
 import * as path from 'path'; //Node.js-Modul --> Dateizüge zu ergänzen/zusammenzuführen...
 import * as http from 'http'; //Node.js Modul
 ```
-- danach, verändern des Konstruktors:
+- Danach wird der Konstruktor verändert: 
 ```
  constructor () {
-        const configFile = path.join(__dirname, '..', 'config.json'); //__dirname ist das aktuelle Verzeichnis, mit .. eine Ebene höher (zurück)
+        const configFile = path.join(__dirname, '..', 'config.json'); 
         console.log(configFile);
         nconf.file(configFile);
         this._config = nconf.get('server');
@@ -132,4 +132,19 @@ import * as http from 'http'; //Node.js Modul
 
     }
 ```
+- Man gibt den Ordner an, in welcher sich die Datei "config.json" befindet.
+- _ _dirname ist das aktuelle Verzeichnis, mit ".." eine Ebene(Ordner) höher (zurück) 
+- Zum Schluss wird noch eine Funktion "handleGetError" erstellt.
+```
+ private handleGetError(req: express.Request, res: express.Response, next: express.NextFunction)
+    {
+             try{
+                throw new Error('Feehlllaaaa!')
+             }
+             catch(err)
+             {
+                next(err); // ????????
+             }
+```
 
+Ganzes Programm: Siehe Anhang.
