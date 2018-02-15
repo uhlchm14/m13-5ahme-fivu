@@ -329,4 +329,14 @@ Nachteil: langsame Verarbeitung.
 
 ## 19.Einheit 08.02.2018 (Donnerstag)
 
+* TLS-> Transport Layer Security in Übung 17 erklärt.
+* ECDHE -> (Schlüssel austausch Verfahren) nicht sicher näschtes Mal
+* RSA -> auch nächstes mal
+* ASE_128 -> symmetrisches Verschl. ASE 128 Bit.
+* GCM -> Betriebsmodus bei sym. Verfahren -> die verschlüsselten Blöcke vermischen.
+* SHA 256 -> Hashverfahren
+
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+
+## 20.Einheit 15.02.2018 (Donnerstag)
 

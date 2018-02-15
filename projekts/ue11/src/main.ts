@@ -1,4 +1,3 @@
-
 import { sprintf } from 'sprintf-js';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
