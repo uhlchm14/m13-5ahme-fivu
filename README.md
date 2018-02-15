@@ -482,7 +482,29 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
 
 ### 18. Einheit
 **Datum:** 08.02.2018  
-**Dazugehörige Übung(en):**  
+**Dazugehörige Übung(en):**  [ue11](projects/ue11_angularServer) 
 **Inhalt**:  
 
+1. HTTPS
+  - TLS_ECDHE_RSA_ASE_128_GCM_SHA256  
 
+    TLS: Transport Layer Security  
+    ECDHE: Schlüsselaustauschverfahren  
+    RSA: Verschlüsselung  
+    ASE_128: symetrische Verschlüsselung mit ASE mit 128 Bit  
+    GCM: Betriebsmodus bei sym. Verschlüsselung  
+    SHA256: Hashalgorythmus   
+
+2. Beginn mit ue11
+  - in der Übung werden 2 Unterordner angelegt: server und ngxClient
+  - im Unterordner server ist node und in ngxClient ist angular enthalten
+  - Einstellungen für das Projekt treffen (vscode)
+  
+
+### 19. Einheit
+**Datum:** 15.02.2018  
+**Dazugehörige Übung(en):**  [ue11](projects/ue11_angularServer) 
+**Inhalt**:  
+
+1. Fortsetzung von ue11
+  Implementieren von main.ts
