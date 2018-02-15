@@ -123,7 +123,7 @@ Abwesend
 ## Einheit 15: 18.1.18
 * mehrere Komponenten in app.component zusammenführen
 * Services
---> Abwesend aufgrund Stellung!
+--> Abwesend aufgrund EYP!
 
 ## Einheit 16: 25.1.18
 * Verwendung von async Methoden und Promises um Serverlatenz zu simulieren und für Datenerhalt von Server vorzubereiten
@@ -144,6 +144,25 @@ Abwesend
   3. Zertifikat erstellen
 * Erstellen eines Zertifikats für einen Server
 * Ordner: [Übung 10]
+
+## Einheit 18: 1.2.18
+--> Abwesend aufgrund EYP!
+
+## Einheit 19: 8.2.18
+--> Abwesend aufgrund EYP!
+
+## Einheit 20: 15.2.18
+* Aufbau Server und Angular in einem Projekt
+* [main.ts]: Server erstellen
+* Config File _config.json_ erstellen und mit npm Modul nconf in Server einlesen
+
+```json
+{
+    "server": {
+        "port": 4711
+    }
+}
+```
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
@@ -167,3 +186,4 @@ Abwesend
 [Übung 8]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue08
 [Übung 9]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue09
 [Übung 10]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue10_certificates
+[main.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue11/server/src/main.ts
