@@ -1,0 +1,37 @@
+{
+    "name": "ue11",
+    "version": "1.0.0",
+    "description": "ue11",
+    "repository": {},
+    "scripts": {
+      "clean": "cd server; rm -rf dist; cd ../ngxClient; rm -rf dist",
+      "build": "npm run builds; npm run buildc",
+      "builds": "cd server; ./node_modules/gulp/bin/gulp.js build",
+      "buildc": "cd ngxClient; ng build --prod --output-hashing none",
+      "prestart": "npm run build",
+      "start": "cd server; node dist/main.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Kager Fabian",
+    "license": "ISC",
+    "dependencies": {
+      "@types/node": "^8.0.31",
+      "@types/sprintf-js": "^1.1.0",
+      "express": "^4.16.2",
+      "sprintf-js": "^1.1.1"
+    },
+    "devDependencies": {
+      "del": "^3.0.0",
+      "gulp": "^3.9.1",
+      "gulp-changed": "^3.1.0",
+      "gulp-sourcemaps": "^2.6.1",
+      "gulp-tslint": "^8.1.2",
+      "gulp-typescript": "^3.2.2",
+      "gulp-using": "^0.1.1",
+      "merge-stream": "^1.0.1",
+      "path": "^0.12.7",
+      "run-sequence": "^2.2.0",
+      "tslint": "^5.7.0",
+      "typescript": "^2.5.3"
+    }
+  }
