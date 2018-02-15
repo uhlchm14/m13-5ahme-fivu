@@ -6,6 +6,7 @@
 1. Allgemeines
 2. Server 
 3. config.json
+4. Weiterarbeiten beim Server
 
 ### 1. Allgemeines
 - angular-application kann mit **ng serve** oder **ng build** gestartet werden. _ng build -prod_ baut die Daten kompakt zusammen.
@@ -89,8 +90,46 @@ this._express.get('/*', (req,res,next) => this.handleGetAll(req,res,next));
 startup().catch((err) => {
     console.log(err);
 });
-
- ```
+```
  
 ### 3. config.json
-- Anlegen der Datei config.json
+- Anlegen der Datei config.json (hinzufügen von Konfigurationsdateien)
+```
+{
+    "server": {
+        "port": 4711
+    }
+}
+```
+### 4. Weiterarbeiten beim Server
+- nconf ist ein Modul, um Konfigurationsdateien einzulesen.
+- Dafür brauchen wird es, zum Verknüpfen mit config.json
+- installieren der packages:
+```
+npm install --save nconf
+```
+und
+```
+npm install --save-dev @types/nconf
+```
+
+- importieren von:
+```
+import * as nconf from 'nconf';
+import * as path from 'path'; //Node.js-Modul --> Dateizüge zu ergänzen/zusammenzuführen...
+import * as http from 'http'; //Node.js Modul
+```
+- danach, verändern des Konstruktors:
+```
+ constructor () {
+        const configFile = path.join(__dirname, '..', 'config.json'); //__dirname ist das aktuelle Verzeichnis, mit .. eine Ebene höher (zurück)
+        console.log(configFile);
+        nconf.file(configFile);
+        this._config = nconf.get('server');
+        if( !this._config || isNaN(this._config.port)) {
+            throw new Error('invalid configuration');
+        }
+
+    }
+```
+
