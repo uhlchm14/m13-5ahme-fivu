@@ -560,3 +560,10 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
  * AES-128 = Symmetrische Verschlüsselung nach AES Verfahren mit 128 Bit (nicht sicher)  
  * GCM = Betriebsmodus (Verwürfelung der Daten) bei symmetrischer Verschlüsselung  
  * SHA-256 = Hash-Verfahren  
+
+### Einheit 20: 15.02.2018
+ * Programm schreiben, dass Server und Angular zur Verfügung stellt
+ * Auf gemeinsame Klasse zugreifen zwischen Server und Angular
+ * Mit ng build -> Angular wird zusammengebaut
+ * Express Server arbeitet nach Schichten -> hat einen Error handler
+ * Modul nconf einfügen, um Konfigurations Dateinen einzulesen
