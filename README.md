@@ -847,4 +847,57 @@ Download und Besprechung der letzten Dateien des Templates für ue03
       - `openssl req -new -subj '/CN=server-poefam13' -key server-poefam13.pem -out server-poefam13.csr`
     - Zertifikat erstellen
       - `openssl ca -config openssl.cnf -batch -cert ca.crt -keyfile ca.pem -in server-poefam13.csr -out server-poefam13.crt`
-  
+
+*****
+
+### 18. Einheit
+**Datum:** 01.02.2018  
+**Dazugehörige Übung(en):** ![x509](projects/x509)  
+**Inhalt:**  
+1. Erstellung eines eigenen HTTP- und HTTPS-Servers
+
+  ```typescript
+    const privateKey  = fs.readFileSync(path.join(__dirname, '../server-poefam13.pem'));
+    const certificate = fs.readFileSync(path.join(__dirname, '../server-poefam13.crt'));
+
+    const credentials = {key: privateKey, cert: certificate};
+    const server = express();
+
+    server.get('', (req, res, next) => {
+        res.send('OK');
+    });
+
+    const httpServer = http.createServer(server);
+    const httpsServer = https.createServer(credentials, server);
+
+    httpServer.listen(8080, () => {
+        console.log('HTTP läuft auf 8080.');
+    });
+
+    httpsServer.listen(8443, () => {
+        console.log('HTTPS läuft auf 8443.');
+    });
+  ```
+
+2. Test der Server mittels Browser
+  - Der HTTP-Server ist voll funktionsfähig, während der HTTPS-Server vom Browser nicht als HTTPS-Server akzeptiert wird, obwohl das für den Server angefertigte Zertifikat im Browser hinterlegt wurde.
+
+*****
+
+### 19. Einheit
+**Datum:** 08.02.2018  
+**Dazugehörige Übung(en):** ![ue11_angularServer](projects/ue11_angularServer)  
+**Inhalt:**  
+1. Prüfung
+
+*****
+
+### 20. Einheit
+**Datum:** 15.02.2018  
+**Dazugehörige Übung(en):** ![ue11_angularServer](projects/ue11_angularServer)  
+**Inhalt:**  
+1. Programmierung eines Angular-Servers
+
+2. Config-File für den Server erstellen und bei Start einlesen
+
+3. Implementierung der beiden `async`-Methoden `start()` und `startup()` und drei Handler-Methoden `handleGetAll()`, `handleGetError()` und `handleError()`.
