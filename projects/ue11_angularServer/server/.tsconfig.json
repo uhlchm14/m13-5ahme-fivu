@@ -1,0 +1,11 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "sourceMap": false,
+    "removeComments": true,
+    "target": "es5",
+    "lib": [
+      "es2015"
+    ]
+  }
+}
