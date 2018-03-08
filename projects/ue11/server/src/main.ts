@@ -2,7 +2,7 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as nconf from 'nconf';
 import * as path from 'path'; // Node.js Modul
-import * as http from 'http';
+import * as http from 'http'; // Node.js Modul
 
 
 class Main {
@@ -27,8 +27,11 @@ class Main {
         // const pugRenderingEngine = this._server.set('view engine', 'pug');
         // pugRenderingEngine.locals.pretty = true;
 
-        this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetAll(req, res, next));
+        const ngxPath = path.join(__dirname, '../../ngx/dist');
+
+        this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartup(req, res, next));
         this._express.get('/error', (req, res, next) => this.handleGetError(req, res, next));
+        this._express.use(express.static(ngxPath));
         this._express.use(
             (err: any,
              req: express.Request,
@@ -50,6 +53,19 @@ class Main {
         }
     }
 
+    private handleGetStartup (req: express.Request, res: express.Response, next: express.NextFunction) {
+        try {
+            const indexPath = path.join(__dirname, '../../ngx/dist/index.html');
+            const indexMain = path.join(__dirname, '../../ngx/dist/main.*');
+            const indexInline = path.join(__dirname, '../../ngx/dist/inline.*');
+            const indexPolyfilles = path.join(__dirname, '../../ngx/dist/polyfills.*');
+            const indexStyle = path.join(__dirname, '../../ngx/dist/styles.*');
+            res.sendFile(indexPath);
+        } catch (err) {
+            next(err);
+        }
+    }
+
     private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
             throw new Error('Test');
@@ -59,7 +75,9 @@ class Main {
     }
 
     private handleError(err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
-        res.status(500).send('internal Error');
+        const timeStamp = new Date().toISOString();
+        console.log(timeStamp);
+        res.status(500).send('internal Error (' + timeStamp + ')');
     }
 }
 
@@ -71,3 +89,5 @@ async function startup() {
 startup().catch( (err) => {
     console.log(err);
 });
+
+
