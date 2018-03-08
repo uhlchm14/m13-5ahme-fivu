@@ -30,3 +30,4 @@ private handleGetStartUp (req: express.Request, res: express.Response, next: exp
     }
 ```
 Dadurch greifen wir auf "index.html" zu. Wir haben dafür die Variable "indexPath" angelegt.
+Die weitere Stunde ist von Fehler-Handling geprägt. Es treten bei den meisten Schülern Fehler auf, welche zu beheben sind.
