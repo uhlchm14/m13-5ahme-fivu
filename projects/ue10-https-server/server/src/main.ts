@@ -41,7 +41,7 @@ httpServer.listen(httpport, () => {
   log.info('http server running on port ' + httpport);
 });
 httpsServer.listen(httpsport, () => {
-  log.info('hhtps server running on port ' + httpsport);
+  log.info('https server running on port ' + httpsport);
 });
 
 function logger(req: express.Request, res: express.Response, next: express.NextFunction) {
