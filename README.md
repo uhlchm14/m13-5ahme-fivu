@@ -567,3 +567,30 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
  * Mit ng build -> Angular wird zusammengebaut
  * Express Server arbeitet nach Schichten -> hat einen Error handler
  * Modul nconf einfügen, um Konfigurations Dateinen einzulesen
+
+### Einheit 21: 08.03.2018
+ * nconf Modul um konfigurationen einzulesen 
+ * next step: Angular am Client zum Laufen bringen
+   * dazu wird das index.html aus ngxClient dist Ordner über den Path in den Server eingefügt
+     ```Javascript
+     private handleGetStartup(req: express.Request, res: express.Response, next: express.NextFunction) 
+     {
+         try 
+         {
+            // Angular Client startfähig machen
+            const indexPath = path.join(__dirname, '../../ngxClient/dist/index.html');
+            res.sendFile(indexPath);
+         }
+         catch(err) 
+         {
+            next(err);
+         }
+     }
+     ```
+    
+    * Path von dist Ordner zuweisen: 
+  ```Javascript
+      const ngxPath = path.join(__dirname, '../../ngxClient/dist/');
+      this._express.use(express.static(ngxPath));
+  ```
+   
