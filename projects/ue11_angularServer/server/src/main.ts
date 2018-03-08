@@ -71,18 +71,18 @@ class Main {
     this._express.use(bodyparser.urlencoded({ extended: true }));
 
     this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartup(req, res, next));
+    this._express.use(express.static(path.join(__dirname, '../../ng2/dist')));
     this._express.get('/error', (req, res, next) => this.handleGetError);
-    this._express.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) =>
-      this.handleError(err, req, res, next)
-    );
+    this._express.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => this.handleError(err, req, res, next));
 
-    http.createServer(this._express).listen(4711);
+    http.createServer(this._express).listen(this._config.port);
+    log.info('Server started on port ' + this._config.port);
   }
 
   public handleGetStartup(req: express.Request, res: express.Response, next: express.NextFunction) {
     try {
       log.info('get request from client');
-      res.send('starting angular...');
+      this._express.use(express.static(path.join(__dirname, '../../ng2/dist')));
     } catch (err) {
       next(err);
     }

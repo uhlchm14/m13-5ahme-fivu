@@ -34,7 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 process.env['DEBUG'] = '*::INFO, *::WARN, *::ERR, *::SEVERE, *::';
 process.env['DEBUG_COLORS'] = 'true';
 process.env['DEBUG_STREAM'] = 'stdout';
@@ -53,30 +53,7 @@ var consolelogger = debugsx.createConsoleHandler('stdout', '*::INFO, *::FINE, *:
     { level: 'WARN', color: 'magenta', inverse: true }
 ]);
 debugsx.addHandler(consolelogger);
-// region comment
-// const privKey = fs.readFileSync(path.join(__dirname, '../../../../x509/server.pem'));
-// const cert = fs.readFileSync(path.join(__dirname, '../../../../x509/server.crt'));
-// const credentials = { key: privKey, cert: cert };
-// const app = express();
-// app.use(logger);
-// app.use(express.static(path.join(__dirname, '../../ng2/dist')));
-// const httpServer = http.createServer(app);
-// const httpsServer = https.createServer(credentials, app);
-// const httpport = 8080;
-// const httpsport = 8443;
-// httpServer.listen(httpport, () => {
-//   log.info('http server running on port ' + httpport);
-// });
-// httpsServer.listen(httpsport, () => {
-//   log.info('hhtps server running on port ' + httpsport);
-// });
-// function logger(req: express.Request, res: express.Response, next: express.NextFunction) {
-//   const clientSocket = req.socket.remoteAddress + ':' + req.socket.remotePort;
-//   log.info(req.method, req.url, clientSocket);
-//   next();
-// }
-// endregion
-var Main = /** @class */ (function () {
+var Main = (function () {
     function Main() {
         var configFile = path.join(__dirname, '../config.json');
         nconf.file(configFile);
@@ -92,19 +69,19 @@ var Main = /** @class */ (function () {
                 this._express = express();
                 this._express.use(bodyparser.urlencoded({ extended: true }));
                 this._express.get(['/', '/index.html', '/index.htm'], function (req, res, next) { return _this.handleGetStartup(req, res, next); });
+                this._express.use(express.static(path.join(__dirname, '../../ng2/dist')));
                 this._express.get('/error', function (req, res, next) { return _this.handleGetError; });
-                this._express.use(function (err, req, res, next) {
-                    return _this.handleError(err, req, res, next);
-                });
-                http.createServer(this._express).listen(4711);
-                return [2 /*return*/];
+                this._express.use(function (err, req, res, next) { return _this.handleError(err, req, res, next); });
+                http.createServer(this._express).listen(this._config.port);
+                exports.log.info('Server started on port ' + this._config.port);
+                return [2];
             });
         });
     };
     Main.prototype.handleGetStartup = function (req, res, next) {
         try {
             exports.log.info('get request from client');
-            res.send('starting angular...');
+            this._express.use(express.static(path.join(__dirname, '../../ng2/dist')));
         }
         catch (err) {
             next(err);
@@ -131,14 +108,14 @@ function startup() {
             switch (_a.label) {
                 case 0:
                     main = new Main();
-                    return [4 /*yield*/, main.start()];
+                    return [4, main.start()];
                 case 1:
                     _a.sent();
-                    return [2 /*return*/];
+                    return [2];
             }
         });
     });
 }
-startup()["catch"](function (err) { return exports.log.severe(err); });
+startup().catch(function (err) { return exports.log.severe(err); });
 
 //# sourceMappingURL=main.js.map
