@@ -14,7 +14,7 @@ private _express: express.Express;
 
     constructor (){
         const configFile = path.join(__dirname, '..', 'config.json');
-        console.log('reading configFile ' + configFile);
+        console.log(configFile);
         nconf.file(configFile);
         this._config = nconf.get('server');
         if(!this._config || isNaN(this._config.port)) {
@@ -30,8 +30,12 @@ private _express: express.Express;
 
         this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartUp(req, res, next));
 
-            this._express.get('/error', this.handleGetError(req, res, next));
+        this._express.get('/error', (req, res, next) => this.handleGetError(req, res, next));
 
+        const ngxPath = path.join(__dirname, '../../ngx/dist');
+        
+        this._express.use(express.static(ngxPath));
+                // Error Handling
         this._express.use(
             (err: any, 
             req: express.Request, 
@@ -40,7 +44,7 @@ private _express: express.Express;
     
             this._server = http.createServer(this._express);
             this._server.listen(this._config.port);
-            console.log('server listening ( http://localhost:' + this._config.port);
+            console.log('server listening ( http://localhost:' + this._config.port + ')');
     
         }
 
@@ -49,29 +53,35 @@ private _express: express.Express;
     private handleGetStartUp (req: express.Request, res: express.Response, 
                 next: express.NextFunction) {
                     try{
-                    console.log('get request from client');
-                    res.send('Not implemented yet');
+                        const indexPath = path.join(__dirname, '../../ngx/dist/index.html'); // 
+                        res.sendFile(indexPath);
+                    
                 } catch (err) {
                     next(err);
                 }
                 }
 
+    private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
+        try {
+            throw new Error ('Testing error expection...');
+        
+        }
+        catch(err)
+        {
+            next(err);
+        }
+        }
+
     private handleError (err: any, req: express.Request, res: express.Response,
     next: express.NextFunction) {
-        res.status(500).send('InternalError');
+        const timeStamp = new Date().toISOString();
+        console.log(timeStamp);
+        console.log(err);
+        res.status(500).send('InternalError (' + timeStamp + ')');
     }
 }
 
 // Fertig machen!
-
-private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
-try {
-    throw new Error ('Testing error expection...');
-
-}
-
-}
-
 async function startup(): Promise<void> {
 const main = new Main();
 await main.start();

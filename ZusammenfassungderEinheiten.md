@@ -579,7 +579,19 @@ KRANK
 
 - Error-Handler
 
-## Einheit 20: 01.02.2018
+## Einheit 20: 08.03.2018
+
+Wiederholung der letzten Einheit:
+
+Fortsetzung Error-Handling
+
+Wir haben in diesem Projekt 2 Unterordner -> in beiden muss npm install aufgerufen werden.
+
+Fertigstellung ue11
+
+Fortsetzung nächste Einheit
+
+## Einheit 21: 1x.03.2018
 
 
 
