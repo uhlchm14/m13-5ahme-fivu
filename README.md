@@ -163,6 +163,12 @@ Abwesend
     }
 }
 ```
+
+## Einheit 21: 08.03.18
+* Wiederholung Server
+* Laden der Angular app über den Server
+  + Angular app hat 5 bundles, die in der `index.hmtl` eingebunden werden
+  + index.html wird vom Server an den Client geschickt
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03

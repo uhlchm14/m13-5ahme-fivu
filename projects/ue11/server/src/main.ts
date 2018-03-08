@@ -23,6 +23,7 @@ class Main {
         this._express = express();
 
         this._express.use(bodyParser.urlencoded());
+        this._express.use(express.static(path.join(__dirname, '../../ngx/dist')));
         // const pugRenderingEngine = this._server.set('view engine', 'pug');
         // pugRenderingEngine.locals.pretty = true;
 
@@ -44,8 +45,8 @@ class Main {
 
     private handleGetStartup(req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
-            console.log('get request from client');
-            res.send('Starting Angular...');
+            const indexPath = path.join(__dirname, '../../ngx/dist/index.html');
+            res.sendFile(indexPath);
         } catch (err) {
             next(err);
         }
@@ -60,7 +61,10 @@ class Main {
     }
 
     private handleError(err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
-        res.status(500).send('Internal Error');
+        const timeStamp = new Date().toISOString();
+        console.log(timeStamp);
+        console.log(err);
+        res.status(500).send('Internal Error (' + timeStamp + ')');
     }
 
 }
