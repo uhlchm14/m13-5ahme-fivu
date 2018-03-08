@@ -16,7 +16,11 @@
 | 12 | 14.12.2017 | [ue07](projects/ue07/src/main.ts) & [ue08](projects/ue08/src/main.ts)|
 | 13 | 11.01.2018 | [ue08](projects/ue08/src/main.ts)|
 | 14 | 18.01.2018 | [ue08](projects/ue08/src/main.ts)|
-
+| 15 | 25.01.2018 | [ue09](projects/ue09/Angular2/src/main.ts)|
+| 16 | 25.01.2018 | [ue09](projects/ue09/Angular2/src/main.ts)|
+| 17 | 01.02.2018 | [ue09](projects/ue09/Angular2/src/main.ts)|
+| 18 | 08.02.2018 | [ue10](projects/ue10/src/main.ts)|
+| 19 | 15.02.2018 | [ue11](projects/ue11/server/src/main.ts)|
 
 
 [Documentation](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/master/README.md)

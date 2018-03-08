@@ -28,6 +28,10 @@ class Main {
         this._express.get(['/', '/index.html', 'index.htm'], (req, res, next) => this.handleGetAll(req, res, next));
         this._express.get(['/error'], (req, res, next) => this.handleGetError(req, res, next));
 
+        const ngxPath = path.join(__dirname, '../../ngxClient/ngxClient/dist');
+
+        this._express.use(express.static(ngxPath))
+
         this._express.use((err: any, req: express.Request, res: express.Response, 
             next: express.NextFunction) => this.handleError(err, req, res, next));
         
@@ -39,8 +43,8 @@ class Main {
     private handleGetAll(req: express.Request, res: express.Response, 
         next: express.NextFunction) {
         try {
-            console.log('get request from client');
-            res.send('Not implemented yet');
+            const indexPath = path.join(__dirname, '../../ngxClient/ngxClient/dist/index.html');
+            res.sendFile(indexPath);
         } catch (err) {
             next(err);
         }
@@ -57,7 +61,10 @@ class Main {
 
     private handleError(err: any, req: express.Request, res: express.Response, 
         next: express.NextFunction) {
-            res.status(500).send('internal Error: \n' + err);
+            const timeStamp = new Date().toISOString();
+            console.log(timeStamp);
+            console.log(err);
+            res.status(500).send('Internal Error (' + timeStamp +')');
     }
 }
 async function startup(): Promise<void> {

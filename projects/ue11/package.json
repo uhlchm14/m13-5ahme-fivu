@@ -14,5 +14,8 @@
   },
   "author": "sx",
   "license": "ISC",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@angular/cli": "^1.7.3"
+  }
 }
