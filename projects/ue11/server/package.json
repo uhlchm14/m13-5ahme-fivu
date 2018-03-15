@@ -8,7 +8,7 @@
         "clean": "gulp clean",
         "build": "gulp build",
         "prestart": "gulp cleanAndBuild",
-        "start": "node dist/main.js",
+        "start": "cd ../ngx & ng build & cd ../server & nodemon dist/main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "frelum13",
@@ -19,6 +19,7 @@
         "body-parser": "^1.18.2",
         "express": "^4.16.2",
         "nconf": "^0.10.0",
+        "nodemon": "^1.17.2",
         "pug": "^2.0.0-rc.4",
         "sprintf-js": "^1.1.1"
     },

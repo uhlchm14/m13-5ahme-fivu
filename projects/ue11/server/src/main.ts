@@ -4,19 +4,26 @@ import * as nconf from 'nconf';
 import * as path from 'path';
 import * as http from 'http';
 
+import { IUser } from './models/user';
+
 class Main {
 
     private _config: { port: number };
     private _server: http.Server;
     private _express: express.Express;
+    private _users: IUser[] = [];
 
-    constructor() {
+    public constructor() {
         const configFile = path.join(__dirname, '..', 'config.json');
         nconf.file(configFile);
         this._config = nconf.get('server');
         if (!this._config || isNaN(this._config.port)) {
             throw new Error('invalid configuration');
         }
+
+        this._users.push({ surname: 'Freyler', firstname: 'Lukas', classname: '5AHME'});
+        this._users.push({ surname: 'Freyler', firstname: 'Paul', classname: '2AHME'});
+        this._users.push({ surname: 'Mörth', firstname: 'Markus', classname: '5AHME'});
     }
 
     public async start(): Promise<void> {
@@ -29,6 +36,8 @@ class Main {
 
         this._express.get(['/', '/index.htm', '/index.html'],
             (req, res, next) => this.handleGetStartup(req, res, next));
+        this._express.get('/users',
+            (req, res, next) => this.handleGetUsers(req, res, next));
         this._express.get('/error',
             (req, res, next) => this.handleGetError(req, res, next));
 
@@ -47,6 +56,15 @@ class Main {
         try {
             const indexPath = path.join(__dirname, '../../ngx/dist/index.html');
             res.sendFile(indexPath);
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    private handleGetUsers(req: express.Request, res: express.Response, next: express.NextFunction) {
+        try {
+            const users = JSON.stringify(this._users);
+            res.json(users);
         } catch (err) {
             next(err);
         }

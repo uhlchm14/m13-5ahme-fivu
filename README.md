@@ -169,6 +169,16 @@ Abwesend
 * Laden der Angular app über den Server
   + Angular app hat 5 bundles, die in der `index.hmtl` eingebunden werden
   + index.html wird vom Server an den Client geschickt
+  
+## Einheit 22: 05.03.18
+* Holen der Datein aus [Übung 9] in die aktuelle [Übung 11], mit rsync Befehl
+* User sollen von Server kommen --> Http Request schreiben
+  + HttpClient injecten
+  + HttpClientModule importieren
+* Request Handler im Server
+* Erstellen symbolic link von server/models auf ngx/models
+* User Array als JSON an Client schicken
+
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
@@ -193,3 +203,4 @@ Abwesend
 [Übung 9]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue09
 [Übung 10]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue10_certificates
 [main.ts]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue11/server/src/main.ts
+[Übung 11]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue11
