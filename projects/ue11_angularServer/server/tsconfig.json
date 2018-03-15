@@ -1,12 +1,11 @@
 {
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
-    "sourceMap": false,
+    "sourceMap": true,
     "removeComments": true,
-    "target": "es5",
+    "target": "ES6",
     "lib": [
-      "es2017",
-      "dom"
+      "es2018"
     ]
   }
 }
