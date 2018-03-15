@@ -1,11 +1,23 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "sourceMap": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
     "removeComments": true,
-    "target": "ES6",
-    "lib": [
-      "es2018"
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "target": "es6",
+    "mapRoot": "./",
+    "outDir": "./dist",
+    //"baseUrl": "src",
+    //"declaration": false,
+    //"moduleResolution": "node",
+    //"emitDecoratorMetadata": true,
+    "typeRoots": [
+      "node_modules/@types"
     ]
-  }
+  },
+  "include": [ "src" ]
 }
