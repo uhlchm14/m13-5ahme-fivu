@@ -591,8 +591,35 @@ Fertigstellung ue11
 
 Fortsetzung nächste Einheit
 
-## Einheit 21: 1x.03.2018
+## Einheit 21: 15.03.2018
 
+Einbindung der Dateien aus dem dist Ordner über den Pfad (index.html) 
+Bei Konfiguration, wenn Ressource ohne Informationen -> index.html wird gesendet
+
+In index.html: Es müssen Script-Dateien nachgeladen werden (Bundle-Dateie3n)
+
+Client versucht Bundels vom Server zu bekommen
+
+Express muss gesagt bekommen wo sich die bundle-Dateien befinden. 
+
+2. Schritte: Richtige index.html-Datei
+		Das was nachgeladen wird, muss tatsächlich vom Server starten
+
+Leere Bildschirm bei Laden -> Debug-Modus starten, etc.
+
+- Übernehmen von ue09 in ue11
+
+Ordner App aus ue09 in ue11 kopieren
+
+rsync -aPt ../../../../ue09AngularWithClockComponent/src/app/ ./
+
+User muss nun Daten vom Server holen
+
+Um Daten zwischen Client und Server auszutauschen : Verlinken (nur unter Linux möglich)
+
+mit ln -s ../../..... das jeweilige Verzeichnis angeben, diese wird dann anschließend in den insich befindlichen ordner verlinkt
+
+Fort
 
 
 Einzelne Einheiten:
@@ -607,3 +634,4 @@ Einzelne Einheiten:
 - [Angular Übersicht](https://angular.io/guide/template-syntax)
 - [ue09](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue09AngularWithClockComponent)
 - [ue10](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue10HTTPSServer)
+- [ue11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/riedom13/Projekte/ue11)

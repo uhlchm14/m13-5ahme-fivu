@@ -3,6 +3,7 @@ import * as bodyParser from 'body-parser';
 import * as nconf from 'nconf';
 import * as path from 'path'; //node.js modul
 import * as http from 'http'; // Node.js Modul
+import { IUser } from './models/user';
 
 class Main {
 /////////////////////////////////////////////////////////////////////////
@@ -10,6 +11,7 @@ class Main {
 private _config: {port: number};
 private _server: http.Server;
 private _express: express.Express;
+private _users: IUser[] = [];
 
 
     constructor (){
@@ -20,6 +22,11 @@ private _express: express.Express;
         if(!this._config || isNaN(this._config.port)) {
             throw new Error('invalid configuration');
         }
+         // Service der User zu verfügung stellt.
+         this._users.push({ surname: 'Riegelnegg', firstname: 'Dominik', classname: '5AHME'});
+         this._users.push({ surname: 'Riegelnegg', firstname: 'Lukas', classname: '1AHME'});
+         this._users.push({ surname: 'Markus', firstname: 'Mörth', classname: '5AHME'});
+        
     }
 
     public async start(): Promise<void> {
@@ -29,7 +36,7 @@ private _express: express.Express;
         //pugRenderingEngine.locals.pretty = true;
 
         this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartUp(req, res, next));
-
+        this._express.get('/users', (req, res, next) => this.handleGetUsers(req, res, next));
         this._express.get('/error', (req, res, next) => this.handleGetError(req, res, next));
 
         const ngxPath = path.join(__dirname, '../../ngx/dist');
@@ -61,6 +68,17 @@ private _express: express.Express;
                 }
                 }
 
+    private handleGetUsers (req: express.Request, res: express.Response, 
+        next: express.NextFunction) {
+                try{
+                        const returnValue = JSON.stringify(this._users);
+                        res.json(returnValue);
+                }
+                    catch (err) {
+                        next(err);
+                    }
+                
+        }
     private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
             throw new Error ('Testing error expection...');
