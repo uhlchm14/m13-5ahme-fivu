@@ -31,6 +31,9 @@ class Main {
         this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartup(req, res, next));
         this._express.get('/error', (req, res, next) => this.handleGetError(req, res, next));
 
+        const ngxPath = path.join(__dirname, '../../ngxClient/dist');
+        this._express.use(express.static(ngxPath));
+
         this._express.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => this.handleError(err, req, res, next));
 
         this._server = http.createServer(this._express).listen(this._config.port);
@@ -40,12 +43,11 @@ class Main {
 
     private handleGetStartup (req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
-            console.log('get request from client');
-            res.send('Starting Angular..');
+            const indexPath = path.join(__dirname, '../../ngxClient/dist/index.html');
+            res.sendFile(indexPath);
         } catch (err) {
             next(err);
         }
-        
     }
 
     private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
@@ -57,7 +59,10 @@ class Main {
     }
 
     private handleError (err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
-        res.status(500).send('Internal Error');
+        const timeStamp = new Date().toISOString();
+        console.log(timeStamp);
+        console.log(err);
+        res.status(500).send('Internal Error (' + timeStamp + ')');
     }
 }
 
