@@ -36,8 +36,8 @@ Die Funktion Date().toISOString() speichert die aktuelle Uhrzeit und Datum in ei
 ### 3. Angular client bundles in Angular Server einbeziehen
 
 Wenn der Angular Client gebaut wird, werden die neu angelegten Dateien in den dist-Ordner abgespeichert.
-Die index.html enthält die Angular bundles, welche die Angular App darstellen. Wir kopieren die index.html in den Server, um die selbe Angular App als der Client zu haben.
-Jedoch sind die Angular Bundles nur als Pfad in der index.html angegeben, weshalb diese Bundles im nachhinein hinzugefügt werden müssen. Da sich diese Bundles ebenfalls im dist-Ordner befinden, kann man direkt den ganzen dist-Ordner dem Server zuführen.
+Die index.html enthält die Dateipfade der Angular bundles, welche die Angular App darstellen. Wir geben dem Server den Dateipfad der index.html, um die selbe Angular App als der Client zu haben.
+Da die Angular Bundles nur als Pfad in der index.html angegeben sind, müssen diese Bundles im nachhinein hinzugefügt werden. Da sich diese Bundles ebenfalls im dist-Ordner befinden, kann man direkt den ganzen dist-Ordner dem Server als Pfad zur verfügung stellen.
 
 In der start Methode werden deshalb folgende Funktionen eingegeben:
 ```JavaScript
@@ -54,6 +54,7 @@ In der handleGetStartup Methode wird nun folgendes geschrieben:
 ```
 
 Die Datei index.html wird mit res.sendFile() an den Client zurückgeschickt und automatisch im Webbrowser dargestellt.
+Der Client holt sich nur noch die einzelnen Bundles vom Server.
 
 
 
