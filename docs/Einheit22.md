@@ -18,3 +18,22 @@ Um Zeit zu sparen, wird der zuvor erstellte Schüler-Server von der Übung 9 üb
 - Danach wird styles.css verändert:
    - Es wird "@import '../node_modules/bootstrap/dist/css/bootstrap.min.css'" eingefügt.
 
+- Danach wird der Server kontaktiert, in user.service.ts:
+   - wir benötigen einen Import: "import { HttpClient } from '@angular/common/http';"
+   
+Danach wird die Datei: user.service.ts und app.module.ts verändert.
+
+Wir erstellen in der main.ts des Servers folgende Methode:
+```
+  private handleGetUsers(req: express.Request, res: express.Response, next: express.NextFunction) 
+     {
+         try{
+            const rv = JSON.stringify(this._users);
+            res.json(rv);
+            
+         } catch (err)
+         {
+             next (err);
+         }
+     }
+```
