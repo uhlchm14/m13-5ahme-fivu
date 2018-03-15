@@ -344,4 +344,20 @@ ng serve -> angular starten.
 
 ng build -> baut eine angular zusammen -> dist Bundles
 
+Angular und Server im gleichen Verzeichnis erstellt.
+
 * [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+
+## 21.Einheit 08.03.2018 (Donnerstag)
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+## 22.Einheit 15.03.2018 (Donnerstag)
+
+* Wiederholung der letzten Einheit.
+* Daten von UE09 aus dem Ordner src->app in die UE11 ngxClient->src->app kopieren.
+* Die fehlenden Packages Installieren(bootstrap und ng-bootstrap).
+* Server starten und kontrollieren, das alles in Ordnung ist.
+* Users sollen vom Server angefragt werden mithilfe des HTTP-Clientservices.
+  * Package hinzufügen: import {HttpClient} from '@angular/common/http';
+
+* [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+

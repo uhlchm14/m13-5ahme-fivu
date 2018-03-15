@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-
+import {UserService} from './user.service';
 import { AppComponent } from './app.component';
-
+import { AppClockComponent } from './app-clock.component';
+import { AppUserTableComponent } from './app-user-table.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, AppClockComponent, AppUserTableComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpClientModule, NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ UserService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
