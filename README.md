@@ -593,4 +593,6 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
       const ngxPath = path.join(__dirname, '../../ngxClient/dist/');
       this._express.use(express.static(ngxPath));
   ```
-   
+  ### Einheit 22: 15.03.2018
+   * in index.html werden script Dateien nachgelesen. Client versucht diese Bundles am Server zu finden. -> Bundles werden an Client zurückgegeben und ein Bild erscheint am Client. 
+   * next step: Aus ue11 die Angular Applikation in Ordner app kopieren und dann in die Angular Applikation kopieren.
