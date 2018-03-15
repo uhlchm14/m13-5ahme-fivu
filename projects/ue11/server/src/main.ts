@@ -4,12 +4,14 @@ import * as nconf from 'nconf';
 import * as path from 'path';
 import * as http from 'http';
 import { sprintf } from 'sprintf-js';
+import { IUser } from './models/user'
 
 class Main {
 
     private _express: express.Express;
     private _config: {port: number};
     private _server: http.Server;
+    private _users: IUser[] = [];
 
     constructor () {
         const configFile = path.join(__dirname, '..', 'config.json');
@@ -19,6 +21,11 @@ class Main {
         if (!this._config || isNaN(this._config.port)) {
             throw new Error('invalid configuration');
         }
+        this._users.push({surname: 'Freyler', firstname: 'Lukas', classname: '5AHME'});
+        this._users.push({surname: 'Kager', firstname: 'Fabian', classname: '5AHME'});
+        this._users.push({surname: 'Ritter', firstname: 'Mario', classname: '5AHME'});
+        this._users.push({surname: 'Fink', firstname: 'Matthias', classname: '5AHME'});
+        this._users.push({surname: 'Ornik', firstname: 'Stefan', classname: '5AHME'});
     }
 
     public async start(): Promise<void>{
@@ -26,6 +33,7 @@ class Main {
         this._express.use(bodyParser.urlencoded());
 
         this._express.get(['/', '/index.html', 'index.htm'], (req, res, next) => this.handleGetAll(req, res, next));
+        this._express.get('/users', (req, res, next) => this.handleGetUsers(req, res, next));
         this._express.get(['/error'], (req, res, next) => this.handleGetError(req, res, next));
 
         const ngxPath = path.join(__dirname, '../../ngxClient/ngxClient/dist');
@@ -49,6 +57,17 @@ class Main {
             next(err);
         }
     }
+
+    private handleGetUsers (req: express.Request, res: express.Response,
+        next: express.NextFunction) {
+        try {
+            const rv = JSON.stringify(this._users);
+            res.json(rv);
+        } catch (error) {
+            next(error);
+        }
+    }
+
 
     private handleGetError(req: express.Request, res: express.Response, 
         next: express.NextFunction) {
