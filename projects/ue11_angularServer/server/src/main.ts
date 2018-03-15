@@ -4,6 +4,8 @@ import * as nconf from 'nconf';
 import * as path from 'path';
 import * as http from 'http';
 
+import { IUser } from './models/user';
+
 // import { sprintf } from 'sprintf-js';
 
 class Main {
@@ -11,6 +13,8 @@ class Main {
     private _express: express.Express;
     private _config: { port: number };
     private _server: http.Server;
+    private _users: IUser [] = [];
+
 
     constructor () {
         const configFile = path.join(__dirname, '..', 'config.json');
@@ -20,6 +24,9 @@ class Main {
         if (!this._config || isNaN(this._config.port)) {
             throw new Error('invalid configuration');
         }
+        this._users.push({surname: 'Freyler', firstname: 'Lukas', classname: '5AHME'});
+        this._users.push({surname: 'Freyler', firstname: 'Paul', classname: '2AHME'});
+        this._users.push({surname: 'Mörth', firstname: 'Markus', classname: '5AHME'});
     }
 
     public async start (): Promise<void> {
@@ -50,6 +57,15 @@ class Main {
         }
     }
 
+    private handleGetUsers (req: express.Request, res: express.Response, next: express.NextFunction) {
+        try {
+            const rv = JSON.stringify(this._users);
+            res.json(rv);
+        } catch (err) {
+            next(err);
+        }
+    }
+    
     private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
             throw new Error('testing error exception');
