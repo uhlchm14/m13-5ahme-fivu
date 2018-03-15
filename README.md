@@ -55,4 +55,4 @@ Von Stefan Ornik: [Server, Konfigurationsdatei, Error-Handling](https://github.c
 Von Julian Wolf: [Server, index.html, Timestamp](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/woljum13/docs/Stundenzusammenfassung08032018.md)
 
 ## Einheit 20, 15.03.2018
-Von Dominik Pichler: [Datenaustausch zwischen Client Server über Http Request](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/picdom12/Zusammenfassung_15032018.md)
+Von Dominik Pichler: [Datenaustausch zwischen Client Server über HTTP](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/picdom12/Zusammenfassung_15032018.md)
