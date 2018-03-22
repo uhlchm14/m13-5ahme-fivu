@@ -170,7 +170,7 @@ Abwesend
   + Angular app hat 5 bundles, die in der `index.hmtl` eingebunden werden
   + index.html wird vom Server an den Client geschickt
   
-## Einheit 22: 05.03.18
+## Einheit 22: 15.03.18
 * Holen der Datein aus [Übung 9] in die aktuelle [Übung 11], mit rsync Befehl
 * User sollen von Server kommen --> Http Request schreiben
   + HttpClient injecten
@@ -179,6 +179,19 @@ Abwesend
 * Erstellen symbolic link von server/models auf ngx/models
 * User Array als JSON an Client schicken
 
+## Einheit 23: 22.03.18
+* Raspbian Image auf SD-Karte laden
+  + Zip Herunterladen
+  + Image entpacken und mit Tool `dd` image auf SD-Karte spielen
+* Mit SSH auf Pi verbinen
+* Raspberry Seriennummer in /proc/cpuinfo (auf Website prüfen welches Raspbbery)
+* Software installieren
+  + apt-get vs. apt (Datei am System oder nicht)
+  + Node.js im SW Repo: 4.8 => zu alt! Daher holen aus dem Node Repository von der Node.js Website
+  + FIVU Repository klonen
+  + npm install -> Problem bei install im ngx
+  + dist file von PC mit rsync auf Pi
+  + Server starten
 	
 [Übung 2]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue02
 [Übung 3]: https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/kormam13/projects/ue03
