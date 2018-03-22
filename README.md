@@ -29,3 +29,4 @@
 | 21  | 08.03 |![Einheit 21](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit21.md) | Error-Handling | 
 | 22  | 15.03 |![Einheit 22](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit22.md) | | 
 | 23  | 22.03 |![Einheit 23](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit23.md) | | 
+| 24  |  |![Einheit 23](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit24.md) | | 
