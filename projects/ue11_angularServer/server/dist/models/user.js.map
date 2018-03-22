@@ -1,0 +1,1 @@
+{"version":3,"sources":["models/user.ts"],"names":[],"mappings":"","file":"user.js","sourcesContent":["export interface IUser {\r\n    surname: string;\r\n    firstname: string;\r\n    classname: string;\r\n  }"],"sourceRoot":"D:\\Schule\\HTL\\5AHME\\FIVU\\Git\\m13-5ahme-fivu\\projects\\ue11_angularServer\\server"}

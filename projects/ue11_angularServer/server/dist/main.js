@@ -42,6 +42,7 @@ var path = require("path");
 var http = require("http");
 var Main = /** @class */ (function () {
     function Main() {
+        this._users = [];
         var configFile = path.join(__dirname, '../config.json');
         console.log(configFile);
         nconf.file(configFile);
@@ -49,6 +50,10 @@ var Main = /** @class */ (function () {
         if (!this._config || isNaN(this._config.port)) {
             throw new Error('invalid configuration');
         }
+        this._users.push({ surname: 'Fink', firstname: 'Matthias', classname: '5AHME' });
+        this._users.push({ surname: 'Freyler', firstname: 'Lukas', classname: '5AHME' });
+        this._users.push({ surname: 'Greistorfer', firstname: 'Florian', classname: '5AHME' });
+        this._users.push({ surname: 'Harrer', firstname: 'Florian', classname: '5AHME' });
         console.log('Start');
     }
     Main.prototype.start = function () {
@@ -59,7 +64,10 @@ var Main = /** @class */ (function () {
                 this._express.use(bodyparser.urlencoded({ extended: true }));
                 // const pugRenderungEngine = this._server.set('view engine', 'pug');
                 // pugRenderungEngine.locals.pretty = true;
-                this._express.get(['/', '/index.html', '/index.htm'], function (req, res, next) { return _this.handleGetAll(req, res, next); });
+                this._express.get(['/', '/index.html', '/index.htm'], function (req, res, next) { return _this.handleGetStartup(req, res, next); });
+                this._express.get('/users', function (req, res, next) { return _this.handleGetUsers(req, res, next); });
+                this._express.use(express.static(path.join(__dirname, '../../ngxClient/dist')));
+                this._express.get('/error', function (req, res, next) { return _this.handleGetError(req, res, next); });
                 this._express.use(function (err, req, res, next) {
                     return _this.handleError(err, req, res, next);
                 });
@@ -69,17 +77,37 @@ var Main = /** @class */ (function () {
             });
         });
     };
-    Main.prototype.handleGetAll = function (req, res, next) {
+    Main.prototype.handleGetStartup = function (req, res, next) {
         try {
-            console.log('get request from client');
-            res.send('i bims, not implemented yet');
+            var indexPath = path.join(__dirname, '../../ngxClient/dist/index.html');
+            res.sendFile(indexPath);
+        }
+        catch (err) {
+            next(err);
+        }
+    };
+    Main.prototype.handleGetError = function (req, res, next) {
+        try {
+            throw new Error('I bims a Test-Error');
         }
         catch (err) {
             next(err);
         }
     };
     Main.prototype.handleError = function (err, req, res, next) {
-        res.status(500).send('Internal Error');
+        var timeStamp = new Date().toISOString();
+        console.log(timeStamp);
+        console.log(err);
+        res.status(500).send('Internal Error (' + timeStamp + ')');
+    };
+    Main.prototype.handleGetUsers = function (req, res, next) {
+        try {
+            var rv = JSON.stringify(this._users);
+            res.json(this._users);
+        }
+        catch (err) {
+            next(err);
+        }
     };
     return Main;
 }());
