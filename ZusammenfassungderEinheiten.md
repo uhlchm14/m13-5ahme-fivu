@@ -619,7 +619,58 @@ Um Daten zwischen Client und Server auszutauschen : Verlinken (nur unter Linux m
 
 mit ln -s ../../..... das jeweilige Verzeichnis angeben, diese wird dann anschließend in den insich befindlichen ordner verlinkt
 
-Fort
+## Einheit 22: 22.03.2018
+
+Arbeiten mit dem Raspberry Pi
+
+Der Raspberry Pi hat entwqeder einen 32 Bit oder einen 64 Bit Prozessor
+
+Der Raspberry hat Anschlüsse für Audio, USB, HDMI, ...
+
+Eventuell können Kontaktprobleme zwischen Betriebssystemspeicher und Raspberry entstehen.
+
+Ziel bis Schulende: Server auf Raspberry zum Laufen bringen, welcher evtl. ein PortPin ansteuert.
+
+dd-Kommando unter Linux: Kann unmittelbar zwischen Geräten Daten austauschen. 
+Zum Beispiel: Von einer Datei den Inhalt 1 zu 1 auf die SD-Karte spielen.
+
+Nun muss das image auf die SD-Karte geladen werden
+
+Anschließend muss die SD-Karte in den Raspberry geschoben werden. 
+
+Anschließend soll man sich über SSH mit den Raspberry Verbinden:
+
+´´´
+ssh pi@10.200.114.211 (IP-Adresse)
+´´´
+
+NUN müssen die restlichen Pakete installiert werden um einen Server erstellen zu können
+
+Der Befehl apt lädt das gewünschte Paket herunter, installiert es und entfernt die Installationsdatei.
+
+Der Befehl apt-get lädt das gewünschte Paket herunter, installiert es und entfernt die Installationsdatei NICHT!
+
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+Curl lädt das Paket auf den Raspberry, installiert aber noch nicht
+
+Folgende Pakete werden benötigt:
+
+- git
+- nodejs (Version 8)
+- Mit nodejs wird auch npm installeriert -> dieses muss noch geupdated werden -> npm install -g npm
+- git clonen
+
+
+Bei Raspberry Pi auf dioe Pins kommen:
+
+wiringPi : wiringpi.com
+
+Um eine Verbindung zwischen Pins und Software herzustellen wird folgendes Modul benötigt:
+
+https://nodejs.org/api/addons.html
+
+
+
 
 
 Einzelne Einheiten:
