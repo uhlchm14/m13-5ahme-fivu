@@ -559,7 +559,7 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
       - `npm install -g npm`
     - Repository clonen
       - `git clone "<Link>"`
-    - ll Kommando aktivieren
+    - `ll` Kommando aktivieren
       - im root: `nano .bashrc`
         - Das `#` vor `alias ll='ls $LS_OPTIONS -ls'` weg löschen und zu `alias ll='ls $LS_OPTIONS -la'` ändern
     - npm installin ngxClient
