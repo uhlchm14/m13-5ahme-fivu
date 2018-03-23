@@ -565,8 +565,8 @@ In ein Div-Element können Komponenten eingefügt werden. Ein Container wird ben
     - npm installin ngxClient
       - mit cd in geclonten Ordner wechseln
       - `git checkout <branchname>`
-      - in ngxClient wechseln und npm install ausführen
-      - in server wechseln und npm install ausführen
+      - in ngxClient wechseln und `npm install` ausführen
+      - in server wechseln und `npm install` ausführen
     - Auf die Pins des Raspberrys zugreifen über node
       - node API wird benötigt
     - Dist Ordner von ngxClient am PC nach Raspberry tmp kopieren
