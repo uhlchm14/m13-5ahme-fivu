@@ -901,3 +901,151 @@ Download und Besprechung der letzten Dateien des Templates für ue03
 2. Config-File für den Server erstellen und bei Start einlesen
 
 3. Implementierung der beiden `async`-Methoden `start()` und `startup()` und drei Handler-Methoden `handleGetAll()`, `handleGetError()` und `handleError()`.
+
+*****
+
+### 21. Einheit
+**Datum:** 08.03.2018  
+**Dazugehörige Übung(en):** ![ue11_angularServer](projects/ue11_angularServer)  
+**Inhalt:**  
+1. Verbesserung von `handleError()`
+
+   ```typescript
+     private handleError (err: any, req: express.Request, res: express.Response, next: express.NextFunction)
+     {
+       const timeStamp = new Date().toISOString();
+       console.log(timeStamp);
+       console.log(err);
+       res.status(500).send('I bims 1 Error ( ' + timeStamp + ' )');
+     }
+   ```
+
+2. Bundles des Clients aus `dist` einbinden.
+
+  ```typescript
+    this._express.use(express.static(path.join(__dirname, '../../ng2/dist')));
+  ```
+
+3. In `handleGetStartup()` soll dem Client die `index.html`-Datei gesendet werden.
+
+  ```typescript
+    const indexPath = path.join(__dirname, '../../ng2/dist/index.html');
+    res.sendFile(indexPath);
+  ```
+
+*****
+
+### 22. Einheit
+**Datum:** 15.03.2018  
+**Dazugehörige Übung(en):** ![ue11_angularServer](projects/ue11_angularServer)  
+**Inhalt:**  
+1. Der Client aus ![ue09_angularServer](projects/ue09) wurde nach ![ue11_angularServer](projects/ue11_angularServer) kopiert um Zeit zu sparen. Dabei wurden sämtliche Inhalte von `ue09/src/app` nach `ue11_angularServer/ng2/src/app` kopiert. Alle fehlenden Packages wurden dann nachinstalliert (wie z.B.: Bootstrap).
+
+2. In `app.module.ts` muss das HTTP-Modul eingebunden werden, da es für die Kontaktierung des Servers verwendet wird.
+
+  ```typescript
+    import { HttpClientModule } from '@angular/common/http';
+
+    @NgModule({
+      declarations: [
+        AppComponent,
+        AppClockComponent,
+        AppUserTableComponent
+      ],
+      imports: [
+        BrowserModule, HttpClientModule, NgbModule.forRoot()
+      ],
+      providers: [UserService],
+      bootstrap: [AppComponent]
+    })
+  ```
+
+3. In der Komponente `user.service.ts` wird das HTTP-Modul "injected".
+
+  ```typescript
+    import { HttpClient } from '@angular/common/http';
+
+    @Injectable()
+    export class UserService
+    {
+      public users: IUser [] = [];
+    
+        constructor(private httpClient: HttpClient)
+        {
+  ```
+
+4. HTTP-Request an den Server senden.
+
+  ```typescript
+    private async reloadUsers (): Promise<void>
+    {
+      try
+      {
+        const result = await this.httpClient.get('/users').toPromise();
+        console.log(result);
+      }
+      catch (err)
+      {
+        console.log(err);
+      }
+    }
+  ```
+
+5. Auf der Seite des Servers muss eine Schicht für den Handler der Userabfrage eingebaut werden.
+
+  ```typescript
+    this._express.get('/users', (req, res, next) => this.handleGetUsers(req, res, next));
+  ```
+
+6. In `handleGetUsers()` wird dem Client ein Array von Usern im JSON-Format gesendet.
+
+  ```typescript
+    private handleGetUsers (req: express.Request, res: express.Response, next: express.NextFunction)
+    {
+      try
+      {
+        const rv = JSON.stringify(this._users);
+        res.json(rv);
+      }
+      catch (err)
+      {
+        next(err);
+      }
+    }
+  ```
+
+7. Damit das Interface für einen User auf der Seite des Clients und des Servers immer gleich sind, wurde ein sybolischer Link für das Interface erzeugt. Damit entspricht das Interface auf der Seite des Servers immer dem des Clients, weil es sich bei einer Veränderung auf beiden Seiten ändert.
+
+  - `ln -s ../../ng2/src/app/models/`
+
+*****
+
+### 23. Einheit
+**Datum:** 22.03.2018  
+**Dazugehörige Übung(en):** ![ue11_angularServer](projects/ue11_angularServer)  
+**Inhalt:**  
+1. Arbeiten mit Raspberry PI
+  - Image vom Mechatronik-Server herunterladen und SD-Karte am Laptop anstecken.
+  - Alte Partitionen mit `umount` entfernen.
+  - Image auf Raspberry spielen
+    - `unzip -p 2018-03-13-raspbian-stretch-little.zip | dd bs=4M of=/dev/mmcblk0`
+  - Mit `sync` überprüfen, ob die Operation abgeschlossen wurde.
+  - SSH-Verzeichnis anlegen, damit später die Verbindung mit SSH aufgebaut werden kann.
+    - `touch /media/ubuntu/boot/ssh`
+  - SD-Karte beim Raspberry anstecken und starten.
+  - Vom Laptop mit dem Raspberry verbinden und Updates installieren.
+    - `ssh pi@10.200.114.210`
+    - `apt update`
+    - `apt upgrade`
+  - Git, Node.js und npm installieren
+    - `apt install git`
+    - `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash`
+    - `apt install nodejs`
+    - `npm install -g npm`
+  - Git-Repository klonen
+    - `git clone <Link>`
+  - In den eigenen Branch wechseln und für Server und Client ein `npm install` ausführen
+    - `git checkout poefam13`
+    - `npm install` (einmal in `server` und einmal in `ng2`)
+  - In `server` in der `config.json` den Port ändern
+  - Server mit `npm start` starten. Über die IP-Adresse des Raspberry kann nun auf den Server zugegriffen werden.

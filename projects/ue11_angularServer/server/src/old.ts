@@ -1,17 +1,16 @@
+/*
+
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as nconf from 'nconf';
 import * as path from 'path';
 import * as http from 'http';
 
-import { IUser } from './modules/user';
-
 class Main
 {
   private _express: express.Express;
   private _server: http.Server;
   private _config: { port: number };
-  private _users: IUser[] = [];
 
   constructor ()
   {
@@ -23,20 +22,6 @@ class Main
     {
       throw new Error('The configuration is fucking invalid!');
     }
-
-    this._users.push({firstname: 'Florian', surname: 'Harrer', class: '5AHME'});
-    this._users.push({firstname: 'Florian', surname: 'Greistorfer', class: '5AHME'});
-    this._users.push({firstname: 'Dominik', surname: 'Riegelnegg', class: '5AHME'});
-    this._users.push({firstname: 'Marian', surname: 'Korosec', class: '5AHME'});
-    this._users.push({firstname: 'Dominik', surname: 'Pichler', class: '5AHME'});
-    this._users.push({firstname: 'Julian', surname: 'Wolf', class: '5AHME'});
-    this._users.push({firstname: 'Markus', surname: 'Mörth', class: '5AHME'});
-    this._users.push({firstname: 'Lukas', surname: 'Freyler', class: '5AHME'});
-    this._users.push({firstname: 'Fabian', surname: 'Kager', class: '5AHME'});
-    this._users.push({firstname: 'Mario', surname: 'Ritter', class: '5AHME'});
-    this._users.push({firstname: 'Matthias', surname: 'Fink', class: '5AHME'});
-    this._users.push({firstname: 'Stefan', surname: 'Ornik', class: '5AHME'});
-    this._users.push({firstname: 'Fabio', surname: 'Pölzl', class: '5AHME'});
   }
 
   public async start (): Promise<void>
@@ -48,8 +33,6 @@ class Main
     //pugRenderingEngine.locals.pretty = true;
 
     this._express.get([ '/', '/index.html', '/index.htm' ], (req, res, next) => this.handleGetStartup(req, res, next));
-
-    this._express.get('/users', (req, res, next) => this.handleGetUsers(req, res, next));
 
     this._express.use(express.static(path.join(__dirname, '../../ng2/dist')));
 
@@ -71,19 +54,6 @@ class Main
 
       // console.log('GET-Request vong Client');
       // res.send('Nobody implemented this shit yet');
-    }
-    catch (err)
-    {
-      next(err);
-    }
-  }
-
-  private handleGetUsers (req: express.Request, res: express.Response, next: express.NextFunction)
-  {
-    try
-    {
-      const rv = JSON.stringify(this._users);
-      res.json(rv);
     }
     catch (err)
     {
@@ -123,3 +93,7 @@ startup().catch( (err) => {
 });
 
 //express, body-parser, nconf
+
+
+
+*/
