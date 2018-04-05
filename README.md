@@ -360,4 +360,7 @@ Angular und Server im gleichen Verzeichnis erstellt.
   * Package hinzufügen: import {HttpClient} from '@angular/common/http';
 
 * [Übung 11](https://github.com/HTLMechatronics/m13-5ahme-fivu/tree/picdom12/projekts/ue11)
+## 23.Einheit 29.03.2018 (Donnerstag)
+
+* Krank
 
