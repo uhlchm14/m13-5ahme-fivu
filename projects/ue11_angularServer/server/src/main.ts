@@ -70,7 +70,7 @@ class Main {
     this.users.push({ surname: 'Harrer', firstname: 'Florian', classname: 'Carrier' });
     this.users.push({ surname: 'Greistorfer', firstname: 'Florian', classname: 'Programmierer' });
     this.users.push({ surname: 'Pölzl', firstname: 'Fabio', classname: 'Intelligenzquotient' });
-    this.users.push({ surname: 'Nöhrer', firstname: 'Valentin', classname: 'Intelligenzquotientendivident' });
+    this.users.push({ surname: 'Nöhrer', firstname: 'Valentin', classname: 'HLW-Schüler' });
   }
 
   public async start(): Promise<void> {
