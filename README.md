@@ -200,7 +200,7 @@ und
 #### Inhalte der Stunde
 
 - Ladebalken einbinden
-- Async und Promisses wenn Tabelle länger zum befüllen braucht
+- Async und Promisses wen Tabelle länger zum befüllen braucht
 
 ### Einheit 17:
 
