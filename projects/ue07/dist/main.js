@@ -2,37 +2,68 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
+const jwt = require("jsonwebtoken");
 const fs = require("fs");
+const path = require("path");
 class Main {
     constructor() {
-        console.log('Start');
-        this._publicKey = fs.readFileSync('keys/server-public.pem');
-        this._privateKey = fs.readFileSync('keys/server-private.pem');
-        console.log(__dirname);
-        console.log('Key-Pair read from files');
+        const pubFileName = path.join(__dirname, '..', 'keys/server-public.pem');
+        const privFileName = path.join(__dirname, '..', 'keys/server-private.pem');
+        console.log('  reading public key from ' + pubFileName);
+        this._publicKey = fs.readFileSync(pubFileName);
+        console.log('  reading private key from ' + privFileName);
+        this._privateKey = fs.readFileSync(privFileName);
+        this._server = express();
+        this._server.use(bodyParser.urlencoded({ extended: true }));
+        this._server.get('/', (req, res, next) => {
+            next();
+        });
+        this._server.post('/login', (req, res, next) => this.getLogin(req, res, next));
+        this._server.get('/data', (req, res, next) => this.getData(req, res, next));
+        this._server.use(express.static('public'));
+    }
+    startServer(port) {
+        this._server.listen(port);
+        console.log('Server gestartet (http://localhost:4711)');
+    }
+    getData(req, res, next) {
+        const value = req.headers.authorization;
+        if (value.startsWith('Bearer: ')) {
+            const token = value.substr(8);
+            console.log(token);
+            const data = jwt.verify(token, this._publicKey, (err, decode) => {
+                try {
+                    if (err) {
+                        throw err;
+                    }
+                    if (decode.name && decode.name === 'maxi') {
+                        const issuedAt = new Date(decode.iat * 1000);
+                        console.log(issuedAt.toLocaleDateString());
+                        res.send('OK');
+                    }
+                    else {
+                        throw new Error('invalid token objeckt');
+                    }
+                }
+                catch (err) {
+                    res.status(401).send('ERROR');
+                }
+            });
+        }
+    }
+    getLogin(req, res, next) {
+        if (req.body) {
+            console.log(req.body);
+        }
+        if (req.body.name === 'maxi' && req.body.password === 'geheim') {
+            const token = jwt.sign({ name: 'maxi' }, this._privateKey, { expiresIn: '2h', algorithm: 'RS256' });
+            console.log(token);
+            res.json({ token: token });
+        }
+        next();
     }
 }
 const main = new Main();
-const server = express();
-const pugRenderingEngine = server.set('view engine', 'pug');
-pugRenderingEngine.locals.pretty = true;
-server.use(bodyParser.urlencoded());
-server.get('/', (req, res, next) => {
-    next();
-});
-server.post('/login', (req, res, next) => {
-    if (req.body) {
-        console.log(req.body);
-    }
-    if (req.body.name === 'maxi' && req.body.password === 'geheim') {
-        res.send('OK (' + req.body.name + ')');
-    }
-    else {
-        res.status(401).send('ERROR');
-    }
-});
-server.use(express.static('public'));
-server.listen(4711);
-console.log('Server gestartet (http://localhost:4711)');
+main.startServer(4711);
 
 //# sourceMappingURL=main.js.map
