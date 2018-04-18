@@ -596,17 +596,31 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
   ### Einheit 22: 15.03.2018
    * in index.html werden script Dateien nachgelesen. Client versucht diese Bundles am Server zu finden. -> Bundles werden an Client zurückgegeben und ein Bild erscheint am Client. 
    * next step: Aus ue11 die Angular Applikation in Ordner app kopieren und dann in die Angular Applikation kopieren.
-   
+   * die fehlenden Packages bootstrap und ng-bootstrap mit **npm install** installieren.
+   * Der User soll mithilfe des HttpClient Services vom Server angefragt werden.
  ### Einheit 23: 22.03.2018
   * Unterschied Raspberry PI zu Mikrocontroller: 
    * Raspberry hat 32, 64 Bit -> dadurch kann ein eigenes Betriebssystem am Raspberry laufen.
    * USB, LAN Schnittstelle wird über Bridge zugeführt. 
   * Ziel dieser Einheit: das Projekt der letzten Einheit auf einen Raspberry zu spielen.
   * SD-Karte in Laptop stecken: dann Befehl umount /dev/mmcblk0p1 
-  * dann downgeloadetes Raspbian Image entpacken und auf SD-Karte spielen: unzip -p 2018-03-13-raspbian-strech-lite.zip | dd
-  bs=4M of=/dev/mmcblk0
-  * dann SD Karte aus und einwerfen. Nächster Schritt touch /media/matthias/boot/ssh
-  * ssh Datei anlegen, um mit ssh auf den Raspberry zuzugreifen
+  * dann downgeloadetes Raspbian Image entpacken und auf SD-Karte spielen
+    * unzip -p 2018-03-13-raspbian-strech-lite.zip | ddbs=4M of=/dev/mmcblk0
+  * dann SD Karte aus und einwerfen. Nächster Schritt ein SSH Verzeichnis anlegen 
+    * touch /media/matthias/boot/ssh
   * Dann mit ssh pi@10.200.114.203 auf Raspberry zugreifen
+  * Vom Laptop mit dem Raspberry verbinden und Updates installieren
+    * apt update
+    * apt upgrade
   * Als nächsten Schritt muss git und node.js am Raspberry installiert werden
+    * apt install git
+    * curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash
+    * apt install nodejs
+    * npm install -g npm
+  * Git-Repository klonen
+    * git clone <Link>
+  * In Server und Client ein npm install durchführen
+    * npm install (einmal in Server und einmal in ngxClient)
+  * In server in der config.json den Port ändern
+  * Den Server mit npm start starten. Durch die IP-Adresse des Raspberrys kann nun auf den Server zugegriffen werden.
   * Java native interface um von java auf Raspberry Betriebssystem zugriff zu haben
