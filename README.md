@@ -1,33 +1,5 @@
 # m13-5ahme-fivu
 
-<<<<<<< HEAD
-## Einheit 1, 21.9.2017
-Von Markus Mörth: [Projekt anlegen](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/moemam13/create_project.md)
-
-## Einheit 2, 28.9.2017
-Von Dominik Riegelnegg: [Transpelieren nach Javascript](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/riedom13/riedom13_2017-09-28.md#mitschrift-28092017-fiv)  
-  
-## Einheit 3, 5.10.2017  
-Von Lukas Freyler: [File lesen/schreiben](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/frelum13/Stundenzusammenfassung5102017.md)  
-
-## Einheit 4, 12.10.2017  
-Von Stefan Ornik: [Interface und Debuggen](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ornstm13/docs/Einheit6.md)  
-
-## Einheit 5, 19.10.2017
-Von Julian Wolf: [Webserver und HTML](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/woljum13/docs/Stundenzusammenfassung19102017.md)
-
-## Einheit 6, 09.11.2017
-Von Dominik Pichler: [Dynamischer Server (Pug)](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/picdom12/Zusammenfassung_09112017.md)
-
-## Einheit 7, 16.11.2017
-Von Florian Harrer: [Bootstrap](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/harflm13/docs/protokoll_16_11_2017.md)
-
-## Einheit 8, 23.11.2017
-Von Fabio Pölzl: [Body-Parser und Cookie](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/poefam13/docs/8.Einheit-2017-11-23.md)
-
-## Einheit 9, 30.11.2017
-Von Ritter Mario: [Cookie und JWT](https://github.com/HTLMechatronics/m13-5ahme-fivu/blob/ritmam13/docs/17.11.30.md)
-=======
 ## Dokumentation der Einheiten
 
 ### Einheit 1: 14.09.2017
@@ -651,4 +623,3 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
   * In server in der config.json den Port ändern
   * Den Server mit npm start starten. Durch die IP-Adresse des Raspberrys kann nun auf den Server zugegriffen werden.
   * Java native interface um von java auf Raspberry Betriebssystem zugriff zu haben
->>>>>>> 6d4b190a2177d7c1c2b116eec1890fdbb5d29d93
