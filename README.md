@@ -614,7 +614,6 @@ Des Weiteren muss auch der Service in app.modules.ts eingetragen werden.
     * apt upgrade
   * Als nächsten Schritt muss git und node.js am Raspberry installiert werden
     * apt install git
-    * curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash
     * apt install nodejs
     * npm install -g npm
   * Git-Repository klonen
