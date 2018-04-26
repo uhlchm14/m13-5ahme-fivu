@@ -39,17 +39,29 @@ void app_main (void)
   {
     cli();
     volatile uint8_t vccfk = app.vccFK; // volatile = verhindert das Variable erst zum Schluss zugewiesen wird
+    volatile float vccewma = app.vccEWMA;
     sei();
     uint8_t vk= vccfk >> 5; // Alternative vccfk/32
     uint8_t nk = (uint16_t)(vccfk & 0x1f) * 10/32;
-    printf("VCC = %u.%01u    ERRCNT = %u ",vk,nk,app.adcErrCnt);
-    printf(" DecFilter: %04x   ",app.decFilterSum);  
+    printf("VCC = %u.%01u  V  ERRCNT = %u ",vk,nk,app.adcErrCnt);
+    printf(" DecFilter: %04x   ",app.decFilterSum);
+    vk = (uint8_t)vccewma;
+    nk = (uint8_t) ((vccewma - (float)vk) * 100.0);
+    printf(" EWMA: %u.%02u V ", vk,nk);
     printf("State = %d  \r",app.state);
     printf("  \r");
   }
 }
 
 //--------------------------------------------------------
+
+float ewma (float in)
+{
+  // tau = 100ms, dt=20ms --> a=0.2
+  static float sum = 0.0;
+  sum = 0.2 * in + (1-0.2) * sum;
+  return sum;
+}
 
 void app_task_1ms (void) 
 {
@@ -64,7 +76,8 @@ void app_task_1ms (void)
       decFiltCnt++;
       if(decFiltCnt >= 20)
       {
-        app.vccFK = app.decFilterSum / 20;
+        app.vccFK = app.decFilterSum / 20; // nach 20 Messergebnisse wird ein Wert gerechnet 
+        app.vccEWMA= ewma(app.vccFK/32.0);
         decFiltCnt = 0;
         app.decFilterSum = 0;
         sys_setEvent(APP_EVENT_ADC_MEASURED);

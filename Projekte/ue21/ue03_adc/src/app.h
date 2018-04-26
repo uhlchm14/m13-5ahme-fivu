@@ -11,6 +11,7 @@ struct App
   uint8_t adcErrCnt; 
   uint8_t stateErrCnt;
   uint16_t decFilterSum;
+  float vccEWMA;
   enum App_State state;
 };
 
